@@ -3,30 +3,58 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
+		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
+		8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8894581B236AB41200E3D838 /* Default-568h@2x.png */; };
+		8894581E236AD0EC00E3D838 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */; };
+		88945820236AE51500E3D838 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894581F236AE51500E3D838 /* LoginView.swift */; };
+		88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945821236AF09B00E3D838 /* MainTabBarController.swift */; };
+		88945831236AF46600E3D838 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894582F236AF46600E3D838 /* NewsViewController.swift */; };
+		88945832236AF46600E3D838 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945830236AF46600E3D838 /* NewsViewController.xib */; };
+		88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945833236AF47900E3D838 /* PeopleViewController.swift */; };
+		88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945834236AF47900E3D838 /* PeopleViewController.xib */; };
+		88945839236AF48600E3D838 /* NotifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945837236AF48600E3D838 /* NotifViewController.swift */; };
+		8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945838236AF48600E3D838 /* NotifViewController.xib */; };
+		8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894583B236AF49600E3D838 /* JobsViewController.swift */; };
+		8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583C236AF49600E3D838 /* JobsViewController.xib */; };
+		88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583F236B15E400E3D838 /* MainTabBarController.xib */; };
 		88F68207236971B5006249AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68206236971B5006249AA /* AppDelegate.swift */; };
-		88F68209236971B5006249AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68208236971B5006249AA /* SceneDelegate.swift */; };
 		88F6820B236971B5006249AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6820A236971B5006249AA /* ViewController.swift */; };
-		88F6820E236971B5006249AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F6820C236971B5006249AA /* Main.storyboard */; };
 		88F68210236971B7006249AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F6820F236971B7006249AA /* Assets.xcassets */; };
 		88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F68211236971B7006249AA /* LaunchScreen.storyboard */; };
+		88F68222236985A8006249AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68220236985A8006249AA /* LoginViewController.swift */; };
+		88F68223236985A8006249AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F68221236985A8006249AA /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
+		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		8894581B236AB41200E3D838 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8894581F236AE51500E3D838 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		88945821236AF09B00E3D838 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8894582F236AF46600E3D838 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		88945830236AF46600E3D838 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		88945833236AF47900E3D838 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		88945834236AF47900E3D838 /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
+		88945837236AF48600E3D838 /* NotifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifViewController.swift; sourceTree = "<group>"; };
+		88945838236AF48600E3D838 /* NotifViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifViewController.xib; sourceTree = "<group>"; };
+		8894583B236AF49600E3D838 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		8894583C236AF49600E3D838 /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
+		8894583F236B15E400E3D838 /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
 		88F68203236971B5006249AA /* Almate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F68206236971B5006249AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88F68208236971B5006249AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88F6820A236971B5006249AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88F6820D236971B5006249AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88F6820F236971B7006249AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88F68212236971B7006249AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88F68214236971B7006249AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88F68220236985A8006249AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88F68221236985A8006249AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A8A87A6099742A499B316FBC /* Pods_Almate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Almate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,9 +70,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88945825236AF0A800E3D838 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8894583F236B15E400E3D838 /* MainTabBarController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		88945826236AF0B200E3D838 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				88945821236AF09B00E3D838 /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		88945827236AF3F000E3D838 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8894582F236AF46600E3D838 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		88945828236AF3FC00E3D838 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				88945830236AF46600E3D838 /* NewsViewController.xib */,
+				885AA6D6236C54B00049B35E /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		88945829236AF40200E3D838 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				88945833236AF47900E3D838 /* PeopleViewController.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		8894582A236AF40C00E3D838 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				88945834236AF47900E3D838 /* PeopleViewController.xib */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		8894582B236AF41700E3D838 /* Notif */ = {
+			isa = PBXGroup;
+			children = (
+				88945837236AF48600E3D838 /* NotifViewController.swift */,
+			);
+			path = Notif;
+			sourceTree = "<group>";
+		};
+		8894582C236AF41C00E3D838 /* Notif */ = {
+			isa = PBXGroup;
+			children = (
+				88945838236AF48600E3D838 /* NotifViewController.xib */,
+			);
+			path = Notif;
+			sourceTree = "<group>";
+		};
+		8894582D236AF43C00E3D838 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				8894583B236AF49600E3D838 /* JobsViewController.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		8894582E236AF44100E3D838 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				8894583C236AF49600E3D838 /* JobsViewController.xib */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
 		88F681FA236971B5006249AA = {
 			isa = PBXGroup;
 			children = (
+				8894581B236AB41200E3D838 /* Default-568h@2x.png */,
 				88F68205236971B5006249AA /* Almate */,
 				88F68204236971B5006249AA /* Products */,
 				8A52FF9456F72EDF1B2FEAAD /* Pods */,
@@ -63,15 +173,59 @@
 		88F68205236971B5006249AA /* Almate */ = {
 			isa = PBXGroup;
 			children = (
+				88F68224236985B6006249AA /* Controller */,
+				88F6821A236984D3006249AA /* View */,
 				88F68206236971B5006249AA /* AppDelegate.swift */,
-				88F68208236971B5006249AA /* SceneDelegate.swift */,
 				88F6820A236971B5006249AA /* ViewController.swift */,
-				88F6820C236971B5006249AA /* Main.storyboard */,
 				88F6820F236971B7006249AA /* Assets.xcassets */,
 				88F68211236971B7006249AA /* LaunchScreen.storyboard */,
 				88F68214236971B7006249AA /* Info.plist */,
+				8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */,
 			);
 			path = Almate;
+			sourceTree = "<group>";
+		};
+		88F6821A236984D3006249AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8894582E236AF44100E3D838 /* Jobs */,
+				8894582C236AF41C00E3D838 /* Notif */,
+				8894582A236AF40C00E3D838 /* People */,
+				88945828236AF3FC00E3D838 /* News */,
+				88945825236AF0A800E3D838 /* Main */,
+				88F6821B236984D8006249AA /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88F6821B236984D8006249AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88F68221236985A8006249AA /* LoginViewController.xib */,
+				8894581F236AE51500E3D838 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88F68224236985B6006249AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8894582D236AF43C00E3D838 /* Jobs */,
+				8894582B236AF41700E3D838 /* Notif */,
+				88945829236AF40200E3D838 /* People */,
+				88945827236AF3F000E3D838 /* News */,
+				88945826236AF0B200E3D838 /* Main */,
+				88F68225236985C4006249AA /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88F68225236985C4006249AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88F68220236985A8006249AA /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		8A52FF9456F72EDF1B2FEAAD /* Pods */ = {
@@ -80,7 +234,6 @@
 				728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */,
 				4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,9 +306,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
+				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
+				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
+				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
+				8894581E236AD0EC00E3D838 /* GoogleService-Info.plist in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
-				88F6820E236971B5006249AA /* Main.storyboard in Resources */,
+				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
+				88F68223236985A8006249AA /* LoginViewController.xib in Resources */,
+				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +385,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
+				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
+				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
+				88945839236AF48600E3D838 /* NotifViewController.swift in Sources */,
+				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
+				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
+				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
+				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
-				88F68209236971B5006249AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88F6820C236971B5006249AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88F6820D236971B5006249AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88F68211236971B7006249AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -379,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = slametriyadi.id.Almate;
+				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,7 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = slametriyadi.id.Almate;
+				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
