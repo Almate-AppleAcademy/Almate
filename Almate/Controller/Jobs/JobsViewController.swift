@@ -19,7 +19,10 @@ class JobsViewController: UIViewController {
         navigationItem.title = "Jobs"
     }
 
-
+    @IBAction func didTapPostJob(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

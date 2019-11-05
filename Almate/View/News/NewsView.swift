@@ -17,10 +17,13 @@ class NewsView: UIView {
         // Drawing code
     }
     */
+    @IBOutlet weak var newsCollection: UICollectionView!
     
     private let searchController = UISearchController(searchResultsController: nil)
     
-    override class func awakeFromNib() {
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        newsCollection.register(UINib(nibName: "MatchFootballCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
     }
+
 }

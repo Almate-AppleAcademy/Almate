@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
+		8882C601237022D9001F56B4 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882C5FF237022D9001F56B4 /* NewsCell.swift */; };
 		8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8894581B236AB41200E3D838 /* Default-568h@2x.png */; };
 		8894581E236AD0EC00E3D838 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */; };
 		88945820236AE51500E3D838 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894581F236AE51500E3D838 /* LoginView.swift */; };
@@ -34,6 +35,8 @@
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		8882C5FF237022D9001F56B4 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.swift"; sourceTree = "<absolute>"; };
+		8882C600237022D9001F56B4 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewsCell.xib; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.xib"; sourceTree = "<absolute>"; };
 		8894581B236AB41200E3D838 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8894581F236AE51500E3D838 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 			children = (
 				88945830236AF46600E3D838 /* NewsViewController.xib */,
 				885AA6D6236C54B00049B35E /* NewsView.swift */,
+				8882C600237022D9001F56B4 /* NewsCell.xib */,
+				8882C5FF237022D9001F56B4 /* NewsCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
+				8882C601237022D9001F56B4 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
