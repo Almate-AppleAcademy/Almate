@@ -38,7 +38,7 @@
 		8882C5FF237022D9001F56B4 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.swift"; sourceTree = "<absolute>"; };
 		8882C600237022D9001F56B4 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewsCell.xib; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.xib"; sourceTree = "<absolute>"; };
 		8894581B236AB41200E3D838 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8894581F236AE51500E3D838 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88945821236AF09B00E3D838 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8894582F236AF46600E3D838 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
