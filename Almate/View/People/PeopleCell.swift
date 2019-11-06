@@ -12,6 +12,8 @@ class PeopleCell: UICollectionViewCell {
 
     @IBOutlet weak var imgPeopleCell: UIImageView!
     @IBOutlet weak var namePeopleCell: UILabel!
+    @IBOutlet weak var genPeopleCelll: UILabel!
+    @IBOutlet weak var occupationPeopleCelll: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

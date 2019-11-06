@@ -36,7 +36,9 @@ extension PeopleView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
         cell.namePeopleCell.text = "Munawaroh"
-//        cell.imgPeopleCell.image = UIImage(named: "news")
+        cell.imgPeopleCell.image = UIImage(named: "news")
+        cell.genPeopleCelll.text = "FEB/17"
+        cell.occupationPeopleCelll.text = "Kuli Bangunan"
         return cell
     }
     

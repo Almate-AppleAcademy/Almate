@@ -47,7 +47,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="343" height="76"/>
             <connections>
+                <outlet property="genPeopleCelll" destination="zXB-Ww-hDr" id="fPy-fb-Bvt"/>
+                <outlet property="imgPeopleCell" destination="T7w-gk-zRn" id="5ZM-Jx-QuL"/>
                 <outlet property="namePeopleCell" destination="joB-x1-enp" id="KIt-ab-8Wn"/>
+                <outlet property="occupationPeopleCelll" destination="I1z-C5-lWR" id="98T-Hi-j1n"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="178.79464285714286"/>
         </collectionViewCell>
