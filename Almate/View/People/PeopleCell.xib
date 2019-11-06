@@ -41,6 +41,12 @@
                         <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpw-Mj-2e5">
+                        <rect key="frame" x="142" y="11" width="18" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <state key="normal" image="bookmark" catalog="system"/>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,4 +61,7 @@
             <point key="canvasLocation" x="138.40579710144928" y="178.79464285714286"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="54" height="64"/>
+    </resources>
 </document>
