@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
+		5E4B2D78237299D500EEA1FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B2D76237299D500EEA1FE /* ProfileViewController.swift */; };
+		5E4B2D79237299D500EEA1FE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B2D77237299D500EEA1FE /* ProfileViewController.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
 		8882C601237022D9001F56B4 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882C5FF237022D9001F56B4 /* NewsCell.swift */; };
 		8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8894581B236AB41200E3D838 /* Default-568h@2x.png */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
+		5E4B2D76237299D500EEA1FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5E4B2D77237299D500EEA1FE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		8882C5FF237022D9001F56B4 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.swift"; sourceTree = "<absolute>"; };
@@ -73,6 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E4B2D742372997500EEA1FE /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				5E4B2D77237299D500EEA1FE /* ProfileViewController.xib */,
+			);
+			path = Profil;
+			sourceTree = "<group>";
+		};
+		5E4B2D752372999000EEA1FE /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				5E4B2D76237299D500EEA1FE /* ProfileViewController.swift */,
+			);
+			path = Profil;
+			sourceTree = "<group>";
+		};
 		88945825236AF0A800E3D838 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +213,7 @@
 		88F6821A236984D3006249AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E4B2D742372997500EEA1FE /* Profil */,
 				8894582E236AF44100E3D838 /* Jobs */,
 				8894582C236AF41C00E3D838 /* Notif */,
 				8894582A236AF40C00E3D838 /* People */,
@@ -215,6 +236,7 @@
 		88F68224236985B6006249AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E4B2D752372999000EEA1FE /* Profil */,
 				8894582D236AF43C00E3D838 /* Jobs */,
 				8894582B236AF41700E3D838 /* Notif */,
 				88945829236AF40200E3D838 /* People */,
@@ -316,6 +338,7 @@
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
+				5E4B2D79237299D500EEA1FE /* ProfileViewController.xib in Resources */,
 				8894581E236AD0EC00E3D838 /* GoogleService-Info.plist in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
 				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
@@ -396,6 +419,7 @@
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifViewController.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
+				5E4B2D78237299D500EEA1FE /* ProfileViewController.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Almate" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DJM-66-Olf">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKH-Fs-5bK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1w-wU-gFD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1200" id="C6D-dB-WPG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="L1w-wU-gFD" firstAttribute="top" secondItem="VKH-Fs-5bK" secondAttribute="top" id="36M-JY-HdJ"/>
+                        <constraint firstItem="L1w-wU-gFD" firstAttribute="leading" secondItem="VKH-Fs-5bK" secondAttribute="leading" id="8cv-Uc-506"/>
+                        <constraint firstAttribute="trailing" secondItem="L1w-wU-gFD" secondAttribute="trailing" id="Ntc-oV-yVh"/>
+                        <constraint firstItem="L1w-wU-gFD" firstAttribute="width" secondItem="VKH-Fs-5bK" secondAttribute="width" id="PqX-0y-29a"/>
+                        <constraint firstAttribute="bottom" secondItem="L1w-wU-gFD" secondAttribute="bottom" id="hua-O2-AdP"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="rdB-Mr-yPX"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="VUZ-qK-ORh"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="VKH-Fs-5bK" firstAttribute="trailing" secondItem="sq6-ss-p09" secondAttribute="trailing" id="0hf-cg-Off"/>
+                <constraint firstAttribute="bottom" secondItem="VKH-Fs-5bK" secondAttribute="bottom" id="MVP-rT-g6s"/>
+                <constraint firstItem="VKH-Fs-5bK" firstAttribute="leading" secondItem="sq6-ss-p09" secondAttribute="leading" id="VOr-c7-gNk"/>
+                <constraint firstItem="VKH-Fs-5bK" firstAttribute="top" secondItem="DJM-66-Olf" secondAttribute="top" id="rxh-QU-xay"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="sq6-ss-p09"/>
+            <point key="canvasLocation" x="-47.826086956521742" y="93.75"/>
+        </view>
+    </objects>
+</document>
