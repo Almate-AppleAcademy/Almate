@@ -17,6 +17,9 @@ class JobsViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Jobs"
+        //navigationItem.title = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
 
