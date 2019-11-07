@@ -29,6 +29,8 @@
 		5E4B2DBF237417C500EEA1FE /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B2DAB2373F46A00EEA1FE /* SF-Pro-Display-ThinItalic.otf */; };
 		5E4B2DC0237417C500EEA1FE /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B2DA42373F46800EEA1FE /* SF-Pro-Display-Ultralight.otf */; };
 		5E4B2DC1237417C500EEA1FE /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B2DA52373F46800EEA1FE /* SF-Pro-Display-UltralightItalic.otf */; };
+		5E4B2DC62374352900EEA1FE /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B2DC42374352900EEA1FE /* ProfileCell.swift */; };
+		5E4B2DC72374352900EEA1FE /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B2DC52374352900EEA1FE /* ProfileCell.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
 		8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8894581B236AB41200E3D838 /* Default-568h@2x.png */; };
 		8894581E236AD0EC00E3D838 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8894581D236AD0EB00E3D838 /* GoogleService-Info.plist */; };
@@ -74,6 +76,8 @@
 		5E4B2DAD2373F46A00EEA1FE /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		5E4B2DAE2373F46A00EEA1FE /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		5E4B2DAF2373F46B00EEA1FE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		5E4B2DC42374352900EEA1FE /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		5E4B2DC52374352900EEA1FE /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		8894581B236AB41200E3D838 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			children = (
 				5E4B2D77237299D500EEA1FE /* ProfileViewController.xib */,
 				5E4B2D7A2372B12900EEA1FE /* ProfileView.swift */,
+				5E4B2DC42374352900EEA1FE /* ProfileCell.swift */,
+				5E4B2DC52374352900EEA1FE /* ProfileCell.xib */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				5E4B2DBE237417C500EEA1FE /* SF-Pro-Display-Thin.otf in Resources */,
 				5E4B2DB8237417C500EEA1FE /* SF-Pro-Display-Medium.otf in Resources */,
 				5E4B2DB4237417C500EEA1FE /* SF-Pro-Display-Heavy.otf in Resources */,
+				5E4B2DC72374352900EEA1FE /* ProfileCell.xib in Resources */,
 				5E4B2DB6237417C500EEA1FE /* SF-Pro-Display-Light.otf in Resources */,
 				5E4B2DBD237417C500EEA1FE /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
@@ -491,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4B2DC62374352900EEA1FE /* ProfileCell.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
 				5E4B2D7B2372B12900EEA1FE /* ProfileView.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
