@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     private let jobVC = JobsViewController()
     private let newsVC = NewsViewController()
     private let peopleVC = PeopleViewController()
-    private let notifVC = NotifViewController()
+    private let notifVC = NotifTableViewController()
     var tabBarCnt: UITabBarController!
     
     override func viewDidLoad() {

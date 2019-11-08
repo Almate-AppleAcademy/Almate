@@ -14,6 +14,11 @@
 		3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */; };
 		3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */; };
 		3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB648E3237418E9005B884D /* GoogleService-Info.plist */; };
+		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
+		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
+		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
+		5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C72372C72A00CE5E7B /* Notif2TableViewCell.xib */; };
+		5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68CA23741C6F00CE5E7B /* NotifView.swift */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
 		8890B98123717D33005EE950 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B98023717D33005EE950 /* PeopleView.swift */; };
 		8890B98423717E69005EE950 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B98223717E69005EE950 /* PeopleCell.swift */; };
@@ -25,7 +30,7 @@
 		88945832236AF46600E3D838 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945830236AF46600E3D838 /* NewsViewController.xib */; };
 		88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945833236AF47900E3D838 /* PeopleViewController.swift */; };
 		88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945834236AF47900E3D838 /* PeopleViewController.xib */; };
-		88945839236AF48600E3D838 /* NotifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945837236AF48600E3D838 /* NotifViewController.swift */; };
+		88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88945837236AF48600E3D838 /* NotifTableViewController.swift */; };
 		8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88945838236AF48600E3D838 /* NotifViewController.xib */; };
 		8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894583B236AF49600E3D838 /* JobsViewController.swift */; };
 		8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583C236AF49600E3D838 /* JobsViewController.xib */; };
@@ -48,6 +53,11 @@
 		3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
 		3AB648E3237418E9005B884D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
+		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
+		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
+		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
+		5FFD68C72372C72A00CE5E7B /* Notif2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif2TableViewCell.xib; sourceTree = "<group>"; };
+		5FFD68CA23741C6F00CE5E7B /* NotifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifView.swift; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		8890B98023717D33005EE950 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
@@ -61,7 +71,7 @@
 		88945830236AF46600E3D838 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		88945833236AF47900E3D838 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		88945834236AF47900E3D838 /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
-		88945837236AF48600E3D838 /* NotifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifViewController.swift; sourceTree = "<group>"; };
+		88945837236AF48600E3D838 /* NotifTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableViewController.swift; sourceTree = "<group>"; };
 		88945838236AF48600E3D838 /* NotifViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifViewController.xib; sourceTree = "<group>"; };
 		8894583B236AF49600E3D838 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		8894583C236AF49600E3D838 /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
@@ -148,7 +158,7 @@
 		8894582B236AF41700E3D838 /* Notif */ = {
 			isa = PBXGroup;
 			children = (
-				88945837236AF48600E3D838 /* NotifViewController.swift */,
+				88945837236AF48600E3D838 /* NotifTableViewController.swift */,
 			);
 			path = Notif;
 			sourceTree = "<group>";
@@ -157,6 +167,11 @@
 			isa = PBXGroup;
 			children = (
 				88945838236AF48600E3D838 /* NotifViewController.xib */,
+				5FFD68CA23741C6F00CE5E7B /* NotifView.swift */,
+				5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */,
+				5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */,
+				5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */,
+				5FFD68C72372C72A00CE5E7B /* Notif2TableViewCell.xib */,
 			);
 			path = Notif;
 			sourceTree = "<group>";
@@ -340,6 +355,7 @@
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
 				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
+				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
@@ -352,6 +368,7 @@
 				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
 				88F68223236985A8006249AA /* LoginViewController.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
+				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +439,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
+				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
+				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
+				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
+				5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,

@@ -9,6 +9,8 @@
 import UIKit
 
 class JobsViewController: UIViewController {
+    
+//    let tableCellId = "Notif1TableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,12 @@ class JobsViewController: UIViewController {
 
     @IBAction func didTapPostJob(_ sender: UIButton) {
         
+       
     }
+
+//    @IBAction func didTapPostJob(_ sender: UIButton) {
+//        
+//    }
     
     /*
     // MARK: - Navigation
