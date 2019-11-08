@@ -23,7 +23,6 @@ class NewsView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        newsCollection.register(UINib(nibName: "MatchFootballCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
     }
 
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class JobsViewController: UIViewController {
+    
+//    let tableCellId = "Notif1TableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +19,13 @@ class JobsViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Jobs"
+        
+       
     }
 
-    @IBAction func didTapPostJob(_ sender: UIButton) {
-        
-    }
+//    @IBAction func didTapPostJob(_ sender: UIButton) {
+//        
+//    }
     
     /*
     // MARK: - Navigation
