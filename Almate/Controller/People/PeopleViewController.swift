@@ -8,27 +8,28 @@
 
 import UIKit
 
-class PeopleViewController: UIViewController {
-
+class PeopleViewController: UIViewController, PeopleViewDelegate {
+    
+    @IBOutlet var peopleView: PeopleView!
+    
+    @IBAction func pindah(_ sender: Any) {
+        let vc = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("hah")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "People"
+        peopleView.delegate = self
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
+    func didSelectItemAt() {
+        let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }

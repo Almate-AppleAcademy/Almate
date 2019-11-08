@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             createController(title: "People", imageName: "news", vc: peopleVC),
             createController(title: "Notification", imageName: "news", vc: notifVC)
         ]
-        
+        print(self.navigationController)
         viewControllers = tabList
 //        viewControllers = tabList.map { UINavigationController(rootViewController: $0) }
         
@@ -37,10 +37,11 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func createController(title: String, imageName: String, vc: UIViewController) -> UIViewController {
-        let recentVC = UINavigationController(rootViewController: vc)
-        recentVC.tabBarItem.title = title
-        recentVC.tabBarItem.image = UIImage(named: imageName)
-        return recentVC
+        let nav = UINavigationController(rootViewController: vc)
+//        let recentVC = vc
+        nav.tabBarItem.title = title
+        nav.tabBarItem.image = UIImage(named: imageName)
+        return nav
     }
     
     /*
