@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
+		885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A9A582372C239000D946E /* DetailPeopleViewController.swift */; };
+		885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885A9A592372C239000D946E /* DetailPeopleViewController.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
 		8882C601237022D9001F56B4 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882C5FF237022D9001F56B4 /* NewsCell.swift */; };
 		8890B98123717D33005EE950 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B98023717D33005EE950 /* PeopleView.swift */; };
@@ -26,6 +28,7 @@
 		8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894583B236AF49600E3D838 /* JobsViewController.swift */; };
 		8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583C236AF49600E3D838 /* JobsViewController.xib */; };
 		88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583F236B15E400E3D838 /* MainTabBarController.xib */; };
+		88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7AA3123754FE90016467A /* DetailPeopleView.swift */; };
 		88F68207236971B5006249AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68206236971B5006249AA /* AppDelegate.swift */; };
 		88F6820B236971B5006249AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6820A236971B5006249AA /* ViewController.swift */; };
 		88F68210236971B7006249AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F6820F236971B7006249AA /* Assets.xcassets */; };
@@ -37,6 +40,8 @@
 /* Begin PBXFileReference section */
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
+		885A9A582372C239000D946E /* DetailPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleViewController.swift; sourceTree = "<group>"; };
+		885A9A592372C239000D946E /* DetailPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPeopleViewController.xib; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		8882C5FF237022D9001F56B4 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.swift"; sourceTree = "<absolute>"; };
 		8882C600237022D9001F56B4 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewsCell.xib; path = "/Users/qiarra/Library/Autosave Information/Almate/Almate/View/News/NewsCell.xib"; sourceTree = "<absolute>"; };
@@ -56,6 +61,7 @@
 		8894583B236AF49600E3D838 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		8894583C236AF49600E3D838 /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
 		8894583F236B15E400E3D838 /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
+		88C7AA3123754FE90016467A /* DetailPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleView.swift; sourceTree = "<group>"; };
 		88F68203236971B5006249AA /* Almate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F68206236971B5006249AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F6820A236971B5006249AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		885A9A572372C1F3000D946E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				885A9A592372C239000D946E /* DetailPeopleViewController.xib */,
+				88C7AA3123754FE90016467A /* DetailPeopleView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		88945825236AF0A800E3D838 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +132,7 @@
 		88945829236AF40200E3D838 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				885A9A582372C239000D946E /* DetailPeopleViewController.swift */,
 				88945833236AF47900E3D838 /* PeopleViewController.swift */,
 			);
 			path = People;
@@ -125,6 +141,7 @@
 		8894582A236AF40C00E3D838 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				885A9A572372C1F3000D946E /* Detail */,
 				88945834236AF47900E3D838 /* PeopleViewController.xib */,
 				8890B98023717D33005EE950 /* PeopleView.swift */,
 				8890B98223717E69005EE950 /* PeopleCell.swift */,
@@ -330,6 +347,7 @@
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
 				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
 				88F68223236985A8006249AA /* LoginViewController.xib in Resources */,
+				885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,8 +422,10 @@
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
+				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifViewController.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
+				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
