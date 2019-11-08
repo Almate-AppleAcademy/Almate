@@ -16,23 +16,55 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        self.title = "News"
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+//        UINavigationBar.appearance().tintColor = .white
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
         navigationItem.title = "News"
+//        navigationController?.navigationBar.topItem?.title = "News"
+        navigationController?.view.backgroundColor = .clear
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        
+        let searchController = UISearchController(searchResultsController: nil)
         
         searchController.searchBar.delegate = self
-        //        searchController.delegate = self
-                
-                searchController.hidesNavigationBarDuringPresentation = false
-                searchController.obscuresBackgroundDuringPresentation = false
-                searchController.searchBar.placeholder = "Search GitHub Name User"
-                
-                searchController.searchBar.becomeFirstResponder()
-                self.navigationItem.titleView = searchController.searchBar
-                definesPresentationContext = true
+//        searchController.delegate = self
+        
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+
+//        searchController.searchBar.becomeFirstResponder()
+//        self.navigationItem.titleView = searchController.searchBar
+//        definesPresentationContext = true
+
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .clear
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
+        
     }
 
-
+    @IBAction func likeTapped(_ sender: UIButton) {
+        print("LIKE TAPPED")
+    }
+    
+    @IBAction func commentTapped(_ sender: UIButton) {
+        print("COMMENTS TAPPED")
+    }
     /*
     // MARK: - Navigation
 

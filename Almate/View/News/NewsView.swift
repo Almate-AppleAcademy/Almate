@@ -10,20 +10,34 @@ import UIKit
 
 class NewsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     @IBOutlet weak var newsCollection: UICollectionView!
     
     private let searchController = UISearchController(searchResultsController: nil)
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        newsCollection.register(UINib(nibName: "MatchFootballCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
+        newsCollection.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
+        newsCollection.delegate = self
+        newsCollection.dataSource = self
     }
 
+}
+
+extension NewsView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
+        
+//        cell.coNameOutlet.text = "Jing"
+        return cell
+    }
+    
+    
+}
+
+extension NewsView: UICollectionViewDelegate {
+    
 }
