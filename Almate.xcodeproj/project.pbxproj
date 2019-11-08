@@ -11,6 +11,8 @@
 		3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CF723742A15007E3D4D /* JobCell.swift */; };
 		3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C0CF823742A15007E3D4D /* JobCell.xib */; };
 		3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFB237430A8007E3D4D /* JobsView.swift */; };
+		3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */; };
+		3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */; };
 		3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB648E3237418E9005B884D /* GoogleService-Info.plist */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
 		8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8894581B236AB41200E3D838 /* Default-568h@2x.png */; };
@@ -37,6 +39,8 @@
 		3A9C0CF723742A15007E3D4D /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		3A9C0CF823742A15007E3D4D /* JobCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCell.xib; sourceTree = "<group>"; };
 		3A9C0CFB237430A8007E3D4D /* JobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsView.swift; sourceTree = "<group>"; };
+		3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
 		3AB648E3237418E9005B884D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.debug.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,8 +158,10 @@
 			children = (
 				8894583C236AF49600E3D838 /* JobsViewController.xib */,
 				3A9C0CFB237430A8007E3D4D /* JobsView.swift */,
-				3A9C0CF723742A15007E3D4D /* JobCell.swift */,
 				3A9C0CF823742A15007E3D4D /* JobCell.xib */,
+				3A9C0CF723742A15007E3D4D /* JobCell.swift */,
+				3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */,
+				3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
+				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
@@ -401,6 +408,7 @@
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifViewController.swift in Sources */,
+				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,

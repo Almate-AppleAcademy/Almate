@@ -14,28 +14,32 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="JobsView" customModule="Almate" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gb1-88-9Sr">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Wj-4xS">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="897"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1802"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-DZ-D9m">
-                                    <rect key="frame" x="0.0" y="-54" width="414" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-DZ-D9m">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mez-Lw-u6W">
+                                            <rect key="frame" x="0.0" y="-900" width="414" height="986"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.17701372504234314" green="0.2071114182472229" blue="0.25098615884780884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q14-gD-vIm">
-                                            <rect key="frame" x="25" y="94" width="249" height="40"/>
+                                            <rect key="frame" x="25" y="74" width="249" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnv-GZ-C1V">
-                                            <rect key="frame" x="344" y="94" width="45" height="45"/>
+                                            <rect key="frame" x="344" y="74" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="Oval"/>
                                         </button>
@@ -48,37 +52,55 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Know available position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-UB-KhD">
-                                    <rect key="frame" x="26" y="229" width="353" height="23"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Know available position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-UB-KhD">
+                                    <rect key="frame" x="116" y="229" width="182" height="19.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="secondary" translatesAutoresizingMaskIntoConstraints="NO" id="ThA-Di-bb1">
-                                    <rect key="frame" x="90" y="267" width="224" height="45"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondary" translatesAutoresizingMaskIntoConstraints="NO" id="ThA-Di-bb1">
+                                    <rect key="frame" x="94" y="263.5" width="226" height="47"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="52 jobs opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igV-QA-jnj">
-                                    <rect key="frame" x="32" y="347" width="236" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Az-E6h">
-                                    <rect key="frame" x="32" y="396" width="353" height="1349"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Az-E6h">
+                                    <rect key="frame" x="8" y="394.5" width="398" height="1350.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1350.5" id="vvT-ww-T5l"/>
+                                    </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Js-f5-2hR">
                                         <size key="itemSize" width="353" height="110"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 jobs opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igV-QA-jnj">
+                                    <rect key="frame" x="8" y="341" width="145" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="igV-QA-jnj" secondAttribute="trailing" constant="261" id="353-fk-yIe"/>
+                                <constraint firstItem="jqa-Az-E6h" firstAttribute="top" secondItem="igV-QA-jnj" secondAttribute="bottom" constant="29.5" id="HVY-I3-ful"/>
+                                <constraint firstItem="g0b-UB-KhD" firstAttribute="centerX" secondItem="ThA-Di-bb1" secondAttribute="centerX" id="JVv-I8-K3d"/>
+                                <constraint firstAttribute="bottom" secondItem="jqa-Az-E6h" secondAttribute="bottom" constant="57" id="LXq-6X-fKJ"/>
+                                <constraint firstItem="jqa-Az-E6h" firstAttribute="trailing" secondItem="IDT-Wj-4xS" secondAttribute="trailingMargin" id="Qvl-t9-cbr"/>
+                                <constraint firstItem="V4x-DZ-D9m" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" id="UjD-89-axQ"/>
+                                <constraint firstAttribute="trailing" secondItem="V4x-DZ-D9m" secondAttribute="trailing" id="a6m-9j-Tkr"/>
+                                <constraint firstItem="g0b-UB-KhD" firstAttribute="top" secondItem="V4x-DZ-D9m" secondAttribute="bottom" constant="35" id="ahY-4b-ray"/>
+                                <constraint firstItem="ThA-Di-bb1" firstAttribute="top" secondItem="g0b-UB-KhD" secondAttribute="bottom" constant="15" id="cEB-7E-VJg"/>
+                                <constraint firstItem="V4x-DZ-D9m" firstAttribute="top" secondItem="IDT-Wj-4xS" secondAttribute="top" id="dLa-Yu-44I"/>
+                                <constraint firstItem="g0b-UB-KhD" firstAttribute="top" secondItem="V4x-DZ-D9m" secondAttribute="bottom" constant="35" id="e8v-xN-IWg"/>
+                                <constraint firstItem="V4x-DZ-D9m" firstAttribute="centerX" secondItem="g0b-UB-KhD" secondAttribute="centerX" id="n7v-OR-mPI"/>
+                                <constraint firstItem="g0b-UB-KhD" firstAttribute="top" secondItem="IDT-Wj-4xS" secondAttribute="top" constant="229" id="oRH-3N-rov"/>
+                                <constraint firstItem="V4x-DZ-D9m" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" id="sk7-Tz-4Cd"/>
+                                <constraint firstItem="igV-QA-jnj" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" constant="8" id="vb8-ui-gLw"/>
+                                <constraint firstItem="igV-QA-jnj" firstAttribute="top" secondItem="ThA-Di-bb1" secondAttribute="bottom" constant="30.5" id="x7G-KD-nFQ"/>
+                                <constraint firstItem="jqa-Az-E6h" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leadingMargin" id="zDd-e4-wZm"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,7 +110,7 @@
                         <constraint firstItem="IDT-Wj-4xS" firstAttribute="top" secondItem="Gb1-88-9Sr" secondAttribute="top" id="LsR-fd-Mdk"/>
                         <constraint firstAttribute="bottom" secondItem="IDT-Wj-4xS" secondAttribute="bottom" id="bee-Bg-Khg"/>
                         <constraint firstItem="IDT-Wj-4xS" firstAttribute="width" secondItem="Gb1-88-9Sr" secondAttribute="width" id="dP9-xY-Ggu"/>
-                        <constraint firstItem="IDT-Wj-4xS" firstAttribute="height" secondItem="Gb1-88-9Sr" secondAttribute="height" multiplier="1.00111" id="noe-fr-JII"/>
+                        <constraint firstItem="IDT-Wj-4xS" firstAttribute="height" secondItem="Gb1-88-9Sr" secondAttribute="height" multiplier="1.00111" priority="250" id="noe-fr-JII"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="aYy-n2-Awh"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="AgB-3J-UgZ"/>
@@ -101,6 +123,7 @@
                 <constraint firstItem="Gb1-88-9Sr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kri-2d-1n0"/>
                 <constraint firstItem="Gb1-88-9Sr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sbg-0J-eL5"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
                 <outlet property="jobListTable" destination="jqa-Az-E6h" id="Axp-sj-C4o"/>
