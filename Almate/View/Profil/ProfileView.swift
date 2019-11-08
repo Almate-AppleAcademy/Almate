@@ -15,6 +15,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource 
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var workCollection: UICollectionView!
     @IBOutlet weak var workNumber: UILabel!
+    @IBOutlet weak var aboutLbl: UILabel!
     var workAngka: Int = 5
     override func awakeFromNib() {
         
@@ -23,6 +24,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource 
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         workCollection.dataSource = self
         workCollection.delegate = self
+
+        aboutLbl.sizeToFit()
         
     }
     
