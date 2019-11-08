@@ -1,31 +1,22 @@
 //
-//  JobsViewController.swift
+//  JobDetailViewController.swift
 //  Almate
 //
-//  Created by Qiarra on 31/10/19.
+//  Created by Adrian Suryo Abiyoga on 08/11/19.
 //  Copyright © 2019 Slamet Riyadi. All rights reserved.
 //
 
 import UIKit
 
-class JobsViewController: UIViewController {
+class JobDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Jobs"
-        //navigationItem.title = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    @IBAction func didTapPostJob(_ sender: UIButton) {
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 
