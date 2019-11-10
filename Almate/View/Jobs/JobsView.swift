@@ -11,11 +11,13 @@ import UIKit
 class JobsView: UIView {
 
     @IBOutlet var jobListTable: UICollectionView!
+    var delegate: JobViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         jobListTable.register(UINib(nibName: "JobCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
-//        jobListTable.delegate = self as! UICollectionViewDelegate
+        jobListTable.delegate = self
+            //as! UICollectionViewDelegate
         jobListTable.dataSource = self
         
     }
@@ -28,7 +30,7 @@ extension JobsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
-        cell.jobLocation.text = "msfasl"
+        cell.jobLocation.text = "Jakarta"
         return cell
     }
     
@@ -36,5 +38,11 @@ extension JobsView: UICollectionViewDataSource {
 }
 
 extension JobsView: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        delegate?.didSelectItemAt()
+    }
+}
+
+protocol JobViewDelegate {
+    func didSelectItemAt()
 }
