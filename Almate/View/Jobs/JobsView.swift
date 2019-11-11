@@ -13,6 +13,9 @@ class JobsView: UIView {
     @IBOutlet var jobListTable: UICollectionView!
     var delegate: JobViewDelegate?
     
+   
+    @IBOutlet var postJob: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         jobListTable.register(UINib(nibName: "JobCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
@@ -21,6 +24,11 @@ class JobsView: UIView {
         jobListTable.dataSource = self
         
     }
+    
+    @IBAction func postJobAct(_ sender: Any) {
+        
+    }
+    
 }
 
 extension JobsView: UICollectionViewDataSource {

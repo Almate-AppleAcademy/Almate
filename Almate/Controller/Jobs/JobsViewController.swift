@@ -28,13 +28,13 @@ class JobsViewController: UIViewController, JobViewDelegate {
     
 
         navigationController?.setNavigationBarHidden(true, animated: true)
-        jobView.delegate = self 
+        jobView.delegate = self
     }
 
-    @IBAction func didTapPostJob(_ sender: UIButton) {
-       
-       
-    }
+//    @IBAction func didTapPostJob(_ sender: UIButton) {
+//       
+//       
+//    }
 
 //    @IBAction func didTapPostJob(_ sender: UIButton) {
 //        
