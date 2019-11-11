@@ -19,6 +19,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource 
     var workAngka: Int = 5
     override func awakeFromNib() {
         
+        print("hehe")
         
         workNumber.text = "(\(workAngka))"
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
