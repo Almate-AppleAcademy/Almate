@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="gTV-IL-0wX" customClass="ProfileCell" customModule="Almate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-oJ-nYr">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="R6D-wm-8HO"/>
+                            <constraint firstAttribute="height" constant="130" id="sma-Zn-Qfl"/>
+                        </constraints>
+                        <state key="normal" image="work-pic"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mHS-oJ-nYr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="43G-NJ-97I"/>
+                <constraint firstItem="mHS-oJ-nYr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6HF-PL-Sf7"/>
+                <constraint firstAttribute="trailing" secondItem="mHS-oJ-nYr" secondAttribute="trailing" id="Jt9-fO-2MV"/>
+                <constraint firstAttribute="bottom" secondItem="mHS-oJ-nYr" secondAttribute="bottom" id="WGf-we-cDJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="141" height="95"/>
+            <connections>
+                <outlet property="workButton" destination="mHS-oJ-nYr" id="YUM-4K-2Kh"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="105.80357142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="work-pic" width="200" height="130"/>
+    </resources>
+</document>
