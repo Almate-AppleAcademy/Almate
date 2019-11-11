@@ -16,6 +16,8 @@ class DetailPeopleViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 //        navigationController?.setNavigationBarHidden(true, animated: true)
+//        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never 
     }
 
 
