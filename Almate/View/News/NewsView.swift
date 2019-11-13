@@ -31,7 +31,6 @@ extension NewsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
         
-//        cell.coNameOutlet.text = "Jing"
         return cell
     }
     

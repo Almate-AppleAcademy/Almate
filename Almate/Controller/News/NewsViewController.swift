@@ -56,14 +56,23 @@ class NewsViewController: UIViewController {
         searchController.searchBar.barTintColor = .white
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
         
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        self.navigationItem.setHidesBackButton(true, animated:false)
+
+
     }
+    
 
     @IBAction func likeTapped(_ sender: UIButton) {
         print("LIKE TAPPED")
+        
     }
     
     @IBAction func commentTapped(_ sender: UIButton) {
-        print("COMMENTS TAPPED")
+//        print("COMMENTS TAPPED")
+        let controller = CommentViewController(nibName: "CommentView", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     /*
     // MARK: - Navigation

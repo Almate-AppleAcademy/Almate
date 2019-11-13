@@ -51,6 +51,11 @@
 		88F68223236985A8006249AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F68221236985A8006249AA /* LoginViewController.xib */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
+		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
+		8B860214237A872B0053567B /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B860212237A872B0053567B /* CommentView.xib */; };
+		8B860217237A90A50053567B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860216237A90A50053567B /* CommentViewController.swift */; };
+		8B86021A237AB5AC0053567B /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860218237AB5AC0053567B /* CommentCell.swift */; };
+		8B86021B237AB5AC0053567B /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B860219237AB5AC0053567B /* CommentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,11 @@
 		88F68221236985A8006249AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		8B860212237A872B0053567B /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		8B860216237A90A50053567B /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		8B860218237AB5AC0053567B /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		8B860219237AB5AC0053567B /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		A8A87A6099742A499B316FBC /* Pods_Almate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Almate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8894582F236AF46600E3D838 /* NewsViewController.swift */,
+				8B860215237A90770053567B /* Comment */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 				885AA6D6236C54B00049B35E /* NewsView.swift */,
 				8B86020C2372BFC30053567B /* NewsCell.swift */,
 				8B86020D2372BFC30053567B /* NewsCell.xib */,
+				8B860210237A86D10053567B /* Conmment */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -330,6 +342,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8B860210237A86D10053567B /* Conmment */ = {
+			isa = PBXGroup;
+			children = (
+				8B860212237A872B0053567B /* CommentView.xib */,
+				8B860211237A872B0053567B /* CommentView.swift */,
+				8B860218237AB5AC0053567B /* CommentCell.swift */,
+				8B860219237AB5AC0053567B /* CommentCell.xib */,
+			);
+			path = Conmment;
+			sourceTree = "<group>";
+		};
+		8B860215237A90770053567B /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				8B860216237A90A50053567B /* CommentViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		DB35098C710DE15F4CAA8BFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +436,8 @@
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
+				8B86021B237AB5AC0053567B /* CommentCell.xib in Resources */,
+				8B860214237A872B0053567B /* CommentView.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
@@ -495,12 +528,14 @@
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
+				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
 				5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */,
+				8B860213237A872B0053567B /* CommentView.swift in Sources */,
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
@@ -512,6 +547,7 @@
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
 				8890B98423717E69005EE950 /* PeopleCell.swift in Sources */,
+				8B86021A237AB5AC0053567B /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
