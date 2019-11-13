@@ -10,6 +10,9 @@ import UIKit
 
 class CommentViewController: UIViewController {
     
+    @IBAction func postTapped(_ sender: UIButton) {
+        print("POST TAPPED")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

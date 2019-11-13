@@ -14,6 +14,7 @@ class CommentView: UIView {
     @IBOutlet weak var commentTextfield: UITextField!
     @IBOutlet weak var commentPhoto: UIImageView!
     @IBOutlet weak var commentSenderView: UIView!
+    @IBOutlet weak var postButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,18 +36,30 @@ class CommentView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        
+        postButton.isHidden = true
     }
 
     @objc func keyboardWillShow(sender: NSNotification) {
-            commentTextfield.frame.origin.y = 500
-            commentPhoto.frame.origin.y = 495
-            commentSenderView.frame.origin.y = 480
+        commentTextfield.frame.origin.y = 500
+        commentPhoto.frame.origin.y = 495
+        commentSenderView.frame.origin.y = 480
+        postButton.frame.origin.y = 502
+    
+        commentTextfield.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: self.commentTextfield.frame.height))
+        commentTextfield.rightViewMode = .always
+        postButton.isHidden = false
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
-            commentTextfield.frame.origin.y = 739
-            commentPhoto.frame.origin.y = 734
-            commentSenderView.frame.origin.y = 719
+        commentTextfield.frame.origin.y = 739
+        commentPhoto.frame.origin.y = 734
+        commentSenderView.frame.origin.y = 719
+        postButton.frame.origin.y = 741
+        
+        commentTextfield.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: self.commentTextfield.frame.height))
+        commentTextfield.rightViewMode = .always
+        postButton.isHidden = true
     }
     
 }
@@ -75,3 +88,10 @@ extension CommentView: UITextFieldDelegate {
         return textField.endEditing(false)
     }
 }
+
+//extension UITextField {
+//    func paddingRight(inset: CGFloat){
+//        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: inset, height: self.frame.height))
+//        self.leftViewMode = UITextField.ViewMode.always
+//    }
+//}
