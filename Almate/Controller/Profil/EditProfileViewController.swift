@@ -8,8 +8,9 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
-
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate {
+    
+    @IBOutlet var editProfile: EditProfileView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,17 @@ class EditProfileViewController: UIViewController {
     @objc func cancelPressed(){
         self.dismiss(animated: true, completion: nil)
     }
-
+    @IBAction func avatarPressed(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let avatarImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        editProfile.avaBtn.setImage(avatarImage.withRenderingMode(.alwaysOriginal), for: .normal)
+    }
 
     /*
     // MARK: - Navigation
