@@ -65,7 +65,7 @@ extension AppDelegate: AppDelegateFunc {
         //MARK: CHECK LOGIN IF TRUE TO MAIN PAGE IF FALSE TO LOGIN PAGE
         window = UIWindow(frame: UIScreen.main.bounds)
         if Auth.auth().currentUser == nil {
-            window?.rootViewController = MainTabBarController()
+            window?.rootViewController = ProfileViewController()
             window?.makeKeyAndVisible()
         } else {
             let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)

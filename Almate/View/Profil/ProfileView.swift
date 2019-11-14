@@ -8,15 +8,21 @@
 
 import UIKit
 
+var workAngka: Int = 5
+
 class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-
+    @IBOutlet weak var editBtn: UIButton!
+    
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var workCollection: UICollectionView!
     @IBOutlet weak var workNumber: UILabel!
     @IBOutlet weak var aboutLbl: UILabel!
-    var workAngka: Int = 5
+    @IBOutlet weak var linkedinBtn: UIButton!
+    @IBOutlet weak var phoneBtn: UIButton!
+    @IBOutlet weak var emailBtn: UIButton!
+    
     override func awakeFromNib() {
         
         print("hehe")
@@ -25,6 +31,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource 
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         workCollection.dataSource = self
         workCollection.delegate = self
+        
+        
 
         aboutLbl.sizeToFit()
         
