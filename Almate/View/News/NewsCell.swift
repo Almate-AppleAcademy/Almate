@@ -11,23 +11,20 @@ import UIKit
 class NewsCell: UICollectionViewCell {
 
     @IBOutlet weak var coImageOutlet: UIImageView!
-    @IBOutlet weak var buttonLikesImageOutlet: UIImageView!
-    @IBOutlet weak var buttonCommentsImageOutlet: UIImageView!
     @IBOutlet weak var coNameOutlet: UILabel!
     @IBOutlet weak var dateOutlet: UILabel!
     @IBOutlet weak var captionOutlet: UILabel!
     @IBOutlet weak var postImageOutlet: UIImageView!
     @IBOutlet weak var likesButtonOutlet: UIButton!
     @IBOutlet weak var commentButtonOutlet: UIButton!
-    @IBOutlet weak var likesLabel: UILabel!
-    @IBOutlet weak var commentsLabel: UILabel!
-    @IBOutlet weak var shareButtonOutlet: UIButton!
+
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        noPhoto()
         // Initialization code
     }
 
@@ -49,5 +46,19 @@ class NewsCell: UICollectionViewCell {
         self.layer.cornerRadius = 15.0
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+    }
+    
+    func noPhoto() {
+        if postImageOutlet.image == nil {
+            postImageOutlet.isHidden = true
+//            captionOutlet.heightAnchor
+//            captionOutlet.frame.height
+//            captioframe.size.height = label.frame.height + x
+            captionOutlet.frame = CGRect(x: 25, y: 80, width: 334, height: 377)
+//            likesButtonOutlet.frame.origin.y = 270
+//            commentButtonOutlet.frame.origin.y = 270
+            
+            
+        }
     }
 }
