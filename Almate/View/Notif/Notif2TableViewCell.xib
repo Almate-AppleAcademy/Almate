@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-H4-T77">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo 28-10-19 02.23.51" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-H4-T77">
                         <rect key="frame" x="27" y="17" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="Cha-OG-i9d"/>
@@ -28,14 +28,14 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-jV-bTa">
-                        <rect key="frame" x="95" y="29" width="40.5" height="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-jV-bTa">
+                        <rect key="frame" x="95" y="29" width="215.5" height="19"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDX-fb-2KK">
-                        <rect key="frame" x="324" y="32" width="34.5" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDX-fb-2KK">
+                        <rect key="frame" x="340" y="32" width="50" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,14 +46,14 @@
                     <constraint firstItem="9f7-jV-bTa" firstAttribute="leading" secondItem="fXY-H4-T77" secondAttribute="trailing" constant="23" id="2wC-IG-voC"/>
                     <constraint firstItem="fXY-H4-T77" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="9gs-iE-zqe"/>
                     <constraint firstItem="9f7-jV-bTa" firstAttribute="leading" secondItem="fXY-H4-T77" secondAttribute="trailing" constant="23" id="IHo-o9-Sqd"/>
-                    <constraint firstAttribute="trailing" secondItem="QDX-fb-2KK" secondAttribute="trailing" constant="55.5" id="KJY-bM-L7U"/>
-                    <constraint firstItem="QDX-fb-2KK" firstAttribute="leading" secondItem="9f7-jV-bTa" secondAttribute="trailing" constant="188.5" id="LsT-NF-XxV"/>
+                    <constraint firstAttribute="trailing" secondItem="QDX-fb-2KK" secondAttribute="trailing" constant="24" id="KJY-bM-L7U"/>
+                    <constraint firstItem="QDX-fb-2KK" firstAttribute="leading" secondItem="9f7-jV-bTa" secondAttribute="trailing" constant="45" id="LsT-NF-XxV"/>
                     <constraint firstItem="QDX-fb-2KK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="Lue-SD-y0b"/>
                     <constraint firstAttribute="bottom" secondItem="9f7-jV-bTa" secondAttribute="bottom" constant="32" id="MpM-eC-eeA"/>
                     <constraint firstItem="fXY-H4-T77" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="WtG-Ua-18p"/>
                     <constraint firstItem="9f7-jV-bTa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="a5V-WY-x75"/>
-                    <constraint firstAttribute="bottom" secondItem="QDX-fb-2KK" secondAttribute="bottom" constant="32" id="fHA-fS-VqF"/>
-                    <constraint firstItem="QDX-fb-2KK" firstAttribute="leading" secondItem="9f7-jV-bTa" secondAttribute="trailing" constant="188.5" id="mwF-oJ-RAX"/>
+                    <constraint firstAttribute="bottom" secondItem="QDX-fb-2KK" secondAttribute="bottom" constant="31" id="fHA-fS-VqF"/>
+                    <constraint firstItem="QDX-fb-2KK" firstAttribute="leading" secondItem="9f7-jV-bTa" secondAttribute="trailing" constant="45" id="mwF-oJ-RAX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -62,7 +62,10 @@
                 <outlet property="notificationOutlet" destination="9f7-jV-bTa" id="jvi-ys-4mp"/>
                 <outlet property="profilePictOutlet" destination="fXY-H4-T77" id="f96-7J-wKl"/>
             </connections>
-            <point key="canvasLocation" x="139" y="145"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Photo 28-10-19 02.23.51" width="1000" height="881"/>
+    </resources>
 </document>

@@ -28,7 +28,10 @@ extension JobsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
-        cell.jobLocation.text = "msfasl"
+        cell.jobLocation.text = "Jakarta"
+        cell.jobTitle.text = "UI/UX Designer"
+        cell.jobPicture.image = #imageLiteral(resourceName: "Rectangle")
+        let savefilled = UIImage(named: "savefilled") as UIImage?
         return cell
     }
     

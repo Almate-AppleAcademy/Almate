@@ -10,6 +10,7 @@ import UIKit
 
 class JobCell: UICollectionViewCell {
 
+    var didTapSaveJobs : (() -> ())?
     @IBOutlet var jobPicture: UIImageView!
     @IBOutlet var jobTitle: UILabel!
     @IBOutlet var companyName: UILabel!

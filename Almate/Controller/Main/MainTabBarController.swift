@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             createController(title: "Jobs", imageName: "news", vc: jobVC),
             createController(title: "News", imageName: "news", vc: newsVC),
             createController(title: "People", imageName: "news", vc: peopleVC),
-            createController(title: "Notification", imageName: "news", vc: notifVC)
+            createController(title: "Notification", imageName: "notiffilled", vc: notifVC)
         ]
         print(self.navigationController)
         viewControllers = tabList
