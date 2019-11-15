@@ -15,6 +15,7 @@ class JobCell: UICollectionViewCell {
     @IBOutlet var companyName: UILabel!
     @IBOutlet var jobLocation: UILabel!
     @IBOutlet var bookmarkBtn: UIButton!
+    var didTapSaveContact : (()->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,5 +37,10 @@ class JobCell: UICollectionViewCell {
         self.layer.shadowOpacity = 15/100
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+    }
+    
+    @IBAction func didTappedSaveContact(_ sender: UIButton) {
+        // MARK: STEP 3 - Call the variable inside function action
+        didTapSaveContact?()
     }
 }

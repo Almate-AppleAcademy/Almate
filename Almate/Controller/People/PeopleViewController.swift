@@ -10,26 +10,72 @@ import UIKit
 
 class PeopleViewController: UIViewController, PeopleViewDelegate {
     
-    @IBOutlet var peopleView: PeopleView!
+    func tappedSaveContact(_ state: UserCoreDataState, _ data: Users) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        if state == .delete {
+            
+        } else {
+            requestUserLocal.createData(data: data, appDelegate) {
+                (message) in
+                print(message)
+            }
+        }
+    }
     
-    @IBAction func pindah(_ sender: Any) {
+
+    @IBOutlet weak var blackView: UIView!
+    @IBOutlet var peopleView: PeopleView!
+    private let searchController = UISearchController(searchResultsController: nil)
+    var requestUserLocal = LocalUser()
+    
+    @IBAction func didTapFilterButton(_ sender: Any) {
         let vc = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.present(UINavigationController(rootViewController: FilterViewController()), animated: true, completion: nil)
         print("hah")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setSearchBar()
+        view.backgroundColor = .white
+        peopleView.delegate = self
+    }
+    
+    func setSearchBar() {
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+                
         navigationItem.title = "People"
-        peopleView.delegate = self
+        navigationController?.view.backgroundColor = .clear
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+                
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+
+        navigationController?.navigationBar.isTranslucent = true
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .clear
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
     }
     
     func didSelectItemAt() {
         let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
         self.navigationController?.pushViewController(controller, animated: true)
     }
+}
+
+extension PeopleViewController: UISearchBarDelegate {
+    
 }

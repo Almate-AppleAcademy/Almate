@@ -27,6 +27,18 @@
 		885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A9A582372C239000D946E /* DetailPeopleViewController.swift */; };
 		885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885A9A592372C239000D946E /* DetailPeopleViewController.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
+		887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F47AF237ADCD50059433E /* ReferenceCell.swift */; };
+		887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F47B0237ADCD50059433E /* ReferenceCell.xib */; };
+		888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */; };
+		888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888B296C237D4A8D00CA9DC0 /* FilterViewController.xib */; };
+		888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B296F237D4D9E00CA9DC0 /* FilterView.swift */; };
+		888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B2971237D524000CA9DC0 /* FilterCell.swift */; };
+		888B2974237D524000CA9DC0 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888B2972237D524000CA9DC0 /* FilterCell.xib */; };
+		888B2977237D525500CA9DC0 /* SortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B2975237D525500CA9DC0 /* SortCell.swift */; };
+		888B2978237D525500CA9DC0 /* SortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888B2976237D525500CA9DC0 /* SortCell.xib */; };
+		888B297B237D6AD000CA9DC0 /* FilterValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B2979237D6ACF00CA9DC0 /* FilterValueCell.swift */; };
+		888B297C237D6AD000CA9DC0 /* FilterValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888B297A237D6ACF00CA9DC0 /* FilterValueCell.xib */; };
+		888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B297D237DF0FF00CA9DC0 /* LocalJob.swift */; };
 		8890B98123717D33005EE950 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B98023717D33005EE950 /* PeopleView.swift */; };
 		8890B98423717E69005EE950 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B98223717E69005EE950 /* PeopleCell.swift */; };
 		8890B98523717E69005EE950 /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8890B98323717E69005EE950 /* PeopleCell.xib */; };
@@ -42,7 +54,23 @@
 		8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894583B236AF49600E3D838 /* JobsViewController.swift */; };
 		8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583C236AF49600E3D838 /* JobsViewController.xib */; };
 		88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8894583F236B15E400E3D838 /* MainTabBarController.xib */; };
+		88B9CB222379D1D500634110 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9CB202379D1D500634110 /* EducationCell.swift */; };
+		88B9CB232379D1D500634110 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B9CB212379D1D500634110 /* EducationCell.xib */; };
+		88B9CB272379D60300634110 /* WorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9CB252379D60300634110 /* WorkCell.swift */; };
+		88B9CB282379D60300634110 /* WorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B9CB262379D60300634110 /* WorkCell.xib */; };
 		88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7AA3123754FE90016467A /* DetailPeopleView.swift */; };
+		88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DCABA02379708C00B2FA08 /* SkillCell.swift */; };
+		88DCABA32379708C00B2FA08 /* SkillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DCABA12379708C00B2FA08 /* SkillCell.xib */; };
+		88E076FF237B398D0026D52B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076F7237B398C0026D52B /* Comment.swift */; };
+		88E07700237B398D0026D52B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076F8237B398C0026D52B /* Admin.swift */; };
+		88E07701237B398D0026D52B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076F9237B398D0026D52B /* Users.swift */; };
+		88E07702237B398D0026D52B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FA237B398D0026D52B /* Post.swift */; };
+		88E07703237B398D0026D52B /* Alumni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FB237B398D0026D52B /* Alumni.swift */; };
+		88E07704237B398D0026D52B /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FC237B398D0026D52B /* Institution.swift */; };
+		88E07705237B398D0026D52B /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FD237B398D0026D52B /* Notif.swift */; };
+		88E07706237B398D0026D52B /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FE237B398D0026D52B /* Reference.swift */; };
+		88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88E07707237B3C540026D52B /* User.xcdatamodeld */; };
+		88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0772D237B5BFF0026D52B /* LocalUser.swift */; };
 		88F68207236971B5006249AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68206236971B5006249AA /* AppDelegate.swift */; };
 		88F6820B236971B5006249AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6820A236971B5006249AA /* ViewController.swift */; };
 		88F68210236971B7006249AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F6820F236971B7006249AA /* Assets.xcassets */; };
@@ -80,6 +108,18 @@
 		885A9A582372C239000D946E /* DetailPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleViewController.swift; sourceTree = "<group>"; };
 		885A9A592372C239000D946E /* DetailPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPeopleViewController.xib; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		887F47AF237ADCD50059433E /* ReferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCell.swift; sourceTree = "<group>"; };
+		887F47B0237ADCD50059433E /* ReferenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceCell.xib; sourceTree = "<group>"; };
+		888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		888B296C237D4A8D00CA9DC0 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		888B296F237D4D9E00CA9DC0 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		888B2971237D524000CA9DC0 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		888B2972237D524000CA9DC0 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		888B2975237D525500CA9DC0 /* SortCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCell.swift; sourceTree = "<group>"; };
+		888B2976237D525500CA9DC0 /* SortCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortCell.xib; sourceTree = "<group>"; };
+		888B2979237D6ACF00CA9DC0 /* FilterValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterValueCell.swift; sourceTree = "<group>"; };
+		888B297A237D6ACF00CA9DC0 /* FilterValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterValueCell.xib; sourceTree = "<group>"; };
+		888B297D237DF0FF00CA9DC0 /* LocalJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJob.swift; sourceTree = "<group>"; };
 		8890B98023717D33005EE950 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		8890B98223717E69005EE950 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		8890B98323717E69005EE950 /* PeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
@@ -95,7 +135,23 @@
 		8894583B236AF49600E3D838 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		8894583C236AF49600E3D838 /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
 		8894583F236B15E400E3D838 /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
+		88B9CB202379D1D500634110 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
+		88B9CB212379D1D500634110 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
+		88B9CB252379D60300634110 /* WorkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkCell.swift; sourceTree = "<group>"; };
+		88B9CB262379D60300634110 /* WorkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkCell.xib; sourceTree = "<group>"; };
 		88C7AA3123754FE90016467A /* DetailPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleView.swift; sourceTree = "<group>"; };
+		88DCABA02379708C00B2FA08 /* SkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCell.swift; sourceTree = "<group>"; };
+		88DCABA12379708C00B2FA08 /* SkillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillCell.xib; sourceTree = "<group>"; };
+		88E076F7237B398C0026D52B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		88E076F8237B398C0026D52B /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		88E076F9237B398D0026D52B /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		88E076FA237B398D0026D52B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		88E076FB237B398D0026D52B /* Alumni.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alumni.swift; sourceTree = "<group>"; };
+		88E076FC237B398D0026D52B /* Institution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		88E076FD237B398D0026D52B /* Notif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
+		88E076FE237B398D0026D52B /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		88E07708237B3C540026D52B /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		88E0772D237B5BFF0026D52B /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		88F68203236971B5006249AA /* Almate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F68206236971B5006249AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F6820A236971B5006249AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +210,31 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		887F47AE237ADCAE0059433E /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				887F47AF237ADCD50059433E /* ReferenceCell.swift */,
+				887F47B0237ADCD50059433E /* ReferenceCell.xib */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		888B2966237D423400CA9DC0 /* FilterSort */ = {
+			isa = PBXGroup;
+			children = (
+				888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */,
+				888B296C237D4A8D00CA9DC0 /* FilterViewController.xib */,
+				888B296F237D4D9E00CA9DC0 /* FilterView.swift */,
+				888B2971237D524000CA9DC0 /* FilterCell.swift */,
+				888B2972237D524000CA9DC0 /* FilterCell.xib */,
+				888B2975237D525500CA9DC0 /* SortCell.swift */,
+				888B2976237D525500CA9DC0 /* SortCell.xib */,
+				888B2979237D6ACF00CA9DC0 /* FilterValueCell.swift */,
+				888B297A237D6ACF00CA9DC0 /* FilterValueCell.xib */,
+			);
+			path = FilterSort;
+			sourceTree = "<group>";
+		};
 		88945825236AF0A800E3D838 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +284,11 @@
 		8894582A236AF40C00E3D838 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				888B2966237D423400CA9DC0 /* FilterSort */,
+				887F47AE237ADCAE0059433E /* Reference */,
+				88B9CB242379D5DB00634110 /* Work */,
+				88B9CB1F237989B300634110 /* Education */,
+				88DCAB9F2379704700B2FA08 /* Skill */,
 				885A9A572372C1F3000D946E /* Detail */,
 				88945834236AF47900E3D838 /* PeopleViewController.xib */,
 				8890B98023717D33005EE950 /* PeopleView.swift */,
@@ -254,6 +340,74 @@
 			path = Jobs;
 			sourceTree = "<group>";
 		};
+		88B9CB1F237989B300634110 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				88B9CB202379D1D500634110 /* EducationCell.swift */,
+				88B9CB212379D1D500634110 /* EducationCell.xib */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		88B9CB242379D5DB00634110 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				88B9CB252379D60300634110 /* WorkCell.swift */,
+				88B9CB262379D60300634110 /* WorkCell.xib */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		88DCAB9F2379704700B2FA08 /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				88DCABA02379708C00B2FA08 /* SkillCell.swift */,
+				88DCABA12379708C00B2FA08 /* SkillCell.xib */,
+			);
+			path = Skill;
+			sourceTree = "<group>";
+		};
+		88E076F3237B394D0026D52B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88E076F8237B398C0026D52B /* Admin.swift */,
+				88E076FB237B398D0026D52B /* Alumni.swift */,
+				88E076F7237B398C0026D52B /* Comment.swift */,
+				88E076FC237B398D0026D52B /* Institution.swift */,
+				88E076FD237B398D0026D52B /* Notif.swift */,
+				88E076FA237B398D0026D52B /* Post.swift */,
+				88E076FE237B398D0026D52B /* Reference.swift */,
+				88E076F9237B398D0026D52B /* Users.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88E076F4237B395F0026D52B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				88E076F6237B39720026D52B /* Local */,
+				88E076F5237B396D0026D52B /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		88E076F5237B396D0026D52B /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		88E076F6237B39720026D52B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				88E07707237B3C540026D52B /* User.xcdatamodeld */,
+				88E0772D237B5BFF0026D52B /* LocalUser.swift */,
+				888B297D237DF0FF00CA9DC0 /* LocalJob.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		88F681FA236971B5006249AA = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +430,8 @@
 		88F68205236971B5006249AA /* Almate */ = {
 			isa = PBXGroup;
 			children = (
+				88E076F4237B395F0026D52B /* Data */,
+				88E076F3237B394D0026D52B /* Model */,
 				88F68224236985B6006249AA /* Controller */,
 				88F6821A236984D3006249AA /* View */,
 				88F68206236971B5006249AA /* AppDelegate.swift */,
@@ -444,13 +600,21 @@
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				8B86020F2372BFC30053567B /* NewsCell.xib in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
+				888B297C237D6AD000CA9DC0 /* FilterValueCell.xib in Resources */,
 				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
+				88DCABA32379708C00B2FA08 /* SkillCell.xib in Resources */,
+				88B9CB282379D60300634110 /* WorkCell.xib in Resources */,
 				88F68223236985A8006249AA /* LoginViewController.xib in Resources */,
 				885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */,
 				5E0DB360237957B10079A595 /* ProfileCell.xib in Resources */,
+				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
+				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
+				888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */,
 				5E0DB361237957B10079A595 /* ProfileViewController.xib in Resources */,
+				888B2974237D524000CA9DC0 /* FilterCell.xib in Resources */,
+				888B2978237D525500CA9DC0 /* SortCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,14 +684,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */,
+				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
 				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
+				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
+				888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */,
+				88E07704237B398D0026D52B /* Institution.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
+				888B297B237D6AD000CA9DC0 /* FilterValueCell.swift in Sources */,
+				88E07700237B398D0026D52B /* Admin.swift in Sources */,
+				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
+				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
+				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
+				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
+				88E07702237B398D0026D52B /* Post.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
+				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
 				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
@@ -537,12 +714,19 @@
 				5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */,
 				8B860213237A872B0053567B /* CommentView.swift in Sources */,
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
+				888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
+				88E07706237B398D0026D52B /* Reference.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
+				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
+				88E07705237B398D0026D52B /* Notif.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
+				88E07701237B398D0026D52B /* Users.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
+				888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */,
+				88E076FF237B398D0026D52B /* Comment.swift in Sources */,
 				8890B98123717D33005EE950 /* PeopleView.swift in Sources */,
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
@@ -739,6 +923,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88E07707237B3C540026D52B /* User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88E07708237B3C540026D52B /* User.xcdatamodel */,
+			);
+			currentVersion = 88E07708237B3C540026D52B /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 88F681FB236971B5006249AA /* Project object */;
 }
