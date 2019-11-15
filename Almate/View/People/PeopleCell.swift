@@ -14,6 +14,14 @@ class PeopleCell: UICollectionViewCell {
     @IBOutlet weak var namePeopleCell: UILabel!
     @IBOutlet weak var genPeopleCelll: UILabel!
     @IBOutlet weak var occupationPeopleCelll: UILabel!
+    @IBOutlet weak var skillCollection: UICollectionView!
+    @IBOutlet weak var btnSaveContact: UIButton!
+   
+    //THIS IS INSIDE CELL
+    //MARK: STEP 1 - Create Variable for action button cell
+    var didTapSaveContact : (()->())?
+    
+    let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoapods", "J-Pop"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,5 +42,26 @@ class PeopleCell: UICollectionViewCell {
         self.layer.shadowOpacity = 15/100
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        skillCollection.register(UINib(nibName: "SkillCell", bundle: nil), forCellWithReuseIdentifier: "skillCell")
+        skillCollection.dataSource = self
+    }
+    
+    // MARK: STEP 2 - Make Button actionable
+    @IBAction func didTappedSaveContact(_ sender: UIButton) {
+        // MARK: STEP 3 - Call the variable inside function action
+        didTapSaveContact?()
+    }
+}
+
+extension PeopleCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arraySkills.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
+        cell.skillLabel.text = arraySkills[indexPath.row]
+        return cell
     }
 }

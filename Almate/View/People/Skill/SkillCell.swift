@@ -1,28 +1,16 @@
 //
-//  JobCell.swift
+//  SkillCell.swift
 //  Almate
 //
-//  Created by Adrian Suryo Abiyoga on 07/11/19.
+//  Created by Qiarra on 11/11/19.
 //  Copyright © 2019 Slamet Riyadi. All rights reserved.
 //
 
 import UIKit
 
-class JobCell: UICollectionViewCell {
-
-    @IBOutlet var jobPicture: UIImageView!
-    @IBOutlet var jobTitle: UILabel!
-    @IBOutlet var companyName: UILabel!
-    @IBOutlet var jobLocation: UILabel!
-    @IBOutlet var bookmarkBtn: UIButton!
-    var didTapSaveContact : (()->())?
+class SkillCell: UICollectionViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-        
-    }
+    @IBOutlet weak var skillLabel: UILabel!
     
     override func layoutSubviews() {
         self.layer.borderWidth = 5.0
@@ -38,9 +26,5 @@ class JobCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
-    
-    @IBAction func didTappedSaveContact(_ sender: UIButton) {
-        // MARK: STEP 3 - Call the variable inside function action
-        didTapSaveContact?()
-    }
+
 }
