@@ -19,6 +19,12 @@ class EditProfileView: UIView, UICollectionViewDataSource, UICollectionViewDeleg
     @IBOutlet weak var experienceTableView: ProfileTableView!
     @IBOutlet weak var workCollection: UICollectionView!
     @IBOutlet weak var referenceCollection: UICollectionView!
+    @IBOutlet weak var nameTxtF: UITextField!
+    @IBOutlet weak var occupTxtF: UITextField!
+    @IBOutlet weak var locationTxtF: UITextField!
+    @IBOutlet weak var phoneTxtF: UITextField!
+    @IBOutlet weak var emailTxtF: UITextField!
+    @IBOutlet weak var aboutTxtV: UITextView!
     
     override func awakeFromNib() {
 

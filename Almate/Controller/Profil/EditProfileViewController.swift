@@ -8,18 +8,27 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate {
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
     @IBOutlet var editProfile: EditProfileView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
         let cancelBtn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelPressed))
         self.navigationItem.title = "Edit Profile"
         self.navigationItem.rightBarButtonItem = doneBtn
         self.navigationItem.leftBarButtonItem = cancelBtn
-        // Do any additional setup after loading the view.
+        
+        editProfile.nameTxtF.delegate = self
+        editProfile.occupTxtF.delegate = self
+        editProfile.locationTxtF.delegate = self
+        editProfile.phoneTxtF.delegate = self
+        editProfile.emailTxtF.delegate = self
+        editProfile.aboutTxtV.delegate = self
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @objc func donePressed(){
@@ -39,6 +48,25 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         guard let avatarImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         editProfile.avaBtn.setImage(avatarImage.withRenderingMode(.alwaysOriginal), for: .normal)
     }
+    
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           return true
+       }
+    
+    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+           textView.resignFirstResponder()
+           return true
+       }
 
     /*
     // MARK: - Navigation
@@ -50,4 +78,16 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     */
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
