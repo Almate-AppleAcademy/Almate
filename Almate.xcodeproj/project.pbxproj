@@ -867,7 +867,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
@@ -886,7 +885,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
