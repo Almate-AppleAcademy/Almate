@@ -29,6 +29,10 @@
 		5E0DB377237BE1970079A595 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB375237BE1970079A595 /* EducationCell.xib */; };
 		5E0DB37A237BE6420079A595 /* ReferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB378237BE6420079A595 /* ReferenceCell.swift */; };
 		5E0DB37B237BE6420079A595 /* ReferenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB379237BE6420079A595 /* ReferenceCell.xib */; };
+		5E0DB38A23828ADE0079A595 /* PeopleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB38823828ADE0079A595 /* PeopleListCell.swift */; };
+		5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38923828ADE0079A595 /* PeopleListCell.xib */; };
+		5E0DB38E23828AFA0079A595 /* JobsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB38C23828AFA0079A595 /* JobsListCell.swift */; };
+		5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38D23828AFA0079A595 /* JobsListCell.xib */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -86,6 +90,10 @@
 		5E0DB375237BE1970079A595 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
 		5E0DB378237BE6420079A595 /* ReferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCell.swift; sourceTree = "<group>"; };
 		5E0DB379237BE6420079A595 /* ReferenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceCell.xib; sourceTree = "<group>"; };
+		5E0DB38823828ADE0079A595 /* PeopleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCell.swift; sourceTree = "<group>"; };
+		5E0DB38923828ADE0079A595 /* PeopleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleListCell.xib; sourceTree = "<group>"; };
+		5E0DB38C23828AFA0079A595 /* JobsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListCell.swift; sourceTree = "<group>"; };
+		5E0DB38D23828AFA0079A595 /* JobsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsListCell.xib; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				5E0DB375237BE1970079A595 /* EducationCell.xib */,
 				5E0DB378237BE6420079A595 /* ReferenceCell.swift */,
 				5E0DB379237BE6420079A595 /* ReferenceCell.xib */,
+				5E0DB38823828ADE0079A595 /* PeopleListCell.swift */,
+				5E0DB38923828ADE0079A595 /* PeopleListCell.xib */,
+				5E0DB38C23828AFA0079A595 /* JobsListCell.swift */,
+				5E0DB38D23828AFA0079A595 /* JobsListCell.xib */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -435,12 +447,14 @@
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
+				5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				5E0DB377237BE1970079A595 /* EducationCell.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				8B86020F2372BFC30053567B /* NewsCell.xib in Resources */,
+				5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
 				5E0DB365237969AC0079A595 /* EditProfileViewController.xib in Resources */,
 				88945836236AF47900E3D838 /* PeopleViewController.xib in Resources */,
@@ -537,6 +551,7 @@
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
+				5E0DB38A23828ADE0079A595 /* PeopleListCell.swift in Sources */,
 				5E0DB37A237BE6420079A595 /* ReferenceCell.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
 				5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */,
@@ -546,6 +561,7 @@
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
+				5E0DB38E23828AFA0079A595 /* JobsListCell.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
 				8890B98123717D33005EE950 /* PeopleView.swift in Sources */,
