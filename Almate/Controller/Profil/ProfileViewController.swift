@@ -10,15 +10,61 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var profileSuperview: ProfileView!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         view.insetsLayoutMarginsFromSafeArea = false
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Profile Me"
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 
-
+    @IBAction func editPressed(_ sender: UIButton) {
+        self.present(UINavigationController(rootViewController: EditProfileViewController()), animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func linkedinPressed(_ sender: UIButton) {
+        if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/")
+        {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func phonePressed(_ sender: UIButton) {
+        
+    }
+    @IBAction func emailPressed(_ sender: UIButton) {
+        if let url = URL(string: "mailto:slametngeblog@gmail.com"){
+        UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func profilePressed(_ sender: UIButton) {
+        profileSuperview.profileView.alpha = 1
+        profileSuperview.savedView.alpha = 0
+        
+        profileSuperview.garisMenu.alpha = 1
+        profileSuperview.garisMenuDua.alpha = 0
+        
+        
+//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
+            
+    }
+    
+    @IBAction func savedPressed(_ sender: UIButton) {
+        profileSuperview.savedView.alpha = 1
+        profileSuperview.profileView.alpha = 0
+        
+        profileSuperview.garisMenuDua.alpha = 1
+        profileSuperview.garisMenu.alpha = 0
+        
+        
+//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

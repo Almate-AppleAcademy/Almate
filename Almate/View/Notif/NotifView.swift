@@ -8,21 +8,22 @@
 
 import UIKit
 
-//struct cellData {
+//struct cellData
+//{
 //    let cell: Int!
 //    let news: String!
 //    let date: String!
 //    let image: UIImage!
 //}
-
+//
 //class NotifView: UIView, UITableViewDataSource, UITableViewDelegate {
-   
+//
 //    let sections:  [String] = ["Today Notification", "Older Notification"]
 //
 //    let tableCellId = "Notif1TableViewCell"
 //    let reuseNya = "tableViewCell1"
 //    var arrayOfCellData = [cellData]()
-    
+//
 //    @IBOutlet weak var todayNotifOutlet: UITableView!
 //    @IBOutlet weak var olderNotifOutlet: UITableView!
 //
@@ -58,7 +59,6 @@ import UIKit
 //            let view = UIView()
 //            view.backgroundColor = #colorLiteral(red: 0.9646214843, green: 0.9647600055, blue: 0.9645912051, alpha: 1)
 //
-//            let label
 //            return view
 //        }
 //
@@ -74,16 +74,16 @@ import UIKit
 //            cell.date1Outlet.text = arrayOfCellData[indexPath.row].date
 //            return cell
 //    }
-    
-    
-    
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+//
+//
+//
+//
+//    /*
+//     Only override draw() if you perform custom drawing.
+//     An empty implementation adversely affects performance during animation.
+//    override func draw(_ rect: CGRect) {
+//         Drawing code
+//    }
+//    */
+//
 //}
