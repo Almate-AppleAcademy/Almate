@@ -49,9 +49,9 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         workNumber.text = "(\(workAngka))"
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
-        educationTable.register(UINib(nibName: "EducationCell", bundle: nil), forCellReuseIdentifier: "educationCell")
+        educationTable.register(UINib(nibName: "EducationProfileCell", bundle: nil), forCellReuseIdentifier: "educationProfileCell")
         experienceTable.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellReuseIdentifier: "experienceCell")
-        referenceCollection.register(UINib(nibName: "ReferenceCell", bundle: nil), forCellWithReuseIdentifier: "referenceCell")
+        referenceCollection.register(UINib(nibName: "ReferenceProfileCell", bundle: nil), forCellWithReuseIdentifier: "referenceProfileCell")
             
         peopleListCollection.register(UINib(nibName: "PeopleListCell", bundle: nil), forCellWithReuseIdentifier: "peopleListCell")
         jobsListCollection.register(UINib(nibName: "JobsListCell", bundle: nil), forCellWithReuseIdentifier: "jobsListCell")
@@ -101,7 +101,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as! ProfileCell
         return cell
         }else if collectionView == referenceCollection{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceCell", for: indexPath) as! ReferenceCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceProfileCell", for: indexPath) as! ReferenceProfileCell
             return cell
         }else if collectionView == peopleListCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleListCell", for: indexPath as IndexPath) as! PeopleListCell
@@ -127,7 +127,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == educationTable{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "educationCell", for: indexPath as IndexPath) as! EducationCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "educationProfileCell", for: indexPath as IndexPath) as! EducationProfileCell
             return cell
         }else if tableView == experienceTable{
             let cell = tableView.dequeueReusableCell(withIdentifier: "experienceCell", for: indexPath as IndexPath) as! ExperienceCell

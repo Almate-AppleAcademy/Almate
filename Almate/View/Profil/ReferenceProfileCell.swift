@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReferenceCell: UICollectionViewCell {
+class ReferenceProfileCell: UICollectionViewCell {
 
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var namaUser: UILabel!

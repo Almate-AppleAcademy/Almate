@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EducationCell: UITableViewCell {
+class EducationProfileCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

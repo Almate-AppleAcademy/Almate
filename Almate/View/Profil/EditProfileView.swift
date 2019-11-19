@@ -32,9 +32,9 @@ class EditProfileView: UIView, UICollectionViewDataSource, UICollectionViewDeleg
         avaBtn.imageView?.layer.cornerRadius = 37.5
         
         workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
-        educationTableView.register(UINib(nibName: "EducationCell", bundle: nil), forCellReuseIdentifier: "educationCell")
+        educationTableView.register(UINib(nibName: "EducationProfileCell", bundle: nil), forCellReuseIdentifier: "educationProfileCell")
         experienceTableView.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellReuseIdentifier: "experienceCell")
-        referenceCollection.register(UINib(nibName: "ReferenceCell", bundle: nil), forCellWithReuseIdentifier: "referenceCell")
+        referenceCollection.register(UINib(nibName: "ReferenceProfileCell", bundle: nil), forCellWithReuseIdentifier: "referenceProfileCell")
         
         educationTableView.dataSource = self
         educationTableView.delegate = self
@@ -62,7 +62,7 @@ class EditProfileView: UIView, UICollectionViewDataSource, UICollectionViewDeleg
         return cell
         }
         else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceCell", for: indexPath) as! ReferenceCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceProfileCell", for: indexPath) as! ReferenceProfileCell
             cell.quoteUser.text = "Nothing really matters... nothing really matters, to me. Anywhere the wind blows..."
             cell.quoteUser.sizeToFit()
             return cell
@@ -80,7 +80,7 @@ class EditProfileView: UIView, UICollectionViewDataSource, UICollectionViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == educationTableView{
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "educationCell", for: indexPath) as! EducationCell
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "educationProfileCell", for: indexPath) as! EducationProfileCell
         
         return tableCell
         }
