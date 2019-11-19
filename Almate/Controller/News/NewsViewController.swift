@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController{
     
     private let searchController = UISearchController(searchResultsController: nil)
     
@@ -59,7 +59,6 @@ class NewsViewController: UIViewController {
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         self.navigationItem.setHidesBackButton(true, animated:false)
-
 
     }
     

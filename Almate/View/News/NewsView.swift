@@ -19,24 +19,30 @@ class NewsView: UIView {
         newsCollection.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         newsCollection.delegate = self
         newsCollection.dataSource = self
+        if let layout = newsCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = CGSize(width: newsCollection.frame.width - 50, height: 10)
+        }
+        
     }
 
 }
 
 extension NewsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
+        print(#function)
+        if indexPath.row == 0 {
+            cell.captionOutlet.text = "Just a short text"
+        }
         return cell
     }
-    
-    
+
 }
 
 extension NewsView: UICollectionViewDelegate {
-    
+   
 }

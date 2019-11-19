@@ -26,6 +26,8 @@ class NewsCell: UICollectionViewCell {
         
         noPhoto()
         // Initialization code
+        
+        self.captionOutlet.preferredMaxLayoutWidth = self.captionOutlet.frame.width
     }
 
     override func layoutSubviews() {
@@ -60,5 +62,21 @@ class NewsCell: UICollectionViewCell {
             
             
         }
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        //Tooggle the magic that is Auto Layout
+        setNeedsLayout()
+        layoutIfNeeded()
+        
+        //Tries to fit contentView to the target size in Layoutattributes
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        
+        // Update Layout Attributes with height that was just calculated
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
     }
 }
