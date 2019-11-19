@@ -1,24 +1,21 @@
 import Foundation
-struct Post : Codable {
-	let text : String?
-	let like : Int?
-	let date : String?
-	let comment : [Comment]?
+import UIKit
 
-	enum CodingKeys: String, CodingKey {
+struct Post {
+	let postText : String?
+	let postLike : Int?
+	let postDate : String?
+	let postComment : [Comment]?
+    let postBy: String?
+    let postPhoto: UIImage?
 
-		case text = "text"
-		case like = "like"
-		case date = "date"
-		case comment = "comment"
-	}
+	enum CodingKeys: String {
 
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		text = try values.decodeIfPresent(String.self, forKey: .text)
-		like = try values.decodeIfPresent(Int.self, forKey: .like)
-		date = try values.decodeIfPresent(String.self, forKey: .date)
-		comment = try values.decodeIfPresent([Comment].self, forKey: .comment)
-	}
-
+		case postText = "text"
+		case postLike = "like"
+		case postDate = "date"
+		case postComment = "comment"
+        case postBy = "postBy"
+        case postPhoto = "postPhoto"
+    }
 }

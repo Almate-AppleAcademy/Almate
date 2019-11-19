@@ -8,11 +8,4 @@ struct Reference : Codable {
 		case idUser = "idUser"
 		case textReference = "textReference"
 	}
-
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		idUser = try values.decodeIfPresent(String.self, forKey: .idUser)
-		textReference = try values.decodeIfPresent(String.self, forKey: .textReference)
-	}
-
 }

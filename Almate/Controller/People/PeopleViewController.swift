@@ -13,7 +13,9 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     func tappedSaveContact(_ state: UserCoreDataState, _ data: Users) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if state == .delete {
-            
+            requestUserLocal.deleteData(data: data, appDelegate) { (message) in
+                print(message)
+            }
         } else {
             requestUserLocal.createData(data: data, appDelegate) {
                 (message) in
@@ -21,24 +23,25 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
             }
         }
     }
-    
 
     @IBOutlet weak var blackView: UIView!
     @IBOutlet var peopleView: PeopleView!
     private let searchController = UISearchController(searchResultsController: nil)
     var requestUserLocal = LocalUser()
+    var requestUserDummy = DummyUsers()
     
     @IBAction func didTapFilterButton(_ sender: Any) {
-        let vc = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
         self.navigationController?.present(UINavigationController(rootViewController: FilterViewController()), animated: true, completion: nil)
-        print("hah")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSearchBar()
         view.backgroundColor = .white
+        setSearchBar()
         peopleView.delegate = self
+        requestUserDummy.getData(userType: checkUserType()) { (data) in
+            self.peopleView.displayDataPeople(data: data)
+        }
     }
     
     func setSearchBar() {

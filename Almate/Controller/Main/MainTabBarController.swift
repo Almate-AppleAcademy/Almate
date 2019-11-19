@@ -19,17 +19,23 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        var tabList: [UIViewController]?
+        if checkUserType() == UserType.Alumni {
+            tabList = [
+                self.createController(title: "News", imageName: "news", vc: newsVC),
+                self.createController(title: "Jobs", imageName: "news", vc: jobVC),
+                self.createController(title: "People", imageName: "news", vc: peopleVC),
+                self.createController(title: "Notification", imageName: "news", vc: notifVC)
+            ]
+        } else {
+            tabList = [
+                self.createController(title: "Jobs", imageName: "news", vc: jobVC),
+                self.createController(title: "People", imageName: "news", vc: peopleVC),
+                self.createController(title: "Notification", imageName: "news", vc: notifVC)
+            ]
+        }
         
-        let tabList = [
-            createController(title: "Jobs", imageName: "news", vc: jobVC),
-            createController(title: "News", imageName: "news", vc: newsVC),
-            createController(title: "People", imageName: "news", vc: peopleVC),
-            createController(title: "Notification", imageName: "news", vc: notifVC)
-        ]
-        print(self.navigationController)
         viewControllers = tabList
-//        viewControllers = tabList.map { UINavigationController(rootViewController: $0) }
-        
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
@@ -38,20 +44,23 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func createController(title: String, imageName: String, vc: UIViewController) -> UIViewController {
         let nav = UINavigationController(rootViewController: vc)
-//        let recentVC = vc
         nav.tabBarItem.title = title
         nav.tabBarItem.image = UIImage(named: imageName)
         return nav
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+func checkUserType() -> UserType {
+    let userType = UserDefaults.standard.integer(forKey: "userType")
+    //MARK: User Type 0 for Alumni; User Type 1 for Employer
+    if userType == 0 {
+        return UserType.Alumni
+    } else {
+        return UserType.Employer
     }
-    */
+}
 
+enum UserType {
+    case Alumni
+    case Employer
 }

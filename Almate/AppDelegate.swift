@@ -112,6 +112,8 @@ extension AppDelegate: AppDelegateFunc {
         //MARK: CHECK LOGIN IF TRUE TO MAIN PAGE IF FALSE TO LOGIN PAGE
         window = UIWindow(frame: UIScreen.main.bounds)
         if Auth.auth().currentUser == nil {
+            // TODO: Dummy Save that actually do inside LoginController later
+            UserDefaults.standard.set(0, forKey: "userType")
             window?.rootViewController = MainTabBarController()
             window?.makeKeyAndVisible()
         } else {
