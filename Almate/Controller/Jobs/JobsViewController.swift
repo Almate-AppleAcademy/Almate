@@ -27,27 +27,15 @@ class JobsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    @IBAction func didTapPostJob(_ sender: UIButton) {
-       
-    }
-
-//    @IBAction func didTapPostJob(_ sender: UIButton) {
-//        
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension JobsViewController: JobDelegate {
+    func didTapPostJob() {
+         let vc = PostJobViewController(nibName: "PostJobViewController", bundle: nil)
+                   self.navigationController?.present(vc, animated: true)
+                   print("hah")
+    }
+    
 
     func tappedSaveJob(_ state: UserCoreDataState, _ data: Admin) {
         print("job-4-almost")
@@ -62,4 +50,14 @@ extension JobsViewController: JobDelegate {
             }
         }
     }
+    
+        func didSelectItemAt() {
+            let vc = JobDetailViewController(nibName: "JobDetailViewController", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+            print("hah")
+        }
+    
 }
+
+
+
