@@ -17,7 +17,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var savedView: UIView!
-    
+
   
     @IBOutlet weak var garisMenu: UIImageView!
     @IBOutlet weak var garisMenuDua: UIImageView!
@@ -29,6 +29,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     @IBOutlet weak var skillCollection: UICollectionView!
     @IBOutlet weak var educationTable: UITableView!
     @IBOutlet weak var experienceTable: UITableView!
+    @IBOutlet weak var referenceCollection: UICollectionView!
     
     
     @IBOutlet weak var peopleListCollection: UICollectionView!
@@ -44,11 +45,13 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     override func awakeFromNib() {
         
         garisMenuDua.alpha = 0
+        savedView.alpha = 0
         
         workNumber.text = "(\(workAngka))"
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         educationTable.register(UINib(nibName: "EducationCell", bundle: nil), forCellReuseIdentifier: "educationCell")
         experienceTable.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellReuseIdentifier: "experienceCell")
+        referenceCollection.register(UINib(nibName: "ReferenceCell", bundle: nil), forCellWithReuseIdentifier: "referenceCell")
             
         peopleListCollection.register(UINib(nibName: "PeopleListCell", bundle: nil), forCellWithReuseIdentifier: "peopleListCell")
         jobsListCollection.register(UINib(nibName: "JobsListCell", bundle: nil), forCellWithReuseIdentifier: "jobsListCell")
@@ -69,6 +72,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         jobsListCollection.delegate = self
         jobsSavedCollection.dataSource = self
         jobsSavedCollection.delegate = self
+        referenceCollection.delegate = self
+        referenceCollection.dataSource = self
         
         
         
@@ -80,6 +85,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == workCollection{
             return workAngka
+        }else if collectionView == referenceCollection{
+            return 1
         }else if collectionView == peopleListCollection{
             return 4
         }else if collectionView == jobsListCollection{
@@ -93,6 +100,9 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if collectionView == workCollection{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as! ProfileCell
         return cell
+        }else if collectionView == referenceCollection{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceCell", for: indexPath) as! ReferenceCell
+            return cell
         }else if collectionView == peopleListCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleListCell", for: indexPath as IndexPath) as! PeopleListCell
             return cell
