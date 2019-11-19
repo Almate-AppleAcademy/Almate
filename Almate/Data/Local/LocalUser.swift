@@ -11,10 +11,10 @@ import CoreData
 
 class LocalUser: LocalUserDataDelegate {
     
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
-        fetchRequest.predicate = NSPredicate(format: "idUser =  %@", "\(data.idUser!)")
+        fetchRequest.predicate = NSPredicate(format: "firstName =  %@", "\(data.firstName)")
         do {
             let test = try managedContext.fetch(fetchRequest)
             let objectToDelete = test[0] as! NSManagedObject
@@ -29,19 +29,19 @@ class LocalUser: LocalUserDataDelegate {
         }
     }
     
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func createData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
                
         // Declare an entity and create new record
         let userEntity = NSEntityDescription.entity(forEntityName: "UsersLocal", in: managedContext)!
         let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        user.setValue(data.idUser, forKey: "idUser")
-        user.setValue(data.email, forKey: "emailUser")
-        user.setValue(data.name, forKey: "nameUser")
-        user.setValue(data.generation, forKey: "genUser")
-        user.setValue(data.occupation, forKey: "occuUser")
-        user.setValue("okelah", forKey: "skillsUser")
+        user.setValue(data.firstName, forKey: "firstName")
+//        user.setValue(data.userContact.userEmail, forKey: "emailUser")
+//        user.setValue(data.name, forKey: "nameUser")
+//        user.setValue(data.generation, forKey: "genUser")
+//        user.setValue(data.occupation, forKey: "occuUser")
+//        user.setValue("okelah", forKey: "skillsUser")
         
         do {
             try managedContext.save()
@@ -64,6 +64,6 @@ class LocalUser: LocalUserDataDelegate {
 }
 
 protocol LocalUserDataDelegate {
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func createData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
+    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

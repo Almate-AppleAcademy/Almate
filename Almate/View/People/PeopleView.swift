@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PeopleView: UIView {
     
     @IBOutlet weak var peopleCollection: UICollectionView!
     @IBOutlet weak var peopleCount: UILabel!
     var delegate: PeopleViewDelegate?
+    var dataPeople: [User] = []
     
     override func awakeFromNib() {
         peopleCollection.register(UINib(nibName: "PeopleCell", bundle: nil), forCellWithReuseIdentifier: "peopleCell")
@@ -25,32 +27,35 @@ class PeopleView: UIView {
 extension PeopleView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userOccu.count
+        return dataPeople.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
-        cell.namePeopleCell.text = userName[indexPath.row]
+        let data = dataPeople[indexPath.row]
+        cell.namePeopleCell.text = "\(data.firstName) \(data.lastName) "
         cell.imgPeopleCell.image = userImage[indexPath.row]
-        cell.genPeopleCelll.text = userGrad[indexPath.row]
-        cell.occupationPeopleCelll.text = userOccu[indexPath.row]
+        cell.genPeopleCelll.text = data.userGeneration
+        cell.occupationPeopleCelll.text = data.userOccupation
+        cell.imgPeopleCell.sd_setImage(with: URL(string: data.userImage))
+        cell.skillData(data.tagSkill)
 //        cell.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
         let _: UIImage = cell.btnSaveContact.currentImage ?? UIImage(named: "save-unfilled")!
         cell.didTapSaveContact = {
             () in
             var localState = userLocal[indexPath.row]
-            let data = Users(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState,skills: [userOccu[indexPath.row]])
+//            let data = User(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState,skills: [userOccu[indexPath.row]])
             
             if (!localState) {
                 localState = !localState
-                self.delegate?.tappedSaveContact(.create, data)
+//                self.delegate?.tappedSaveContact(.create, data)
                 let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
                 cell?.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
             } else {
                 localState = !localState
                 cell.btnSaveContact.imageView?.image = UIImage(named: "save-unfilled")
-                self.delegate?.tappedSaveContact(.delete, data)
+//                self.delegate?.tappedSaveContact(.delete, data)
                 print("unfilled")
             }
         }
@@ -70,9 +75,22 @@ extension PeopleView: UICollectionViewDelegate {
     }
 }
 
+extension PeopleView: PeopleViewInput {
+    func displayPeople(_ data: [User]?) {
+        if let data = data {
+            self.dataPeople = data
+            self.peopleCollection.reloadData()
+        } else { return }
+    }
+}
+
 protocol PeopleViewDelegate {
     func didSelectItemAt()
-    func tappedSaveContact(_ state: UserCoreDataState,_ data: Users)
+    func tappedSaveContact(_ state: UserCoreDataState,_ data: User)
+}
+
+protocol PeopleViewInput {
+    func displayPeople(_ data: [User]?)
 }
 
 enum UserCoreDataState {

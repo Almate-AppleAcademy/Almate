@@ -9,8 +9,27 @@
 import UIKit
 
 class PeopleViewController: UIViewController, PeopleViewDelegate {
+
+    @IBOutlet weak var blackView: UIView!
+    @IBOutlet var peopleView: PeopleView!
+    private let searchController = UISearchController(searchResultsController: nil)
+    var requestUserLocal = LocalUser()
+    var requestPeopleRemote = RemotePeople()
     
-    func tappedSaveContact(_ state: UserCoreDataState, _ data: Users) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setSearchBar()
+        view.backgroundColor = .white
+        peopleView.delegate = self
+        
+        //Request Users Institution Data
+        requestPeopleRemote.loadPeople { (data) in
+            print(data)
+            self.peopleView.displayPeople(data)
+        }
+    }
+    
+    func tappedSaveContact(_ state: UserCoreDataState, _ data: User) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if state == .delete {
             
@@ -22,23 +41,8 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         }
     }
     
-
-    @IBOutlet weak var blackView: UIView!
-    @IBOutlet var peopleView: PeopleView!
-    private let searchController = UISearchController(searchResultsController: nil)
-    var requestUserLocal = LocalUser()
-    
     @IBAction func didTapFilterButton(_ sender: Any) {
-        let vc = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
         self.navigationController?.present(UINavigationController(rootViewController: FilterViewController()), animated: true, completion: nil)
-        print("hah")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setSearchBar()
-        view.backgroundColor = .white
-        peopleView.delegate = self
     }
     
     func setSearchBar() {
