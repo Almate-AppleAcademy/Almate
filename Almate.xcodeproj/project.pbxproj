@@ -93,6 +93,9 @@
 		88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F68211236971B7006249AA /* LaunchScreen.storyboard */; };
 		88F68222236985A8006249AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68220236985A8006249AA /* LoginViewController.swift */; };
 		88F68223236985A8006249AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F68221236985A8006249AA /* LoginViewController.xib */; };
+		8B53CDAE2385362700E3ED23 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */; };
+		8B53CDAF2385362700E3ED23 /* EmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */; };
+		8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDB02385364200E3ED23 /* EmployerView.swift */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
 		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
@@ -192,6 +195,9 @@
 		88F68214236971B7006249AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88F68220236985A8006249AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88F68221236985A8006249AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
+		8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerViewController.xib; sourceTree = "<group>"; };
+		8B53CDB02385364200E3ED23 /* EmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerView.swift; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 		5E0DB356237957890079A595 /* Profil */ = {
 			isa = PBXGroup;
 			children = (
+				8B53CDAB238535F200E3ED23 /* EMPLOYER PROFIL */,
 				5E0DB357237957890079A595 /* ProfileViewController.swift */,
 				5E0DB362237969AC0079A595 /* EditProfileViewController.swift */,
 			);
@@ -226,6 +233,7 @@
 		5E0DB359237957B10079A595 /* Profil */ = {
 			isa = PBXGroup;
 			children = (
+				8B53CDAA238535E000E3ED23 /* EMPLOYER PROFIL */,
 				5E0DB35A237957B10079A595 /* ProfileCell.swift */,
 				5E0DB35B237957B10079A595 /* ProfileView.swift */,
 				5E0DB35C237957B10079A595 /* ProfileCell.xib */,
@@ -546,6 +554,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8B53CDAA238535E000E3ED23 /* EMPLOYER PROFIL */ = {
+			isa = PBXGroup;
+			children = (
+				8B53CDB02385364200E3ED23 /* EmployerView.swift */,
+				8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */,
+			);
+			path = "EMPLOYER PROFIL";
+			sourceTree = "<group>";
+		};
+		8B53CDAB238535F200E3ED23 /* EMPLOYER PROFIL */ = {
+			isa = PBXGroup;
+			children = (
+				8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */,
+			);
+			path = "EMPLOYER PROFIL";
+			sourceTree = "<group>";
+		};
 		8B860210237A86D10053567B /* Conmment */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +661,7 @@
 			files = (
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
 				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
+				8B53CDAF2385362700E3ED23 /* EmployerViewController.xib in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
@@ -739,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */,
 				5E0DB364237969AC0079A595 /* EditProfileViewController.swift in Sources */,
 				5E0DB369237AA3880079A595 /* ProfileTableView.swift in Sources */,
 				887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */,
@@ -778,6 +805,7 @@
 				8B860213237A872B0053567B /* CommentView.swift in Sources */,
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
 				888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */,
+				8B53CDAE2385362700E3ED23 /* EmployerViewController.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				88E07706237B398D0026D52B /* Reference.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
