@@ -12,7 +12,7 @@ var workAngka: Int = 5
 
 class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate {
     
-    
+    let skillTags = ["Swift", "Java", "C++", "Kotlin", "Ruby", "Sketch", "SAP HR"]
     
     
     @IBOutlet weak var profileView: UIView!
@@ -47,6 +47,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         garisMenuDua.alpha = 0
         savedView.alpha = 0
         
+        skillCollection.register(UINib(nibName: "SkillProfileCell", bundle: nil), forCellWithReuseIdentifier: "skillProfileCell")
         workNumber.text = "(\(workAngka))"
     workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         educationTable.register(UINib(nibName: "EducationProfileCell", bundle: nil), forCellReuseIdentifier: "educationProfileCell")
@@ -60,6 +61,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         
         
+        skillCollection.dataSource = self
+        skillCollection.delegate = self
         workCollection.dataSource = self
         workCollection.delegate = self
         educationTable.dataSource = self
@@ -85,6 +88,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == workCollection{
             return workAngka
+        }else if collectionView == skillCollection{
+            return skillTags.count
         }else if collectionView == referenceCollection{
             return 1
         }else if collectionView == peopleListCollection{
@@ -100,6 +105,10 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if collectionView == workCollection{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as! ProfileCell
         return cell
+        }else if collectionView == skillCollection{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillProfileCell", for: indexPath) as! SkillProfileCell
+            cell.skillLbl.text = skillTags[indexPath.row]
+            return cell
         }else if collectionView == referenceCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceProfileCell", for: indexPath) as! ReferenceProfileCell
             return cell

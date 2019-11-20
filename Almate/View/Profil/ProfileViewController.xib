@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,6 +150,106 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrk-j7-GgI">
+                                    <rect key="frame" x="0.0" y="476" width="414" height="1224"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-pM-cDw">
+                                            <rect key="frame" x="24" y="48" width="390" height="260"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="260" id="lXR-u8-pqy"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NSz-I1-Rkb">
+                                                <size key="itemSize" width="169" height="260"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People on your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-0o-FQg">
+                                            <rect key="frame" x="38" y="8" width="201" height="26"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs on your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-DL-jBb">
+                                            <rect key="frame" x="38" y="342" width="162.5" height="26"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fGp-Ai-RSC">
+                                            <rect key="frame" x="27" y="390" width="367" height="370"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="370" id="vms-1O-PEa"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="gCd-AB-Yxd">
+                                                <size key="itemSize" width="354" height="110"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs applied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-7t-dKe">
+                                            <rect key="frame" x="39" y="787" width="127" height="26"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="02i-KH-udO">
+                                            <rect key="frame" x="27" y="835" width="367" height="242"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="242" id="yPl-bk-lye"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pCo-qe-t7u">
+                                                <size key="itemSize" width="354" height="110"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-Yp-Dxm">
+                                            <rect key="frame" x="340" y="342" width="44" height="30"/>
+                                            <state key="normal" title="see all">
+                                                <color key="titleColor" red="0.0433146134" green="0.67770749330000002" blue="0.70981389279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byh-gs-YAa">
+                                            <rect key="frame" x="350" y="785" width="44" height="30"/>
+                                            <state key="normal" title="see all">
+                                                <color key="titleColor" red="0.0433146134" green="0.67770749330000002" blue="0.70981389279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="byh-gs-YAa" firstAttribute="top" secondItem="fGp-Ai-RSC" secondAttribute="bottom" constant="25" id="0Y7-fP-4qi"/>
+                                        <constraint firstAttribute="trailing" secondItem="byh-gs-YAa" secondAttribute="trailing" constant="20" id="2kj-nX-FrJ"/>
+                                        <constraint firstItem="eLb-DL-jBb" firstAttribute="top" secondItem="yVO-pM-cDw" secondAttribute="bottom" constant="34" id="58u-2E-35k"/>
+                                        <constraint firstItem="keQ-7t-dKe" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="39" id="GZx-ib-RcM"/>
+                                        <constraint firstItem="fGp-Ai-RSC" firstAttribute="top" secondItem="3c4-Yp-Dxm" secondAttribute="bottom" constant="18" id="Gbs-9D-1fh"/>
+                                        <constraint firstItem="xFw-0o-FQg" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="38" id="Pgp-NQ-aUw"/>
+                                        <constraint firstItem="fGp-Ai-RSC" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="27" id="PiC-pn-hKD"/>
+                                        <constraint firstItem="yVO-pM-cDw" firstAttribute="top" secondItem="xFw-0o-FQg" secondAttribute="bottom" constant="14" id="Pv1-Xn-UHM"/>
+                                        <constraint firstAttribute="bottom" secondItem="02i-KH-udO" secondAttribute="bottom" constant="147" id="RlD-6M-QWQ"/>
+                                        <constraint firstItem="eLb-DL-jBb" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="38" id="SzK-DS-t2u"/>
+                                        <constraint firstAttribute="trailing" secondItem="xFw-0o-FQg" secondAttribute="trailing" constant="175" id="T4x-4Z-fK3"/>
+                                        <constraint firstAttribute="trailing" secondItem="3c4-Yp-Dxm" secondAttribute="trailing" constant="30" id="U7u-Be-rgy"/>
+                                        <constraint firstItem="3c4-Yp-Dxm" firstAttribute="top" secondItem="yVO-pM-cDw" secondAttribute="bottom" constant="34" id="eOw-Mu-Sae"/>
+                                        <constraint firstAttribute="trailing" secondItem="fGp-Ai-RSC" secondAttribute="trailing" constant="20" id="hZx-kC-7um"/>
+                                        <constraint firstAttribute="trailing" secondItem="02i-KH-udO" secondAttribute="trailing" constant="20" id="isQ-gG-YU0"/>
+                                        <constraint firstItem="02i-KH-udO" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="27" id="mvt-ST-Iey"/>
+                                        <constraint firstItem="02i-KH-udO" firstAttribute="top" secondItem="byh-gs-YAa" secondAttribute="bottom" constant="20" id="ngu-La-5HX"/>
+                                        <constraint firstItem="yVO-pM-cDw" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="24" id="ofi-SK-Tmo"/>
+                                        <constraint firstAttribute="trailing" secondItem="yVO-pM-cDw" secondAttribute="trailing" id="q7H-m8-IlI"/>
+                                        <constraint firstItem="xFw-0o-FQg" firstAttribute="top" secondItem="Jrk-j7-GgI" secondAttribute="top" constant="8" id="r6N-Dr-uUS"/>
+                                        <constraint firstItem="byh-gs-YAa" firstAttribute="leading" secondItem="keQ-7t-dKe" secondAttribute="trailing" constant="184" id="sd2-Vq-eLd"/>
+                                        <constraint firstItem="keQ-7t-dKe" firstAttribute="top" secondItem="fGp-Ai-RSC" secondAttribute="bottom" constant="27" id="t7s-JK-dCa"/>
+                                        <constraint firstItem="3c4-Yp-Dxm" firstAttribute="leading" secondItem="eLb-DL-jBb" secondAttribute="trailing" constant="139.5" id="v53-if-gN4"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZV-uR-idh">
                                     <rect key="frame" x="0.0" y="476" width="414" height="1224"/>
                                     <subviews>
@@ -177,8 +277,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="RDz-lO-sh0"/>
                                             </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GHP-zA-U8b">
-                                                <size key="itemSize" width="50" height="50"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="6" minimumInteritemSpacing="6" id="GHP-zA-U8b">
+                                                <size key="itemSize" width="140" height="30"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -303,106 +403,6 @@
                                         <constraint firstAttribute="trailing" secondItem="JBz-Sm-c7B" secondAttribute="trailing" constant="12" id="yNN-il-ft6"/>
                                         <constraint firstItem="0VJ-Wr-L4Z" firstAttribute="top" secondItem="vCY-eG-asm" secondAttribute="bottom" constant="30" id="ylh-zz-ZQF"/>
                                         <constraint firstAttribute="trailing" secondItem="X1U-ql-8DT" secondAttribute="trailing" constant="285.5" id="yvV-6i-Eer"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrk-j7-GgI">
-                                    <rect key="frame" x="0.0" y="476" width="414" height="1224"/>
-                                    <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-pM-cDw">
-                                            <rect key="frame" x="24" y="48" width="390" height="260"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="260" id="lXR-u8-pqy"/>
-                                            </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NSz-I1-Rkb">
-                                                <size key="itemSize" width="169" height="260"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                        </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People on your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-0o-FQg">
-                                            <rect key="frame" x="38" y="8" width="201" height="26"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs on your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-DL-jBb">
-                                            <rect key="frame" x="38" y="342" width="162.5" height="26"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fGp-Ai-RSC">
-                                            <rect key="frame" x="27" y="390" width="367" height="370"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="370" id="vms-1O-PEa"/>
-                                            </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="gCd-AB-Yxd">
-                                                <size key="itemSize" width="354" height="110"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                        </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs applied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-7t-dKe">
-                                            <rect key="frame" x="39" y="787" width="127" height="26"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="02i-KH-udO">
-                                            <rect key="frame" x="27" y="835" width="367" height="242"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="242" id="yPl-bk-lye"/>
-                                            </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pCo-qe-t7u">
-                                                <size key="itemSize" width="354" height="110"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                        </collectionView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-Yp-Dxm">
-                                            <rect key="frame" x="340" y="342" width="44" height="30"/>
-                                            <state key="normal" title="see all">
-                                                <color key="titleColor" red="0.0433146134" green="0.67770749330000002" blue="0.70981389279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byh-gs-YAa">
-                                            <rect key="frame" x="350" y="785" width="44" height="30"/>
-                                            <state key="normal" title="see all">
-                                                <color key="titleColor" red="0.0433146134" green="0.67770749330000002" blue="0.70981389279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="byh-gs-YAa" firstAttribute="top" secondItem="fGp-Ai-RSC" secondAttribute="bottom" constant="25" id="0Y7-fP-4qi"/>
-                                        <constraint firstAttribute="trailing" secondItem="byh-gs-YAa" secondAttribute="trailing" constant="20" id="2kj-nX-FrJ"/>
-                                        <constraint firstItem="eLb-DL-jBb" firstAttribute="top" secondItem="yVO-pM-cDw" secondAttribute="bottom" constant="34" id="58u-2E-35k"/>
-                                        <constraint firstItem="keQ-7t-dKe" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="39" id="GZx-ib-RcM"/>
-                                        <constraint firstItem="fGp-Ai-RSC" firstAttribute="top" secondItem="3c4-Yp-Dxm" secondAttribute="bottom" constant="18" id="Gbs-9D-1fh"/>
-                                        <constraint firstItem="xFw-0o-FQg" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="38" id="Pgp-NQ-aUw"/>
-                                        <constraint firstItem="fGp-Ai-RSC" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="27" id="PiC-pn-hKD"/>
-                                        <constraint firstItem="yVO-pM-cDw" firstAttribute="top" secondItem="xFw-0o-FQg" secondAttribute="bottom" constant="14" id="Pv1-Xn-UHM"/>
-                                        <constraint firstAttribute="bottom" secondItem="02i-KH-udO" secondAttribute="bottom" constant="147" id="RlD-6M-QWQ"/>
-                                        <constraint firstItem="eLb-DL-jBb" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="38" id="SzK-DS-t2u"/>
-                                        <constraint firstAttribute="trailing" secondItem="xFw-0o-FQg" secondAttribute="trailing" constant="175" id="T4x-4Z-fK3"/>
-                                        <constraint firstAttribute="trailing" secondItem="3c4-Yp-Dxm" secondAttribute="trailing" constant="30" id="U7u-Be-rgy"/>
-                                        <constraint firstItem="3c4-Yp-Dxm" firstAttribute="top" secondItem="yVO-pM-cDw" secondAttribute="bottom" constant="34" id="eOw-Mu-Sae"/>
-                                        <constraint firstAttribute="trailing" secondItem="fGp-Ai-RSC" secondAttribute="trailing" constant="20" id="hZx-kC-7um"/>
-                                        <constraint firstAttribute="trailing" secondItem="02i-KH-udO" secondAttribute="trailing" constant="20" id="isQ-gG-YU0"/>
-                                        <constraint firstItem="02i-KH-udO" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="27" id="mvt-ST-Iey"/>
-                                        <constraint firstItem="02i-KH-udO" firstAttribute="top" secondItem="byh-gs-YAa" secondAttribute="bottom" constant="20" id="ngu-La-5HX"/>
-                                        <constraint firstItem="yVO-pM-cDw" firstAttribute="leading" secondItem="Jrk-j7-GgI" secondAttribute="leading" constant="24" id="ofi-SK-Tmo"/>
-                                        <constraint firstAttribute="trailing" secondItem="yVO-pM-cDw" secondAttribute="trailing" id="q7H-m8-IlI"/>
-                                        <constraint firstItem="xFw-0o-FQg" firstAttribute="top" secondItem="Jrk-j7-GgI" secondAttribute="top" constant="8" id="r6N-Dr-uUS"/>
-                                        <constraint firstItem="byh-gs-YAa" firstAttribute="leading" secondItem="keQ-7t-dKe" secondAttribute="trailing" constant="184" id="sd2-Vq-eLd"/>
-                                        <constraint firstItem="keQ-7t-dKe" firstAttribute="top" secondItem="fGp-Ai-RSC" secondAttribute="bottom" constant="27" id="t7s-JK-dCa"/>
-                                        <constraint firstItem="3c4-Yp-Dxm" firstAttribute="leading" secondItem="eLb-DL-jBb" secondAttribute="trailing" constant="139.5" id="v53-if-gN4"/>
                                     </constraints>
                                 </view>
                             </subviews>
