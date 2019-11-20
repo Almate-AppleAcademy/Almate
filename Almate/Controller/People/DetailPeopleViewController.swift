@@ -9,20 +9,24 @@
 import UIKit
 
 class DetailPeopleViewController: UIViewController {
-
+    
+    @IBOutlet var detailPeopleVoew: DetailPeopleView!
+    var dataPeople: Users?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never 
+        navigationItem.largeTitleDisplayMode = .never
+        detailPeopleVoew.dataPeople = dataPeople
     }
     
     @IBAction func didTapLinkeIdn(_ sender: Any) {
-       if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/") {
+        if let url = URL(string: (dataPeople?.linkedIn)!) {
             UIApplication.shared.open(url)
         }
     }
     
     @IBAction func didTapEmail(_ sender: Any) {
-        if let url = URL(string: "mailto:slametngeblog@gmail.com") {
+        if let url = URL(string: "mailto:\((dataPeople?.email)!)") {
             UIApplication.shared.open(url)
         }
     }

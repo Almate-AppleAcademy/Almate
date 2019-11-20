@@ -16,6 +16,11 @@ struct Users {
     let idUser: String?
     let local: Bool?
     let imageUser: UIImage?
+    // add this "about, linkedIn, nophone, location, "
+    let about: String?
+    let linkedIn: String?
+    let location: String?
+    let noPhone: String?
 
 	enum CodingKeys: String, CodingKey {
 		case name = "name"
@@ -33,7 +38,7 @@ struct Users {
         case local = "local"
 	}
     
-    init(email: String, idUser: String, name: String, generation: String, occupation: String, local: Bool, skills: [String], image: UIImage) {
+    init(email: String, idUser: String, name: String, generation: String, occupation: String, local: Bool, about: String, linkedIn: String, noPhone: String, location: String, skills: [String], image: UIImage) {
         self.email = email
         self.idUser = idUser
         self.name = name
@@ -42,5 +47,9 @@ struct Users {
         self.tagSkill = skills
         self.local = local
         self.imageUser = image
+        self.about = about
+        self.noPhone = noPhone
+        self.linkedIn = linkedIn
+        self.location = location
     }
 }

@@ -73,8 +73,9 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
     }
     
-    func didSelectItemAt() {
+    func didSelectItemAt(_ detailPeopleData: Users?) {
         let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
+        controller.dataPeople = detailPeopleData
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
