@@ -33,7 +33,7 @@ extension JobsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
-        cell.jobLocation.text = "Jakarta"
+        cell.jobLocation.text = "Jakarta" 
         cell.didTapSaveContact = {
             () in
             print("job-2")

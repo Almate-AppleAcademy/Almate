@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
+		3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */; };
+		3A353CE823850DE100BE4A19 /* JobEmployerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */; };
+		3A67CB582383F38800DC1114 /* EmployerJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67CB562383F38800DC1114 /* EmployerJobViewController.swift */; };
+		3A67CB592383F38800DC1114 /* EmployerJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A67CB572383F38800DC1114 /* EmployerJobViewController.xib */; };
+		3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67CB5B2383F3E300DC1114 /* EmployerJobView.swift */; };
 		3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83339D238230FB007C17C4 /* PostJobViewController.swift */; };
 		3A8333A0238230FB007C17C4 /* PostJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A83339E238230FB007C17C4 /* PostJobViewController.xib */; };
 		3A8333A223823120007C17C4 /* PostJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8333A123823120007C17C4 /* PostJobView.swift */; };
@@ -91,6 +96,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEmployerCell.swift; sourceTree = "<group>"; };
+		3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobEmployerCell.xib; sourceTree = "<group>"; };
+		3A67CB562383F38800DC1114 /* EmployerJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerJobViewController.swift; sourceTree = "<group>"; };
+		3A67CB572383F38800DC1114 /* EmployerJobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerJobViewController.xib; sourceTree = "<group>"; };
+		3A67CB5B2383F3E300DC1114 /* EmployerJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerJobView.swift; sourceTree = "<group>"; };
 		3A83339D238230FB007C17C4 /* PostJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobViewController.swift; sourceTree = "<group>"; };
 		3A83339E238230FB007C17C4 /* PostJobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostJobViewController.xib; sourceTree = "<group>"; };
 		3A8333A123823120007C17C4 /* PostJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobView.swift; sourceTree = "<group>"; };
@@ -190,6 +200,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A67CB552383F35500DC1114 /* Employer */ = {
+			isa = PBXGroup;
+			children = (
+				3A67CB572383F38800DC1114 /* EmployerJobViewController.xib */,
+				3A67CB5B2383F3E300DC1114 /* EmployerJobView.swift */,
+				3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */,
+				3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */,
+			);
+			path = Employer;
+			sourceTree = "<group>";
+		};
+		3A67CB5A2383F39900DC1114 /* Employer Job */ = {
+			isa = PBXGroup;
+			children = (
+				3A67CB562383F38800DC1114 /* EmployerJobViewController.swift */,
+			);
+			path = "Employer Job";
+			sourceTree = "<group>";
+		};
 		3A83339723823027007C17C4 /* Detail Job */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +388,7 @@
 		8894582D236AF43C00E3D838 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				3A67CB5A2383F39900DC1114 /* Employer Job */,
 				8894583B236AF49600E3D838 /* JobsViewController.swift */,
 				3A83339D238230FB007C17C4 /* PostJobViewController.swift */,
 				3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */,
@@ -369,6 +399,7 @@
 		8894582E236AF44100E3D838 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				3A67CB552383F35500DC1114 /* Employer */,
 				3A83339823823038007C17C4 /* Post Job */,
 				3A83339723823027007C17C4 /* Detail Job */,
 				3A8333A523828053007C17C4 /* Main Job */,
@@ -596,6 +627,7 @@
 				TargetAttributes = {
 					88F68202236971B5006249AA = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -634,6 +666,7 @@
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
+				3A353CE823850DE100BE4A19 /* JobEmployerCell.xib in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				8B86020F2372BFC30053567B /* NewsCell.xib in Resources */,
 				88F68210236971B7006249AA /* Assets.xcassets in Resources */,
@@ -648,6 +681,7 @@
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
+				3A67CB592383F38800DC1114 /* EmployerJobViewController.xib in Resources */,
 				888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */,
 				5E0DB361237957B10079A595 /* ProfileViewController.xib in Resources */,
 				888B2974237D524000CA9DC0 /* FilterCell.xib in Resources */,
@@ -728,6 +762,7 @@
 				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
+				3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */,
 				888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */,
 				88E07704237B398D0026D52B /* Institution.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
@@ -742,6 +777,7 @@
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
 				88E07702237B398D0026D52B /* Post.swift in Sources */,
+				3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
 				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
 				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
@@ -762,6 +798,7 @@
 				88E07705237B398D0026D52B /* Notif.swift in Sources */,
 				3A8333A7238280D6007C17C4 /* JobDetailView.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
+				3A67CB582383F38800DC1114 /* EmployerJobViewController.swift in Sources */,
 				88E07701237B398D0026D52B /* Users.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
@@ -907,6 +944,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
@@ -916,6 +954,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -925,6 +964,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;

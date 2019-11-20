@@ -9,6 +9,7 @@
 import UIKit
 
 class JobDetailView: UIView {
+    @IBOutlet var backToJobBtn: UIButton!
     override class func awakeFromNib() {
          super.awakeFromNib()
     }
