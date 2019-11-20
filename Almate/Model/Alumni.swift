@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 // MARK: - Alumni
 struct Alumni {
@@ -127,27 +128,73 @@ extension User: DocumentSerializable {
 
 // MARK: - UserContact
 struct UserContact: Codable {
-    let userPhone, userEmail, userLinkedIn: String
+    let userPhone, userEmail, userLinkedIn, userLocation: String
+    
+    var dictionary: [String:Any] {
+           return [
+               "userPhone": userPhone,
+               "userEmail": userEmail,
+               "userLinkedin": userLinkedIn,
+               "userLocation": userLocation
+           ]
+       }
 }
 
 extension UserContact: DocumentSerializable {
     init?(dictionary: [String : Any]) {
         guard let userPhone = dictionary["userPhone"] as? String,
                 let userEmail = dictionary["userEmail"] as? String,
-                let userLinkedIn = dictionary["userLinkedIn"] as? String else {return nil}
+                let userLinkedIn = dictionary["userLinkedin"] as? String,
+                let userLocation = dictionary["userLocation"] as? String else {return nil}
         
-        self.init(userPhone: userPhone, userEmail: userEmail, userLinkedIn: userLinkedIn)
+        self.init(userPhone: userPhone, userEmail: userEmail, userLinkedIn: userLinkedIn, userLocation: userLocation)
     }
 }
 
 // MARK: - Education
 struct Education {
     let educationName: String
-    let educationYearEnd, educationYearStart, yearEducationStart, yearEducationEnd: String?
+    let educationYearEnd, educationYearStart: String
+    
+    var dictionary: [String:Any] {
+        return [
+            "educationName": educationName,
+            "educationYearEnd": educationYearEnd,
+            "educationYearStart": educationYearStart
+        ]
+    }
+}
+
+extension Education: DocumentSerializable {
+    init?(dictionary: [String : Any]) {
+        guard let educationName = dictionary["educationName"] as? String,
+                let educationYearEnd = dictionary["educationYearEnd"] as? String,
+                let educationYearStart = dictionary["educationYearStart"] as? String else {return nil}
+        
+        self.init(educationName: educationName, educationYearEnd: educationYearEnd, educationYearStart: educationYearStart)
+    }
 }
 
 // MARK: - Experience
 struct Experience {
-    let companyName, dateStart, dateEnd, educationName: String?
-    let yearEducationStart, yearEducationEnd: String?
+    let companyName: String
+    let dateStart, dateEnd: Date
+    
+    var dictionary: [String:Any] {
+        return [
+            "companyName": companyName,
+            "dateEnd": dateEnd,
+            "dateStart": dateStart
+        ]
+    }
+}
+
+extension Experience: DocumentSerializable {
+    init?(dictionary: [String : Any]) {
+        guard let companyName = dictionary["companyName"] as? String,
+                let dateEnd = dictionary["dateEnd"] as? Timestamp,
+                let dateStart = dictionary["dateStart"] as? Timestamp else {return nil}
+        
+        self.init(companyName: companyName, dateStart: dateStart.dateValue(), dateEnd: dateEnd.dateValue())
+    }
 }

@@ -26,10 +26,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             createController(title: "People", imageName: "news", vc: peopleVC),
             createController(title: "Notification", imageName: "news", vc: notifVC)
         ]
-        print(self.navigationController)
-        viewControllers = tabList
-//        viewControllers = tabList.map { UINavigationController(rootViewController: $0) }
         
+        viewControllers = tabList
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

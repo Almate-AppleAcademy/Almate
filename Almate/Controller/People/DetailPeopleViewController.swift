@@ -7,24 +7,52 @@
 //
 
 import UIKit
+import FirebaseFirestore
+
 
 class DetailPeopleViewController: UIViewController {
-
+    
+    var dataPeople: User?
+    var dataContactPeople: UserContact?
+    var documents: QueryDocumentSnapshot?
+    var requestRemoteData = RemotePeople()
+    
+    @IBOutlet weak var detailPeopleView: DetailPeopleView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never 
+        navigationItem.largeTitleDisplayMode = .never
+        detailPeopleView.dataPeople = dataPeople
+        
+        requestRemoteData.loadPeopleEducation(documents: documents!) { (dataEducation) in
+            print(dataEducation)
+        }
+        
+        requestRemoteData.loadPeopleExperience(documents: documents!) { (dataExperience) in
+            print(dataExperience)
+        }
+        
+        requestRemoteData.loadPeopleDetail(documents: documents!) { (dataContact) in
+            self.dataContactPeople = dataContact
+            self.detailPeopleView.dataPeopleContact = dataContact
+        }
+        
     }
     
     @IBAction func didTapLinkeIdn(_ sender: Any) {
-       if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/") {
-            UIApplication.shared.open(url)
-        }
+        if let linkedInURL = dataContactPeople?.userLinkedIn {
+            if let url = URL(string: linkedInURL) {
+                UIApplication.shared.open(url)
+            }
+        } else { print("LinkedIn URL Not Found") }
     }
     
     @IBAction func didTapEmail(_ sender: Any) {
-        if let url = URL(string: "mailto:slametngeblog@gmail.com") {
-            UIApplication.shared.open(url)
-        }
+        if let userEmail = dataContactPeople?.userEmail {
+            if let url = URL(string: "mailto:\(userEmail)") {
+                UIApplication.shared.open(url)
+            }
+        } else { print("User Email Not Found") }
     }
     
     @IBAction func didTapTelpon(_ sender: UIButton) {
@@ -37,8 +65,10 @@ class DetailPeopleViewController: UIViewController {
         //
         // }
         
-        if let url = URL(string: "tel://081291617355"), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
+        if let userPhone = dataContactPeople?.userPhone {
+            if let url = URL(string: "tel://\(userPhone)"), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        } else { print("User Number Not Found")}
     }
 }

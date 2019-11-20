@@ -10,6 +10,27 @@ import UIKit
 
 class DetailPeopleView: UIView {
     
+    var dataPeople: User? {
+        didSet {
+            if let data = dataPeople {
+                self.nameProfile.text = "\(data.firstName) \(data.lastName)"
+                self.companyNameProfile.text = data.userOccupation
+                self.aboutProfile.text = data.userAbout
+                self.imgProfile.sd_setImage(with: URL(string: data.userImage))
+                self.skillsCollection.reloadData()
+                self.skillCount.text = "(\(data.tagSkill.count))"
+            }
+        }
+    }
+    
+    var dataPeopleContact: UserContact? {
+        didSet {
+            if let data = dataPeopleContact {
+                self.currentLocation.text = data.userLocation
+            }
+        }
+    }
+    
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var linkedinBtn: UIButton!
     @IBOutlet weak var telponBtn: UIButton!
@@ -58,7 +79,7 @@ extension DetailPeopleView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.skillsCollection {
-            return arraySkills.count
+            return (dataPeople?.tagSkill.count)!
         } else if collectionView == self.educationCollection {
             return arrayEducations.count
         } else if collectionView == self.workCollection {
@@ -73,8 +94,8 @@ extension DetailPeopleView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.skillsCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
-            cell.skillLabel.text = arraySkills[indexPath.row]
-            skillCount.text = "(\(arraySkills.count))"
+            cell.skillLabel.text = dataPeople?.tagSkill[indexPath.row]
+//            skillCount.text = "(\(arraySkills.count))"
             return cell
         } else if collectionView == self.educationCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "educationCell", for: indexPath) as! EducationCell
@@ -97,4 +118,16 @@ extension DetailPeopleView: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     }
+}
+
+extension DetailPeopleView: DetailPeopleViewInput {
+    func displayDetailPeople(_ data: UserContact?) {
+        
+    }
+    
+}
+
+
+protocol DetailPeopleViewInput {
+    func displayDetailPeople(_ data: UserContact?)
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import FirebaseFirestore
 
 class PeopleView: UIView {
     
@@ -15,6 +16,7 @@ class PeopleView: UIView {
     @IBOutlet weak var peopleCount: UILabel!
     var delegate: PeopleViewDelegate?
     var dataPeople: [User] = []
+    var documents: [QueryDocumentSnapshot]?
     
     override func awakeFromNib() {
         peopleCollection.register(UINib(nibName: "PeopleCell", bundle: nil), forCellWithReuseIdentifier: "peopleCell")
@@ -35,7 +37,7 @@ extension PeopleView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
         let data = dataPeople[indexPath.row]
         cell.namePeopleCell.text = "\(data.firstName) \(data.lastName) "
-        cell.imgPeopleCell.image = userImage[indexPath.row]
+//        cell.imgPeopleCell.image = userImage[indexPath.row]
         cell.genPeopleCelll.text = data.userGeneration
         cell.occupationPeopleCelll.text = data.userOccupation
         cell.imgPeopleCell.sd_setImage(with: URL(string: data.userImage))
@@ -71,26 +73,27 @@ extension PeopleView: UICollectionViewDataSource {
 extension PeopleView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        delegate?.didSelectItemAt()
+        delegate?.didSelectItemAt(dataPeople[indexPath.row], self.documents![indexPath.row])
     }
 }
 
 extension PeopleView: PeopleViewInput {
-    func displayPeople(_ data: [User]?) {
+    func displayPeople(_ data: [User]?,_ documents: [QueryDocumentSnapshot]) {
         if let data = data {
             self.dataPeople = data
             self.peopleCollection.reloadData()
         } else { return }
+        self.documents = documents
     }
 }
 
 protocol PeopleViewDelegate {
-    func didSelectItemAt()
+    func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
     func tappedSaveContact(_ state: UserCoreDataState,_ data: User)
 }
 
 protocol PeopleViewInput {
-    func displayPeople(_ data: [User]?)
+    func displayPeople(_ data: [User]?, _ documents: [QueryDocumentSnapshot])
 }
 
 enum UserCoreDataState {

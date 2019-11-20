@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class PeopleViewController: UIViewController, PeopleViewDelegate {
 
@@ -23,10 +24,10 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         peopleView.delegate = self
         
         //Request Users Institution Data
-        requestPeopleRemote.loadPeople { (data) in
+        requestPeopleRemote.loadPeople(completionBlock: { (data, documents) in
             print(data)
-            self.peopleView.displayPeople(data)
-        }
+            self.peopleView.displayPeople(data, documents)
+        })
     }
     
     func tappedSaveContact(_ state: UserCoreDataState, _ data: User) {
@@ -74,8 +75,11 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
     }
     
-    func didSelectItemAt() {
+    
+    func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot) {
         let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
+        controller.dataPeople = dataPeople
+        controller.documents = documents
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
