@@ -283,6 +283,64 @@ I’m very open for networking opportunity.</string>
                                         <constraint firstItem="40g-CN-Wv4" firstAttribute="leading" secondItem="bzC-z5-7rG" secondAttribute="leading" constant="25" id="xFN-Ot-KfO"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-Nc-SJm" userLabel="Favorite View">
+                                    <rect key="frame" x="0.0" y="524" width="414" height="676"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People on your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-a7-daa">
+                                            <rect key="frame" x="25" y="30" width="183" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="183" id="4OW-yr-ou6"/>
+                                                <constraint firstAttribute="height" constant="27" id="L1g-r5-t96"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="textColor" red="0.21960784310000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(8)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-qO-NbA">
+                                            <rect key="frame" x="228" y="35" width="24" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="AC3-cm-XpW"/>
+                                                <constraint firstAttribute="height" constant="20" id="BoG-Vv-Eif"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" red="0.30588235289999999" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-j3-7Zy">
+                                            <rect key="frame" x="346" y="37" width="43" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="43" id="8Bj-yq-EeL"/>
+                                                <constraint firstAttribute="height" constant="17" id="VUo-4y-5Me"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <color key="textColor" red="0.30588235289999999" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-MS-eq7">
+                                            <rect key="frame" x="20" y="87" width="374" height="589"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kOK-Ni-gYn">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nEg-j3-7Zy" secondAttribute="trailing" constant="25" id="1ST-8B-ebA"/>
+                                        <constraint firstItem="hbB-qO-NbA" firstAttribute="leading" secondItem="kDz-a7-daa" secondAttribute="trailing" constant="20" id="8wp-94-jfR"/>
+                                        <constraint firstItem="nEg-j3-7Zy" firstAttribute="top" secondItem="hwU-Nc-SJm" secondAttribute="top" constant="37" id="BWJ-15-MBh"/>
+                                        <constraint firstItem="MuI-MS-eq7" firstAttribute="top" secondItem="kDz-a7-daa" secondAttribute="bottom" constant="30" id="C0c-8s-bCA"/>
+                                        <constraint firstAttribute="bottom" secondItem="MuI-MS-eq7" secondAttribute="bottom" id="Ht2-F7-XTK"/>
+                                        <constraint firstItem="kDz-a7-daa" firstAttribute="leading" secondItem="hwU-Nc-SJm" secondAttribute="leading" constant="25" id="KLW-8h-Tbs"/>
+                                        <constraint firstItem="kDz-a7-daa" firstAttribute="top" secondItem="hwU-Nc-SJm" secondAttribute="top" constant="30" id="RVW-UO-TMY"/>
+                                        <constraint firstAttribute="trailing" secondItem="MuI-MS-eq7" secondAttribute="trailing" constant="20" id="SIa-Ti-mSy"/>
+                                        <constraint firstItem="hbB-qO-NbA" firstAttribute="top" secondItem="hwU-Nc-SJm" secondAttribute="top" constant="35" id="hqT-Wt-I1G"/>
+                                        <constraint firstItem="MuI-MS-eq7" firstAttribute="leading" secondItem="hwU-Nc-SJm" secondAttribute="leading" constant="20" id="tu1-l0-b7q"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -291,7 +349,11 @@ I’m very open for networking opportunity.</string>
                                 <constraint firstAttribute="trailing" secondItem="CEY-V6-ygF" secondAttribute="trailing" id="P87-HB-h5r"/>
                                 <constraint firstItem="CEY-V6-ygF" firstAttribute="leading" secondItem="34D-q5-iV7" secondAttribute="leading" id="PT1-Qa-mMm"/>
                                 <constraint firstAttribute="trailing" secondItem="bzC-z5-7rG" secondAttribute="trailing" id="SLC-tn-rBN"/>
+                                <constraint firstAttribute="trailing" secondItem="hwU-Nc-SJm" secondAttribute="trailing" id="XDZ-VV-lBY"/>
+                                <constraint firstItem="hwU-Nc-SJm" firstAttribute="leading" secondItem="34D-q5-iV7" secondAttribute="leading" id="Xbc-3U-XfO"/>
+                                <constraint firstItem="hwU-Nc-SJm" firstAttribute="top" secondItem="CEY-V6-ygF" secondAttribute="bottom" constant="8" id="eT1-cA-AeR"/>
                                 <constraint firstAttribute="width" constant="414" id="gIV-Ug-HO6"/>
+                                <constraint firstAttribute="bottom" secondItem="hwU-Nc-SJm" secondAttribute="bottom" id="jss-3K-Djr"/>
                                 <constraint firstAttribute="bottom" secondItem="bzC-z5-7rG" secondAttribute="bottom" id="wRs-Ti-nO6"/>
                                 <constraint firstItem="CEY-V6-ygF" firstAttribute="top" secondItem="34D-q5-iV7" secondAttribute="top" id="wfi-xO-0v1"/>
                             </constraints>
