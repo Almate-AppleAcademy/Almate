@@ -100,6 +100,8 @@
 		8B70E037238682C600B6F090 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B70E035238682C600B6F090 /* HeaderTableViewCell.xib */; };
 		8B70E03A23868C3500B6F090 /* ProfileSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70E03823868C3500B6F090 /* ProfileSegmentTableViewCell.swift */; };
 		8B70E03B23868C3500B6F090 /* ProfileSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B70E03923868C3500B6F090 /* ProfileSegmentTableViewCell.xib */; };
+		8B70E03E2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70E03C2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift */; };
+		8B70E03F2386916200B6F090 /* ProfileSegmentSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B70E03D2386916200B6F090 /* ProfileSegmentSmallTableViewCell.xib */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
 		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
@@ -206,6 +208,8 @@
 		8B70E035238682C600B6F090 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		8B70E03823868C3500B6F090 /* ProfileSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		8B70E03923868C3500B6F090 /* ProfileSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSegmentTableViewCell.xib; sourceTree = "<group>"; };
+		8B70E03C2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSegmentSmallTableViewCell.swift; sourceTree = "<group>"; };
+		8B70E03D2386916200B6F090 /* ProfileSegmentSmallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSegmentSmallTableViewCell.xib; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -571,6 +575,8 @@
 				8B70E035238682C600B6F090 /* HeaderTableViewCell.xib */,
 				8B70E03823868C3500B6F090 /* ProfileSegmentTableViewCell.swift */,
 				8B70E03923868C3500B6F090 /* ProfileSegmentTableViewCell.xib */,
+				8B70E03C2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift */,
+				8B70E03D2386916200B6F090 /* ProfileSegmentSmallTableViewCell.xib */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */,
 				5E0DB361237957B10079A595 /* ProfileViewController.xib in Resources */,
 				8B70E03B23868C3500B6F090 /* ProfileSegmentTableViewCell.xib in Resources */,
+				8B70E03F2386916200B6F090 /* ProfileSegmentSmallTableViewCell.xib in Resources */,
 				888B2974237D524000CA9DC0 /* FilterCell.xib in Resources */,
 				888B2978237D525500CA9DC0 /* SortCell.xib in Resources */,
 			);
@@ -786,6 +793,7 @@
 				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
 				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
+				8B70E03E2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift in Sources */,
 				5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */,
 				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,

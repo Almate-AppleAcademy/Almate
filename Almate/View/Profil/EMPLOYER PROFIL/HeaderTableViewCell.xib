@@ -165,7 +165,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vx1-wE-p9d" firstAttribute="top" secondItem="miM-5b-a5M" secondAttribute="top" constant="66" id="0J7-0T-obj"/>
                             <constraint firstItem="4h5-z9-PCw" firstAttribute="leading" secondItem="miM-5b-a5M" secondAttribute="leading" constant="88" id="0Lw-j9-8UU"/>
@@ -211,20 +211,22 @@
                             <constraint firstItem="Yis-xd-9Pb" firstAttribute="leading" secondItem="q7c-JC-OLP" secondAttribute="trailing" constant="55" id="wgw-Ar-bAk"/>
                             <constraint firstAttribute="trailing" secondItem="ydX-v9-HlP" secondAttribute="trailing" constant="136" id="xEZ-CA-7Qy"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="15"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.12822151184082031" green="0.15705710649490356" blue="0.19560936093330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="miM-5b-a5M" secondAttribute="bottom" id="3Rv-ps-7ZS"/>
                     <constraint firstItem="miM-5b-a5M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l9K-yL-kRd"/>
                     <constraint firstItem="miM-5b-a5M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sCZ-04-rUD"/>
                     <constraint firstAttribute="trailing" secondItem="miM-5b-a5M" secondAttribute="trailing" id="wx3-da-INe"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="15"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="205.79710144927537" y="271.875"/>
         </tableViewCell>
