@@ -13,7 +13,16 @@ class EmployerView: UIView {
     @IBOutlet weak var linkedinButtonOutlet: UIButton!
     @IBOutlet weak var telpButtonOutlet: UIButton!
     @IBOutlet weak var mailButtonOutlet: UIButton!
+    @IBOutlet weak var profileEmployerView: UIView!
+    @IBOutlet weak var savedEmployerView: UIView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        profileEmployerView.alpha = 0
+        
+        
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

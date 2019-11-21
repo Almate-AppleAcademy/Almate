@@ -394,6 +394,8 @@ I’m very open for networking opportunity.</string>
             <connections>
                 <outlet property="linkedinButtonOutlet" destination="VyW-wb-mO8" id="5Nn-IT-Q5L"/>
                 <outlet property="mailButtonOutlet" destination="Mpr-ZO-bvh" id="wY6-C0-vN7"/>
+                <outlet property="profileEmployerView" destination="bzC-z5-7rG" id="IV4-c2-6FO"/>
+                <outlet property="savedEmployerView" destination="hwU-Nc-SJm" id="clg-zA-FUJ"/>
                 <outlet property="telpButtonOutlet" destination="oow-c7-UcH" id="FAP-L8-BP1"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>

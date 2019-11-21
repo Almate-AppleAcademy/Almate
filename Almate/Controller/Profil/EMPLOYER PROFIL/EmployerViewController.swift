@@ -19,9 +19,8 @@ class EmployerViewController: UIViewController {
         super.viewDidLoad()
         employerPostJobdiController.delegate = self
         employerPostJobdiController.dataSource = self
-       // savedPeoplediEmployerView.delegate = self
-    //savedPeoplediEmployerView.dataSource = self
-    
+        savedPeoplediEmployer.delegate = self
+        savedPeoplediEmployer.dataSource = self
         savedPeoplediEmployer.register(UINib(nibName: "FavoriteCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "savedPeopleCell")
         
         employerPostJobdiController.register(UINib(nibName: "EmployerPostJobCollectionCell", bundle: nil), forCellWithReuseIdentifier: "employerViewCell")
@@ -63,12 +62,21 @@ class EmployerViewController: UIViewController {
 
 extension EmployerViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == employerPostJobdiController{
         return 5
+        }else{
+            return 3
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == employerPostJobdiController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "employerViewCell", for: indexPath as IndexPath) as! EmployerPostJobCollectionCell
         return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "savedPeopleCell", for: indexPath) as! FavoriteCollectionViewCell
+            return cell
+        }
     }
     
 }
