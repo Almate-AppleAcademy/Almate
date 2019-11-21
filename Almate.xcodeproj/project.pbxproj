@@ -39,6 +39,8 @@
 		5F5083D0238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */; };
 		5F5083D3238665F400EB9AC9 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */; };
 		5F5083D4238665F400EB9AC9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */; };
+		5F5083D7238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */; };
+		5F5083D8238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -142,6 +144,8 @@
 		5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerPostJobCollectionCell.xib; sourceTree = "<group>"; };
 		5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerSkillCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerSkillCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -571,6 +575,8 @@
 				5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */,
 				5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */,
 				5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */,
+				5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */,
+				5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				5E0DB377237BE1970079A595 /* EducationProfileCell.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
+				5F5083D8238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				8B86020F2372BFC30053567B /* NewsCell.xib in Resources */,
 				5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */,
@@ -786,6 +793,7 @@
 				887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */,
 				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
+				5F5083D7238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift in Sources */,
 				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
 				5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */,
 				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
