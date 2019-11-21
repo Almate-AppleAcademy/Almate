@@ -48,6 +48,11 @@ class EmployerViewController: UIViewController {
         }
     }
     
+    @IBAction func settingButton(_ sender: Any) {
+        self.present(UINavigationController(rootViewController: SettingsEmployerViewController()), animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

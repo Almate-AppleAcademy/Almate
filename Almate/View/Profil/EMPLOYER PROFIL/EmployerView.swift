@@ -10,6 +10,7 @@ import UIKit
 
 class EmployerView: UIView {
 
+
     @IBOutlet weak var linkedinButtonOutlet: UIButton!
     @IBOutlet weak var telpButtonOutlet: UIButton!
     @IBOutlet weak var mailButtonOutlet: UIButton!
@@ -23,8 +24,10 @@ class EmployerView: UIView {
         
         
     }
+    
+
     /*
-    // Only override draw() if you perform custom drawing.
+     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code

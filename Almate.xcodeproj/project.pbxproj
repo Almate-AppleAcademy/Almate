@@ -41,6 +41,8 @@
 		5F5083D4238665F400EB9AC9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */; };
 		5F5083D7238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */; };
 		5F5083D8238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */; };
+		5F5083DB23869CB300EB9AC9 /* SettingsEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083D923869CB300EB9AC9 /* SettingsEmployerViewController.swift */; };
+		5F5083DC23869CB300EB9AC9 /* SettingsEmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083DA23869CB300EB9AC9 /* SettingsEmployerViewController.xib */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -146,6 +148,8 @@
 		5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerSkillCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerSkillCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F5083D923869CB300EB9AC9 /* SettingsEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEmployerViewController.swift; sourceTree = "<group>"; };
+		5F5083DA23869CB300EB9AC9 /* SettingsEmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsEmployerViewController.xib; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -577,6 +581,7 @@
 				5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */,
 				5F5083D5238688C400EB9AC9 /* EmployerSkillCollectionViewCell.swift */,
 				5F5083D6238688C400EB9AC9 /* EmployerSkillCollectionViewCell.xib */,
+				5F5083DA23869CB300EB9AC9 /* SettingsEmployerViewController.xib */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */,
+				5F5083D923869CB300EB9AC9 /* SettingsEmployerViewController.swift */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -704,6 +710,7 @@
 				88B9CB282379D60300634110 /* WorkCell.xib in Resources */,
 				88F68223236985A8006249AA /* LoginViewController.xib in Resources */,
 				885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */,
+				5F5083DC23869CB300EB9AC9 /* SettingsEmployerViewController.xib in Resources */,
 				5E0DB360237957B10079A595 /* ProfileCell.xib in Resources */,
 				5E0DB37B237BE6420079A595 /* ReferenceProfileCell.xib in Resources */,
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
@@ -828,6 +835,7 @@
 				5E0DB376237BE1970079A595 /* EducationProfileCell.swift in Sources */,
 				8B860213237A872B0053567B /* CommentView.swift in Sources */,
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
+				5F5083DB23869CB300EB9AC9 /* SettingsEmployerViewController.swift in Sources */,
 				888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */,
 				8B53CDAE2385362700E3ED23 /* EmployerViewController.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
