@@ -21,6 +21,12 @@ class PeopleView: UIView {
         peopleCollection.delegate = self
         peopleCount.text = "20 people in Apple Academy"
     }
+    
+    @IBAction func tapProfile(_ sender: UIButton) {
+        delegate?.didTapProfileIcon()
+        print("hilih gi")
+    }
+    
 }
 
 extension PeopleView: UICollectionViewDataSource {
@@ -61,13 +67,14 @@ extension PeopleView: UICollectionViewDataSource {
         }
     }
     
-    
     @IBAction func saveTapped(_ sender: UIButton) {
     
     }
+    
+    
 }
 
-extension PeopleView: UICollectionViewDelegate {
+extension PeopleView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         delegate?.didSelectItemAt(self.dataPeople?[indexPath.row])
@@ -87,6 +94,7 @@ protocol PeopleInput {
 
 protocol PeopleViewDelegate {
     func didSelectItemAt(_ detailPeopleData: Users?)
+    func didTapProfileIcon()
     func tappedSaveContact(_ state: UserCoreDataState,_ data: Users)
 }
 

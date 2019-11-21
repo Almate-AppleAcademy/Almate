@@ -78,6 +78,10 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         controller.dataPeople = detailPeopleData
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func didTapProfileIcon() {
+        self.navigationController?.pushViewController(PeopleViewController(), animated: true)
+    }
 }
 
 extension PeopleViewController: UISearchBarDelegate {

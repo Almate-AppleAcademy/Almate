@@ -28,6 +28,7 @@
 		885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A9A582372C239000D946E /* DetailPeopleViewController.swift */; };
 		885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885A9A592372C239000D946E /* DetailPeopleViewController.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
+		885D0BA82385E25100EBFF02 /* DummyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D0BA72385E25100EBFF02 /* DummyNews.swift */; };
 		887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F47AF237ADCD50059433E /* ReferenceCell.swift */; };
 		887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F47B0237ADCD50059433E /* ReferenceCell.xib */; };
 		888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */; };
@@ -106,6 +107,8 @@
 		885A9A582372C239000D946E /* DetailPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleViewController.swift; sourceTree = "<group>"; };
 		885A9A592372C239000D946E /* DetailPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPeopleViewController.xib; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		885D0BA72385E25100EBFF02 /* DummyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNews.swift; sourceTree = "<group>"; };
+		88696A6A2386813700673DE2 /* Almate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Almate-Bridging-Header.h"; sourceTree = "<group>"; };
 		887F47AF237ADCD50059433E /* ReferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCell.swift; sourceTree = "<group>"; };
 		887F47B0237ADCD50059433E /* ReferenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceCell.xib; sourceTree = "<group>"; };
 		888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -362,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				88CB38E823828CD300AED999 /* DummyUsers.swift */,
+				885D0BA72385E25100EBFF02 /* DummyNews.swift */,
 			);
 			path = Dummy;
 			sourceTree = "<group>";
@@ -450,6 +454,7 @@
 				88F68211236971B7006249AA /* LaunchScreen.storyboard */,
 				3AB648E3237418E9005B884D /* GoogleService-Info.plist */,
 				88F68214236971B7006249AA /* Info.plist */,
+				88696A6A2386813700673DE2 /* Almate-Bridging-Header.h */,
 			);
 			path = Almate;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				TargetAttributes = {
 					88F68202236971B5006249AA = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -708,6 +714,7 @@
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
 				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
+				885D0BA82385E25100EBFF02 /* DummyNews.swift in Sources */,
 				88E07705237B398D0026D52B /* Notif.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				88E07701237B398D0026D52B /* Users.swift in Sources */,
@@ -856,6 +863,7 @@
 			baseConfigurationReference = 728D53EE3591508D74C3109E /* Pods-Almate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
@@ -865,6 +873,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Almate/Almate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -875,6 +885,7 @@
 			baseConfigurationReference = 4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
@@ -884,6 +895,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Almate/Almate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

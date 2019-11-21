@@ -12,5 +12,6 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'Firebase/Analytics' 
 pod 'Firebase/Firestore'
+pod 'DLRadioButton', '~> 1.4'
 
 end

@@ -11,6 +11,9 @@ import UIKit
 class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
+    var requestDummyData = DummyNews()
+    @IBOutlet weak var newsView: NewsView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,9 @@ class NewsViewController: UIViewController {
         searchController.searchBar.barTintColor = .white
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
         
+        requestDummyData.getData { (dataPost) in
+            self.newsView.dataPost = dataPost
+        }
     }
 
     @IBAction func likeTapped(_ sender: UIButton) {

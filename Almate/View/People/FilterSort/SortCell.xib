@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,18 +23,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIE-wi-2km">
-                        <rect key="frame" x="347" y="17" width="49" height="31"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x5-fB-Fyn" customClass="DLRadioButton">
+                        <rect key="frame" x="364" y="15" width="34" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </switch>
+                        <state key="normal" title="Button"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="uncheck"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="checked"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="logSelectedButtonWithRadioButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="84Z-Qe-LoP"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="lblSortValue" destination="TMX-86-a58" id="cpa-AZ-wOk"/>
-                <outlet property="switchValue" destination="zIE-wi-2km" id="05S-du-cce"/>
+                <outlet property="rbSort" destination="3x5-fB-Fyn" id="ZD4-Cg-P0G"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.34375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checked" width="24" height="25"/>
+        <image name="uncheck" width="24" height="25"/>
+    </resources>
 </document>

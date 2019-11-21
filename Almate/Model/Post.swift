@@ -2,20 +2,22 @@ import Foundation
 import UIKit
 
 struct Post {
+    let postImageProfile: UIImage?
+    let postNameProfile: String?
 	let postText : String?
 	let postLike : Int?
-	let postDate : String?
-	let postComment : [Comment]?
+	let postDate : Date?
+//	let postComment : [Comment]?
     let postBy: String?
     let postPhoto: UIImage?
 
-	enum CodingKeys: String {
-
-		case postText = "text"
-		case postLike = "like"
-		case postDate = "date"
-		case postComment = "comment"
-        case postBy = "postBy"
-        case postPhoto = "postPhoto"
-    }
+//	enum CodingKeys: String {
+//
+//		case postText = "text"
+//		case postLike = "like"
+//		case postDate = "date"
+//		case postComment = "comment"
+//        case postBy = "postBy"
+//        case postPhoto = "postPhoto"
+//    }
 }

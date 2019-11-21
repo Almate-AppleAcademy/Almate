@@ -17,6 +17,10 @@ class DetailPeopleViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         detailPeopleVoew.dataPeople = dataPeople
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
     }
     
     @IBAction func didTapLinkeIdn(_ sender: Any) {
