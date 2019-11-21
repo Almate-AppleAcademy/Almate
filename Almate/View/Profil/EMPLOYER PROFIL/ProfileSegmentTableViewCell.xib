@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileSegmentTableViewCell" rowHeight="282" id="KGk-i7-Jjw" customClass="ProfileSegmentTableViewCell" customModule="Almate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnX-A9-R1n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p81-fS-MdQ">
+                                <rect key="frame" x="25" y="25" width="62" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="gUD-lQ-gwN"/>
+                                    <constraint firstAttribute="height" constant="27" id="zcG-Yo-Be8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psn-6r-kHD">
+                                <rect key="frame" x="25" y="62" width="364" height="95.5"/>
+                                <string key="text">Hi I’m aspiring UI/UX Designer based on Jakarta. I’m a passionate quick learner and I want to grab as many opportunities I could.
+
+I’m very open for networking opportunity.</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My job openings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeG-kp-obv">
+                                <rect key="frame" x="25" y="192.5" width="165" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="efb-2B-9Lq"/>
+                                    <constraint firstAttribute="width" constant="165" id="gVX-6s-a8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="psn-6r-kHD" firstAttribute="leading" secondItem="hnX-A9-R1n" secondAttribute="leading" constant="25" id="LVi-VA-YfS"/>
+                            <constraint firstItem="p81-fS-MdQ" firstAttribute="leading" secondItem="hnX-A9-R1n" secondAttribute="leading" constant="25" id="S9P-km-Bjh"/>
+                            <constraint firstItem="p81-fS-MdQ" firstAttribute="top" secondItem="hnX-A9-R1n" secondAttribute="top" constant="25" id="Xr0-9K-J9Y"/>
+                            <constraint firstItem="YeG-kp-obv" firstAttribute="top" secondItem="psn-6r-kHD" secondAttribute="bottom" constant="35" id="aAh-uX-luG"/>
+                            <constraint firstAttribute="trailing" secondItem="psn-6r-kHD" secondAttribute="trailing" constant="25" id="br4-8A-uhh"/>
+                            <constraint firstItem="YeG-kp-obv" firstAttribute="leading" secondItem="hnX-A9-R1n" secondAttribute="leading" constant="25" id="q3m-w8-5AU"/>
+                            <constraint firstAttribute="height" constant="282" id="vVu-Pv-AXZ"/>
+                            <constraint firstItem="psn-6r-kHD" firstAttribute="top" secondItem="p81-fS-MdQ" secondAttribute="bottom" constant="10" id="x9k-4m-XY0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hnX-A9-R1n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dd7-Am-a4B"/>
+                    <constraint firstAttribute="bottom" secondItem="hnX-A9-R1n" secondAttribute="bottom" id="GCI-hq-9bE"/>
+                    <constraint firstItem="hnX-A9-R1n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="S5P-JL-zfg"/>
+                    <constraint firstAttribute="trailing" secondItem="hnX-A9-R1n" secondAttribute="trailing" id="aef-u3-vbs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="205.79710144927537" y="204.24107142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
