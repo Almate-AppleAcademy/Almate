@@ -33,7 +33,13 @@ class ProfileViewController: UIViewController {
         }
     }
     @IBAction func phonePressed(_ sender: UIButton) {
-        
+        if let url = URL(string: "tel://+6281274330099"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     @IBAction func emailPressed(_ sender: UIButton) {
         if let url = URL(string: "mailto:slametngeblog@gmail.com"){

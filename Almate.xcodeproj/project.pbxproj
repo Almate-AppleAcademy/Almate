@@ -35,6 +35,10 @@
 		5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38D23828AFA0079A595 /* JobsListCell.xib */; };
 		5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F142385167D00D54524 /* SkillProfileCell.swift */; };
 		5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F152385167D00D54524 /* SkillProfileCell.xib */; };
+		5F5083CF238550B900EB9AC9 /* EmployerPostJobCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083CD238550B900EB9AC9 /* EmployerPostJobCollectionCell.swift */; };
+		5F5083D0238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */; };
+		5F5083D3238665F400EB9AC9 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */; };
+		5F5083D4238665F400EB9AC9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -134,6 +138,10 @@
 		5E0DB38D23828AFA0079A595 /* JobsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsListCell.xib; sourceTree = "<group>"; };
 		5EEA1F142385167D00D54524 /* SkillProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillProfileCell.swift; sourceTree = "<group>"; };
 		5EEA1F152385167D00D54524 /* SkillProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillProfileCell.xib; sourceTree = "<group>"; };
+		5F5083CD238550B900EB9AC9 /* EmployerPostJobCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerPostJobCollectionCell.swift; sourceTree = "<group>"; };
+		5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerPostJobCollectionCell.xib; sourceTree = "<group>"; };
+		5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -559,6 +567,10 @@
 			children = (
 				8B53CDB02385364200E3ED23 /* EmployerView.swift */,
 				8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */,
+				5F5083CD238550B900EB9AC9 /* EmployerPostJobCollectionCell.swift */,
+				5F5083CE238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib */,
+				5F5083D1238665F400EB9AC9 /* FavoriteCollectionViewCell.swift */,
+				5F5083D2238665F400EB9AC9 /* FavoriteCollectionViewCell.xib */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -669,6 +681,7 @@
 				5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */,
 				8B86021B237AB5AC0053567B /* CommentCell.xib in Resources */,
 				8B860214237A872B0053567B /* CommentView.xib in Resources */,
+				5F5083D4238665F400EB9AC9 /* FavoriteCollectionViewCell.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				5E0DB377237BE1970079A595 /* EducationProfileCell.xib in Resources */,
@@ -689,6 +702,7 @@
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
+				5F5083D0238550B900EB9AC9 /* EmployerPostJobCollectionCell.xib in Resources */,
 				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
@@ -765,6 +779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5083D3238665F400EB9AC9 /* FavoriteCollectionViewCell.swift in Sources */,
 				8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */,
 				5E0DB364237969AC0079A595 /* EditProfileViewController.swift in Sources */,
 				5E0DB369237AA3880079A595 /* ProfileTableView.swift in Sources */,
@@ -785,6 +800,7 @@
 				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
+				5F5083CF238550B900EB9AC9 /* EmployerPostJobCollectionCell.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
 				88E07702237B398D0026D52B /* Post.swift in Sources */,
@@ -963,6 +979,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -982,6 +999,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RKKB6DTX4;
 				INFOPLIST_FILE = Almate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
