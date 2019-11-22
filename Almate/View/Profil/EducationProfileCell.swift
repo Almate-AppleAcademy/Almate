@@ -10,7 +10,12 @@ import UIKit
 
 class EducationProfileCell: UITableViewCell {
 
+    
+    @IBOutlet weak var institusiLbl: UILabel!
+    @IBOutlet weak var tanggalLbl: UILabel!
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddReferenceViewController" customModule="Almate" customModuleProvider="target">
+            <connections>
+                <outlet property="addReferenceSuperview" destination="i5M-Pr-FkT" id="uir-yw-rFh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="AddReferenceView" customModule="Almate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Something About" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtz-WL-jqa">
+                    <rect key="frame" x="25" y="118" width="369" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orang Yang Di Stalk" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40D-j9-UQk">
+                    <rect key="frame" x="25" y="154" width="369" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                    <color key="textColor" red="0.30196078430000001" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write something here..." translatesAutoresizingMaskIntoConstraints="NO" id="gfA-Sd-FaS">
+                    <rect key="frame" x="25" y="239" width="364" height="225"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="buw-mI-IpI"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Orang Yang Ngestalk" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgU-yD-psk">
+                    <rect key="frame" x="25" y="505" width="364" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-Wo-9Je">
+                    <rect key="frame" x="15" y="666" width="384" height="85"/>
+                    <state key="normal" image="post"/>
+                    <connections>
+                        <action selector="postPressed:" destination="-1" eventType="touchUpInside" id="nMA-p7-ui4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vtz-WL-jqa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="1h9-Q8-RGk"/>
+                <constraint firstItem="B4L-Wo-9Je" firstAttribute="top" secondItem="VgU-yD-psk" secondAttribute="bottom" constant="139.5" id="5AX-bE-GSZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gfA-Sd-FaS" secondAttribute="trailing" constant="25" id="CTv-v4-stH"/>
+                <constraint firstItem="B4L-Wo-9Je" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Ed3-yI-sWc"/>
+                <constraint firstItem="VgU-yD-psk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Kvc-o0-mws"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B4L-Wo-9Je" secondAttribute="trailing" constant="15" id="MTt-hM-Nfa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VgU-yD-psk" secondAttribute="trailing" constant="25" id="XjX-Pw-zC3"/>
+                <constraint firstItem="gfA-Sd-FaS" firstAttribute="top" secondItem="40D-j9-UQk" secondAttribute="bottom" constant="51.5" id="ce6-nL-Pot"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="40D-j9-UQk" secondAttribute="trailing" constant="20" id="leT-Fz-Mz8"/>
+                <constraint firstItem="VgU-yD-psk" firstAttribute="top" secondItem="gfA-Sd-FaS" secondAttribute="bottom" constant="41" id="oCR-KL-4ec"/>
+                <constraint firstItem="40D-j9-UQk" firstAttribute="top" secondItem="Vtz-WL-jqa" secondAttribute="bottom" constant="2.5" id="oij-vJ-7C9"/>
+                <constraint firstItem="gfA-Sd-FaS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="q6m-0E-Z0S"/>
+                <constraint firstItem="40D-j9-UQk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="uEN-l3-dlB"/>
+                <constraint firstItem="Vtz-WL-jqa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="74" id="xsp-7j-vmH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vtz-WL-jqa" secondAttribute="trailing" constant="20" id="yS9-cW-ZRg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="peopleNgestalkLbl" destination="VgU-yD-psk" id="sYX-7k-keS"/>
+                <outlet property="peopleStalkedLbl" destination="40D-j9-UQk" id="yUH-so-ULG"/>
+                <outlet property="referenceTxtView" destination="gfA-Sd-FaS" id="GoA-bk-MBO"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="post" width="384" height="85"/>
+    </resources>
+</document>

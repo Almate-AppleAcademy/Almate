@@ -43,6 +43,11 @@
 		5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38923828ADE0079A595 /* PeopleListCell.xib */; };
 		5E0DB38E23828AFA0079A595 /* JobsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB38C23828AFA0079A595 /* JobsListCell.swift */; };
 		5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38D23828AFA0079A595 /* JobsListCell.xib */; };
+		5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F142385167D00D54524 /* SkillProfileCell.swift */; };
+		5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F152385167D00D54524 /* SkillProfileCell.xib */; };
+		5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */; };
+		5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */; };
+		5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F2223868C3300D54524 /* AddReferenceView.swift */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -152,6 +157,11 @@
 		5E0DB38923828ADE0079A595 /* PeopleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleListCell.xib; sourceTree = "<group>"; };
 		5E0DB38C23828AFA0079A595 /* JobsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListCell.swift; sourceTree = "<group>"; };
 		5E0DB38D23828AFA0079A595 /* JobsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsListCell.xib; sourceTree = "<group>"; };
+		5EEA1F142385167D00D54524 /* SkillProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillProfileCell.swift; sourceTree = "<group>"; };
+		5EEA1F152385167D00D54524 /* SkillProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillProfileCell.xib; sourceTree = "<group>"; };
+		5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceViewController.swift; sourceTree = "<group>"; };
+		5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReferenceViewController.xib; sourceTree = "<group>"; };
+		5EEA1F2223868C3300D54524 /* AddReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceView.swift; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -316,6 +326,8 @@
 				5E0DB38923828ADE0079A595 /* PeopleListCell.xib */,
 				5E0DB38C23828AFA0079A595 /* JobsListCell.swift */,
 				5E0DB38D23828AFA0079A595 /* JobsListCell.xib */,
+				5EEA1F142385167D00D54524 /* SkillProfileCell.swift */,
+				5EEA1F152385167D00D54524 /* SkillProfileCell.xib */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -404,6 +416,7 @@
 			children = (
 				885A9A582372C239000D946E /* DetailPeopleViewController.swift */,
 				88945833236AF47900E3D838 /* PeopleViewController.swift */,
+				5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -421,6 +434,8 @@
 				8890B98023717D33005EE950 /* PeopleView.swift */,
 				8890B98223717E69005EE950 /* PeopleCell.swift */,
 				8890B98323717E69005EE950 /* PeopleCell.xib */,
+				5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */,
+				5EEA1F2223868C3300D54524 /* AddReferenceView.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -733,6 +748,7 @@
 				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
+				5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
 				5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */,
@@ -760,6 +776,7 @@
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
+				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
 				3A67CB592383F38800DC1114 /* EmployerJobViewController.xib in Resources */,
@@ -842,8 +859,10 @@
 				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
 				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
+				5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */,
 				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
+				5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
 				3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */,
 				888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */,
@@ -855,6 +874,7 @@
 				88E07700237B398D0026D52B /* Admin.swift in Sources */,
 				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
+				5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,

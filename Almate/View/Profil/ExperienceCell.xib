@@ -17,18 +17,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nama Perusahaan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-Ta-Efn">
-                        <rect key="frame" x="10" y="7" width="172" height="21"/>
+                        <rect key="frame" x="10" y="7" width="156" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="172" id="uTV-K8-hb8"/>
+                            <constraint firstAttribute="width" constant="156" id="uTV-K8-hb8"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-0Z-jVH">
-                        <rect key="frame" x="258" y="9" width="92" height="17"/>
+                        <rect key="frame" x="204" y="9" width="146" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="92" id="xiT-S9-PDZ"/>
+                            <constraint firstAttribute="width" constant="146" id="xiT-S9-PDZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <nil key="textColor"/>
@@ -43,10 +43,14 @@
                     <constraint firstItem="qLJ-Ta-Efn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VoC-3I-UKY"/>
                     <constraint firstItem="bKC-0Z-jVH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="s5q-Ht-m7S"/>
                     <constraint firstItem="qLJ-Ta-Efn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="vtu-M4-Q2i"/>
-                    <constraint firstItem="bKC-0Z-jVH" firstAttribute="leading" secondItem="qLJ-Ta-Efn" secondAttribute="trailing" constant="76" id="z1c-sh-IAn"/>
+                    <constraint firstItem="bKC-0Z-jVH" firstAttribute="leading" secondItem="qLJ-Ta-Efn" secondAttribute="trailing" constant="38" id="z1c-sh-IAn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="perusahaanLbl" destination="qLJ-Ta-Efn" id="AU3-aX-fUJ"/>
+                <outlet property="tanggalLbl" destination="bKC-0Z-jVH" id="i79-f9-GLt"/>
+            </connections>
             <point key="canvasLocation" x="121.73913043478262" y="116.18303571428571"/>
         </tableViewCell>
     </objects>

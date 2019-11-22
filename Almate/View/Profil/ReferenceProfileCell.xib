@@ -19,27 +19,27 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyk-dJ-jZ7">
                         <rect key="frame" x="0.0" y="0.0" width="368" height="177"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-au-74y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo 28-10-19 02.23.51" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-au-74y">
                                 <rect key="frame" x="8" y="8" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="MDH-9r-drA"/>
                                     <constraint firstAttribute="height" constant="45" id="xPP-iA-azQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Orang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17R-3Y-7hk">
-                                <rect key="frame" x="67" y="8" width="95" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Liam W." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17R-3Y-7hk">
+                                <rect key="frame" x="67" y="8" width="73" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angkatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9o-8x-lJF">
-                                <rect key="frame" x="176" y="8" width="71" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9o-8x-lJF">
+                                <rect key="frame" x="143" y="8" width="37" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kerjaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arI-GS-mzZ">
-                                <rect key="frame" x="67" y="33" width="57" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PT. Pertamina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arI-GS-mzZ">
+                                <rect key="frame" x="67" y="33.5" width="151" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -52,8 +52,8 @@
                                 </constraints>
                                 <state key="normal" image="threeDots"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg5-dp-YrZ">
-                                <rect key="frame" x="8" y="69" width="352" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager who had an idea best idea to make a change in progress as well for the employees." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg5-dp-YrZ">
+                                <rect key="frame" x="8" y="69" width="352" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.28000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -68,9 +68,9 @@
                             <constraint firstAttribute="trailing" secondItem="SqX-yW-xCO" secondAttribute="trailing" id="Ekz-0d-aUC"/>
                             <constraint firstItem="SqX-yW-xCO" firstAttribute="top" secondItem="gyk-dJ-jZ7" secondAttribute="top" constant="6" id="FK2-xP-kA1"/>
                             <constraint firstItem="UsA-au-74y" firstAttribute="top" secondItem="gyk-dJ-jZ7" secondAttribute="top" constant="8" id="Osf-MZ-YqO"/>
-                            <constraint firstAttribute="trailing" secondItem="arI-GS-mzZ" secondAttribute="trailing" constant="244" id="Ya7-nq-QdN"/>
-                            <constraint firstItem="L9o-8x-lJF" firstAttribute="leading" secondItem="17R-3Y-7hk" secondAttribute="trailing" constant="14" id="Z3Y-Rh-4UF"/>
-                            <constraint firstItem="SqX-yW-xCO" firstAttribute="leading" secondItem="L9o-8x-lJF" secondAttribute="trailing" constant="97" id="f51-pu-ekq"/>
+                            <constraint firstAttribute="trailing" secondItem="arI-GS-mzZ" secondAttribute="trailing" constant="150" id="Ya7-nq-QdN"/>
+                            <constraint firstItem="L9o-8x-lJF" firstAttribute="leading" secondItem="17R-3Y-7hk" secondAttribute="trailing" constant="3" id="Z3Y-Rh-4UF"/>
+                            <constraint firstItem="SqX-yW-xCO" firstAttribute="leading" secondItem="L9o-8x-lJF" secondAttribute="trailing" constant="164" id="f51-pu-ekq"/>
                             <constraint firstItem="17R-3Y-7hk" firstAttribute="leading" secondItem="UsA-au-74y" secondAttribute="trailing" constant="14" id="lcW-Fx-Q0w"/>
                             <constraint firstItem="UsA-au-74y" firstAttribute="leading" secondItem="gyk-dJ-jZ7" secondAttribute="leading" constant="8" id="rOt-ep-cXd"/>
                             <constraint firstItem="arI-GS-mzZ" firstAttribute="leading" secondItem="UsA-au-74y" secondAttribute="trailing" constant="14" id="utN-Mv-Z0C"/>
@@ -99,7 +99,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Oval" width="45" height="45"/>
+        <image name="Photo 28-10-19 02.23.51" width="1000" height="881"/>
         <image name="threeDots" width="24" height="24"/>
     </resources>
 </document>
