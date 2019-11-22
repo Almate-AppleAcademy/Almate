@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmployerJobViewController" customModule="Almate" customModuleProvider="target">
+            <connections>
+                <outlet property="jobEmployerView" destination="686-i9-kul" id="tJX-Hg-wvR"/>
+                <outlet property="view" destination="686-i9-kul" id="Es1-2q-c1f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="686-i9-kul" customClass="EmployerJobView" customModule="Almate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CL9-4g-DOo">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-bv-pL0">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0B-cF-Kc2">
+                                    <rect key="frame" x="95" y="261" width="224" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="Post a job"/>
+                                    <connections>
+                                        <action selector="postAJobBtn:" destination="686-i9-kul" eventType="touchUpInside" id="FGF-DK-8tE"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have available position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-2V-fce">
+                                    <rect key="frame" x="26" y="229" width="353" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Job Openings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcv-cR-oyg">
+                                    <rect key="frame" x="17" y="324" width="174" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bU0-Ka-5Eh">
+                                    <rect key="frame" x="0.0" y="356" width="414" height="540"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E4M-Rp-rNw">
+                                        <size key="itemSize" width="354" height="110"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-NL-jKB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xap-Nu-twb">
+                                            <rect key="frame" x="338" y="75" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="Pzh-b8-Y5w"/>
+                                            </constraints>
+                                            <state key="normal" image="Oval"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.13347160816192627" green="0.15679097175598145" blue="0.19216051697731018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Xap-Nu-twb" secondAttribute="trailing" constant="31" id="T39-IR-qBw"/>
+                                        <constraint firstItem="Xap-Nu-twb" firstAttribute="top" secondItem="1DE-NL-jKB" secondAttribute="top" constant="75" id="vWM-TW-MWE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="1DE-NL-jKB" firstAttribute="top" secondItem="Wq6-bv-pL0" secondAttribute="top" id="0d4-U8-3YO"/>
+                                <constraint firstItem="1DE-NL-jKB" firstAttribute="leading" secondItem="Wq6-bv-pL0" secondAttribute="leading" id="43E-a6-oWV"/>
+                                <constraint firstAttribute="width" constant="414" id="azZ-EW-EOo"/>
+                                <constraint firstAttribute="bottom" secondItem="1DE-NL-jKB" secondAttribute="bottom" constant="702" id="fg4-DN-E8c"/>
+                                <constraint firstAttribute="trailing" secondItem="1DE-NL-jKB" secondAttribute="trailing" id="jlp-cH-AIO"/>
+                                <constraint firstAttribute="height" constant="896" id="wxJ-C5-Gqh"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Wq6-bv-pL0" firstAttribute="top" secondItem="zqf-tf-luW" secondAttribute="top" id="CYA-vR-VlA"/>
+                        <constraint firstItem="Wq6-bv-pL0" firstAttribute="bottom" secondItem="zqf-tf-luW" secondAttribute="bottom" id="nJF-gg-TMx"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="2dm-e4-1WT"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="zqf-tf-luW"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="zpD-It-Fpi"/>
+            <connections>
+                <outlet property="jobOpeningsTable" destination="bU0-Ka-5Eh" id="PGC-Pb-Odk"/>
+                <outlet property="postAJobBtn" destination="y0B-cF-Kc2" id="f9F-3C-Agq"/>
+            </connections>
+            <point key="canvasLocation" x="2463" y="203"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Oval" width="45" height="45"/>
+        <image name="Post a job" width="224" height="45"/>
+    </resources>
+</document>
