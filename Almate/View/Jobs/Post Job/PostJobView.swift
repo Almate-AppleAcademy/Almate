@@ -23,25 +23,15 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
     
     @IBAction func addLogoBtn(_ sender: UIButton) {
         addLogoImage()
-        
+       
     }
     
     @IBAction func addDetailImageBtn(_ sender: Any) {
         addImage()
+      
     }
-    
-//   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//       guard let profileImage  = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
-//
-//       // configure plusPhotoBtn with selected image
-//       addLogo.layer.cornerRadius = addLogo.frame.width/2
-//       addLogo.layer.masksToBounds = true
-//       addLogo.layer.borderColor = UIColor.black.cgColor
-//       addLogo.layer.borderWidth = 2
-//       addLogo.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
-//
-//       self.dismiss(animated: true, completion: nil)
-//   }
+
+
 }
 
 extension PostJobView{

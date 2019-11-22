@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
-    private let jobVC = EmployerJobViewController()
+    private let jobVC = JobsViewController()
     private let newsVC = NewsViewController()
     private let peopleVC = PeopleViewController()
     private let notifVC = NotifTableViewController()

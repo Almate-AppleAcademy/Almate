@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JobDetailViewController" customModule="Almate" customModuleProvider="target">
             <connections>
-                <outlet property="backToJobBtn" destination="OCm-X2-LKk" id="1Ha-m7-zWe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,64 +24,44 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1298"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-jY-D5N">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="254"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxz-gt-YIz">
-                                            <rect key="frame" x="25" y="289" width="80" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdY-fc-MpI">
-                                            <rect key="frame" x="303" y="199" width="83" height="38"/>
+                                            <rect key="frame" x="302" y="115" width="83" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="Group Copy"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-w4-EH6">
-                                            <rect key="frame" x="161" y="199" width="93" height="36"/>
+                                            <rect key="frame" x="160" y="115" width="93" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="Group"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-vC-I1V">
-                                            <rect key="frame" x="31" y="207" width="113" height="19"/>
+                                            <rect key="frame" x="30" y="123" width="113" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advertising Sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9o-4L-Lee">
-                                            <rect key="frame" x="136" y="94" width="147" height="22"/>
+                                            <rect key="frame" x="135" y="10" width="147" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spotify" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-Sk-cEH">
-                                            <rect key="frame" x="136" y="122" width="55" height="21"/>
+                                            <rect key="frame" x="135" y="38" width="55" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Company pic" translatesAutoresizingMaskIntoConstraints="NO" id="kak-8U-fEt">
-                                            <rect key="frame" x="31" y="94" width="75" height="75"/>
+                                            <rect key="frame" x="30" y="10" width="75" height="75"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCm-X2-LKk">
-                                            <rect key="frame" x="18" y="24" width="41" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="Combined Shape"/>
-                                            <connections>
-                                                <action selector="backToJobBtn:" destination="-1" eventType="touchUpInside" id="1c7-Yl-rFb"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAY-nc-GYQ">
-                                            <rect key="frame" x="373" y="34" width="24" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="white"/>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <userDefinedRuntimeAttributes>
@@ -91,8 +70,15 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxz-gt-YIz">
+                                    <rect key="frame" x="25" y="181" width="80" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZB-f3-nQK">
-                                    <rect key="frame" x="25" y="328" width="364" height="144"/>
+                                    <rect key="frame" x="26" y="215" width="364" height="144"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <string key="text">With Spotify, it’s easy to find the right music or podcast for every moment – on your phone, your computer, your tablet and more. There are millions of tracks and episodes on Spotify. So whether you’re behind the wheel, partying or relaxing, the right music or podcast is always at your fingertips. </string>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -100,11 +86,11 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-uH-9uT">
-                                    <rect key="frame" x="24" y="508" width="364" height="165"/>
+                                    <rect key="frame" x="25" y="395" width="364" height="165"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwP-Ym-Yki">
-                                    <rect key="frame" x="24" y="737" width="364" height="131"/>
+                                    <rect key="frame" x="25" y="624" width="364" height="131"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <string key="text">you will learn everything about our Free Business and be able to develop skills and knowledge around how best to monetize an advertising-funded digital platform/app. You will work with the team in analyzing audience behaviours and identify what creative engagements brands may have. </string>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -112,26 +98,26 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Requirement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-DC-frH">
-                                    <rect key="frame" x="24" y="915" width="209" height="26"/>
+                                    <rect key="frame" x="25" y="802" width="209" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-ao-q16">
-                                    <rect key="frame" x="25" y="1208" width="364" height="70"/>
+                                    <rect key="frame" x="26" y="1095" width="364" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="primary"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz0-I0-wLw">
-                                    <rect key="frame" x="25" y="706" width="209" height="23"/>
+                                    <rect key="frame" x="26" y="593" width="209" height="23"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40g-ab-BYl">
-                                    <rect key="frame" x="24" y="955" width="364" height="131"/>
+                                    <rect key="frame" x="25" y="842" width="364" height="131"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <string key="text">you will learn everything about our Free Business and be able to develop skills and knowledge around how best to monetize an advertising-funded digital platform/app. You will work with the team in analyzing audience behaviours and identify what creative engagements brands may have. </string>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -166,18 +152,18 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="backToJobBtn" destination="OCm-X2-LKk" id="qCD-mj-Ksw"/>
+                <outlet property="applyBtn" destination="mb6-ao-q16" id="kyx-x3-RK8"/>
+                <outlet property="emailBtn" destination="kdY-fc-MpI" id="bap-Yw-Qqg"/>
+                <outlet property="phoneBtn" destination="3kd-w4-EH6" id="bHp-hP-ZT2"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
-        <image name="Combined Shape" width="12" height="21"/>
         <image name="Company pic" width="77" height="77"/>
         <image name="Group" width="91" height="38"/>
         <image name="Group Copy" width="83" height="38"/>
         <image name="Rectangle" width="364" height="165"/>
         <image name="primary" width="384" height="85"/>
-        <image name="white" width="24" height="24"/>
     </resources>
 </document>

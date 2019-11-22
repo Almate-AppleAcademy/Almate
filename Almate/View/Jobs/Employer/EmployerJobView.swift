@@ -12,18 +12,22 @@ class EmployerJobView: UIView {
 
     @IBOutlet var jobOpeningsTable: UICollectionView!
     var jobOpeningsDelegate: JobOpeningsDelegate?
+    @IBOutlet var postAJobBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         jobOpeningsTable.register(UINib(nibName: "JobEmployerCell", bundle: nil), forCellWithReuseIdentifier: "jobEmployerCell")
         jobOpeningsTable.delegate = self
         jobOpeningsTable.dataSource = self
     }
-
+    @IBAction func postAJobBtn(_ sender: Any) {
+        tapPost()
+    }
+    
 }
 
 extension EmployerJobView: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,9 +49,13 @@ extension EmployerJobView: UICollectionViewDelegate{
     func tapEdit(){
         jobOpeningsDelegate?.didTappedEdit()
     }
+    func tapPost(){
+        jobOpeningsDelegate?.didTappedPostJob()
+    }
 }
 
 protocol JobOpeningsDelegate{
     func didSelectItemAt()
     func didTappedEdit()
+    func didTappedPostJob()
 }

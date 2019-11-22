@@ -14,9 +14,13 @@ class JobDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Detail"
-       // navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.navigationBar.tintColor = .white
+        
+        //navigationController?.navigationBar.prefersLargeTitles = true
+       // navigationItem.title = "Detail"
+      //  navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationItem.largeTitleDisplayMode = .never
+        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent

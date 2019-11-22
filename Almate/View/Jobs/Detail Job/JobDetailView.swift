@@ -10,6 +10,9 @@ import UIKit
 
 class JobDetailView: UIView {
     @IBOutlet var backToJobBtn: UIButton!
+    @IBOutlet var phoneBtn: UIButton!
+    @IBOutlet var emailBtn: UIButton!
+    @IBOutlet var applyBtn: UIButton!
     override class func awakeFromNib() {
          super.awakeFromNib()
     }

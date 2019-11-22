@@ -10,6 +10,7 @@
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
 		3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */; };
 		3A353CE823850DE100BE4A19 /* JobEmployerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */; };
+		3A353CF72386884D00BE4A19 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A353CF62386884D00BE4A19 /* DLRadioButton.m */; };
 		3A67CB582383F38800DC1114 /* EmployerJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67CB562383F38800DC1114 /* EmployerJobViewController.swift */; };
 		3A67CB592383F38800DC1114 /* EmployerJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A67CB572383F38800DC1114 /* EmployerJobViewController.xib */; };
 		3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67CB5B2383F3E300DC1114 /* EmployerJobView.swift */; };
@@ -98,6 +99,9 @@
 /* Begin PBXFileReference section */
 		3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEmployerCell.swift; sourceTree = "<group>"; };
 		3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobEmployerCell.xib; sourceTree = "<group>"; };
+		3A353CF42386884C00BE4A19 /* Almate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Almate-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A353CF52386884D00BE4A19 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		3A353CF62386884D00BE4A19 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		3A67CB562383F38800DC1114 /* EmployerJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerJobViewController.swift; sourceTree = "<group>"; };
 		3A67CB572383F38800DC1114 /* EmployerJobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerJobViewController.xib; sourceTree = "<group>"; };
 		3A67CB5B2383F3E300DC1114 /* EmployerJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerJobView.swift; sourceTree = "<group>"; };
@@ -503,10 +507,13 @@
 				88F6821A236984D3006249AA /* View */,
 				88F68206236971B5006249AA /* AppDelegate.swift */,
 				88F6820A236971B5006249AA /* ViewController.swift */,
+				3A353CF52386884D00BE4A19 /* DLRadioButton.h */,
+				3A353CF62386884D00BE4A19 /* DLRadioButton.m */,
 				88F6820F236971B7006249AA /* Assets.xcassets */,
 				88F68211236971B7006249AA /* LaunchScreen.storyboard */,
 				3AB648E3237418E9005B884D /* GoogleService-Info.plist */,
 				88F68214236971B7006249AA /* Info.plist */,
+				3A353CF42386884C00BE4A19 /* Almate-Bridging-Header.h */,
 			);
 			path = Almate;
 			sourceTree = "<group>";
@@ -796,6 +803,7 @@
 				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
 				88E07705237B398D0026D52B /* Notif.swift in Sources */,
+				3A353CF72386884D00BE4A19 /* DLRadioButton.m in Sources */,
 				3A8333A7238280D6007C17C4 /* JobDetailView.swift in Sources */,
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				3A67CB582383F38800DC1114 /* EmployerJobViewController.swift in Sources */,
@@ -954,6 +962,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Almate/Almate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -974,6 +983,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = applegroupone.id.Almate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Almate/Almate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
