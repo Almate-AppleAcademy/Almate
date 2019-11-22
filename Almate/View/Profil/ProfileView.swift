@@ -14,6 +14,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     let skillTags = ["Swift", "Java", "C++", "Kotlin", "Ruby", "Sketch", "SAP HR"]
     
+    @IBOutlet weak var transparentView: UIView!
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var savedView: UIView!
@@ -46,6 +47,13 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         garisMenuDua.alpha = 0
         savedView.alpha = 0
+        transparentView.alpha = 0.8
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = transparentView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        transparentView.addSubview(blurEffectView)
         
         skillCollection.register(UINib(nibName: "SkillProfileCell", bundle: nil), forCellWithReuseIdentifier: "skillProfileCell")
         workNumber.text = "(\(workAngka))"

@@ -19,12 +19,19 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.isHidden = true
     }
 
+    
     @IBAction func editPressed(_ sender: UIButton) {
         self.present(UINavigationController(rootViewController: EditProfileViewController()), animated: true, completion: nil)
         
     }
+    
+    @IBAction func donePressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @IBAction func linkedinPressed(_ sender: UIButton) {
         if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/")
@@ -51,6 +58,10 @@ class ProfileViewController: UIViewController {
         
 //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
             
+    }
+    
+    @IBAction func doneProfilePressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func savedPressed(_ sender: UIButton) {

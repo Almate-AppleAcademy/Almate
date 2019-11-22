@@ -41,4 +41,12 @@ class DetailPeopleViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+    @IBAction func addReferencePressed(_ sender: UIButton) {
+        let controller = AddReferenceViewController(nibName: "AddReferenceViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+//        self.navigationController?.popViewController(animated: Bool)
+        
+        
+        print("K")
+    }
 }

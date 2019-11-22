@@ -129,7 +129,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-YJ-2FD">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-YJ-2FD">
                                     <rect key="frame" x="25" y="400" width="365" height="128"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -213,28 +213,40 @@
                                     <color key="textColor" red="0.30196078430000001" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDp-vi-Nfw">
+                                    <rect key="frame" x="355" y="1092" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="add button"/>
+                                    <connections>
+                                        <action selector="addReferencePressed:" destination="-1" eventType="touchUpInside" id="dQ2-e5-V04"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="414" id="LaL-M3-BVr"/>
+                                <constraint firstAttribute="height" constant="1350" id="gyh-4g-3bl"/>
+                            </constraints>
                             <viewLayoutGuide key="safeArea" id="flp-Jw-Qhn"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="leading" secondItem="qGa-pi-yBq" secondAttribute="leading" id="0AC-fR-Aj1"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="top" secondItem="qGa-pi-yBq" secondAttribute="top" id="RFo-vK-QYJ"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="centerX" secondItem="qGa-pi-yBq" secondAttribute="centerX" id="S3C-8C-7i1"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="centerY" secondItem="qGa-pi-yBq" secondAttribute="centerY" id="uO5-Rf-Crs"/>
-                        <constraint firstAttribute="bottom" secondItem="90g-ky-UQC" secondAttribute="bottom" id="xTh-cO-mDj"/>
-                        <constraint firstAttribute="trailing" secondItem="90g-ky-UQC" secondAttribute="trailing" id="ydB-gJ-Xy0"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="top" secondItem="qGa-pi-yBq" secondAttribute="top" id="8hW-xq-ts2"/>
+                        <constraint firstAttribute="trailing" secondItem="90g-ky-UQC" secondAttribute="trailing" id="9uI-kO-1Vd"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="width" secondItem="qGa-pi-yBq" secondAttribute="width" id="Ed4-tH-iYN"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="height" secondItem="qGa-pi-yBq" secondAttribute="height" priority="250" id="Pke-4f-dzz"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="leading" secondItem="qGa-pi-yBq" secondAttribute="leading" id="b7n-B0-VfM"/>
+                        <constraint firstAttribute="bottom" secondItem="90g-ky-UQC" secondAttribute="bottom" id="oVE-bL-OpG"/>
                     </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="leading" secondItem="H8l-Wl-I8g" secondAttribute="leading" id="UA1-ju-1RV"/>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="trailing" secondItem="H8l-Wl-I8g" secondAttribute="trailing" id="gEP-JG-cqm"/>
-                <constraint firstAttribute="bottom" secondItem="qGa-pi-yBq" secondAttribute="bottom" id="kHH-zk-QbQ"/>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="top" secondItem="ihW-TC-c86" secondAttribute="top" id="yuU-Uf-c0y"/>
+                <constraint firstAttribute="bottom" secondItem="qGa-pi-yBq" secondAttribute="bottom" id="2re-uK-OEI"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="trailing" secondItem="H8l-Wl-I8g" secondAttribute="trailing" id="DTf-Be-rOo"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="leading" secondItem="H8l-Wl-I8g" secondAttribute="leading" id="W28-12-LtX"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="top" secondItem="ihW-TC-c86" secondAttribute="top" id="iY9-Cs-s3s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="H8l-Wl-I8g"/>
@@ -260,6 +272,7 @@
     </objects>
     <resources>
         <image name="Profile pic" width="100" height="100"/>
+        <image name="add button" width="24" height="24"/>
         <image name="email" width="43" height="43"/>
         <image name="linked-in" width="43" height="43"/>
         <image name="location" width="24" height="24"/>

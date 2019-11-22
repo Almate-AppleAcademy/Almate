@@ -56,7 +56,7 @@
                             <constraint firstAttribute="height" constant="62" id="o1r-1r-Vvt"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dlL-XD-Ffh">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="54" height="23"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -91,6 +91,9 @@
                     <integer key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="skillPeopleCollection" destination="0B7-gZ-5SW" id="k9V-19-RHn"/>
+            </connections>
             <point key="canvasLocation" x="131.15942028985509" y="123.88392857142857"/>
         </collectionViewCell>
     </objects>
