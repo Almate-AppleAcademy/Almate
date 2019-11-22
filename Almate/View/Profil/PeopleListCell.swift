@@ -14,6 +14,9 @@ class PeopleListCell: UICollectionViewCell, UICollectionViewDelegate, UICollecti
 let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoapods", "J-Pop"]
     
     @IBOutlet weak var skillPeopleCollection: UICollectionView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var angkatanLbl: UILabel!
+    @IBOutlet weak var jobTitleLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

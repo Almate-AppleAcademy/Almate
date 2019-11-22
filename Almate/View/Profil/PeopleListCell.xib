@@ -92,6 +92,9 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="angkatanLbl" destination="owW-uS-A7E" id="nHp-HE-CnX"/>
+                <outlet property="jobTitleLbl" destination="F7f-Mm-6UN" id="6Tt-vg-OuN"/>
+                <outlet property="nameLbl" destination="pcu-Uf-pbq" id="geO-8J-Chn"/>
                 <outlet property="skillPeopleCollection" destination="0B7-gZ-5SW" id="k9V-19-RHn"/>
             </connections>
             <point key="canvasLocation" x="131.15942028985509" y="123.88392857142857"/>

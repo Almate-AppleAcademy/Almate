@@ -13,6 +13,17 @@ var workAngka: Int = 5
 class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate {
     
     let skillTags = ["Swift", "Java", "C++", "Kotlin", "Ruby", "Sketch", "SAP HR"]
+    let listIntitusi = ["Yale University", "SMAN 3 Jakarta"]
+    let listTanggalInstitusi = ["2015 - 2019", "2012 - 2015"]
+    let listPerusahaan = ["PT. Pertamina", "Apple Indonesia"]
+    let listTanggalPerusahaan = ["Mar 2016 - Present", "2014 - 2016"]
+    let listNamaAlumni = ["Rizal W.", "Abraham L.", "Mirza F.", "Lunggo S.F"]
+    let listAngkatanAlumni = ["Cohort 1", "Cohort 2", "Cohort 2", "Cohort 1", "Cohort 2"]
+    let listKerjaanAlumni = ["UX Designer", "UX Designer", "General Manager", "Product Manager", "Programmer"]
+    let listJobTitle = ["UX Designer","Programmer", "Product Designer"]
+    let listJobPerusahaan = ["Spotify", "Spotify", "Spotify"]
+     let listLokasiPerusahaan = ["Jakarta", "Jakarta", "Jakarta"]
+    
     
     @IBOutlet weak var transparentView: UIView!
     
@@ -54,6 +65,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         blurEffectView.frame = transparentView.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         transparentView.addSubview(blurEffectView)
+        
+        
         
         skillCollection.register(UINib(nibName: "SkillProfileCell", bundle: nil), forCellWithReuseIdentifier: "skillProfileCell")
         workNumber.text = "(\(workAngka))"
@@ -122,12 +135,22 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
             return cell
         }else if collectionView == peopleListCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleListCell", for: indexPath as IndexPath) as! PeopleListCell
+            cell.nameLbl.text = listNamaAlumni[indexPath.row]
+            cell.angkatanLbl.text = listAngkatanAlumni[indexPath.row]
+            cell.jobTitleLbl.text = listKerjaanAlumni[indexPath.row]
+            
             return cell
         }else if collectionView == jobsListCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
+            cell.jobTitleLbl.text = listJobTitle[indexPath.row]
+            cell.companyLbl.text = listJobPerusahaan[indexPath.row]
+            cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
+            cell.jobTitleLbl.text = listJobTitle[indexPath.row]
+            cell.companyLbl.text = listJobPerusahaan[indexPath.row]
+            cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
             return cell
         }
     }
@@ -145,9 +168,18 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == educationTable{
             let cell = tableView.dequeueReusableCell(withIdentifier: "educationProfileCell", for: indexPath as IndexPath) as! EducationProfileCell
+            
+            cell.institusiLbl.text
+                = listIntitusi[indexPath.row]
+            
+            cell.tanggalLbl.text = listTanggalInstitusi[indexPath.row]
+            
             return cell
         }else if tableView == experienceTable{
             let cell = tableView.dequeueReusableCell(withIdentifier: "experienceCell", for: indexPath as IndexPath) as! ExperienceCell
+            
+            cell.perusahaanLbl.text = listPerusahaan[indexPath.row]
+            cell.tanggalLbl.text =  listTanggalPerusahaan[indexPath.row]
             return cell
         }else{
              let cell = tableView.dequeueReusableCell(withIdentifier: "experienceCell", for: indexPath as IndexPath) as! ExperienceCell

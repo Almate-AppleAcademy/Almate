@@ -10,6 +10,10 @@ import UIKit
 
 class ExperienceCell: UITableViewCell {
 
+    
+    @IBOutlet weak var perusahaanLbl: UILabel!
+    @IBOutlet weak var tanggalLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

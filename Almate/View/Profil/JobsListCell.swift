@@ -10,8 +10,14 @@ import UIKit
 
 class JobsListCell: UICollectionViewCell {
 
+    @IBOutlet weak var jobTitleLbl: UILabel!
+    @IBOutlet weak var companyLbl: UILabel!
+    @IBOutlet weak var locationLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         
         self.layer.borderWidth = 5.0
              self.layer.borderColor = UIColor.clear.cgColor
