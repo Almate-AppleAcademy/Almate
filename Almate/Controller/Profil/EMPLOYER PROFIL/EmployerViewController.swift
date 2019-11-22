@@ -62,9 +62,6 @@ class EmployerViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         
-//        let nav = self.navigationController?.navigationBar
-//        nav?.barStyle = UIBarStyle.default
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerTableViewCell")

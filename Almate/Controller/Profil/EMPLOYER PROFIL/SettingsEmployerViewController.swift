@@ -15,6 +15,9 @@ class SettingsEmployerViewController: UIViewController {
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
         self.navigationItem.title = "Settings"
         self.navigationItem.rightBarButtonItem = doneBtn
+
+        
+        
         // Do any additional setup after loading the view.
     }
 

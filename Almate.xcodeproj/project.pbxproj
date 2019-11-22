@@ -100,6 +100,22 @@
 		8B01FBED2387CFB900AD012F /* SettingsEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBEB2387CFB900AD012F /* SettingsEmployerViewController.swift */; };
 		8B01FBEE2387CFB900AD012F /* SettingsEmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */; };
 		8B01FBF02387D00C00AD012F /* SettingsEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */; };
+		8B01FBF82387DD5600AD012F /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBF62387DD5600AD012F /* BusinessCollectionViewCell.swift */; };
+		8B01FBF92387DD5600AD012F /* BusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBF72387DD5600AD012F /* BusinessCollectionViewCell.xib */; };
+		8B01FBFC2387DD6700AD012F /* IllustratorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBFA2387DD6700AD012F /* IllustratorCollectionViewCell.swift */; };
+		8B01FBFD2387DD6700AD012F /* IllustratorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBFB2387DD6700AD012F /* IllustratorCollectionViewCell.xib */; };
+		8B01FC002387DD7300AD012F /* ResearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBFE2387DD7300AD012F /* ResearchCollectionViewCell.swift */; };
+		8B01FC012387DD7300AD012F /* ResearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBFF2387DD7300AD012F /* ResearchCollectionViewCell.xib */; };
+		8B01FC042387DD8100AD012F /* FigmaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC022387DD8100AD012F /* FigmaCollectionViewCell.swift */; };
+		8B01FC052387DD8100AD012F /* FigmaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC032387DD8100AD012F /* FigmaCollectionViewCell.xib */; };
+		8B01FC082387DD9000AD012F /* SketchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC062387DD9000AD012F /* SketchCollectionViewCell.swift */; };
+		8B01FC092387DD9000AD012F /* SketchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC072387DD9000AD012F /* SketchCollectionViewCell.xib */; };
+		8B01FC0C2387DD9D00AD012F /* WireframingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC0A2387DD9D00AD012F /* WireframingCollectionViewCell.swift */; };
+		8B01FC0D2387DD9D00AD012F /* WireframingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC0B2387DD9D00AD012F /* WireframingCollectionViewCell.xib */; };
+		8B01FC142387E2E700AD012F /* SwiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC122387E2E700AD012F /* SwiftCollectionViewCell.swift */; };
+		8B01FC152387E2E700AD012F /* SwiftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC132387E2E700AD012F /* SwiftCollectionViewCell.xib */; };
+		8B01FC182387E58300AD012F /* MoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC162387E58300AD012F /* MoreCollectionViewCell.swift */; };
+		8B01FC192387E58300AD012F /* MoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC172387E58300AD012F /* MoreCollectionViewCell.xib */; };
 		8B53CDAE2385362700E3ED23 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */; };
 		8B53CDAF2385362700E3ED23 /* EmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */; };
 		8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDB02385364200E3ED23 /* EmployerView.swift */; };
@@ -215,6 +231,22 @@
 		8B01FBEB2387CFB900AD012F /* SettingsEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEmployerViewController.swift; sourceTree = "<group>"; };
 		8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsEmployerViewController.xib; sourceTree = "<group>"; };
 		8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEmployer.swift; sourceTree = "<group>"; };
+		8B01FBF62387DD5600AD012F /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FBF72387DD5600AD012F /* BusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FBFA2387DD6700AD012F /* IllustratorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustratorCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FBFB2387DD6700AD012F /* IllustratorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IllustratorCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FBFE2387DD7300AD012F /* ResearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FBFF2387DD7300AD012F /* ResearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FC022387DD8100AD012F /* FigmaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FC032387DD8100AD012F /* FigmaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FigmaCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FC062387DD9000AD012F /* SketchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FC072387DD9000AD012F /* SketchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SketchCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FC0A2387DD9D00AD012F /* WireframingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FC0B2387DD9D00AD012F /* WireframingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WireframingCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FC122387E2E700AD012F /* SwiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FC132387E2E700AD012F /* SwiftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B01FC162387E58300AD012F /* MoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B01FC172387E58300AD012F /* MoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
 		8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerViewController.xib; sourceTree = "<group>"; };
 		8B53CDB02385364200E3ED23 /* EmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerView.swift; sourceTree = "<group>"; };
@@ -580,6 +612,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8B01FBF52387D9CA00AD012F /* Skill Tags */ = {
+			isa = PBXGroup;
+			children = (
+				8B01FBF62387DD5600AD012F /* BusinessCollectionViewCell.swift */,
+				8B01FBF72387DD5600AD012F /* BusinessCollectionViewCell.xib */,
+				8B01FBFA2387DD6700AD012F /* IllustratorCollectionViewCell.swift */,
+				8B01FBFB2387DD6700AD012F /* IllustratorCollectionViewCell.xib */,
+				8B01FBFE2387DD7300AD012F /* ResearchCollectionViewCell.swift */,
+				8B01FBFF2387DD7300AD012F /* ResearchCollectionViewCell.xib */,
+				8B01FC022387DD8100AD012F /* FigmaCollectionViewCell.swift */,
+				8B01FC032387DD8100AD012F /* FigmaCollectionViewCell.xib */,
+				8B01FC062387DD9000AD012F /* SketchCollectionViewCell.swift */,
+				8B01FC072387DD9000AD012F /* SketchCollectionViewCell.xib */,
+				8B01FC0A2387DD9D00AD012F /* WireframingCollectionViewCell.swift */,
+				8B01FC0B2387DD9D00AD012F /* WireframingCollectionViewCell.xib */,
+				8B01FC122387E2E700AD012F /* SwiftCollectionViewCell.swift */,
+				8B01FC132387E2E700AD012F /* SwiftCollectionViewCell.xib */,
+				8B01FC162387E58300AD012F /* MoreCollectionViewCell.swift */,
+				8B01FC172387E58300AD012F /* MoreCollectionViewCell.xib */,
+			);
+			path = "Skill Tags";
+			sourceTree = "<group>";
+		};
 		8B53CDAA238535E000E3ED23 /* EMPLOYER PROFIL */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +650,7 @@
 				8B01FBE42386D4B400AD012F /* FavoritesSegmentTableViewCell.xib */,
 				8B01FBE72386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift */,
 				8B01FBE82386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.xib */,
+				8B01FBF52387D9CA00AD012F /* Skill Tags */,
 				8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */,
 				8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */,
 			);
@@ -698,17 +754,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B01FC092387DD9000AD012F /* SketchCollectionViewCell.xib in Resources */,
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
+				8B01FC192387E58300AD012F /* MoreCollectionViewCell.xib in Resources */,
+				8B01FBF92387DD5600AD012F /* BusinessCollectionViewCell.xib in Resources */,
 				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
 				8B53CDAF2385362700E3ED23 /* EmployerViewController.xib in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
+				8B01FC052387DD8100AD012F /* FigmaCollectionViewCell.xib in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
 				5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */,
 				8B86021B237AB5AC0053567B /* CommentCell.xib in Resources */,
+				8B01FC012387DD7300AD012F /* ResearchCollectionViewCell.xib in Resources */,
 				8B860214237A872B0053567B /* CommentView.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
+				8B01FBFD2387DD6700AD012F /* IllustratorCollectionViewCell.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				5E0DB377237BE1970079A595 /* EducationProfileCell.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
@@ -727,11 +789,13 @@
 				885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */,
 				5E0DB360237957B10079A595 /* ProfileCell.xib in Resources */,
 				5E0DB37B237BE6420079A595 /* ReferenceProfileCell.xib in Resources */,
+				8B01FC152387E2E700AD012F /* SwiftCollectionViewCell.xib in Resources */,
 				8B70E037238682C600B6F090 /* HeaderTableViewCell.xib in Resources */,
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
 				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
+				8B01FC0D2387DD9D00AD012F /* WireframingCollectionViewCell.xib in Resources */,
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
 				8B01FBEE2387CFB900AD012F /* SettingsEmployerViewController.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
@@ -810,10 +874,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B01FBFC2387DD6700AD012F /* IllustratorCollectionViewCell.swift in Sources */,
 				8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */,
 				5E0DB364237969AC0079A595 /* EditProfileViewController.swift in Sources */,
 				5E0DB369237AA3880079A595 /* ProfileTableView.swift in Sources */,
 				887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */,
+				8B01FBF82387DD5600AD012F /* BusinessCollectionViewCell.swift in Sources */,
+				8B01FC142387E2E700AD012F /* SwiftCollectionViewCell.swift in Sources */,
 				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
 				8B01FBE92386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift in Sources */,
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
@@ -836,10 +903,13 @@
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
+				8B01FC0C2387DD9D00AD012F /* WireframingCollectionViewCell.swift in Sources */,
+				8B01FC002387DD7300AD012F /* ResearchCollectionViewCell.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
 				88E07702237B398D0026D52B /* Post.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
 				8B70E036238682C600B6F090 /* HeaderTableViewCell.swift in Sources */,
+				8B01FC042387DD8100AD012F /* FigmaCollectionViewCell.swift in Sources */,
 				5E0DB371237BCEAF0079A595 /* ExperienceCell.swift in Sources */,
 				5E0DB36723796A1C0079A595 /* EditProfileView.swift in Sources */,
 				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
@@ -871,7 +941,9 @@
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
 				888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */,
 				88E076FF237B398D0026D52B /* Comment.swift in Sources */,
+				8B01FC082387DD9000AD012F /* SketchCollectionViewCell.swift in Sources */,
 				8890B98123717D33005EE950 /* PeopleView.swift in Sources */,
+				8B01FC182387E58300AD012F /* MoreCollectionViewCell.swift in Sources */,
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
 				8890B98423717E69005EE950 /* PeopleCell.swift in Sources */,
