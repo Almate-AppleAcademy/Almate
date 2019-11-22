@@ -22,6 +22,7 @@ class NewsViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
 //        UINavigationBar.appearance().tintColor = .white
         navigationController?.navigationBar.barStyle = UIBarStyle.black
+//        navigationController?.navigationBar.isTranslucent = true
         
         navigationItem.title = "News"
 //        navigationController?.navigationBar.topItem?.title = "News"

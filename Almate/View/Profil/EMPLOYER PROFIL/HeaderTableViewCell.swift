@@ -10,6 +10,9 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet var profileSegmentMark: UIImageView!
+    @IBOutlet var favoritesSegmentMark: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

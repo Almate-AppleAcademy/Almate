@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="24" id="WOO-ye-Tsu"/>
                                     <constraint firstAttribute="width" constant="24" id="bsz-5r-XHB"/>
                                 </constraints>
-                                <state key="normal" image="filled"/>
+                                <state key="normal" image="bookmark unenabled"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-Ag-qmO">
                                 <rect key="frame" x="95" y="47" width="219" height="19"/>
@@ -110,7 +110,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="filled" width="24" height="24"/>
+        <image name="bookmark unenabled" width="21" height="26"/>
         <image name="profile" width="800" height="800"/>
     </resources>
 </document>

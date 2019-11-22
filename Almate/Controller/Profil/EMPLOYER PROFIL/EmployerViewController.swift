@@ -10,15 +10,21 @@ import UIKit
 
 class EmployerViewController: UIViewController {
 
+    var chosenCell: HeaderTableViewCell?
+    
     var firstSegment = true
     
-    enum CellType{
+    enum CellType {
         case header
         case about
         case people
     }
     
-    class Job{
+    class Job {
+        
+    }
+    
+    class Users {
         
     }
     
@@ -30,6 +36,9 @@ class EmployerViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         
+//        let nav = self.navigationController?.navigationBar
+//        nav?.barStyle = UIBarStyle.default
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerTableViewCell")
@@ -40,31 +49,34 @@ class EmployerViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
-    func setupData(){
+    func setupData() {
         array.removeAll()
         array.append(CellType.header)
         array.append(CellType.about)
         array.append(Job())
         array.append(Job())
         array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
-        array.append(Job())
+        
+//        array.append(CellType.people)
+//        array.append(Users())
+//        array.append(Users())
+//        array.append(Users())
     }
     
     
     @IBAction func profileSegmentedTapped(_ sender: Any) {
         if firstSegment == false {
             firstSegment = true
+            array.removeAll()
+            array.append(CellType.header)
+            array.append(CellType.about)
+            array.append(Job())
+            array.append(Job())
+            array.append(Job())
+            self.tableView.reloadData()
             
-//            firstSegmentMark.isHidden = false
-//            secondSegmentMark.isHidden = true
+            chosenCell?.profileSegmentMark.isHidden = false
+            chosenCell?.favoritesSegmentMark.isHidden = true
         } else {
             
         }
@@ -73,8 +85,16 @@ class EmployerViewController: UIViewController {
     @IBAction func favoritesSegmentedTapped(_ sender: Any) {
         if firstSegment == true {
             firstSegment = false
-//            firstSegmentMark.isHidden = true
-//            secondSegmentMark.isHidden = false
+            array.removeAll()
+            array.append(CellType.header)
+            array.append(CellType.people)
+            array.append(Users())
+            array.append(Users())
+            array.append(Users())
+            self.tableView.reloadData()
+            
+            chosenCell?.profileSegmentMark.isHidden = true
+            chosenCell?.favoritesSegmentMark.isHidden = false
         } else {
             
         }
@@ -93,12 +113,15 @@ extension EmployerViewController: UITableViewDelegate, UITableViewDataSource {
             switch type {
             case .header:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "headerTableViewCell", for: indexPath) as! HeaderTableViewCell
+                chosenCell = cell
                 return cell
             case .about:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "profileSegmentTableViewCell", for: indexPath as IndexPath) as! ProfileSegmentTableViewCell
+//                chosenCell = cell
                 return cell
             case .people:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "profileSegmentTableViewCell", for: indexPath as IndexPath) as! ProfileSegmentTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesSegmentTableViewCell", for: indexPath as IndexPath) as! FavoritesSegmentTableViewCell
+//                chosenCell = cell
                 return cell
             }
             
@@ -106,7 +129,7 @@ extension EmployerViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "profileSegmentSmallTableViewCell", for: indexPath as IndexPath) as! ProfileSegmentSmallTableViewCell
             return cell
         }else if let user =  array[indexPath.row] as? Users {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "profileSegmentTableViewCell", for: indexPath as IndexPath) as! ProfileSegmentTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesSegmentSmallTableViewCell", for: indexPath as IndexPath) as! FavoritesSegmentSmallTableViewCell
             return cell
         }
         
