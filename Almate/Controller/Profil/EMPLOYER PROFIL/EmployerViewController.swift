@@ -28,6 +28,32 @@ class EmployerViewController: UIViewController {
         
     }
     
+    @IBAction func linkedinButtonPressed(_ sender: Any) {
+         if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/")
+         {
+             UIApplication.shared.open(url)
+         }
+     }
+     @IBAction func employerTelpButtonPressed(_ sender: Any) {
+         if let url = URL(string: "tel://+6281274330099"), UIApplication.shared.canOpenURL(url) {
+             if #available(iOS 10, *) {
+                 UIApplication.shared.open(url)
+             } else {
+                 UIApplication.shared.openURL(url)
+             }
+         }
+     }
+     @IBAction func employerMailButtonPressed(_ sender: Any) {
+         if let url = URL(string: "mailto:slametngeblog@gmail.com"){
+         UIApplication.shared.open(url)
+         }
+     }
+     
+     @IBAction func settingButton(_ sender: Any) {
+         self.present(UINavigationController(rootViewController: SettingsEmployerViewController()), animated: true, completion: nil)
+     }
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var array:[Any] = []

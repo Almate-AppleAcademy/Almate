@@ -97,6 +97,9 @@
 		8B01FBE62386D4B400AD012F /* FavoritesSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBE42386D4B400AD012F /* FavoritesSegmentTableViewCell.xib */; };
 		8B01FBE92386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBE72386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift */; };
 		8B01FBEA2386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBE82386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.xib */; };
+		8B01FBED2387CFB900AD012F /* SettingsEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBEB2387CFB900AD012F /* SettingsEmployerViewController.swift */; };
+		8B01FBEE2387CFB900AD012F /* SettingsEmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */; };
+		8B01FBF02387D00C00AD012F /* SettingsEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */; };
 		8B53CDAE2385362700E3ED23 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */; };
 		8B53CDAF2385362700E3ED23 /* EmployerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */; };
 		8B53CDB12385364200E3ED23 /* EmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53CDB02385364200E3ED23 /* EmployerView.swift */; };
@@ -209,6 +212,9 @@
 		8B01FBE42386D4B400AD012F /* FavoritesSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesSegmentTableViewCell.xib; sourceTree = "<group>"; };
 		8B01FBE72386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSegmentSmallTableViewCell.swift; sourceTree = "<group>"; };
 		8B01FBE82386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesSegmentSmallTableViewCell.xib; sourceTree = "<group>"; };
+		8B01FBEB2387CFB900AD012F /* SettingsEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEmployerViewController.swift; sourceTree = "<group>"; };
+		8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsEmployerViewController.xib; sourceTree = "<group>"; };
+		8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEmployer.swift; sourceTree = "<group>"; };
 		8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
 		8B53CDAD2385362700E3ED23 /* EmployerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployerViewController.xib; sourceTree = "<group>"; };
 		8B53CDB02385364200E3ED23 /* EmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerView.swift; sourceTree = "<group>"; };
@@ -589,6 +595,8 @@
 				8B01FBE42386D4B400AD012F /* FavoritesSegmentTableViewCell.xib */,
 				8B01FBE72386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.swift */,
 				8B01FBE82386D7F500AD012F /* FavoritesSegmentSmallTableViewCell.xib */,
+				8B01FBEF2387D00C00AD012F /* SettingsEmployer.swift */,
+				8B01FBEC2387CFB900AD012F /* SettingsEmployerViewController.xib */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -597,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				8B53CDAC2385362700E3ED23 /* EmployerViewController.swift */,
+				8B01FBEB2387CFB900AD012F /* SettingsEmployerViewController.swift */,
 			);
 			path = "EMPLOYER PROFIL";
 			sourceTree = "<group>";
@@ -724,6 +733,7 @@
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
 				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
+				8B01FBEE2387CFB900AD012F /* SettingsEmployerViewController.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
 				888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */,
 				5E0DB361237957B10079A595 /* ProfileViewController.xib in Resources */,
@@ -809,11 +819,13 @@
 				88F68222236985A8006249AA /* LoginViewController.swift in Sources */,
 				5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */,
 				8B70E03E2386916200B6F090 /* ProfileSegmentSmallTableViewCell.swift in Sources */,
+				8B01FBED2387CFB900AD012F /* SettingsEmployerViewController.swift in Sources */,
 				5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */,
 				88E07703237B398D0026D52B /* Alumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
 				888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */,
+				8B01FBF02387D00C00AD012F /* SettingsEmployer.swift in Sources */,
 				88E07704237B398D0026D52B /* Institution.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
 				885AA6D7236C54B00049B35E /* NewsView.swift in Sources */,
