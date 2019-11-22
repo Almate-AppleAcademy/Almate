@@ -94,6 +94,7 @@ class RemotePeople: RemotePeopleInput {
             }
             let models = snapshot.documents.map { (document) -> Experience in
                 if let model = Experience(dictionary: document.data()) {
+                    print(model)
                     return model
                 } else {
                     fatalError("Unable to initialize type \(Experience.self) with dictionary \(document.data())")

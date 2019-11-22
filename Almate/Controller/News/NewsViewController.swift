@@ -12,6 +12,8 @@ class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     
+    var remoteNews = RemoteNews()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,7 +61,10 @@ class NewsViewController: UIViewController {
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         self.navigationItem.setHidesBackButton(true, animated:false)
-
+        
+        remoteNews.requestDataNews { (data, documents) in
+            print(data)
+        }
 
     }
     

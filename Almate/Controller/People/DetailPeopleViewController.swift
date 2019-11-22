@@ -26,17 +26,16 @@ class DetailPeopleViewController: UIViewController {
         
         requestRemoteData.loadPeopleEducation(documents: documents!) { (dataEducation) in
             print(dataEducation)
+            
+            self.requestRemoteData.loadPeopleExperience(documents: self.documents!) { (dataExperience) in
+                print(dataExperience)
+                
+                self.requestRemoteData.loadPeopleDetail(documents: self.documents!) { (dataContact) in
+                    self.dataContactPeople = dataContact
+                    self.detailPeopleView.dataPeopleContact = dataContact
+                }
+            }
         }
-        
-        requestRemoteData.loadPeopleExperience(documents: documents!) { (dataExperience) in
-            print(dataExperience)
-        }
-        
-        requestRemoteData.loadPeopleDetail(documents: documents!) { (dataContact) in
-            self.dataContactPeople = dataContact
-            self.detailPeopleView.dataPeopleContact = dataContact
-        }
-        
     }
     
     @IBAction func didTapLinkeIdn(_ sender: Any) {

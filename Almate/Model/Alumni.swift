@@ -24,8 +24,7 @@ struct Institusi {
     let name, address: String
     let admin: [Admin]
     let users: [User]
-    let news: [News]?
-    let notif: [Notif]
+    let notif: [Notif]?
     let post: [Post]?
 }
 
@@ -35,12 +34,32 @@ struct Admin {
 }
 
 // MARK: - News
-struct News {
+struct Post {
     let newsText: String
-    let newsLike: Int
+    let newsLike: NSNumber
     let newsDate: String
     let newsPhoto: [String]
-    let comment: [NewsComment]
+//    let comment: [NewsComment]
+    
+    var dictionary: [String:Any] {
+           return [
+               "newsText": newsText,
+               "newsLike": newsLike,
+               "newsDate": newsDate,
+               "newsPhoto": newsPhoto
+           ]
+       }
+}
+
+extension Post: DocumentSerializable {
+    init?(dictionary: [String:Any]) {
+            guard let newsText = dictionary["newsText"] as? String,
+                    let newsLike = dictionary["newsLike"] as? NSNumber,
+                    let newsDate = dictionary["newsDate"] as? String,
+                    let newsPhoto = dictionary["newsPhoto"] as? [String] else { return nil}
+            
+        self.init(newsText: newsText, newsLike: newsLike, newsDate: newsDate, newsPhoto: newsPhoto)
+    }
 }
 
 // MARK: - NewsComment
@@ -62,12 +81,12 @@ struct Notif {
 }
 
 // MARK: - Post
-struct Post {
-    let text: String
-    let like: Int
-    let date: String
-    let comment: [PostComment]
-}
+//struct Post {
+//    let text: String
+//    let like: Int
+//    let date: String
+//    let comment: [PostComment]
+//}
 
 // MARK: - PostComment
 struct PostComment {
@@ -178,7 +197,7 @@ extension Education: DocumentSerializable {
 // MARK: - Experience
 struct Experience {
     let companyName: String
-    let dateStart, dateEnd: Date
+    let dateStart, dateEnd: String
     
     var dictionary: [String:Any] {
         return [
@@ -192,9 +211,9 @@ struct Experience {
 extension Experience: DocumentSerializable {
     init?(dictionary: [String : Any]) {
         guard let companyName = dictionary["companyName"] as? String,
-                let dateEnd = dictionary["dateEnd"] as? Timestamp,
-                let dateStart = dictionary["dateStart"] as? Timestamp else {return nil}
+                let dateEnd = dictionary["dateEnd"] as? String,
+                let dateStart = dictionary["dateStart"] as? String else {return nil}
         
-        self.init(companyName: companyName, dateStart: dateStart.dateValue(), dateEnd: dateEnd.dateValue())
+        self.init(companyName: companyName, dateStart: dateStart, dateEnd: dateEnd)
     }
 }
