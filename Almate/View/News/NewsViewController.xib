@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apel" translatesAutoresizingMaskIntoConstraints="NO" id="N9g-lB-aco">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="N9g-lB-aco">
                             <rect key="frame" x="344" y="74" width="45" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
@@ -66,6 +66,6 @@
         </collectionViewFlowLayout>
     </objects>
     <resources>
-        <image name="apel" width="620" height="620"/>
+        <image name="Oval" width="45" height="45"/>
     </resources>
 </document>

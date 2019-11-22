@@ -25,7 +25,7 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28z-Ju-fST">
                             <rect key="frame" x="344" y="74" width="45" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="apel"/>
+                            <state key="normal" image="Oval"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="imageView.layer.cornerRadius">
                                     <integer key="value" value="23"/>
@@ -96,7 +96,7 @@
         </view>
     </objects>
     <resources>
-        <image name="apel" width="620" height="620"/>
+        <image name="Oval" width="45" height="45"/>
         <image name="filter" width="24" height="24"/>
     </resources>
 </document>
