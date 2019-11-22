@@ -12,6 +12,12 @@ class NewsView: UIView {
 
     @IBOutlet weak var newsCollection: UICollectionView!
     
+    var dataPost: [Post] = [] {
+        didSet {
+            self.newsCollection.reloadData()
+        }
+    }
+    
     private let searchController = UISearchController(searchResultsController: nil)
     
     override func awakeFromNib() {
@@ -25,12 +31,16 @@ class NewsView: UIView {
 
 extension NewsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataPost.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
         
+        cell.coNameOutlet.text = dataPost[indexPath.row].postNameProfile
+        cell.captionOutlet.text = dataPost[indexPath.row].postText
+        cell.postImageOutlet.image = dataPost[indexPath.row].postImageProfile
+        cell.likesButtonOutlet.setTitle(" asdadasDSA DA likes", for: .normal)
         return cell
     }
     

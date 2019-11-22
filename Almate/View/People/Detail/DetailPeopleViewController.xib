@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPeopleViewController" customModule="Almate" customModuleProvider="target">
             <connections>
+                <outlet property="detailPeopleVoew" destination="ihW-TC-c86" id="8L3-MH-irh"/>
                 <outlet property="view" destination="ihW-TC-c86" id="tdE-Px-md4"/>
             </connections>
         </placeholder>
@@ -47,15 +48,8 @@
                                             <rect key="frame" x="157" y="44" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daniella Priska Fachreza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-O7-3ir">
-                                            <rect key="frame" x="86" y="156" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PT. Kompetitif Nusa Jaya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-83-HpH">
-                                            <rect key="frame" x="86" y="185" width="242" height="19"/>
+                                            <rect key="frame" x="117" y="185" width="180" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -77,13 +71,6 @@
                                                 <action selector="didTapEmail:" destination="-1" eventType="touchUpInside" id="uB4-M5-Yma"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Unknown, CA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-hd-phF">
-                                            <rect key="frame" x="135" y="212" width="145" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZD-aC-WUx">
                                             <rect key="frame" x="86" y="249" width="43" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,10 +79,30 @@
                                                 <action selector="didTapLinkeIdn:" destination="-1" eventType="touchUpInside" id="HQM-ZF-WNw"/>
                                             </connections>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-Rk-vZV">
-                                            <rect key="frame" x="114" y="213" width="15" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daniella Priska Fachreza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-O7-3ir">
+                                            <rect key="frame" x="108.5" y="156" width="197" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7b-yF-0D4">
+                                            <rect key="frame" x="110" y="212" width="194" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Unknown, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-hd-phF">
+                                                    <rect key="frame" x="30" y="0.0" width="145" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-Rk-vZV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <userDefinedRuntimeAttributes>
@@ -215,26 +222,30 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="414" id="44n-4B-ipU"/>
+                                <constraint firstAttribute="height" constant="1350" id="Ng3-30-Kxb"/>
+                            </constraints>
                             <viewLayoutGuide key="safeArea" id="flp-Jw-Qhn"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="leading" secondItem="qGa-pi-yBq" secondAttribute="leading" id="0AC-fR-Aj1"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="top" secondItem="qGa-pi-yBq" secondAttribute="top" id="RFo-vK-QYJ"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="centerX" secondItem="qGa-pi-yBq" secondAttribute="centerX" id="S3C-8C-7i1"/>
-                        <constraint firstItem="90g-ky-UQC" firstAttribute="centerY" secondItem="qGa-pi-yBq" secondAttribute="centerY" id="uO5-Rf-Crs"/>
-                        <constraint firstAttribute="bottom" secondItem="90g-ky-UQC" secondAttribute="bottom" id="xTh-cO-mDj"/>
-                        <constraint firstAttribute="trailing" secondItem="90g-ky-UQC" secondAttribute="trailing" id="ydB-gJ-Xy0"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="top" secondItem="qGa-pi-yBq" secondAttribute="top" id="FxX-DG-eBd"/>
+                        <constraint firstAttribute="bottom" secondItem="90g-ky-UQC" secondAttribute="bottom" id="H3f-ko-DhJ"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="height" secondItem="qGa-pi-yBq" secondAttribute="height" priority="250" id="MVQ-lm-MVS"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="leading" secondItem="qGa-pi-yBq" secondAttribute="leading" id="Xr8-nw-9iQ"/>
+                        <constraint firstAttribute="trailing" secondItem="90g-ky-UQC" secondAttribute="trailing" id="sNY-0Y-5l3"/>
+                        <constraint firstItem="90g-ky-UQC" firstAttribute="width" secondItem="qGa-pi-yBq" secondAttribute="width" id="sOh-7F-4cH"/>
                     </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="leading" secondItem="H8l-Wl-I8g" secondAttribute="leading" id="UA1-ju-1RV"/>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="trailing" secondItem="H8l-Wl-I8g" secondAttribute="trailing" id="gEP-JG-cqm"/>
-                <constraint firstAttribute="bottom" secondItem="qGa-pi-yBq" secondAttribute="bottom" id="kHH-zk-QbQ"/>
-                <constraint firstItem="qGa-pi-yBq" firstAttribute="top" secondItem="ihW-TC-c86" secondAttribute="top" id="yuU-Uf-c0y"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="trailing" secondItem="H8l-Wl-I8g" secondAttribute="trailing" id="19r-P8-rCG"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="top" secondItem="ihW-TC-c86" secondAttribute="top" id="1jy-0X-9hZ"/>
+                <constraint firstItem="qGa-pi-yBq" firstAttribute="leading" secondItem="H8l-Wl-I8g" secondAttribute="leading" id="Krn-dj-NIo"/>
+                <constraint firstAttribute="bottom" secondItem="qGa-pi-yBq" secondAttribute="bottom" id="lxT-ob-mk0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="H8l-Wl-I8g"/>
@@ -246,7 +257,7 @@
                 <outlet property="emailBtn" destination="har-1L-ezL" id="vce-to-B7h"/>
                 <outlet property="imgProfile" destination="FXV-zD-4f1" id="puh-lI-8ef"/>
                 <outlet property="linkedinBtn" destination="zZD-aC-WUx" id="eIk-mn-H4c"/>
-                <outlet property="nameProfile" destination="GRu-83-HpH" id="Zkx-ho-qoD"/>
+                <outlet property="nameProfile" destination="Qhc-O7-3ir" id="f60-KW-nFr"/>
                 <outlet property="referenceCollection" destination="yPx-T2-UEA" id="h9X-bU-li1"/>
                 <outlet property="referenceCount" destination="bOs-th-Mnq" id="EXi-UR-mm9"/>
                 <outlet property="skillCount" destination="1Oh-Oo-hrl" id="Kdk-iq-LUD"/>

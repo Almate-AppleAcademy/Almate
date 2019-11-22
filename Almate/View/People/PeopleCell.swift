@@ -21,7 +21,12 @@ class PeopleCell: UICollectionViewCell {
     //MARK: STEP 1 - Create Variable for action button cell
     var didTapSaveContact : (()->())?
     
-    let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoapods", "J-Pop"]
+    var arraySkills: [String]? {
+        didSet {
+            skillCollection.reloadData()
+        }
+    }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,12 +61,12 @@ class PeopleCell: UICollectionViewCell {
 extension PeopleCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arraySkills.count
+        return arraySkills!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
-        cell.skillLabel.text = arraySkills[indexPath.row]
+        cell.skillLabel.text = arraySkills![indexPath.row]
         return cell
     }
 }

@@ -11,6 +11,9 @@ import UIKit
 class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
+    var requestDummyData = DummyNews()
+    @IBOutlet weak var newsView: NewsView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,9 @@ class NewsViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:false)
 
 
+        requestDummyData.getData { (dataPost) in
+            self.newsView.dataPost = dataPost
+        }
     }
     
 
