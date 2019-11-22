@@ -10,6 +10,8 @@ import UIKit
 
 class EmployerViewController: UIViewController {
 
+    var firstSegment = true
+    
     enum CellType{
         case header
         case about
@@ -21,6 +23,7 @@ class EmployerViewController: UIViewController {
     }
     
     @IBOutlet weak var tableView: UITableView!
+    
     var array:[Any] = []
     
     override func viewDidLoad() {
@@ -32,7 +35,8 @@ class EmployerViewController: UIViewController {
         tableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerTableViewCell")
         tableView.register(UINib(nibName: "ProfileSegmentTableViewCell", bundle: nil), forCellReuseIdentifier: "profileSegmentTableViewCell")
         tableView.register(UINib(nibName: "ProfileSegmentSmallTableViewCell", bundle: nil), forCellReuseIdentifier: "profileSegmentSmallTableViewCell")
-        
+        tableView.register(UINib(nibName: "FavoritesSegmentTableViewCell", bundle: nil), forCellReuseIdentifier: "favoritesSegmentTableViewCell")
+        tableView.register(UINib(nibName: "FavoritesSegmentSmallTableViewCell", bundle: nil), forCellReuseIdentifier: "favoritesSegmentSmallTableViewCell")
         tableView.separatorStyle = .none
     }
     
@@ -53,8 +57,29 @@ class EmployerViewController: UIViewController {
         array.append(Job())
         array.append(Job())
     }
-
-
+    
+    
+    @IBAction func profileSegmentedTapped(_ sender: Any) {
+        if firstSegment == false {
+            firstSegment = true
+            
+//            firstSegmentMark.isHidden = false
+//            secondSegmentMark.isHidden = true
+        } else {
+            
+        }
+    }
+    
+    @IBAction func favoritesSegmentedTapped(_ sender: Any) {
+        if firstSegment == true {
+            firstSegment = false
+//            firstSegmentMark.isHidden = true
+//            secondSegmentMark.isHidden = false
+        } else {
+            
+        }
+    }
+    
 }
 
 extension EmployerViewController: UITableViewDelegate, UITableViewDataSource {
@@ -90,3 +115,4 @@ extension EmployerViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+
