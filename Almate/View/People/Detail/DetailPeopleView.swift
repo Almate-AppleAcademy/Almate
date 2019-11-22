@@ -107,6 +107,7 @@ extension DetailPeopleView: UICollectionViewDataSource {
             cell.lblGradProfileRef.text = arrayRefGrad[indexPath.row]
             cell.lblOccupProfileRef.text = arrayRefOccu[indexPath.row]
             cell.lblProfileRef.text = arrayRefName[indexPath.row]
+            cell.textRef.text = arrayRefMsg[indexPath.row]
             return cell
         } else {
             return UICollectionViewCell()
