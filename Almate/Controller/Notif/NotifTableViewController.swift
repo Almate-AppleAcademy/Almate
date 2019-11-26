@@ -31,6 +31,7 @@ class NotifTableViewController: UITableViewController{
     
     var time = [["1hr", "3hr", "4hr", "8hr", "10hr", "12hr"], ["1W","1W","2W","3W","5W", "8W"]]
     var searchable = [Searchable]()
+    var imageNotif: [UIImage]? = [(UIImage(named: "Photo 27-10-19 23.36.17")!), UIImage(named: "Photo 27-10-19 23.36.41")!, UIImage(named: "Photo 28-10-19 02.23.51")!, UIImage(named: "profile")!, UIImage(named: "tiny-profile")!, UIImage(named: "Photo 27-10-19 23.36.17")!]
 
 //    var arrayOfCellData = [Data]()
 //    var arrayOfCellOlder = [Data]()
@@ -129,6 +130,12 @@ class NotifTableViewController: UITableViewController{
             
             cell.notif1Outlet.text = self.peoples[indexPath.section][indexPath.row]
             cell.date1Outlet.text = self.time[indexPath.section][indexPath.row]
+            if indexPath.section == 0 {
+                cell.coPhotoOutlet.image = self.imageNotif![indexPath.row]
+            } else {
+                cell.coPhotoOutlet.image = self.imageNotif![indexPath.row]
+            }
+       
             return cell
 //        }
 //        else

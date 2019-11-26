@@ -22,10 +22,10 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         var tabList: [UIViewController]?
         if checkUserType() == UserType.Alumni {
             tabList = [
-                self.createController(title: "News", imageName: "news", vc: newsVC),
-                self.createController(title: "Jobs", imageName: "news", vc: jobVC),
-                self.createController(title: "People", imageName: "news", vc: peopleVC),
-                self.createController(title: "Notification", imageName: "news", vc: notifVC)
+                self.createController(title: "News", imageName: "Feeds replica", vc: newsVC),
+                self.createController(title: "Jobs", imageName: "briefcase", vc: jobVC),
+                self.createController(title: "People", imageName: "people", vc: peopleVC),
+                self.createController(title: "Notification", imageName: "Icon notification-1", vc: notifVC)
             ]
         } else {
             tabList = [
@@ -34,7 +34,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
                 self.createController(title: "Notification", imageName: "news", vc: notifVC)
             ]
         }
-        
+        tabBar.tintColor = UIColor(red:0.31, green:0.80, blue:0.77, alpha:1.0)
         viewControllers = tabList
     }
     

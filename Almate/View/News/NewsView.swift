@@ -35,12 +35,12 @@ extension NewsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
         
         cell.coNameOutlet.text = dataPost[indexPath.row].postNameProfile
         cell.captionOutlet.text = dataPost[indexPath.row].postText
         cell.postImageOutlet.image = dataPost[indexPath.row].postImageProfile
-        cell.likesButtonOutlet.setTitle(" asdadasDSA DA likes", for: .normal)
+        cell.likesButtonOutlet.setTitle(" 12 likes", for: .normal)
         return cell
     }
     

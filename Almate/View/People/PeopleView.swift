@@ -12,6 +12,8 @@ class PeopleView: UIView {
     
     @IBOutlet weak var peopleCollection: UICollectionView!
     @IBOutlet weak var peopleCount: UILabel!
+    @IBOutlet weak var headerView: UIView!
+    
     var dataPeople: [Users]?
     var delegate: PeopleViewDelegate?
     
@@ -20,9 +22,14 @@ class PeopleView: UIView {
         peopleCollection.dataSource = self
         peopleCollection.delegate = self
         peopleCount.text = "20 people in Apple Academy"
+        headerView.isUserInteractionEnabled = true
     }
     
     @IBAction func tapProfile(_ sender: UIButton) {
+        print("hilih gi")
+    }
+    
+    @IBAction func taapProfile(_ sender: UIButton) {
         delegate?.didTapProfileIcon()
         print("hilih gi")
     }

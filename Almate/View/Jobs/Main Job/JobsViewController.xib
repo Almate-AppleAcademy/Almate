@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Wj-4xS">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1802"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1550"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Know available position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-UB-KhD">
                                     <rect key="frame" x="116" y="36" width="182" height="19.666666666666657"/>
@@ -60,7 +60,7 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="1802" id="t8A-yC-Qzy"/>
+                                <constraint firstAttribute="height" constant="1550" id="t8A-yC-Qzy"/>
                             </constraints>
                         </view>
                     </subviews>

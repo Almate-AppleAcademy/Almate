@@ -75,12 +75,14 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     
     func didSelectItemAt(_ detailPeopleData: Users?) {
         let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
+        print(detailPeopleData)
         controller.dataPeople = detailPeopleData
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func didTapProfileIcon() {
-        self.navigationController?.pushViewController(PeopleViewController(), animated: true)
+        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

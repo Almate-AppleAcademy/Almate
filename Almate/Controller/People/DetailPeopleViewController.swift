@@ -16,6 +16,7 @@ class DetailPeopleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+//        print(dataPeople)
         detailPeopleVoew.dataPeople = dataPeople
         
         self.navigationController?.navigationBar.backgroundColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
