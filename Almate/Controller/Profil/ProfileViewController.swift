@@ -75,6 +75,10 @@ class ProfileViewController: UIViewController {
 //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
     }
     
+    @IBAction func settingsTapped(_ sender: Any) {
+        let controller = SettingViewController(nibName: "SettingsViewController", bundle: nil)
+        self.navigationController?.present(controller, animated: true)
+    }
     
     /*
     // MARK: - Navigation
