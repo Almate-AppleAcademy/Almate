@@ -72,6 +72,8 @@ class NewsViewController: UIViewController {
 
     @IBAction func likeTapped(_ sender: UIButton) {
         print("LIKE TAPPED")
+        let controller = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
     
