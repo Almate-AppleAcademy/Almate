@@ -12,8 +12,8 @@ class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     var requestDummyData = DummyNews()
-    @IBOutlet weak var newsView: NewsView!
     
+    @IBOutlet weak var newsView: NewsView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +69,16 @@ class NewsViewController: UIViewController {
         }
     }
     
+    @IBAction func profileImageTapped(_ sender: Any) {
+        let controller = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+        print("PROFILE TAPPED")
+    }
 
     @IBAction func likeTapped(_ sender: UIButton) {
         print("LIKE TAPPED")
-        
+        let controller = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func commentTapped(_ sender: UIButton) {

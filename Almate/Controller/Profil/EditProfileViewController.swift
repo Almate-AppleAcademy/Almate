@@ -37,6 +37,9 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     @objc func cancelPressed(){
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
     @IBAction func avatarPressed(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate

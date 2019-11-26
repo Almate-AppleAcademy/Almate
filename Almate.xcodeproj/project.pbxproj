@@ -109,6 +109,9 @@
 		88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F68211236971B7006249AA /* LaunchScreen.storyboard */; };
 		88F68222236985A8006249AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68220236985A8006249AA /* LoginViewController.swift */; };
 		88F68223236985A8006249AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F68221236985A8006249AA /* LoginViewController.xib */; };
+		8B01FC20238D40C600AD012F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC1E238D40C600AD012F /* SettingsViewController.swift */; };
+		8B01FC21238D40C600AD012F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC1F238D40C600AD012F /* SettingsViewController.xib */; };
+		8B01FC23238D40F300AD012F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC22238D40F300AD012F /* SettingsView.swift */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
 		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
@@ -227,6 +230,9 @@
 		88F68214236971B7006249AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88F68220236985A8006249AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88F68221236985A8006249AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8B01FC1E238D40C600AD012F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8B01FC1F238D40C600AD012F /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		8B01FC22238D40F300AD012F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 			children = (
 				5E0DB357237957890079A595 /* ProfileViewController.swift */,
 				5E0DB362237969AC0079A595 /* EditProfileViewController.swift */,
+				8B01FC1E238D40C600AD012F /* SettingsViewController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -328,6 +335,8 @@
 				5E0DB38D23828AFA0079A595 /* JobsListCell.xib */,
 				5EEA1F142385167D00D54524 /* SkillProfileCell.swift */,
 				5EEA1F152385167D00D54524 /* SkillProfileCell.xib */,
+				8B01FC22238D40F300AD012F /* SettingsView.swift */,
+				8B01FC1F238D40C600AD012F /* SettingsViewController.xib */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -752,6 +761,7 @@
 				5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
 				8890B98523717E69005EE950 /* PeopleCell.xib in Resources */,
+				8B01FC21238D40C600AD012F /* SettingsViewController.xib in Resources */,
 				5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */,
 				8B86021B237AB5AC0053567B /* CommentCell.xib in Resources */,
 				3A8333A0238230FB007C17C4 /* PostJobViewController.xib in Resources */,
@@ -877,6 +887,7 @@
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
+				8B01FC20238D40C600AD012F /* SettingsViewController.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
@@ -918,6 +929,7 @@
 				888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */,
 				88E076FF237B398D0026D52B /* Comment.swift in Sources */,
 				8890B98123717D33005EE950 /* PeopleView.swift in Sources */,
+				8B01FC23238D40F300AD012F /* SettingsView.swift in Sources */,
 				881B42B7238314AA005C190A /* Employers.swift in Sources */,
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
