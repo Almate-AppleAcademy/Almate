@@ -253,6 +253,14 @@
 			path = Reference;
 			sourceTree = "<group>";
 		};
+		888893AE238D385100B86759 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				88A73A2323841BEC00991B69 /* Alumni.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		888B2966237D423400CA9DC0 /* FilterSort */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,7 +412,7 @@
 		88E076F3237B394D0026D52B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88A73A2323841BEC00991B69 /* Alumni.swift */,
+				888893AE238D385100B86759 /* Remote */,
 				88A73A252384622B00991B69 /* ExtensionModelFirestore.swift */,
 			);
 			path = Model;
