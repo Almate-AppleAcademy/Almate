@@ -25,6 +25,10 @@ class NewsView: UIView {
         newsCollection.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         newsCollection.delegate = self
         newsCollection.dataSource = self
+        
+        if let layout = newsCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = CGSize(width: newsCollection.frame.width - 50, height: 10)
+        }
     }
 
 }

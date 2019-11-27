@@ -69,6 +69,51 @@ class NewsViewController: UIViewController {
         }
     }
     
+    override func awakeFromNib() {
+         view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+//        UINavigationBar.appearance().tintColor = .white
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+                
+        navigationItem.title = "News"
+//        navigationController?.navigationBar.topItem?.title = "News"
+        navigationController?.view.backgroundColor = .clear
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+                
+                
+        let searchController = UISearchController(searchResultsController: nil)
+                
+        searchController.searchBar.delegate = self
+//        searchController.delegate = self
+                
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+
+//        searchController.searchBar.becomeFirstResponder()
+//        self.navigationItem.titleView = searchController.searchBar
+//        definesPresentationContext = true
+
+                
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = true
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .clear
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
+                
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        self.navigationItem.setHidesBackButton(true, animated:false)
+    }
+    
 
     @IBAction func likeTapped(_ sender: UIButton) {
         print("LIKE TAPPED")

@@ -25,7 +25,11 @@ class NewsCell: UICollectionViewCell {
         super.awakeFromNib()
         
         noPhoto()
+        self.captionOutlet.preferredMaxLayoutWidth = self.captionOutlet.frame.width
+        
         // Initialization code
+        
+        
     }
 
     override func layoutSubviews() {

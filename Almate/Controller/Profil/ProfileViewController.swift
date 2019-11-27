@@ -76,7 +76,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func settingsTapped(_ sender: Any) {
-        let controller = SettingViewController(nibName: "SettingsViewController", bundle: nil)
+        let controller = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         self.navigationController?.present(controller, animated: true)
     }
     
