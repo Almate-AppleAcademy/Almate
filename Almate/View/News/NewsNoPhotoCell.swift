@@ -1,34 +1,26 @@
 //
-//  NewsCell.swift
+//  NewsNoPhotoCell.swift
 //  Almate
 //
-//  Created by Gabriella Gracia MT on 06/11/19.
+//  Created by Andi Ikhsan Eldrian on 27/11/19.
 //  Copyright © 2019 Slamet Riyadi. All rights reserved.
 //
 
 import UIKit
 
-class NewsCell: UICollectionViewCell {
+class NewsNoPhotoCell: UICollectionViewCell {
 
     @IBOutlet weak var coImageOutlet: UIImageView!
     @IBOutlet weak var coNameOutlet: UILabel!
     @IBOutlet weak var dateOutlet: UILabel!
     @IBOutlet weak var captionOutlet: UILabel!
-    @IBOutlet weak var postImageOutlet: UIImageView!
     @IBOutlet weak var likesButtonOutlet: UIButton!
     @IBOutlet weak var commentButtonOutlet: UIButton!
-
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        noPhoto()
+    
         self.captionOutlet.preferredMaxLayoutWidth = self.captionOutlet.frame.width
-        
-        // Initialization code
-        
         
     }
 
@@ -51,18 +43,5 @@ class NewsCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
-    
-//    func noPhoto() {
-//        if postImageOutlet.image == nil {
-//            postImageOutlet.isHidden = true
-////            captionOutlet.heightAnchor
-////            captionOutlet.frame.height
-////            captioframe.size.height = label.frame.height + x
-//            captionOutlet.frame = CGRect(x: 25, y: 80, width: 334, height: 377)
-////            likesButtonOutlet.frame.origin.y = 270
-////            commentButtonOutlet.frame.origin.y = 270
-//
-//
-//        }
-//    }
+
 }

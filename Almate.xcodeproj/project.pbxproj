@@ -112,6 +112,14 @@
 		8B01FC26238D454600AD012F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC24238D454600AD012F /* SettingsViewController.swift */; };
 		8B01FC27238D454600AD012F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC25238D454600AD012F /* SettingsViewController.xib */; };
 		8B01FC29238D459700AD012F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC28238D459700AD012F /* SettingsView.swift */; };
+		8B01FC30238E7DFD00AD012F /* NewsTwoPhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC2E238E7DFD00AD012F /* NewsTwoPhotosCell.swift */; };
+		8B01FC31238E7DFD00AD012F /* NewsTwoPhotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC2F238E7DFD00AD012F /* NewsTwoPhotosCell.xib */; };
+		8B01FC34238E840800AD012F /* NewsThreePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC32238E840800AD012F /* NewsThreePhotosCell.swift */; };
+		8B01FC35238E840800AD012F /* NewsThreePhotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC33238E840800AD012F /* NewsThreePhotosCell.xib */; };
+		8B01FC38238E880C00AD012F /* NewsOnePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC36238E880C00AD012F /* NewsOnePhotoCell.swift */; };
+		8B01FC39238E880C00AD012F /* NewsOnePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC37238E880C00AD012F /* NewsOnePhotoCell.xib */; };
+		8B01FC3C238E885400AD012F /* NewsNoPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC3A238E885400AD012F /* NewsNoPhotoCell.swift */; };
+		8B01FC3D238E885400AD012F /* NewsNoPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC3B238E885400AD012F /* NewsNoPhotoCell.xib */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
 		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
@@ -233,6 +241,14 @@
 		8B01FC24238D454600AD012F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B01FC25238D454600AD012F /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		8B01FC28238D459700AD012F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8B01FC2E238E7DFD00AD012F /* NewsTwoPhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTwoPhotosCell.swift; sourceTree = "<group>"; };
+		8B01FC2F238E7DFD00AD012F /* NewsTwoPhotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTwoPhotosCell.xib; sourceTree = "<group>"; };
+		8B01FC32238E840800AD012F /* NewsThreePhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsThreePhotosCell.swift; sourceTree = "<group>"; };
+		8B01FC33238E840800AD012F /* NewsThreePhotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsThreePhotosCell.xib; sourceTree = "<group>"; };
+		8B01FC36238E880C00AD012F /* NewsOnePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsOnePhotoCell.swift; sourceTree = "<group>"; };
+		8B01FC37238E880C00AD012F /* NewsOnePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsOnePhotoCell.xib; sourceTree = "<group>"; };
+		8B01FC3A238E885400AD012F /* NewsNoPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNoPhotoCell.swift; sourceTree = "<group>"; };
+		8B01FC3B238E885400AD012F /* NewsNoPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsNoPhotoCell.xib; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -415,6 +431,14 @@
 				885AA6D6236C54B00049B35E /* NewsView.swift */,
 				8B86020C2372BFC30053567B /* NewsCell.swift */,
 				8B86020D2372BFC30053567B /* NewsCell.xib */,
+				8B01FC3A238E885400AD012F /* NewsNoPhotoCell.swift */,
+				8B01FC3B238E885400AD012F /* NewsNoPhotoCell.xib */,
+				8B01FC36238E880C00AD012F /* NewsOnePhotoCell.swift */,
+				8B01FC37238E880C00AD012F /* NewsOnePhotoCell.xib */,
+				8B01FC2E238E7DFD00AD012F /* NewsTwoPhotosCell.swift */,
+				8B01FC2F238E7DFD00AD012F /* NewsTwoPhotosCell.xib */,
+				8B01FC32238E840800AD012F /* NewsThreePhotosCell.swift */,
+				8B01FC33238E840800AD012F /* NewsThreePhotosCell.xib */,
 				8B860210237A86D10053567B /* Conmment */,
 			);
 			path = News;
@@ -754,6 +778,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B01FC3D238E885400AD012F /* NewsNoPhotoCell.xib in Resources */,
+				8B01FC31238E7DFD00AD012F /* NewsTwoPhotosCell.xib in Resources */,
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
 				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
@@ -791,7 +817,9 @@
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
 				3A67CB592383F38800DC1114 /* EmployerJobViewController.xib in Resources */,
+				8B01FC39238E880C00AD012F /* NewsOnePhotoCell.xib in Resources */,
 				888B296E237D4A8D00CA9DC0 /* FilterViewController.xib in Resources */,
+				8B01FC35238E840800AD012F /* NewsThreePhotosCell.xib in Resources */,
 				5E0DB361237957B10079A595 /* ProfileViewController.xib in Resources */,
 				888B2974237D524000CA9DC0 /* FilterCell.xib in Resources */,
 				888B2978237D525500CA9DC0 /* SortCell.xib in Resources */,
@@ -865,6 +893,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E0DB364237969AC0079A595 /* EditProfileViewController.swift in Sources */,
+				8B01FC3C238E885400AD012F /* NewsNoPhotoCell.swift in Sources */,
 				5E0DB369237AA3880079A595 /* ProfileTableView.swift in Sources */,
 				887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */,
 				88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */,
@@ -876,6 +905,7 @@
 				5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
 				3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */,
+				8B01FC38238E880C00AD012F /* NewsOnePhotoCell.swift in Sources */,
 				888B2973237D524000CA9DC0 /* FilterCell.swift in Sources */,
 				88E07704237B398D0026D52B /* Institution.swift in Sources */,
 				88F6820B236971B5006249AA /* ViewController.swift in Sources */,
@@ -886,6 +916,7 @@
 				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */,
+				8B01FC30238E7DFD00AD012F /* NewsTwoPhotosCell.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				8B01FC26238D454600AD012F /* SettingsViewController.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
@@ -932,6 +963,7 @@
 				8B01FC29238D459700AD012F /* SettingsView.swift in Sources */,
 				881B42B7238314AA005C190A /* Employers.swift in Sources */,
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
+				8B01FC34238E840800AD012F /* NewsThreePhotosCell.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
 				8890B98423717E69005EE950 /* PeopleCell.swift in Sources */,
 				8B86021A237AB5AC0053567B /* CommentCell.swift in Sources */,
