@@ -10,6 +10,7 @@ import UIKit
 
 class DetailPeopleView: UIView {
     
+    // MARK: People Data, u can set the label or others inside didSet
     var dataPeople: User? {
         didSet {
             if let data = dataPeople {
@@ -23,6 +24,7 @@ class DetailPeopleView: UIView {
         }
     }
     
+    // MARK: PeopleContact, u can set the label or others inside didSet
     var dataPeopleContact: UserContact? {
         didSet {
             if let data = dataPeopleContact {
@@ -31,24 +33,21 @@ class DetailPeopleView: UIView {
         }
     }
     
+    // MARK: People Education, u can set the label or others inside didSet
     var dataPeopleEducation: [Education]? {
         didSet {
             self.educationCollection.reloadData()
         }
     }
     
+    // MARK: PeopleExperience
     var dataPeopleExperience: [Experience]? {
         didSet {
             self.experienceCollection.reloadData()
         }
     }
     
-    var dataPeopleReference: [Reference]? {
-        didSet {
-            self.referenceCollection.reloadData()
-        }
-    }
-    
+    // MARK: Perpare data List Reference and Users Reference
     var dataUsersReference: [User]? = []
     var dataReference: [Reference]? = []
     
@@ -70,16 +69,6 @@ class DetailPeopleView: UIView {
     @IBOutlet weak var educationCollection: UICollectionView!
     @IBOutlet weak var workCollection: UICollectionView!
     @IBOutlet weak var experienceCollection: UICollectionView!
-    
-    let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoapods", "J-Pop"]
-    let arrayEducations = ["Universitas Indonesia", "SMAN 3 Semarang"]
-    let arrayEducationYears = ["2016 - 2020", "2013 - 2016"]
-    let arrayWorks = [UIImage(named: "karya1"), UIImage(named: "karya2"),UIImage(named: "karya1"), UIImage(named: "karya2") ]
-    let arrayRefName = ["Slamet Riyadi", "Gentar Chandrawinata"]
-    let arrayRefImg = [UIImage(named: "profile"), UIImage(named: "tiny-profile")]
-    let arrayRefGrad = ["Cohort 2", "Cohort 1"]
-    let arrayRefOccu = ["Software Engineer", "iOS Developer"]
-    let arrayRefMsg = ["Beliau merupakan orang yang sangat menekuni bidangnya. Leader yang hebat dan bertalenta","Sukses membawa tim kami menyelesaikan belasan project merupakan pencapaian yang luar biasa. Berpengalaman dan Critical Thinking"]
     
     override func awakeFromNib() {
         skillsCollection.register(UINib(nibName: "SkillCell", bundle: nil), forCellWithReuseIdentifier: "skillCell")
@@ -139,18 +128,21 @@ extension DetailPeopleView: UICollectionViewDataSource {
             return cell
         } else if collectionView == self.referenceCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceCell", for: indexPath) as! ReferenceCell
-            let dataUser = dataUsersReference![indexPath.row]
-            self.referenceCount.text = "(\(dataReference?.count ?? 0))"
-            cell.imgProfileRef.sd_setImage(with: URL(string: dataUser.userImage))
-            cell.lblGradProfileRef.text = dataUser.userGeneration
-            cell.lblOccupProfileRef.text = dataUser.userOccupation
-            cell.lblProfileRef.text = "\(dataUser.firstName) \(dataUser.lastName)"
+            if let data = dataUsersReference?[indexPath.row] {
+                self.referenceCount.text = "(\(dataReference?.count ?? 0))"
+                cell.imgProfileRef.sd_setImage(with: URL(string: data.userImage))
+                cell.lblGradProfileRef.text = data.userGeneration
+                cell.lblOccupProfileRef.text = data.userOccupation
+                cell.lblProfileRef.text = "\(data.firstName) \(data.lastName)"
+                cell.textRef.text = dataReference![indexPath.row].referenceText
+            }
             return cell
         } else if collectionView == self.experienceCollection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "experienceCollectionCell", for: indexPath) as! ExperienceCollectionCell
-            let data = dataPeopleExperience![indexPath.row]
-            cell.experienceCompanyName.text = data.companyName
-            cell.experiencePeriode.text = "\(data.dateStart) - \(data.dateEnd)"
+            if let data = dataPeopleExperience?[indexPath.row] {
+                cell.experienceCompanyName.text = data.companyName
+                cell.experiencePeriode.text = "\(data.dateStart) - \(data.dateEnd)"
+            }
             return cell
         } else {
             return UICollectionViewCell()
@@ -159,6 +151,8 @@ extension DetailPeopleView: UICollectionViewDataSource {
 }
 
 extension DetailPeopleView: DetailPeopleViewInput {
+    
+    // MARK: People Reference Data, if u want to set it into cell u need to reload the collection first or if just Outlet u can set it
     func displayReference(_ dataReference: [Reference]?, _ dataUsers: [User]?) {
         self.dataUsersReference = dataUsers
         self.dataReference = dataReference

@@ -59,7 +59,11 @@ class RemotePeople: RemotePeopleInput {
                     fatalError("Unable to initialize type \(UserContact.self) with dictionary \(document.data())")
                 }
             }
-            completionBlock(models[0])
+            if models.count > 0 {
+                completionBlock(models[0])
+            } else {
+                print("Data Not Found")
+            }
         }
     }
 
