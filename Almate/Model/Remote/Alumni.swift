@@ -217,3 +217,25 @@ extension Experience: DocumentSerializable {
         self.init(companyName: companyName, dateStart: dateStart, dateEnd: dateEnd)
     }
 }
+
+// MARK: - Experience
+struct Reference {
+    let referenceText: String
+    let referenceUser: DocumentReference
+    
+    var dictionary: [String:Any] {
+        return [
+            "referenceText": referenceText,
+            "referenceUser": referenceUser
+        ]
+    }
+}
+
+extension Reference: DocumentSerializable {
+    init?(dictionary: [String : Any]) {
+        guard let referenceText = dictionary["referenceText"] as? String,
+                let referenceUser = dictionary["referenceUser"] as? DocumentReference else {return nil}
+        
+        self.init(referenceText: referenceText, referenceUser: referenceUser)
+    }
+}

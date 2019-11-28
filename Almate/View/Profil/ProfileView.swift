@@ -57,9 +57,6 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         jobsListCollection.register(UINib(nibName: "JobsListCell", bundle: nil), forCellWithReuseIdentifier: "jobsListCell")
         jobsSavedCollection.register(UINib(nibName: "JobsListCell", bundle: nil), forCellWithReuseIdentifier: "jobsListCell")
         
-        
-        
-        
         workCollection.dataSource = self
         workCollection.delegate = self
         educationTable.dataSource = self

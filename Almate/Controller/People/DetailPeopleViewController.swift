@@ -9,7 +9,6 @@
 import UIKit
 import FirebaseFirestore
 
-
 class DetailPeopleViewController: UIViewController {
     
     var dataPeople: User?
@@ -25,14 +24,19 @@ class DetailPeopleViewController: UIViewController {
         detailPeopleView.dataPeople = dataPeople
         
         requestRemoteData.loadPeopleEducation(documents: documents!) { (dataEducation) in
-            print(dataEducation)
+            self.detailPeopleView.dataPeopleEducation = dataEducation
             
             self.requestRemoteData.loadPeopleExperience(documents: self.documents!) { (dataExperience) in
-                print(dataExperience)
+                self.detailPeopleView.dataPeopleExperience = dataExperience
                 
                 self.requestRemoteData.loadPeopleDetail(documents: self.documents!) { (dataContact) in
                     self.dataContactPeople = dataContact
                     self.detailPeopleView.dataPeopleContact = dataContact
+                    
+//                    self.requestRemoteData.loadPeopleReference(documents: self.documents!)
+                    self.requestRemoteData.loadPeopleReference(documents: self.documents!) { (reference, users)  in
+                        self.detailPeopleView.displayReference(reference, users)
+                    }
                 }
             }
         }

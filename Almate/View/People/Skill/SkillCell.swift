@@ -13,6 +13,7 @@ class SkillCell: UICollectionViewCell {
     @IBOutlet weak var skillLabel: UILabel!
     
     override func layoutSubviews() {
+        /*
         self.layer.borderWidth = 5.0
         self.layer.borderColor = UIColor.clear.cgColor
         self.layer.masksToBounds = true
@@ -25,6 +26,7 @@ class SkillCell: UICollectionViewCell {
         self.layer.shadowOpacity = 15/100
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        */
     }
 
 }
