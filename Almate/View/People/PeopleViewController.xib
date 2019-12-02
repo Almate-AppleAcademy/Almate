@@ -32,10 +32,13 @@
                         <outlet property="dataSource" destination="i5M-Pr-FkT" id="y6y-NZ-DVl"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-bF-tiA">
-                    <rect key="frame" x="147" y="770" width="120" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-bF-tiA">
+                    <rect key="frame" x="147" y="797" width="120" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="SvU-dv-XTg"/>
+                        <constraint firstAttribute="height" constant="40" id="gfr-3j-hq8"/>
+                    </constraints>
                     <state key="normal" title="Filter" image="filter">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,9 +64,14 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J3m-bF-tiA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IRt-xq-VOJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J3m-bF-tiA" secondAttribute="bottom" constant="25" id="v57-ht-pX7"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
+                <outlet property="filterButton" destination="J3m-bF-tiA" id="01v-0s-ZTb"/>
                 <outlet property="peopleCollection" destination="MJE-vT-zOz" id="aJW-zh-Nv9"/>
                 <outlet property="peopleCount" destination="eho-B7-edf" id="qxa-aP-FqT"/>
             </connections>
