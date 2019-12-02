@@ -22,7 +22,7 @@ class PeopleView: UIView {
         peopleCollection.dataSource = self
         peopleCollection.delegate = self
         peopleCount.text = "20 people in Apple Academy"
-        headerView.isUserInteractionEnabled = true
+       // headerView.isUserInteractionEnabled = true
     }
     
     @IBAction func tapProfile(_ sender: UIButton) {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1321CC7767F567400AF45FD6 /* Pods_Almate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A87A6099742A499B316FBC /* Pods_Almate.framework */; };
+		3A1B0F2B239110D20009A27E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B0F2A239110D20009A27E /* Extension.swift */; };
+		3A1B0F2F239516EA0009A27E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B0F2E239516EA0009A27E /* GoogleService-Info.plist */; };
 		3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */; };
 		3A353CE823850DE100BE4A19 /* JobEmployerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */; };
 		3A353CF72386884D00BE4A19 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A353CF62386884D00BE4A19 /* DLRadioButton.m */; };
@@ -23,7 +25,7 @@
 		3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFB237430A8007E3D4D /* JobsView.swift */; };
 		3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */; };
 		3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */; };
-		3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB648E3237418E9005B884D /* GoogleService-Info.plist */; };
+		3AC7266623910659008F08F2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC7266523910659008F08F2 /* Constant.swift */; };
 		5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB357237957890079A595 /* ProfileViewController.swift */; };
 		5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB35A237957B10079A595 /* ProfileCell.swift */; };
 		5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB35B237957B10079A595 /* ProfileView.swift */; };
@@ -130,6 +132,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1B0F2A239110D20009A27E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3A1B0F2E239516EA0009A27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A353CE523850DE100BE4A19 /* JobEmployerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEmployerCell.swift; sourceTree = "<group>"; };
 		3A353CE623850DE100BE4A19 /* JobEmployerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobEmployerCell.xib; sourceTree = "<group>"; };
 		3A353CF42386884C00BE4A19 /* Almate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Almate-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -147,7 +151,7 @@
 		3A9C0CFB237430A8007E3D4D /* JobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsView.swift; sourceTree = "<group>"; };
 		3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
-		3AB648E3237418E9005B884D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AC7266523910659008F08F2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		5E0DB357237957890079A595 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5E0DB35A237957B10079A595 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -271,6 +275,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1B0F29239110B60009A27E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3AC7266523910659008F08F2 /* Constant.swift */,
+				3A1B0F2A239110D20009A27E /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		3A67CB552383F35500DC1114 /* Employer */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +521,7 @@
 		8894582E236AF44100E3D838 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				88945826236AF0B200E3D838 /* Main */,
 				3A67CB552383F35500DC1114 /* Employer */,
 				3A83339823823038007C17C4 /* Post Job */,
 				3A83339723823027007C17C4 /* Detail Job */,
@@ -628,8 +642,8 @@
 				3A353CF62386884D00BE4A19 /* DLRadioButton.m */,
 				88F6820F236971B7006249AA /* Assets.xcassets */,
 				88F68211236971B7006249AA /* LaunchScreen.storyboard */,
-				3AB648E3237418E9005B884D /* GoogleService-Info.plist */,
 				88F68214236971B7006249AA /* Info.plist */,
+				3A1B0F2E239516EA0009A27E /* GoogleService-Info.plist */,
 				3A353CF42386884C00BE4A19 /* Almate-Bridging-Header.h */,
 			);
 			path = Almate;
@@ -666,8 +680,8 @@
 				8894582B236AF41700E3D838 /* Notif */,
 				88945829236AF40200E3D838 /* People */,
 				88945827236AF3F000E3D838 /* News */,
-				88945826236AF0B200E3D838 /* Main */,
 				88F68225236985C4006249AA /* Login */,
+				3A1B0F29239110B60009A27E /* Helper */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -780,8 +794,8 @@
 			files = (
 				8B01FC3D238E885400AD012F /* NewsNoPhotoCell.xib in Resources */,
 				8B01FC31238E7DFD00AD012F /* NewsTwoPhotosCell.xib in Resources */,
+				3A1B0F2F239516EA0009A27E /* GoogleService-Info.plist in Resources */,
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
-				3AB648E4237418E9005B884D /* GoogleService-Info.plist in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */,
@@ -929,6 +943,7 @@
 				5E0DB36723796A1C0079A595 /* EditProfileView.swift in Sources */,
 				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
 				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
+				3A1B0F2B239110D20009A27E /* Extension.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
@@ -943,6 +958,7 @@
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
 				888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
+				3AC7266623910659008F08F2 /* Constant.swift in Sources */,
 				88E07706237B398D0026D52B /* Reference.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
 				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,
