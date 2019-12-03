@@ -40,6 +40,7 @@ extension NewsView: UICollectionViewDataSource {
         cell.captionOutlet.text = data.newsText
         cell.dateOutlet.text = data.newsDate
         cell.postImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[indexPath.row]))
+        cell.likesButtonOutlet.setTitle("\(data.newsLike.stringValue) likes", for: .normal)
         
         cell.didTapComment = {
             () in

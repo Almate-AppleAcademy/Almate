@@ -18,6 +18,7 @@ class CommentView: UIView {
     @IBOutlet weak var postButton: UIButton!
     
     var dataComments: [Comments] = []
+    var dataPeople: [User] = []
     var documents: [QueryDocumentSnapshot] = []
     
     override func awakeFromNib() {
@@ -42,8 +43,6 @@ class CommentView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         
         postButton.isHidden = true
-        
-        print(dataComments.count)
     }
 
     @objc func keyboardWillShow(sender: NSNotification) {
@@ -78,8 +77,10 @@ extension CommentView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! CommentCell
         let data = dataComments[indexPath.row]
+        let dataUser = dataPeople[indexPath.row]
         cell.commentOutlet.text = data.commentText
-        
+        cell.nameOutlet.text = "\(dataUser.firstName) \(dataUser.lastName)"
+        cell.profilleImageOutlet.sd_setImage(with: URL(string: dataUser.userImage))
         return cell
     }
     
@@ -97,20 +98,20 @@ extension CommentView: UITextFieldDelegate {
     }
 }
 
-extension CommentView: CommentViewInput{
-    func displayComments(_ data: [Comments]?, _ documents: [QueryDocumentSnapshot]) {
-        if let data = data{
+extension CommentView: CommentViewInput {
+    func displayComments(_ data: [Comments]?, _ dataPeople: [User]?) {
+        if let data = data, let dataPeople = dataPeople {
             self.dataComments = data
+            self.dataPeople = dataPeople
             self.commentTable.reloadData()
         } else {return}
-        self.documents = documents
     }
     
     
 }
 
 protocol CommentViewInput{
-    func displayComments(_ data: [Comments]?, _ documents: [QueryDocumentSnapshot])
+    func displayComments(_ data: [Comments]?,_ dataPeople: [User]?)
 }
 
 //extension UITextField {

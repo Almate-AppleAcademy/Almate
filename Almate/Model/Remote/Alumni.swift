@@ -39,6 +39,7 @@ struct Post {
     let newsLike: NSNumber
     let newsDate: String
     let newsPhoto: [String]
+    let didLike = false
 //    let comment: [NewsComment]
     
     var dictionary: [String:Any] {
@@ -49,6 +50,10 @@ struct Post {
                "newsPhoto": newsPhoto
            ]
        }
+    
+    func adjustLikes(){
+        
+    }
 }
 
 extension Post: DocumentSerializable {

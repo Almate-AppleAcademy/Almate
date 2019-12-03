@@ -15,6 +15,7 @@ class RemoteNews: RemoteNewsInput {
     
     var newsData: [Post]?
     var commentData: [Comments]?
+    var peopleComment: [User]?
     
     private var listener: ListenerRegistration?
     fileprivate var query: Query? {
@@ -44,11 +45,12 @@ class RemoteNews: RemoteNewsInput {
         })
     }
     
-    func loadPostComments(documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments]) -> Void) {
+    func loadPostComments(documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) {
         query = Firestore.firestore()
         
                 .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post/\(documents.documentID)/Comments")
         guard let query = query else { return }
+        var usersData: [User] = []
         listener = query.addSnapshotListener{ (snapshot, error) in
             guard let snapshot = snapshot else {
                 print("Error fetching snapshot results: \(String(describing: error))")
@@ -61,10 +63,38 @@ class RemoteNews: RemoteNewsInput {
                     fatalError("Unable to initialize type \(Comments.self) with dictionary \(document.data())")
                 }
             }
-           
-           completionBlock(models)
+            self.loadPeopleComments(models: models) { (dataUser) in
+                if let dataUser = dataUser {
+                    usersData.append(dataUser)
+                    completionBlock(models, usersData ?? [User]())
+                }
+            }
         }
     }
+    
+    func loadPeopleComments(models: [Comments], completion: @escaping(User?) -> Void) {
+        for model in models {
+            let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").document("\(model.commentBy.documentID)")
+            query.getDocument { (snapshot, error) in
+                let model = User(dictionary: (snapshot?.data())!)
+                completion(model)
+            }
+        }
+    }
+    
+    
+//     func loadPeopleReferencing(models: [Reference], completion: @escaping(User?) -> Void) {
+//
+//            for model in models {
+//                let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/")
+//                    .document("\(model.referenceUser.documentID)")
+//                    query.getDocument { (snapshot, error) in
+//                        let model = User(dictionary: (snapshot?.data())!)
+//    //                    usersData.insert(mod, at: <#T##Int#>)
+//                        completion(model)
+//                }
+//            }
+//        }
     
     
     func baseQuery() -> Query {
@@ -75,5 +105,5 @@ class RemoteNews: RemoteNewsInput {
 
 protocol RemoteNewsInput {
     func requestDataNews(completionBlock: @escaping([Post], [QueryDocumentSnapshot]) -> Void) -> Void
-    func loadPostComments (documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments]) -> Void) -> Void
+    func loadPostComments (documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) -> Void
 }

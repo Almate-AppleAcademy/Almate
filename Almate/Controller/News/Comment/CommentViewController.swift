@@ -24,10 +24,10 @@ class CommentViewController: UIViewController {
         super.viewDidLoad()
         
        if let commentDocument = commentDocument {
-        remoteNews.loadPostComments(documents: commentDocument) { (dataComment) in
-                print(dataComment)
+        remoteNews.loadPostComments(documents: commentDocument) { (dataComment, dataPeople) in
                 // Kirim datacomment ke View
                 self.dataComments = dataComment
+            self.commentView.displayComments(dataComment, dataPeople)
             }
        }
 //        self.navigationItem.setHidesBackButton(true, animated:false)
