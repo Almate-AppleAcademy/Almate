@@ -33,5 +33,17 @@ class JobDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    @IBAction func applyJob(_ sender: Any) {
+        // create the alert
+        let alert = UIAlertController(title: "Success", message: "You have applied this job.", preferredStyle: UIAlertController.Style.alert)
+
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }

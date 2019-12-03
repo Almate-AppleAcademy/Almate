@@ -48,6 +48,9 @@
 		5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */; };
 		5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */; };
 		5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F2223868C3300D54524 /* AddReferenceView.swift */; };
+		5F26F62A238F78D100190580 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26F629238F78D100190580 /* RegisterView.swift */; };
+		5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF9914238F783A00A61711 /* RegisterViewController.swift */; };
+		5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDF9915238F783A00A61711 /* RegisterViewController.xib */; };
 		5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */; };
 		5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */; };
 		5FFD68C82372C72A00CE5E7B /* Notif2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */; };
@@ -162,6 +165,9 @@
 		5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceViewController.swift; sourceTree = "<group>"; };
 		5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReferenceViewController.xib; sourceTree = "<group>"; };
 		5EEA1F2223868C3300D54524 /* AddReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceView.swift; sourceTree = "<group>"; };
+		5F26F629238F78D100190580 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5FDF9914238F783A00A61711 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5FDF9915238F783A00A61711 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		5FFD68C22372C70B00CE5E7B /* Notif1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif1TableViewCell.swift; sourceTree = "<group>"; };
 		5FFD68C32372C70B00CE5E7B /* Notif1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notif1TableViewCell.xib; sourceTree = "<group>"; };
 		5FFD68C62372C72A00CE5E7B /* Notif2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif2TableViewCell.swift; sourceTree = "<group>"; };
@@ -330,6 +336,23 @@
 				5EEA1F152385167D00D54524 /* SkillProfileCell.xib */,
 			);
 			path = Profil;
+			sourceTree = "<group>";
+		};
+		5F26F628238F78BA00190580 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5F26F629238F78D100190580 /* RegisterView.swift */,
+				5FDF9915238F783A00A61711 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5FDF9913238F781C00A61711 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5FDF9914238F783A00A61711 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		881B42B523831499005C190A /* Employers */ = {
@@ -605,13 +628,14 @@
 		88F6821A236984D3006249AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5F26F628238F78BA00190580 /* Register */,
+				88F6821B236984D8006249AA /* Login */,
 				5E0DB359237957B10079A595 /* Profil */,
 				8894582E236AF44100E3D838 /* Jobs */,
 				8894582C236AF41C00E3D838 /* Notif */,
 				8894582A236AF40C00E3D838 /* People */,
 				88945828236AF3FC00E3D838 /* News */,
 				88945825236AF0A800E3D838 /* Main */,
-				88F6821B236984D8006249AA /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -635,6 +659,7 @@
 				88945827236AF3F000E3D838 /* News */,
 				88945826236AF0B200E3D838 /* Main */,
 				88F68225236985C4006249AA /* Login */,
+				5FDF9913238F781C00A61711 /* Register */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -713,7 +738,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Slamet Riyadi";
 				TargetAttributes = {
 					88F68202236971B5006249AA = {
@@ -761,6 +786,7 @@
 				5E0DB377237BE1970079A595 /* EducationProfileCell.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
 				3A353CE823850DE100BE4A19 /* JobEmployerCell.xib in Resources */,
+				5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */,
 				88945840236B15E400E3D838 /* MainTabBarController.xib in Resources */,
 				8B86020F2372BFC30053567B /* NewsCell.xib in Resources */,
 				5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */,
@@ -885,13 +911,13 @@
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
 				5E0DB371237BCEAF0079A595 /* ExperienceCell.swift in Sources */,
 				5E0DB36723796A1C0079A595 /* EditProfileView.swift in Sources */,
+				5F26F62A238F78D100190580 /* RegisterView.swift in Sources */,
 				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
 				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88CB38E923828CD300AED999 /* DummyUsers.swift in Sources */,
-				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				5E0DB38A23828ADE0079A595 /* PeopleListCell.swift in Sources */,
 				5E0DB37A237BE6420079A595 /* ReferenceProfileCell.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
@@ -915,6 +941,7 @@
 				88E07701237B398D0026D52B /* Users.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
+				5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */,
 				888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */,
 				88E076FF237B398D0026D52B /* Comment.swift in Sources */,
 				8890B98123717D33005EE950 /* PeopleView.swift in Sources */,
