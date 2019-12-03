@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>465687578561-4c8e88nao41fdnt7sh91154rh7jsbeqm.apps.googleusercontent.com</string>
+	<string>465687578561-0lebl148e52piam6a7udv550so63dage.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.465687578561-4c8e88nao41fdnt7sh91154rh7jsbeqm</string>
+	<string>com.googleusercontent.apps.465687578561-0lebl148e52piam6a7udv550so63dage</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCoyalSG1WLxD4ZOFiYx2A-V1idG6eB_mo</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>applegroupone.id.Almate</string>
+	<string>id.appleonegroup.almate</string>
 	<key>PROJECT_ID</key>
 	<string>almate-applegroup1</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:465687578561:ios:ea4e8cab3e4170e7689140</string>
+	<string>1:465687578561:ios:9cef66d45a3aeb66689140</string>
 	<key>DATABASE_URL</key>
 	<string>https://almate-applegroup1.firebaseio.com</string>
 </dict>

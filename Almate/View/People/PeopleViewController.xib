@@ -18,19 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="MYM-PA-9GN">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.13375958800315857" green="0.1562640368938446" blue="0.19216156005859375" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <viewLayoutGuide key="safeArea" id="E6r-WO-dri"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="15"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="MJE-vT-zOz">
-                    <rect key="frame" x="0.0" y="245" width="414" height="617"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" id="MJE-vT-zOz">
+                    <rect key="frame" x="0.0" y="29" width="414" height="833"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wqy-bH-qaZ">
@@ -43,17 +32,13 @@
                         <outlet property="dataSource" destination="i5M-Pr-FkT" id="y6y-NZ-DVl"/>
                     </connections>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-B7-edf">
-                    <rect key="frame" x="20" y="216" width="374" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-bF-tiA">
-                    <rect key="frame" x="147" y="770" width="120" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-bF-tiA">
+                    <rect key="frame" x="147" y="797" width="120" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="SvU-dv-XTg"/>
+                        <constraint firstAttribute="height" constant="40" id="gfr-3j-hq8"/>
+                    </constraints>
                     <state key="normal" title="Filter" image="filter">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,27 +55,28 @@
                         <action selector="didTapFilterButton:" destination="-1" eventType="touchUpInside" id="t9H-sh-0kC"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rqY-5b-VAR" userLabel="Profile">
-                    <rect key="frame" x="340" y="70" width="45" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="Profile pic">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="25"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="taapProfile:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="3GA-uc-1JV"/>
-                    </connections>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-B7-edf">
+                    <rect key="frame" x="20" y="8" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="fSf-Gx-bPf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eho-B7-edf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="7zv-kh-QoF"/>
+                <constraint firstItem="J3m-bF-tiA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IRt-xq-VOJ"/>
+                <constraint firstItem="eho-B7-edf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="SXa-aU-05b"/>
+                <constraint firstAttribute="trailing" secondItem="eho-B7-edf" secondAttribute="trailing" constant="20" id="sxg-Zc-RyP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J3m-bF-tiA" secondAttribute="bottom" constant="25" id="v57-ht-pX7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="headerView" destination="MYM-PA-9GN" id="s7b-7j-WoS"/>
+                <outlet property="filterButton" destination="J3m-bF-tiA" id="01v-0s-ZTb"/>
                 <outlet property="peopleCollection" destination="MJE-vT-zOz" id="aJW-zh-Nv9"/>
                 <outlet property="peopleCount" destination="eho-B7-edf" id="qxa-aP-FqT"/>
             </connections>
@@ -98,7 +84,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Profile pic" width="100" height="100"/>
         <image name="filter" width="24" height="24"/>
     </resources>
 </document>

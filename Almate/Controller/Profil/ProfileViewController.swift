@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     
@@ -61,7 +62,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func doneProfilePressed(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func savedPressed(_ sender: UIButton) {
@@ -75,6 +76,10 @@ class ProfileViewController: UIViewController {
 //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
     }
     
+    @IBAction func settingsTapped(_ sender: Any) {
+        let controller = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        self.navigationController?.present(controller, animated: true)
+    }
     
     /*
     // MARK: - Navigation

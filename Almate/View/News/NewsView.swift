@@ -22,9 +22,18 @@ class NewsView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        newsCollection.register(UINib(nibName: "NewsNoPhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsNoPhotoCell")
+        newsCollection.register(UINib(nibName: "NewsOnePhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsOnePhotoCell")
+        newsCollection.register(UINib(nibName: "NewsTwoPhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsTwoPhotoCell")
+        newsCollection.register(UINib(nibName: "NewsThreePhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsThreePhotoCell")
         newsCollection.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
+        
         newsCollection.delegate = self
         newsCollection.dataSource = self
+        
+        if let layout = newsCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = CGSize(width: newsCollection.frame.width - 50, height: 10)
+        }
     }
 
 }
