@@ -47,17 +47,19 @@ extension PeopleView: UICollectionViewDataSource {
         cell.didTapSaveContact = {
             () in
             var localState = userLocal[indexPath.row]
-//            let data = User(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState,skills: [userOccu[indexPath.row]])
-            
+            let data =
+                UserLocal(fullname: "\(data.firstName) \(data.lastName)", userGraduation: data.userGeneration,
+                          userOccupation: data.userOccupation, userSkills: data.tagSkill, userImage: ((cell.imgPeopleCell!.image?.pngData())!))
+//            (profileimg?.image)!.pngData()
             if (!localState) {
                 localState = !localState
-//                self.delegate?.tappedSaveContact(.create, data)
+                self.delegate?.tappedSaveContact(.create, data)
                 let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
                 cell?.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
             } else {
                 localState = !localState
                 cell.btnSaveContact.imageView?.image = UIImage(named: "save-unfilled")
-//                self.delegate?.tappedSaveContact(.delete, data)
+                self.delegate?.tappedSaveContact(.delete, data)
                 print("unfilled")
             }
         }
@@ -89,7 +91,7 @@ extension PeopleView: PeopleViewInput {
 
 protocol PeopleViewDelegate {
     func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
-    func tappedSaveContact(_ state: UserCoreDataState,_ data: User)
+    func tappedSaveContact(_ state: UserCoreDataState,_ data: UserLocal)
 }
 
 protocol PeopleViewInput {

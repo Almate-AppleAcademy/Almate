@@ -30,7 +30,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         })
     }
     
-    func tappedSaveContact(_ state: UserCoreDataState, _ data: User) {
+    func tappedSaveContact(_ state: UserCoreDataState, _ data: UserLocal) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if state == .delete {
             

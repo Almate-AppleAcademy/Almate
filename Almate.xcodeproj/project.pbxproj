@@ -41,9 +41,12 @@
 		885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A9A582372C239000D946E /* DetailPeopleViewController.swift */; };
 		885A9A5B2372C239000D946E /* DetailPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885A9A592372C239000D946E /* DetailPeopleViewController.xib */; };
 		885AA6D7236C54B00049B35E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885AA6D6236C54B00049B35E /* NewsView.swift */; };
+		885E915C23958A4B0053613B /* UserLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E915B23958A4B0053613B /* UserLocal.swift */; };
 		88645D57238E6C7800A461ED /* ExperienceCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88645D55238E6C7800A461ED /* ExperienceCollectionCell.swift */; };
 		88645D58238E6C7800A461ED /* ExperienceCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88645D56238E6C7800A461ED /* ExperienceCollectionCell.xib */; };
 		88696A6F2387BD3000673DE2 /* RemoteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88696A6E2387BD3000673DE2 /* RemoteNews.swift */; };
+		8877464223919DFF009F3655 /* RemoteJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877464123919DFF009F3655 /* RemoteJob.swift */; };
+		8877464423919EFC009F3655 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877464323919EFC009F3655 /* Job.swift */; };
 		887F47B1237ADCD50059433E /* ReferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F47AF237ADCD50059433E /* ReferenceCell.swift */; };
 		887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F47B0237ADCD50059433E /* ReferenceCell.xib */; };
 		888B296D237D4A8D00CA9DC0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */; };
@@ -134,9 +137,12 @@
 		885A9A582372C239000D946E /* DetailPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleViewController.swift; sourceTree = "<group>"; };
 		885A9A592372C239000D946E /* DetailPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPeopleViewController.xib; sourceTree = "<group>"; };
 		885AA6D6236C54B00049B35E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		885E915B23958A4B0053613B /* UserLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocal.swift; sourceTree = "<group>"; };
 		88645D55238E6C7800A461ED /* ExperienceCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCollectionCell.swift; sourceTree = "<group>"; };
 		88645D56238E6C7800A461ED /* ExperienceCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceCollectionCell.xib; sourceTree = "<group>"; };
 		88696A6E2387BD3000673DE2 /* RemoteNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNews.swift; sourceTree = "<group>"; };
+		8877464123919DFF009F3655 /* RemoteJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteJob.swift; sourceTree = "<group>"; };
+		8877464323919EFC009F3655 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		887F47AF237ADCD50059433E /* ReferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCell.swift; sourceTree = "<group>"; };
 		887F47B0237ADCD50059433E /* ReferenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceCell.xib; sourceTree = "<group>"; };
 		888B296B237D4A8D00CA9DC0 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +254,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		885E915A23958A1C0053613B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				885E915B23958A4B0053613B /* UserLocal.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		88645D54238E6C5C00A461ED /* Experience */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				88A73A2323841BEC00991B69 /* Alumni.swift */,
+				8877464323919EFC009F3655 /* Job.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -426,6 +441,7 @@
 		88E076F3237B394D0026D52B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				885E915A23958A1C0053613B /* Local */,
 				888893AE238D385100B86759 /* Remote */,
 				88A73A252384622B00991B69 /* ExtensionModelFirestore.swift */,
 			);
@@ -446,6 +462,7 @@
 			children = (
 				88A73A212384173D00991B69 /* RemotePeople.swift */,
 				88696A6E2387BD3000673DE2 /* RemoteNews.swift */,
+				8877464123919DFF009F3655 /* RemoteJob.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -760,6 +777,7 @@
 				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
+				8877464223919DFF009F3655 /* RemoteJob.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
 				88A73A222384173D00991B69 /* RemotePeople.swift in Sources */,
@@ -770,7 +788,9 @@
 				8B860217237A90A50053567B /* CommentViewController.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
+				885E915C23958A4B0053613B /* UserLocal.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
+				8877464423919EFC009F3655 /* Job.swift in Sources */,
 				88645D57238E6C7800A461ED /* ExperienceCollectionCell.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				5E0DB38A23828ADE0079A595 /* PeopleListCell.swift in Sources */,

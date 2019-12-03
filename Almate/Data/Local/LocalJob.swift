@@ -29,19 +29,28 @@ class LocalJob: LocalJobDataDelegate {
         }
     }
     
-    func createData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
                
         // Declare an entity and create new record
-        let userEntity = NSEntityDescription.entity(forEntityName: "JobsLocal", in: managedContext)!
-        let job = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        job.setValue(data.email, forKey: "emailAdmin")
-        job.setValue(data.password, forKey: "passwordAdmin")
+//        let userEntity = NSEntityDescription.entity(forEntityName: "JobsLocal", in: managedContext)!
+        let userEntity = NSEntityDescription.insertNewObject(forEntityName: "UsersLocal", into: managedContext)
+//        let userEntity = NSManagedObject(entity: userEntity, insertInto: managedContext)
         
+        
+        print(data.userSkills.joined(separator: "-"))
+        
+        userEntity.setValue(data.fullname, forKey: "fullname")
+        userEntity.setValue(data.userGraduation, forKey: "userGraduation")
+        userEntity.setValue(data.userOccupation, forKey: "userOccupation")
+        userEntity.setValue(data.userSkills.joined(separator: "-"), forKey: "userSkills")
+        userEntity.setValue(data.userImage, forKey: "userImage")
+    
         do {
             try managedContext.save()
             completionBlock("Success Save Data!")
+            print(NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).last!);
         } catch let error as NSError {
             completionBlock("\(error)")
         }
@@ -51,8 +60,10 @@ class LocalJob: LocalJobDataDelegate {
         do {
             let result = try managedContext.fetch(fetchRequest)
             for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "emailAdmin") as! String)
-                print(data.value(forKey: "passwordAdmin") as! String)
+                print(data.value(forKey: "fullname") as! String)
+                print(data.value(forKey: "userGraduation") as! String)
+                print(data.value(forKey: "userOccupation") as! String)
+                print(data.value(forKey: "userSkills") as! [String])
             }
         } catch {
             print("failed")
@@ -61,6 +72,6 @@ class LocalJob: LocalJobDataDelegate {
 }
 
 protocol LocalJobDataDelegate {
-    func createData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
+    func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
     func deleteData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

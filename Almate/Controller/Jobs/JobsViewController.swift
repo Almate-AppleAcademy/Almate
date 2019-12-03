@@ -13,6 +13,7 @@ class JobsViewController: UIViewController {
     @IBOutlet var jobView: JobsView!
     //    let tableCellId = "Notif1TableViewCell"
     var requestLocalJob = LocalJob()
+    var requestRemoteJob = RemoteJob()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,10 @@ class JobsViewController: UIViewController {
         //navigationItem.title = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        requestRemoteJob.loadAllJob { (dataJob) in
+            self.jobView.jobsData = dataJob
+        }
     }
 
     @IBAction func didTapPostJob(_ sender: UIButton) {
@@ -48,6 +53,9 @@ class JobsViewController: UIViewController {
 }
 
 extension JobsViewController: JobDelegate {
+    func didTapDetailJob(dataJob: Job) {
+        self.navigationController?.pushViewController(DetailPeopleViewController(), animated: true)
+    }
 
     func tappedSaveJob(_ state: UserCoreDataState, _ data: Admin) {
         print("job-4-almost")
@@ -55,11 +63,11 @@ extension JobsViewController: JobDelegate {
         if state == .delete {
             print("job-4-delete")
         } else {
-            requestLocalJob.createData(data: data, appDelegate) {
-                (message) in
-                print("job-4-create")
-                print(message)
-            }
+//            requestLocalJob.createData(data: data, appDelegate) {
+//                (message) in
+//                print("job-4-create")
+//                print(message)
+//            }
         }
     }
 }
