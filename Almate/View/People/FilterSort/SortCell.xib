@@ -16,9 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-86-a58">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-86-a58">
                         <rect key="frame" x="20" y="10" width="225" height="45"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="225" id="Jrj-sh-bwN"/>
+                            <constraint firstAttribute="height" constant="45" id="f33-bh-AKR"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,6 +42,11 @@
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TMX-86-a58" secondAttribute="bottom" constant="10" id="FTO-Fz-V0L"/>
+                    <constraint firstItem="TMX-86-a58" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ePi-wl-bpY"/>
+                    <constraint firstItem="TMX-86-a58" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nb8-Xy-Tqm"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

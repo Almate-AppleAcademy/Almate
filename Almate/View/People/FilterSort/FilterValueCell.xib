@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,10 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-HG-nv5">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-HG-nv5">
                         <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.45186501741409302" green="0.79205375909805298" blue="0.76470345258712769" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="CiV-yP-mWb"/>
+                            <constraint firstAttribute="height" constant="40" id="G58-Yj-3ay"/>
+                        </constraints>
                         <state key="normal" title="Button">
                             <color key="titleColor" red="0.8981327415" green="0.94114297629999999" blue="0.94117033480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
@@ -34,6 +37,12 @@
                     </button>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="1ri-HG-nv5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JEG-JH-rBc"/>
+                <constraint firstAttribute="bottom" secondItem="1ri-HG-nv5" secondAttribute="bottom" id="djY-zJ-RbI"/>
+                <constraint firstItem="1ri-HG-nv5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gtc-m8-6kA"/>
+                <constraint firstAttribute="trailing" secondItem="1ri-HG-nv5" secondAttribute="trailing" id="hbZ-Cn-GCS"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="buttonValue" destination="1ri-HG-nv5" id="4h0-p5-N7l"/>
