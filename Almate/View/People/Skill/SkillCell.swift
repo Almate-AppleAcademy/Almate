@@ -17,8 +17,9 @@ class SkillCell: UICollectionViewCell {
         self.layer.cornerRadius = 11
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.masksToBounds = true
+        self.layer.backgroundColor = UIColor.clear.cgColor
 //        self.contentView.layer.borderWidth = 0.5
-//        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
 //        self.contentView.layer.masksToBounds = true
         self.layer.masksToBounds = false
 //        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
