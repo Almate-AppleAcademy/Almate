@@ -14,13 +14,22 @@ class JobsView: UIView {
     @IBOutlet var postJobBtn: UIButton!
     var jobDelegate: JobDelegate?
     
+    var jobsData: [Job]?  {
+        didSet {
+            self.jobListTable.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         jobListTable.register(UINib(nibName: "JobCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
+<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
         jobListTable.delegate = self
+=======
+>>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
         jobListTable.dataSource = self
-        
+        jobListTable.delegate = self
     }
     @IBAction func postJobBtn(_ sender: UIButton) {
         post()
@@ -29,11 +38,16 @@ class JobsView: UIView {
 
 extension JobsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
         return 11
+=======
+        return jobsData?.count ?? 0
+>>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
+<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
         cell.jobLocation.text = jobLocation[indexPath.row]
         cell.jobTitle.text = jobTitle[indexPath.row]
         cell.companyName.text = companyName[indexPath.row]
@@ -45,15 +59,33 @@ extension JobsView: UICollectionViewDataSource {
             let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
             if (!localState) {
                 localState = !localState
+=======
+        if let jobsData = jobsData {
+            let data = jobsData[indexPath.row]
+            cell.jobLocation.text = data.jobLocation
+            cell.jobTitle.text = data.jobTitle
+            cell.companyName.text = data.jobCompanyName
+            cell.jobPicture.sd_setImage(with: URL(string: data.jobCompanyLogo))
+            cell.didTapSaveContact = {
+                () in
+>>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
                 print("job-2")
-                self.jobDelegate?.tappedSaveJob(.create, data)
-                //TODO : Change image Save Button
-            } else {
-                localState = !localState
-                self.jobDelegate?.tappedSaveJob(.delete, data)
-                //TODO : Change image Save Button
-                print("unfilled")
+                var localState = userLocalJob[indexPath.row]
+                let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
+                if (!localState) {
+                    localState = !localState
+                    print("job-2")
+                    self.jobDelegate?.tappedSaveJob(.create, data)
+                    //TODO : Change image Save Button
+                } else {
+                    localState = !localState
+                    self.jobDelegate?.tappedSaveJob(.delete, data)
+                    //TODO : Change image Save Button
+                    print("unfilled")
+                }
             }
+        } else {
+            // MARK: - ERROR HANDLING IF DATA NOT FOUND
         }
         return cell
     }
@@ -61,17 +93,27 @@ extension JobsView: UICollectionViewDataSource {
 
 extension JobsView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
         jobDelegate?.didSelectItemAt()
     }
     func post(){
         jobDelegate?.didTapPostJob()
+=======
+        if let jobsData = jobsData {
+            jobDelegate?.didTapDetailJob(dataJob: jobsData[indexPath.row])
+        }
+>>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
     }
 }
 
 protocol JobDelegate {
     func tappedSaveJob(_ state: UserCoreDataState,_ data: Admin)
+<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
     func didSelectItemAt()
     func didTapPostJob()
+=======
+    func didTapDetailJob(dataJob: Job)
+>>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
 }
 
 let userLocalJob = [false, false, false, false, false, false, false, false, false, false]

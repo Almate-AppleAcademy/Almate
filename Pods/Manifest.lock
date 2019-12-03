@@ -136,6 +136,9 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - Protobuf (3.10.0)
+  - SDWebImage (5.2.5):
+    - SDWebImage/Core (= 5.2.5)
+  - SDWebImage/Core (5.2.5)
 
 DEPENDENCIES:
   - DLRadioButton (~> 1.4)
@@ -144,6 +147,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - GoogleSignIn
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -171,6 +175,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
@@ -197,7 +202,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
 
-PODFILE CHECKSUM: 23cebabd622921a4cd2d828cab9e7dbaf8dcd946
+PODFILE CHECKSUM: 0e40d042422fe8839e9ed57a2c23815febea79f5
 
 COCOAPODS: 1.8.4

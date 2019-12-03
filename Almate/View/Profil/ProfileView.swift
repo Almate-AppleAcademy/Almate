@@ -70,7 +70,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         skillCollection.register(UINib(nibName: "SkillProfileCell", bundle: nil), forCellWithReuseIdentifier: "skillProfileCell")
         workNumber.text = "(\(workAngka))"
-    workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
+        workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         educationTable.register(UINib(nibName: "EducationProfileCell", bundle: nil), forCellReuseIdentifier: "educationProfileCell")
         experienceTable.register(UINib(nibName: "ExperienceCell", bundle: nil), forCellReuseIdentifier: "experienceCell")
         referenceCollection.register(UINib(nibName: "ReferenceProfileCell", bundle: nil), forCellWithReuseIdentifier: "referenceProfileCell")

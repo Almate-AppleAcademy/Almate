@@ -12,6 +12,8 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
     
     @IBOutlet var jobView: JobsView!
     var requestLocalJob = LocalJob()
+    var requestRemoteJob = RemoteJob()
+
     var shoulResize: Bool?
     var SearchView = UIImageView(image: UIImage(named: "white-1"))
     var imageView = UIImageView(image: UIImage(named: "Oval"))
@@ -19,6 +21,9 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         jobView.jobDelegate = self
+        requestRemoteJob.loadAllJob { (dataJob) in
+            self.jobView.jobsData = dataJob
+        }
         self.tabBarController?.tabBar.isHidden = false
         setupUI()
        observeAndHandleOrientationMode()
@@ -223,6 +228,10 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
 
 
 extension JobsViewController: JobDelegate {
+    func didTapDetailJob(dataJob: Job) {
+        self.navigationController?.pushViewController(DetailPeopleViewController(), animated: true)
+    }
+
     func didTapPostJob() {
         let vc = PostJobViewController(nibName: "PostJobViewController", bundle: nil)
         self.navigationController?.present(vc, animated: true)
@@ -236,11 +245,11 @@ extension JobsViewController: JobDelegate {
         if state == .delete {
             print("job-4-delete")
         } else {
-            requestLocalJob.createData(data: data, appDelegate) {
-                (message) in
-                print("job-4-create")
-                print(message)
-            }
+//            requestLocalJob.createData(data: data, appDelegate) {
+//                (message) in
+//                print("job-4-create")
+//                print(message)
+//            }
         }
     }
     

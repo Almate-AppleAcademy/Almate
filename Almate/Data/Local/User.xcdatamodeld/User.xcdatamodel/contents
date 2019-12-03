@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="JobsLocal" representedClassName="JobsLocal" syncable="YES" codeGenerationType="class">
         <attribute name="emailAdmin" optional="YES" attributeType="String"/>
         <attribute name="passwordAdmin" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UsersLocal" representedClassName="UsersLocal" syncable="YES" codeGenerationType="class">
-        <attribute name="emailUser" optional="YES" attributeType="String"/>
-        <attribute name="genUser" optional="YES" attributeType="String"/>
-        <attribute name="idUser" optional="YES" attributeType="String"/>
-        <attribute name="nameUser" optional="YES" attributeType="String"/>
-        <attribute name="occuUser" optional="YES" attributeType="String"/>
-        <attribute name="skillsUser" optional="YES" attributeType="String"/>
+        <attribute name="fullname" optional="YES" attributeType="String"/>
+        <attribute name="userGraduation" optional="YES" attributeType="String"/>
+        <attribute name="userImage" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="userOccupation" optional="YES" attributeType="String"/>
+        <attribute name="userSkills" optional="YES" attributeType="Transformable" customClassName="[String]"/>
     </entity>
     <elements>
-        <element name="UsersLocal" positionX="-54" positionY="-9" width="128" height="28"/>
         <element name="JobsLocal" positionX="-54" positionY="-18" width="128" height="73"/>
+        <element name="UsersLocal" positionX="-54" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

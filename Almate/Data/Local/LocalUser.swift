@@ -8,13 +8,14 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class LocalUser: LocalUserDataDelegate {
     
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
-        fetchRequest.predicate = NSPredicate(format: "idUser =  %@", "\(data.idUser!)")
+        fetchRequest.predicate = NSPredicate(format: "firstName =  %@", "\(data.firstName)")
         do {
             let test = try managedContext.fetch(fetchRequest)
             let objectToDelete = test[0] as! NSManagedObject
@@ -29,19 +30,19 @@ class LocalUser: LocalUserDataDelegate {
         }
     }
     
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
                
         // Declare an entity and create new record
         let userEntity = NSEntityDescription.entity(forEntityName: "UsersLocal", in: managedContext)!
-        let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        user.setValue(data.idUser, forKey: "idUser")
-        user.setValue(data.email, forKey: "emailUser")
-        user.setValue(data.name, forKey: "nameUser")
-        user.setValue(data.generation, forKey: "genUser")
-        user.setValue(data.occupation, forKey: "occuUser")
-        user.setValue("okelah", forKey: "skillsUser")
+        let job = NSManagedObject(entity: userEntity, insertInto: managedContext)
+        job.setValue(data.fullname, forKey: "fullname")
+        job.setValue(data.userGraduation, forKey: "userGraduation")
+        job.setValue(data.userOccupation, forKey: "userOccupation")
+        job.setValue(data.userSkills, forKey: "userSkills")
+        print(data.userImage)
+        job.setValue(data.userImage, forKey: "userImage")
         
         do {
             try managedContext.save()
@@ -51,11 +52,14 @@ class LocalUser: LocalUserDataDelegate {
         }
         
         // Prepare Request of type NSFetchRequest
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "JobsLocal")
         do {
             let result = try managedContext.fetch(fetchRequest)
             for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "idUser") as! String)
+                print(data.value(forKey: "fullname") as! String)
+                print(data.value(forKey: "userGraduation") as! String)
+                print(data.value(forKey: "userOccupation") as! String)
+                print(data.value(forKey: "userSkills") as! [String])
             }
         } catch {
             print("failed")
@@ -64,6 +68,6 @@ class LocalUser: LocalUserDataDelegate {
 }
 
 protocol LocalUserDataDelegate {
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
+    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

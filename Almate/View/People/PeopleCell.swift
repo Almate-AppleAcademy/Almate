@@ -20,6 +20,7 @@ class PeopleCell: UICollectionViewCell {
     //THIS IS INSIDE CELL
     //MARK: STEP 1 - Create Variable for action button cell
     var didTapSaveContact : (()->())?
+    var skills: [String]?
     
     var arraySkills: [String]? {
         didSet {
@@ -57,6 +58,15 @@ class PeopleCell: UICollectionViewCell {
         // MARK: STEP 3 - Call the variable inside function action
         didTapSaveContact?()
     }
+    
+    func skillData(_ dataSkill: [String]?) {
+        if let dataSkill = dataSkill {
+            self.skills = dataSkill
+            self.skillCollection.reloadData()
+        } else {
+            print("skills not found")
+        }
+    }
 }
 
 extension PeopleCell: UICollectionViewDataSource {
@@ -67,9 +77,7 @@ extension PeopleCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
-        cell.skillLabel.text = arraySkills![indexPath.row]
-        cell.layer.cornerRadius = 5
-
+        cell.skillLabel.text = skills![indexPath.row]
         return cell
     }
 }

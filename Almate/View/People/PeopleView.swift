@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import FirebaseFirestore
 
 class PeopleView: UIView {
     
@@ -17,6 +19,8 @@ class PeopleView: UIView {
     
     var dataPeople: [Users]?
     var delegate: PeopleViewDelegate?
+    var dataPeople: [User] = []
+    var documents: [QueryDocumentSnapshot]?
     
     override func awakeFromNib() {
         peopleCollection.register(UINib(nibName: "PeopleCell", bundle: nil), forCellWithReuseIdentifier: "peopleCell")
@@ -47,34 +51,38 @@ class PeopleView: UIView {
 extension PeopleView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataPeople!.count
+        return dataPeople.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let data = dataPeople?[indexPath.row] {
-            peopleCount.text = "\(dataPeople!.count) people in Apple Academy"
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
-            cell.namePeopleCell.text = data.name
-            cell.imgPeopleCell.image = data.imageUser
-            cell.genPeopleCelll.text = data.generation
-            cell.occupationPeopleCelll.text = data.occupation
-            cell.arraySkills = data.tagSkill
-            //        cell.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
-            let _: UIImage = cell.btnSaveContact.currentImage ?? UIImage(named: "save-unfilled")!
-            cell.didTapSaveContact = { () in
-                var localState = userLocal[indexPath.row]
-                let data = Users(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState, about: about[indexPath.row], linkedIn: linkedInLink[indexPath.row], noPhone: "081711128121", location: location[indexPath.row], skills: [userOccu[indexPath.row]], image: userImage[indexPath.row]!)
-                if (!localState) {
-                    localState = !localState
-                    self.delegate?.tappedSaveContact(.create, data)
-                    let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
-                    cell?.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
-                } else {
-                    localState = !localState
-                    cell.btnSaveContact.imageView?.image = UIImage(named: "save-unfilled")
-                    self.delegate?.tappedSaveContact(.delete, data)
-                    print("unfilled")
-                }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
+        let data = dataPeople[indexPath.row]
+        cell.namePeopleCell.text = "\(data.firstName) \(data.lastName) "
+//        cell.imgPeopleCell.image = userImage[indexPath.row]
+        cell.genPeopleCelll.text = data.userGeneration
+        cell.occupationPeopleCelll.text = data.userOccupation
+        cell.imgPeopleCell.sd_setImage(with: URL(string: data.userImage))
+        cell.skillData(data.tagSkill)
+//        cell.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
+        let _: UIImage = cell.btnSaveContact.currentImage ?? UIImage(named: "save-unfilled")!
+        cell.didTapSaveContact = {
+            () in
+            var localState = userLocal[indexPath.row]
+            let data =
+                UserLocal(fullname: "\(data.firstName) \(data.lastName)", userGraduation: data.userGeneration,
+                          userOccupation: data.userOccupation, userSkills: data.tagSkill, userImage: ((cell.imgPeopleCell!.image?.pngData())!))
+//            (profileimg?.image)!.pngData()
+            if (!localState) {
+                localState = !localState
+                self.delegate?.tappedSaveContact(.create, data)
+                let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
+                cell?.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
+            } else {
+                localState = !localState
+                cell.btnSaveContact.imageView?.image = UIImage(named: "save-unfilled")
+                self.delegate?.tappedSaveContact(.delete, data)
+                print("unfilled")
             }
             return cell
         } else {
@@ -92,25 +100,27 @@ extension PeopleView: UICollectionViewDataSource {
 extension PeopleView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        delegate?.didSelectItemAt(self.dataPeople?[indexPath.row])
+        delegate?.didSelectItemAt(dataPeople[indexPath.row], self.documents![indexPath.row])
     }
 }
 
-extension PeopleView: PeopleInput {
-    func displayDataPeople(data: [Users]) {
-        self.dataPeople = data
-        self.peopleCollection.reloadData()
+extension PeopleView: PeopleViewInput {
+    func displayPeople(_ data: [User]?,_ documents: [QueryDocumentSnapshot]) {
+        if let data = data {
+            self.dataPeople = data
+            self.peopleCollection.reloadData()
+        } else { return }
+        self.documents = documents
     }
-}
-
-protocol PeopleInput {
-    func displayDataPeople(data: [Users])
 }
 
 protocol PeopleViewDelegate {
-    func didSelectItemAt(_ detailPeopleData: Users?)
-    func didTapProfileIcon()
-    func tappedSaveContact(_ state: UserCoreDataState,_ data: Users)
+    func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
+    func tappedSaveContact(_ state: UserCoreDataState,_ data: UserLocal)
+}
+
+protocol PeopleViewInput {
+    func displayPeople(_ data: [User]?, _ documents: [QueryDocumentSnapshot])
 }
 
 enum UserCoreDataState {

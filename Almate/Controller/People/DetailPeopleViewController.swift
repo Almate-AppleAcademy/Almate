@@ -7,33 +7,55 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class DetailPeopleViewController: UIViewController {
     
-    @IBOutlet var detailPeopleVoew: DetailPeopleView!
-    var dataPeople: Users?
+    var dataPeople: User?
+    var dataContactPeople: UserContact?
+    var documents: QueryDocumentSnapshot?
+    var requestRemoteData = RemotePeople()
+    
+    @IBOutlet weak var detailPeopleView: DetailPeopleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-//        print(dataPeople)
-        detailPeopleVoew.dataPeople = dataPeople
+        detailPeopleView.dataPeople = dataPeople
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
+        requestRemoteData.loadPeopleEducation(documents: documents!) { (dataEducation) in
+            self.detailPeopleView.dataPeopleEducation = dataEducation
+            
+            self.requestRemoteData.loadPeopleExperience(documents: self.documents!) { (dataExperience) in
+                self.detailPeopleView.dataPeopleExperience = dataExperience
+                
+                self.requestRemoteData.loadPeopleDetail(documents: self.documents!) { (dataContact) in
+                    self.dataContactPeople = dataContact
+                    self.detailPeopleView.dataPeopleContact = dataContact
+                    
+//                    self.requestRemoteData.loadPeopleReference(documents: self.documents!)
+                    self.requestRemoteData.loadPeopleReference(documents: self.documents!) { (reference, users)  in
+                        self.detailPeopleView.displayReference(reference, users)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func didTapLinkeIdn(_ sender: Any) {
-        if let url = URL(string: (dataPeople?.linkedIn)!) {
-            UIApplication.shared.open(url)
-        }
+        if let linkedInURL = dataContactPeople?.userLinkedIn {
+            if let url = URL(string: linkedInURL) {
+                UIApplication.shared.open(url)
+            }
+        } else { print("LinkedIn URL Not Found") }
     }
     
     @IBAction func didTapEmail(_ sender: Any) {
-        if let url = URL(string: "mailto:\((dataPeople?.email)!)") {
-            UIApplication.shared.open(url)
-        }
+        if let userEmail = dataContactPeople?.userEmail {
+            if let url = URL(string: "mailto:\(userEmail)") {
+                UIApplication.shared.open(url)
+            }
+        } else { print("User Email Not Found") }
     }
     
     @IBAction func didTapTelpon(_ sender: UIButton) {
@@ -46,9 +68,11 @@ class DetailPeopleViewController: UIViewController {
         //
         // }
         
-        if let url = URL(string: "tel://081291617355"), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
+        if let userPhone = dataContactPeople?.userPhone {
+            if let url = URL(string: "tel://\(userPhone)"), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        } else { print("User Number Not Found")}
     }
     @IBAction func addReferencePressed(_ sender: UIButton) {
         let controller = AddReferenceViewController(nibName: "AddReferenceViewController", bundle: nil)
