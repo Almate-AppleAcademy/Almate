@@ -25,7 +25,7 @@ class RemotePeople: RemotePeopleInput {
     var userExperience: Experience?
     
     func loadPeople(completionBlock: @escaping ([User], [QueryDocumentSnapshot]) -> Void) {
-       query = baseQuery()
+        query = baseQuery()
         guard let query = query else { return }
         listener = query.addSnapshotListener{ (snapshot, error) in
             guard let snapshot = snapshot else {

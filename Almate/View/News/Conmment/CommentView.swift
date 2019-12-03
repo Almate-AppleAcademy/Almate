@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CommentView: UIView {
 
@@ -15,6 +16,9 @@ class CommentView: UIView {
     @IBOutlet weak var commentPhoto: UIImageView!
     @IBOutlet weak var commentSenderView: UIView!
     @IBOutlet weak var postButton: UIButton!
+    
+    var dataComments: [Comments] = []
+    var documents: [QueryDocumentSnapshot] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +42,8 @@ class CommentView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         
         postButton.isHidden = true
+        
+        print(dataComments.count)
     }
 
     @objc func keyboardWillShow(sender: NSNotification) {
@@ -66,11 +72,13 @@ class CommentView: UIView {
 
 extension CommentView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataComments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! CommentCell
+        let data = dataComments[indexPath.row]
+        cell.commentOutlet.text = data.commentText
         
         return cell
     }
@@ -87,6 +95,22 @@ extension CommentView: UITextFieldDelegate {
         // also return real flow value, not strict, like: true / false
         return textField.endEditing(false)
     }
+}
+
+extension CommentView: CommentViewInput{
+    func displayComments(_ data: [Comments]?, _ documents: [QueryDocumentSnapshot]) {
+        if let data = data{
+            self.dataComments = data
+            self.commentTable.reloadData()
+        } else {return}
+        self.documents = documents
+    }
+    
+    
+}
+
+protocol CommentViewInput{
+    func displayComments(_ data: [Comments]?, _ documents: [QueryDocumentSnapshot])
 }
 
 //extension UITextField {

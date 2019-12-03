@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     
+    @IBOutlet var newsView: NewsView!
     var remoteNews = RemoteNews()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        newsView.delegate = self
         // Do any additional setup after loading the view.
 //        self.title = "News"
         view.backgroundColor = .white
@@ -63,7 +65,7 @@ class NewsViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:false)
         
         remoteNews.requestDataNews { (data, documents) in
-            print(data)
+            self.newsView.displayNews(data, documents)
         }
 
     }
@@ -75,9 +77,9 @@ class NewsViewController: UIViewController {
     }
     
     @IBAction func commentTapped(_ sender: UIButton) {
-//        print("COMMENTS TAPPED")
-        let controller = CommentViewController(nibName: "CommentView", bundle: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
+        print("COMMENTS TAPPED")
+        
+        self.navigationController?.pushViewController(CommentViewController(), animated: true)
     }
     /*
     // MARK: - Navigation
@@ -93,4 +95,12 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UISearchBarDelegate {
     
+}
+
+extension NewsViewController: NewsViewDelegate {
+    func didTapComment(_ documents: QueryDocumentSnapshot?) {
+        let controller = CommentViewController()
+        controller.commentDocument = documents
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }

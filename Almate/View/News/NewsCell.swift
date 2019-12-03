@@ -18,6 +18,7 @@ class NewsCell: UICollectionViewCell {
     @IBOutlet weak var likesButtonOutlet: UIButton!
     @IBOutlet weak var commentButtonOutlet: UIButton!
 
+    var didTapComment: (() -> ())?
     
     
     
@@ -60,5 +61,10 @@ class NewsCell: UICollectionViewCell {
             
             
         }
+        
+        
+    }
+    @IBAction func didTappedComment(_ sender: UIButton) {
+        didTapComment?()
     }
 }
