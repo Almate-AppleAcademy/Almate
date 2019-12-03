@@ -56,17 +56,6 @@
                                 <color key="textColor" red="0.2196078431372549" green="0.24313725490196078" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="none" id="x0Y-1X-4GG">
-                                <rect key="frame" x="12" y="185" width="145" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ksw-TG-y9v">
-                                    <size key="itemSize" width="54" height="23"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="2" minY="2.5" maxX="2" maxY="2"/>
-                                </collectionViewFlowLayout>
-                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Okela" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1z-C5-lWR">
                                 <rect key="frame" x="14" y="152" width="141" height="19"/>
                                 <constraints>
@@ -76,14 +65,25 @@
                                 <color key="textColor" red="0.30256691575050354" green="0.66997236013412476" blue="0.7019692063331604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="none" id="x0Y-1X-4GG">
+                                <rect key="frame" x="12" y="181" width="145" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="ksw-TG-y9v">
+                                    <size key="itemSize" width="54" height="23"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2.5" maxX="2" maxY="2"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="I1z-C5-lWR" secondAttribute="trailing" constant="14" id="30z-Hv-cQ5"/>
-                            <constraint firstItem="x0Y-1X-4GG" firstAttribute="top" secondItem="I1z-C5-lWR" secondAttribute="bottom" constant="14" id="7LX-Rq-uJ8"/>
                             <constraint firstItem="I1z-C5-lWR" firstAttribute="leading" secondItem="wnn-DX-l7h" secondAttribute="leading" constant="14" id="8AK-UQ-s2P"/>
                             <constraint firstItem="T7w-gk-zRn" firstAttribute="centerX" secondItem="wnn-DX-l7h" secondAttribute="centerX" id="Bv6-fH-aTh"/>
                             <constraint firstItem="zXB-Ww-hDr" firstAttribute="top" secondItem="joB-x1-enp" secondAttribute="bottom" constant="3" id="FoB-TB-pud"/>
+                            <constraint firstItem="x0Y-1X-4GG" firstAttribute="top" secondItem="I1z-C5-lWR" secondAttribute="bottom" constant="10" id="M0k-Ct-ljj"/>
                             <constraint firstItem="Jpw-Mj-2e5" firstAttribute="top" secondItem="wnn-DX-l7h" secondAttribute="top" constant="16" id="UWf-M0-zU3"/>
                             <constraint firstItem="I1z-C5-lWR" firstAttribute="top" secondItem="zXB-Ww-hDr" secondAttribute="bottom" constant="9" id="VRb-Zn-y1t"/>
                             <constraint firstAttribute="trailing" secondItem="zXB-Ww-hDr" secondAttribute="trailing" constant="14" id="VXT-Xy-L2h"/>
