@@ -504,8 +504,8 @@
 				885A9A572372C1F3000D946E /* Detail */,
 				88945834236AF47900E3D838 /* PeopleViewController.xib */,
 				8890B98023717D33005EE950 /* PeopleView.swift */,
-				8890B98223717E69005EE950 /* PeopleCell.swift */,
 				8890B98323717E69005EE950 /* PeopleCell.xib */,
+				8890B98223717E69005EE950 /* PeopleCell.swift */,
 				5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */,
 				5EEA1F2223868C3300D54524 /* AddReferenceView.swift */,
 			);

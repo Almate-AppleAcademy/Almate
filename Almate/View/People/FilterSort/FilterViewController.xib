@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +17,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckr-IP-Eb7">
+                <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckr-IP-Eb7">
                     <rect key="frame" x="0.0" y="44" width="414" height="716"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-Mn-c6e">
-                    <rect key="frame" x="108" y="796" width="195" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-Mn-c6e">
+                    <rect key="frame" x="109.5" y="796" width="195" height="40"/>
                     <color key="backgroundColor" red="0.44796061515808105" green="0.7920527458190918" blue="0.76470345258712769" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Kl3-R1-BO1"/>
+                        <constraint firstAttribute="width" constant="195" id="YEu-2y-Mqj"/>
+                    </constraints>
                     <state key="normal" title="Apply Filter">
                         <color key="titleColor" red="0.89813274145126343" green="0.9411429762840271" blue="0.941170334815979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ckr-IP-Eb7" secondAttribute="bottom" constant="102" id="3Pi-tX-59b"/>
+                <constraint firstItem="ckr-IP-Eb7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4gN-ZK-jh5"/>
+                <constraint firstItem="Wq5-Mn-c6e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8oq-Qa-FzI"/>
+                <constraint firstItem="ckr-IP-Eb7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="P1z-mr-AuM"/>
+                <constraint firstItem="ckr-IP-Eb7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b1C-kZ-UNK"/>
+                <constraint firstItem="Wq5-Mn-c6e" firstAttribute="top" secondItem="ckr-IP-Eb7" secondAttribute="bottom" constant="36" id="qPe-p8-PsW"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
                 <outlet property="sortFilterTable" destination="ckr-IP-Eb7" id="eVG-Oa-B28"/>

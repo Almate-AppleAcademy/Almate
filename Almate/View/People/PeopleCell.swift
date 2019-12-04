@@ -37,6 +37,7 @@ class PeopleCell: UICollectionViewCell {
     override func layoutSubviews() {
         self.layer.borderWidth = 5.0
         self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.cornerRadius = 15
         self.layer.masksToBounds = true
         self.contentView.layer.borderWidth = 5.0
         self.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -44,7 +45,7 @@ class PeopleCell: UICollectionViewCell {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowRadius = 10.0
-        self.layer.shadowOpacity = 15/100
+        self.layer.shadowOpacity = 10/100
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
         skillCollection.register(UINib(nibName: "SkillCell", bundle: nil), forCellWithReuseIdentifier: "skillCell")
@@ -67,6 +68,8 @@ extension PeopleCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
         cell.skillLabel.text = arraySkills![indexPath.row]
+        cell.layer.cornerRadius = 5
+
         return cell
     }
 }

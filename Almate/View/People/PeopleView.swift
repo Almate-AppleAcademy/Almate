@@ -13,6 +13,7 @@ class PeopleView: UIView {
     @IBOutlet weak var peopleCollection: UICollectionView!
     @IBOutlet weak var peopleCount: UILabel!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var filterButton: UIButton!
     
     var dataPeople: [LocalUsers]?
     var delegate: PeopleViewDelegate?
@@ -22,6 +23,13 @@ class PeopleView: UIView {
         peopleCollection.dataSource = self
         peopleCollection.delegate = self
         peopleCount.text = "20 people in Apple Academy"
+        
+        filterButton.layer.shadowColor = UIColor.black.cgColor
+        filterButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        filterButton.layer.shadowRadius = 7.0
+        filterButton.layer.shadowOpacity = 20/100
+        filterButton.layer.cornerRadius = 20
+        
        // headerView.isUserInteractionEnabled = true
     }
     
