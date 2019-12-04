@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class DummyNews: DummyNewsInput {
-    var data = [Post]()
-    func getData(completion: @escaping ([Post]) -> Void) {
+    var data = [LocalPost]()
+    func getData(completion: @escaping ([LocalPost]) -> Void) {
         for n in 0...10 {
-            data.append(Post(postImageProfile: UIImage(named: "apel"), postNameProfile: "Apple Developer Academy @ BINUS", postText: postTextDummy[n], postLike: postLike[n], postDate: postDates[n], postBy: "Admin", postPhoto: postImage[n]))
+            data.append(LocalPost(postImageProfile: UIImage(named: "apel"), postNameProfile: "Apple Developer Academy @ BINUS", postText: postTextDummy[n], postLike: postLike[n], postDate: postDates[n], postBy: "Admin", postPhoto: postImage[n]))
         }
         completion(data)
     }
@@ -21,7 +21,7 @@ class DummyNews: DummyNewsInput {
 }
 
 protocol DummyNewsInput {
-    func getData(completion: @escaping ([Post]) -> Void) -> Void
+    func getData(completion: @escaping ([LocalPost]) -> Void) -> Void
 }
 
 let postDates = [

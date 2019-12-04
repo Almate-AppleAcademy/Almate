@@ -12,7 +12,7 @@ class NewsView: UIView {
 
     @IBOutlet weak var newsCollection: UICollectionView!
     
-    var dataPost: [Post] = [] {
+    var dataPost: [LocalPost] = [] {
         didSet {
             self.newsCollection.reloadData()
         }

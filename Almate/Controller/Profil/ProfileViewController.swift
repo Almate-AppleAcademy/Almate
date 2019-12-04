@@ -12,6 +12,9 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet var profileSuperview: ProfileView!
     
+    @IBOutlet var profileImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

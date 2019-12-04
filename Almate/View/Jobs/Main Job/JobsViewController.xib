@@ -15,74 +15,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="JobsView" customModule="Almate" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="894"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb1-88-9Sr">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Wj-4xS">
+                    <rect key="frame" x="0.0" y="-1" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Wj-4xS">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1550"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Know available position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-UB-KhD">
-                                    <rect key="frame" x="116" y="36" width="182" height="19.666666666666657"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Az-E6h">
-                                    <rect key="frame" x="0.0" y="202" width="414" height="1600"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Js-f5-2hR">
-                                        <size key="itemSize" width="353" height="110"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                </collectionView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11 jobs opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igV-QA-jnj">
-                                    <rect key="frame" x="8" y="149" width="145" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-Kk-WGh">
-                                    <rect key="frame" x="94" y="76" width="226" height="47"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="secondary"/>
-                                    <connections>
-                                        <action selector="postJobBtn:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="B81-aY-hwn"/>
-                                    </connections>
-                                </button>
-                            </subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Az-E6h">
+                            <rect key="frame" x="0.0" y="51" width="414" height="845"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1550" id="t8A-yC-Qzy"/>
-                            </constraints>
-                        </view>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Js-f5-2hR">
+                                <size key="itemSize" width="353" height="110"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-Kk-WGh">
+                            <rect key="frame" x="266" y="8" width="140" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" image="secondary"/>
+                            <connections>
+                                <action selector="postJobBtn:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="B81-aY-hwn"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11 jobs opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igV-QA-jnj">
+                            <rect key="frame" x="8" y="13" width="145" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="IDT-Wj-4xS" secondAttribute="bottom" constant="-2" id="ASd-8I-eKc"/>
-                        <constraint firstItem="IDT-Wj-4xS" firstAttribute="top" secondItem="aYy-n2-Awh" secondAttribute="top" id="Lmy-gy-qlO"/>
-                        <constraint firstItem="IDT-Wj-4xS" firstAttribute="centerX" secondItem="Gb1-88-9Sr" secondAttribute="centerX" id="QPS-5m-4iK"/>
-                        <constraint firstAttribute="trailing" secondItem="IDT-Wj-4xS" secondAttribute="trailing" id="aoF-wF-9lC"/>
-                        <constraint firstItem="IDT-Wj-4xS" firstAttribute="leading" secondItem="AgB-3J-UgZ" secondAttribute="leading" id="cST-2y-ofn"/>
-                    </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="aYy-n2-Awh"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="AgB-3J-UgZ"/>
-                </scrollView>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="Gb1-88-9Sr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2B8-Ac-6UE"/>
-                <constraint firstItem="Gb1-88-9Sr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FAJ-Qv-uGS"/>
-                <constraint firstItem="Gb1-88-9Sr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="H43-4s-NS2"/>
-                <constraint firstItem="Gb1-88-9Sr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yes-fl-8WX"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>

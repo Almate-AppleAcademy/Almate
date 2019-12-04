@@ -42,7 +42,7 @@ extension JobsView: UICollectionViewDataSource {
             () in
             print("job-2")
             var localState = userLocalJob[indexPath.row]
-            let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
+            let data = LocalAdmin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
             if (!localState) {
                 localState = !localState
                 print("job-2")
@@ -69,7 +69,7 @@ extension JobsView: UICollectionViewDelegate {
 }
 
 protocol JobDelegate {
-    func tappedSaveJob(_ state: UserCoreDataState,_ data: Admin)
+    func tappedSaveJob(_ state: UserCoreDataState,_ data: LocalAdmin)
     func didSelectItemAt()
     func didTapPostJob()
 }

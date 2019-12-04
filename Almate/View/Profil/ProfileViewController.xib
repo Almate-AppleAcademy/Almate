@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Almate" customModuleProvider="target">
             <connections>
+                <outlet property="profileImageView" destination="CF4-d7-WuW" id="Idl-Mj-cnJ"/>
                 <outlet property="profileSuperview" destination="DJM-66-Olf" id="pQ8-01-Izx"/>
                 <outlet property="view" destination="DJM-66-Olf" id="jBL-0d-4v4"/>
             </connections>
@@ -485,6 +486,7 @@
                 <outlet property="savedView" destination="Jrk-j7-GgI" id="nNA-eD-KbI"/>
                 <outlet property="skillCollection" destination="bXD-wM-ecs" id="coM-AN-i2e"/>
                 <outlet property="transparentView" destination="PGc-IV-kpL" id="eqi-Ef-N0Y"/>
+                <outlet property="userFullName" destination="deK-ET-GPf" id="3P9-tS-LjK"/>
                 <outlet property="workCollection" destination="vCY-eG-asm" id="irR-Ml-bwk"/>
                 <outlet property="workNumber" destination="X1U-ql-8DT" id="VTj-d5-qqb"/>
             </connections>

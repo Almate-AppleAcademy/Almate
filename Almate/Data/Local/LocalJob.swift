@@ -11,7 +11,7 @@ import CoreData
 
 class LocalJob: LocalJobDataDelegate {
     
-    func deleteData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func deleteData(data: LocalAdmin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "JobsLocal")
         fetchRequest.predicate = NSPredicate(format: "emailAdmin =  %@", "jobEmail1@gg.me")
@@ -29,7 +29,7 @@ class LocalJob: LocalJobDataDelegate {
         }
     }
     
-    func createData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func createData(data: LocalAdmin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
                
@@ -61,6 +61,6 @@ class LocalJob: LocalJobDataDelegate {
 }
 
 protocol LocalJobDataDelegate {
-    func createData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
-    func deleteData(data: Admin, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func createData(data: LocalAdmin, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
+    func deleteData(data: LocalAdmin, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

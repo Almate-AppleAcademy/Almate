@@ -1,11 +1,11 @@
 import Foundation
-struct Institution {
+struct LocalInstitution {
 	let name : String?
 	let address : String?
-	let admin : [Admin]?
-	let users : [Users]?
-	let post : [Post]?
-	let notif : [Notif]?
+	let admin : [LocalAdmin]?
+	let users : [LocalUsers]?
+	let post : [LocalPost]?
+	let notif : [LocalNotif]?
 
 	enum CodingKeys: String, CodingKey {
 		case name = "name"

@@ -9,18 +9,18 @@
 import Foundation
 
 class DummyUsers: DummyUsersInput {
-    var data = [Users]()
-    func getData(userType: UserType, completion: @escaping ([Users]) -> Void) {
+    var data = [LocalUsers]()
+    func getData(userType: UserType, completion: @escaping ([LocalUsers]) -> Void) {
         if userType == UserType.Alumni {
             print("Occu: \(userOccu.count), Email: \(userEmail.count), Username: \(userName.count), Grad: \(userGrad.count)")
             for n in 0...10 {
                 print(userImage[n])
-                data.append(Users(email: userEmail[n], idUser: userName[n], name: userName[n], generation: userGrad[n], occupation: userOccu[n], local: false, about: about[n], linkedIn: linkedInLink[n], noPhone: "08181816872", location: location[n], skills: skills[n], image: userImage[n]!))
+                data.append(LocalUsers(email: userEmail[n], idUser: userName[n], name: userName[n], generation: userGrad[n], occupation: userOccu[n], local: false, about: about[n], linkedIn: linkedInLink[n], noPhone: "08181816872", location: location[n], skills: skills[n], image: userImage[n]!))
             }
             completion(data)
         } else {
             for n in 0...11 {
-                data.append(Users(email: userEmail[n], idUser: userName[n], name: "em-\(userName[n])", generation: userGrad[n], occupation: userOccu[n], local: false, about: about[n], linkedIn: linkedInLink[n], noPhone: "08181816872", location: location[n], skills: skills[n], image: userImage[n]!))
+                data.append(LocalUsers(email: userEmail[n], idUser: userName[n], name: "em-\(userName[n])", generation: userGrad[n], occupation: userOccu[n], local: false, about: about[n], linkedIn: linkedInLink[n], noPhone: "08181816872", location: location[n], skills: skills[n], image: userImage[n]!))
             }
             print(data)
             completion(data)
@@ -29,5 +29,5 @@ class DummyUsers: DummyUsersInput {
 }
 
 protocol DummyUsersInput {
-    func getData(userType: UserType, completion: @escaping ([Users]) -> Void) -> Void
+    func getData(userType: UserType, completion: @escaping ([LocalUsers]) -> Void) -> Void
 }

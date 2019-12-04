@@ -12,6 +12,17 @@ var workAngka: Int = 5
 
 class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate {
     
+    var user: User? {
+                   
+                   didSet {
+                    if let data = user{
+                        self.userFullName.text = "\(data.firstName) \(data.middleName) \(data.lastName)"
+                        }
+                   }
+               }
+    
+    
+    
     let skillTags = ["Swift", "Java", "C++", "Kotlin", "Ruby", "Sketch", "SAP HR"]
     let listIntitusi = ["Yale University", "SMAN 3 Jakarta"]
     let listTanggalInstitusi = ["2015 - 2019", "2012 - 2015"]
@@ -54,6 +65,7 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     @IBOutlet weak var phoneBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
     
+    @IBOutlet var userFullName: UILabel!
     override func awakeFromNib() {
         
         garisMenuDua.alpha = 0
@@ -104,6 +116,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
 
         aboutLbl.sizeToFit()
         
+        
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

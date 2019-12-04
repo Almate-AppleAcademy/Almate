@@ -14,7 +14,7 @@ class PeopleView: UIView {
     @IBOutlet weak var peopleCount: UILabel!
     @IBOutlet weak var headerView: UIView!
     
-    var dataPeople: [Users]?
+    var dataPeople: [LocalUsers]?
     var delegate: PeopleViewDelegate?
     
     override func awakeFromNib() {
@@ -55,7 +55,7 @@ extension PeopleView: UICollectionViewDataSource {
             let _: UIImage = cell.btnSaveContact.currentImage ?? UIImage(named: "save-unfilled")!
             cell.didTapSaveContact = { () in
                 var localState = userLocal[indexPath.row]
-                let data = Users(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState, about: about[indexPath.row], linkedIn: linkedInLink[indexPath.row], noPhone: "081711128121", location: location[indexPath.row], skills: [userOccu[indexPath.row]], image: userImage[indexPath.row]!)
+                let data = LocalUsers(email: "myEmail@gg.me", idUser: "12-\(userName[indexPath.row])", name: userName[indexPath.row], generation: userGrad[indexPath.row], occupation: userOccu[indexPath.row], local: !localState, about: about[indexPath.row], linkedIn: linkedInLink[indexPath.row], noPhone: "081711128121", location: location[indexPath.row], skills: [userOccu[indexPath.row]], image: userImage[indexPath.row]!)
                 if (!localState) {
                     localState = !localState
                     self.delegate?.tappedSaveContact(.create, data)
@@ -89,20 +89,20 @@ extension PeopleView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
 }
 
 extension PeopleView: PeopleInput {
-    func displayDataPeople(data: [Users]) {
+    func displayDataPeople(data: [LocalUsers]) {
         self.dataPeople = data
         self.peopleCollection.reloadData()
     }
 }
 
 protocol PeopleInput {
-    func displayDataPeople(data: [Users])
+    func displayDataPeople(data: [LocalUsers])
 }
 
 protocol PeopleViewDelegate {
-    func didSelectItemAt(_ detailPeopleData: Users?)
+    func didSelectItemAt(_ detailPeopleData: LocalUsers?)
     func didTapProfileIcon()
-    func tappedSaveContact(_ state: UserCoreDataState,_ data: Users)
+    func tappedSaveContact(_ state: UserCoreDataState,_ data: LocalUsers)
 }
 
 enum UserCoreDataState {

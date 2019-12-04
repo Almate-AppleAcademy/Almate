@@ -230,7 +230,7 @@ extension JobsViewController: JobDelegate {
     }
     
     
-    func tappedSaveJob(_ state: UserCoreDataState, _ data: Admin) {
+    func tappedSaveJob(_ state: UserCoreDataState, _ data: LocalAdmin) {
         print("job-4-almost")
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if state == .delete {

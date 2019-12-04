@@ -1,5 +1,5 @@
 import Foundation
-struct Comment : Codable {
+struct LocalComment : Codable {
 	let usersId : String?
 	let text : String?
 

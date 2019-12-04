@@ -13,7 +13,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     var SearchView = UIImageView(image: UIImage(named: "white-1"))
     var imageView = UIImageView(image: UIImage(named: "Oval"))
     
-    func tappedSaveContact(_ state: UserCoreDataState, _ data: Users) {
+    func tappedSaveContact(_ state: UserCoreDataState, _ data: LocalUsers) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if state == .delete {
             requestUserLocal.deleteData(data: data, appDelegate) { (message) in
@@ -267,7 +267,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
     }
     
-    func didSelectItemAt(_ detailPeopleData: Users?) {
+    func didSelectItemAt(_ detailPeopleData: LocalUsers?) {
         let controller = DetailPeopleViewController(nibName: "DetailPeopleViewController", bundle: nil)
         print(detailPeopleData)
         controller.dataPeople = detailPeopleData

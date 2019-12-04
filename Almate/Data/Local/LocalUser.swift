@@ -11,7 +11,7 @@ import CoreData
 
 class LocalUser: LocalUserDataDelegate {
     
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func deleteData(data: LocalUsers, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
         fetchRequest.predicate = NSPredicate(format: "idUser =  %@", "\(data.idUser!)")
@@ -29,7 +29,7 @@ class LocalUser: LocalUserDataDelegate {
         }
     }
     
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func createData(data: LocalUsers, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
                
@@ -64,6 +64,6 @@ class LocalUser: LocalUserDataDelegate {
 }
 
 protocol LocalUserDataDelegate {
-    func createData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
-    func deleteData(data: Users, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func createData(data: LocalUsers, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
+    func deleteData(data: LocalUsers, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

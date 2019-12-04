@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct Users {
+struct LocalUsers {
 	let name : String?
 //	let status : String?
 	let email : String?

@@ -11,7 +11,7 @@ import UIKit
 class DetailPeopleViewController: UIViewController {
     
     @IBOutlet var detailPeopleVoew: DetailPeopleView!
-    var dataPeople: Users?
+    var dataPeople: LocalUsers?
     
     override func viewDidLoad() {
         super.viewDidLoad()

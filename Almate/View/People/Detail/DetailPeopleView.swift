@@ -10,7 +10,7 @@ import UIKit
 
 class DetailPeopleView: UIView {
     
-    var dataPeople: Users? {
+    var dataPeople: LocalUsers? {
         didSet {
             if let name = dataPeople?.name {
                 nameProfile.text = name

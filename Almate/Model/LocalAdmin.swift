@@ -1,5 +1,5 @@
 import Foundation
-struct Admin : Codable {
+struct LocalAdmin : Codable {
     
 	let email : String?
 	let password : String?

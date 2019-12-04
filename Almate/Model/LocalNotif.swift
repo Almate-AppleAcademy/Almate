@@ -1,5 +1,5 @@
 import Foundation
-struct Notif : Codable {
+struct LocalNotif : Codable {
 	let text : String?
 	let postID : String?
 	let date : String?
