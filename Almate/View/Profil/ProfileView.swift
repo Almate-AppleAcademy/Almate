@@ -12,6 +12,16 @@ var workAngka: Int = 5
 
 class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate {
     
+    var dataUser: User? {
+        didSet {
+            referenceCollection.reloadData()
+            workCollection.reloadData()
+            skillCollection.reloadData()
+            educationTable.reloadData()
+            experienceTable.reloadData()
+        }
+    }
+    
     let skillTags = ["Swift", "Java", "C++", "Kotlin", "Ruby", "Sketch", "SAP HR"]
     let listIntitusi = ["Yale University", "SMAN 3 Jakarta"]
     let listTanggalInstitusi = ["2015 - 2019", "2012 - 2015"]
@@ -123,35 +133,39 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == workCollection{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as! ProfileCell
-        return cell
-        }else if collectionView == skillCollection{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillProfileCell", for: indexPath) as! SkillProfileCell
-            cell.skillLbl.text = skillTags[indexPath.row]
+        if let data = dataUser {
+            if collectionView == workCollection{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath as IndexPath) as! ProfileCell
             return cell
-        }else if collectionView == referenceCollection{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceProfileCell", for: indexPath) as! ReferenceProfileCell
-            return cell
-        }else if collectionView == peopleListCollection{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleListCell", for: indexPath as IndexPath) as! PeopleListCell
-            cell.nameLbl.text = listNamaAlumni[indexPath.row]
-            cell.angkatanLbl.text = listAngkatanAlumni[indexPath.row]
-            cell.jobTitleLbl.text = listKerjaanAlumni[indexPath.row]
-            
-            return cell
-        }else if collectionView == jobsListCollection{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
-            cell.jobTitleLbl.text = listJobTitle[indexPath.row]
-            cell.companyLbl.text = listJobPerusahaan[indexPath.row]
-            cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
-            return cell
-        }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
-            cell.jobTitleLbl.text = listJobTitle[indexPath.row]
-            cell.companyLbl.text = listJobPerusahaan[indexPath.row]
-            cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
-            return cell
+            } else if collectionView == skillCollection {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillProfileCell", for: indexPath) as! SkillProfileCell
+//                cell.skillLbl.text = data.tagSkill
+                return cell
+            }else if collectionView == referenceCollection{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "referenceProfileCell", for: indexPath) as! ReferenceProfileCell
+                return cell
+            }else if collectionView == peopleListCollection{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleListCell", for: indexPath as IndexPath) as! PeopleListCell
+                cell.nameLbl.text = listNamaAlumni[indexPath.row]
+                cell.angkatanLbl.text = listAngkatanAlumni[indexPath.row]
+                cell.jobTitleLbl.text = listKerjaanAlumni[indexPath.row]
+                
+                return cell
+            }else if collectionView == jobsListCollection{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
+                cell.jobTitleLbl.text = listJobTitle[indexPath.row]
+                cell.companyLbl.text = listJobPerusahaan[indexPath.row]
+                cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
+                return cell
+            }else{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobsListCell", for: indexPath as IndexPath) as! JobsListCell
+                cell.jobTitleLbl.text = listJobTitle[indexPath.row]
+                cell.companyLbl.text = listJobPerusahaan[indexPath.row]
+                cell.locationLbl.text = listLokasiPerusahaan[indexPath.row]
+                return cell
+            }
+        } else {
+            return UICollectionViewCell()
         }
     }
     

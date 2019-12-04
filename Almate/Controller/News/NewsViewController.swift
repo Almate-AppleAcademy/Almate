@@ -11,7 +11,7 @@ import UIKit
 class NewsViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
-    var requestDummyData = DummyNews()
+//    var requestDummyData = DummyNews()
     var shoulResize: Bool?
     var SearchView = UIImageView(image: UIImage(named: "white-1"))
     var imageView = UIImageView(image: UIImage(named: "Oval"))
@@ -72,10 +72,6 @@ class NewsViewController: UIViewController {
         
         remoteNews.requestDataNews { (data, documents) in
             print(data)
-        }
-
-        requestDummyData.getData { (dataPost) in
-            self.newsView.dataPost = dataPost
         }
         
         setupUI()

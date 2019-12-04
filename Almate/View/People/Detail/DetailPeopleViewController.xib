@@ -50,22 +50,20 @@
                                                 <constraint firstAttribute="height" constant="100" id="Xid-15-okw"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-O7-3ir">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-O7-3ir">
                                             <rect key="frame" x="86" y="156" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-83-HpH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-83-HpH">
                                             <rect key="frame" x="86" y="185" width="242" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKi-Ed-UNk">
-                                            <rect key="frame" x="185.5" y="249" width="43" height="43"/>
+                                            <rect key="frame" x="185.5" y="192" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="DCe-Mh-UW8"/>
                                                 <constraint firstAttribute="width" constant="43" id="f9T-5l-IDb"/>
@@ -76,7 +74,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="har-1L-ezL">
-                                            <rect key="frame" x="285" y="249" width="43" height="43"/>
+                                            <rect key="frame" x="285" y="209" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="NNH-pf-tS8"/>
                                                 <constraint firstAttribute="width" constant="43" id="hBc-4g-Scc"/>
@@ -86,15 +84,14 @@
                                                 <action selector="didTapEmail:" destination="-1" eventType="touchUpInside" id="uB4-M5-Yma"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-hd-phF">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-hd-phF">
                                             <rect key="frame" x="135" y="212" width="145" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZD-aC-WUx">
-                                            <rect key="frame" x="86" y="249" width="43" height="43"/>
+                                            <rect key="frame" x="86" y="209" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="43" id="ZYs-97-odt"/>
                                                 <constraint firstAttribute="height" constant="43" id="ybC-cN-ZiA"/>
@@ -105,7 +102,7 @@
                                             </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-Rk-vZV">
-                                            <rect key="frame" x="114" y="213" width="15" height="15"/>
+                                            <rect key="frame" x="186.5" y="173" width="15" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="15" id="b4B-y7-oDk"/>
                                                 <constraint firstAttribute="height" constant="15" id="nj6-iH-fHB"/>
@@ -265,7 +262,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDp-vi-Nfw">
-                                    <rect key="frame" x="355" y="1092" width="24" height="24"/>
+                                    <rect key="frame" x="365" y="1328" width="24" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="add button"/>
                                     <connections>
@@ -275,8 +272,11 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="3X0-Ze-hGy" firstAttribute="leading" secondItem="flp-Jw-Qhn" secondAttribute="leading" id="3Ub-f2-PCK"/>
+                                <constraint firstItem="flp-Jw-Qhn" firstAttribute="trailing" secondItem="3X0-Ze-hGy" secondAttribute="trailing" id="YgP-4V-kLG"/>
                                 <constraint firstAttribute="width" constant="414" id="al5-tY-Ead"/>
                                 <constraint firstAttribute="height" constant="1578" id="ddH-0a-YaI"/>
+                                <constraint firstItem="flp-Jw-Qhn" firstAttribute="top" secondItem="3X0-Ze-hGy" secondAttribute="top" constant="44" id="tkw-Z6-QtV"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="flp-Jw-Qhn"/>
                         </view>

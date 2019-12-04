@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet var profileSuperview: ProfileView!
+    var remoteProfile: RemoteProfile?
     
     override func viewDidLoad() {
         
@@ -21,6 +22,12 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
+        
+        // TODO: This DocumentID actually from local user defaults that value saved after user login, Dummy
+        remoteProfile?.loadUser(documentID: "LRWDmCoOc71P7MtaLBoa", completion: { (data) in
+            
+        })
+        
     }
 
     

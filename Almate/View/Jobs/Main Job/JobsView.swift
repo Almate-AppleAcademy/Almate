@@ -24,42 +24,22 @@ class JobsView: UIView {
         super.awakeFromNib()
         
         jobListTable.register(UINib(nibName: "JobCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
-<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
-        jobListTable.delegate = self
-=======
->>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
         jobListTable.dataSource = self
         jobListTable.delegate = self
     }
     @IBAction func postJobBtn(_ sender: UIButton) {
-        post()
+        jobDelegate?.didTapPostJob()
     }
 }
 
 extension JobsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
-        return 11
-=======
         return jobsData?.count ?? 0
->>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
-<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
-        cell.jobLocation.text = jobLocation[indexPath.row]
-        cell.jobTitle.text = jobTitle[indexPath.row]
-        cell.companyName.text = companyName[indexPath.row]
-        cell.jobPicture.image = logoImage[indexPath.row]
-        cell.didTapSaveContact = {
-            () in
-            print("job-2")
-            var localState = userLocalJob[indexPath.row]
-            let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
-            if (!localState) {
-                localState = !localState
-=======
+
         if let jobsData = jobsData {
             let data = jobsData[indexPath.row]
             cell.jobLocation.text = data.jobLocation
@@ -68,7 +48,6 @@ extension JobsView: UICollectionViewDataSource {
             cell.jobPicture.sd_setImage(with: URL(string: data.jobCompanyLogo))
             cell.didTapSaveContact = {
                 () in
->>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
                 print("job-2")
                 var localState = userLocalJob[indexPath.row]
                 let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
@@ -93,27 +72,17 @@ extension JobsView: UICollectionViewDataSource {
 
 extension JobsView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
-        jobDelegate?.didSelectItemAt()
-    }
-    func post(){
-        jobDelegate?.didTapPostJob()
-=======
         if let jobsData = jobsData {
             jobDelegate?.didTapDetailJob(dataJob: jobsData[indexPath.row])
         }
->>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
     }
 }
 
 protocol JobDelegate {
     func tappedSaveJob(_ state: UserCoreDataState,_ data: Admin)
-<<<<<<< HEAD:Almate/View/Jobs/Main Job/JobsView.swift
     func didSelectItemAt()
     func didTapPostJob()
-=======
     func didTapDetailJob(dataJob: Job)
->>>>>>> slametv2:Almate/View/Jobs/JobsView.swift
 }
 
 let userLocalJob = [false, false, false, false, false, false, false, false, false, false]

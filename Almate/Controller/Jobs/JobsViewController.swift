@@ -229,7 +229,9 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
 
 extension JobsViewController: JobDelegate {
     func didTapDetailJob(dataJob: Job) {
-        self.navigationController?.pushViewController(DetailPeopleViewController(), animated: true)
+        let vc = JobDetailViewController()
+        vc.dataJob = dataJob
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func didTapPostJob() {

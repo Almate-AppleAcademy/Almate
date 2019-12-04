@@ -10,12 +10,17 @@ import UIKit
 
 class JobDetailViewController: UIViewController {
 
+    @IBOutlet var jobDetailView: JobDetailView!
     @IBOutlet var backToJobBtn: UIButton!
+    var dataJob: Job?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let dataJob = dataJob {
+            jobDetailView.displayJobDetail(dataJob: dataJob)
+        }
         view.backgroundColor = .white
         navigationController?.navigationBar.tintColor = .white
-        
         //navigationController?.navigationBar.prefersLargeTitles = true
        // navigationItem.title = "Detail"
       //  navigationController?.setNavigationBarHidden(true, animated: true)

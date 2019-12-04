@@ -17,7 +17,6 @@ class PeopleView: UIView {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var filterButton: UIButton!
     
-    var dataPeople: [Users]?
     var delegate: PeopleViewDelegate?
     var dataPeople: [User] = []
     var documents: [QueryDocumentSnapshot]?
@@ -84,10 +83,8 @@ extension PeopleView: UICollectionViewDataSource {
                 self.delegate?.tappedSaveContact(.delete, data)
                 print("unfilled")
             }
-            return cell
-        } else {
-            return UICollectionViewCell()
         }
+        return cell
     }
     
     @IBAction func saveTapped(_ sender: UIButton) {
@@ -116,6 +113,7 @@ extension PeopleView: PeopleViewInput {
 
 protocol PeopleViewDelegate {
     func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
+    func didTapProfileIcon()
     func tappedSaveContact(_ state: UserCoreDataState,_ data: UserLocal)
 }
 

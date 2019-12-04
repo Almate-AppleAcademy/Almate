@@ -72,12 +72,17 @@ class PeopleCell: UICollectionViewCell {
 extension PeopleCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arraySkills!.count
+        if let skills = skills { return skills.count }
+        else { return 0 }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
-        cell.skillLabel.text = skills![indexPath.row]
-        return cell
+        if let skills = skills {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "skillCell", for: indexPath) as! SkillCell
+            cell.skillLabel.text = skills[indexPath.row]
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
     }
 }

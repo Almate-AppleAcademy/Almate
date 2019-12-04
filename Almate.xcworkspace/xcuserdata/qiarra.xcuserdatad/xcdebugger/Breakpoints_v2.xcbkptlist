@@ -47,7 +47,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
-            endingLineNumber = "28">
+            endingLineNumber = "28"
+            landmarkName = "setSelected(_:animated:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -61,7 +63,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
-            endingLineNumber = "28">
+            endingLineNumber = "28"
+            landmarkName = "setSelected(_:animated:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -76,8 +80,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "DetailPeopleViewController"
-            landmarkType = "3">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53C19382-6266-4C1C-9624-707791367459 - ab68b2803b3e1258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Almate.Experience&gt;) -&gt; () in closure #1 (Swift.Array&lt;Almate.Education&gt;) -&gt; () in Almate.DetailPeopleViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/Controller/People/DetailPeopleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "318">
+               </Location>
+               <Location
+                  uuid = "53C19382-6266-4C1C-9624-707791367459 - 34736c1a1c6ec14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Almate.UserContact) -&gt; () in closure #1 (Swift.Array&lt;Almate.Experience&gt;) -&gt; () in closure #1 (Swift.Array&lt;Almate.Education&gt;) -&gt; () in Almate.DetailPeopleViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/Controller/People/DetailPeopleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "305">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -92,23 +128,103 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "didTapLinkeIdn(_:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56D96B05-6BCA-4994-BEC4-96ACD7A0CF3D - 2e61237eddfb6795"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Almate.Education&gt;) -&gt; () in Almate.DetailPeopleViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/Controller/People/DetailPeopleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "318">
+               </Location>
+               <Location
+                  uuid = "56D96B05-6BCA-4994-BEC4-96ACD7A0CF3D - ab68b2803b3e1258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Almate.Experience&gt;) -&gt; () in closure #1 (Swift.Array&lt;Almate.Education&gt;) -&gt; () in Almate.DetailPeopleViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/Controller/People/DetailPeopleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "496EFC8E-B9AF-4C46-9C36-55B5827CCD52"
+            uuid = "933980DC-A7BD-4F02-988B-1008DE310FC6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Almate/View/People/PeopleView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "taapProfile(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2591BCE-48A9-4D9F-B411-0D3079AAD62A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Almate/View/People/PeopleCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "skillData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2F632CC-37B8-434F-80A0-BF4953C59E10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Almate/View/People/PeopleCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "skillData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "302AA367-689F-4DEF-91B3-2D5A27E545F5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Almate/View/People/PeopleCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "skillData(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

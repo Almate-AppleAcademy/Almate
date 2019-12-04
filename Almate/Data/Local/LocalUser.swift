@@ -12,10 +12,10 @@ import UIKit
 
 class LocalUser: LocalUserDataDelegate {
     
-    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
+    func deleteData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
-        fetchRequest.predicate = NSPredicate(format: "firstName =  %@", "\(data.firstName)")
+        fetchRequest.predicate = NSPredicate(format: "firstName =  %@", "\(data.fullname)")
         do {
             let test = try managedContext.fetch(fetchRequest)
             let objectToDelete = test[0] as! NSManagedObject
@@ -69,5 +69,5 @@ class LocalUser: LocalUserDataDelegate {
 
 protocol LocalUserDataDelegate {
     func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
-    func deleteData(data: User, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func deleteData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
 }

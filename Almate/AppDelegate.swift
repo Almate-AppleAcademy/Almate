@@ -114,7 +114,7 @@ extension AppDelegate: AppDelegateFunc {
         if Auth.auth().currentUser == nil {
             // TODO: Dummy Save that actually do inside LoginController later
             UserDefaults.standard.set(0, forKey: "userType")
-            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+            window?.rootViewController = MainTabBarController()
             window?.makeKeyAndVisible()
         } else {
             let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
