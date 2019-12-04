@@ -39,6 +39,7 @@ struct Post {
     let newsLike: NSNumber
     let newsDate: String
     let newsPhoto: [String]
+    let didLike = false
 //    let comment: [NewsComment]
     
     var dictionary: [String:Any] {
@@ -49,6 +50,10 @@ struct Post {
                "newsPhoto": newsPhoto
            ]
        }
+    
+    func adjustLikes(){
+        
+    }
 }
 
 extension Post: DocumentSerializable {
@@ -62,18 +67,6 @@ extension Post: DocumentSerializable {
     }
 }
 
-// MARK: - NewsComment
-struct NewsComment {
-    let usersID: String
-    let commentText: String?
-    let commentTime: String
-    let text: String?
-
-    enum CodingKeys: String, CodingKey {
-        case usersID = "usersId"
-        case commentText, commentTime, text
-    }
-}
 
 // MARK: - Notif
 struct Notif {
@@ -88,15 +81,32 @@ struct Notif {
 //    let comment: [PostComment]
 //}
 
-// MARK: - PostComment
-struct PostComment {
-    let usersID, text: String
+// MARK: - Comments
+struct Comments {
+    var commentText: String
+    var commentBy: DocumentReference
+    var commentDate: Timestamp
 
-    enum CodingKeys: String, CodingKey {
-        case usersID = "usersId"
-        case text
+    var dictionary: [String:Any] {
+        return [
+            "commentText": commentText,
+            "commentBy": commentBy,
+            "commentDate": commentDate
+        ]
     }
+    
+   
 }
+
+extension Comments: DocumentSerializable{
+       init?(dictionary: [String:Any]){
+           guard let commentText = dictionary["commentText"] as? String,
+           let commentBy = dictionary["commentBy"] as? DocumentReference,
+               let commentDate = dictionary["commentDate"] as? Timestamp else { return nil }
+           
+           self.init(commentText: commentText, commentBy: commentBy, commentDate: commentDate)
+       }
+   }
 
 // MARK: - User
 struct User  {

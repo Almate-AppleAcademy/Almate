@@ -18,6 +18,7 @@ class NewsCell: UICollectionViewCell {
     @IBOutlet weak var likesButtonOutlet: UIButton!
     @IBOutlet weak var commentButtonOutlet: UIButton!
 
+    var didTapComment: (() -> ())?
     
     
     
@@ -52,17 +53,22 @@ class NewsCell: UICollectionViewCell {
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
     
-//    func noPhoto() {
-//        if postImageOutlet.image == nil {
-//            postImageOutlet.isHidden = true
-////            captionOutlet.heightAnchor
-////            captionOutlet.frame.height
-////            captioframe.size.height = label.frame.height + x
-//            captionOutlet.frame = CGRect(x: 25, y: 80, width: 334, height: 377)
-////            likesButtonOutlet.frame.origin.y = 270
-////            commentButtonOutlet.frame.origin.y = 270
-//
-//
-//        }
-//    }
+    func noPhoto() {
+        if postImageOutlet.image == nil {
+            postImageOutlet.isHidden = true
+//            captionOutlet.heightAnchor
+//            captionOutlet.frame.height
+//            captioframe.size.height = label.frame.height + x
+            captionOutlet.frame = CGRect(x: 25, y: 80, width: 334, height: 377)
+//            likesButtonOutlet.frame.origin.y = 270
+//            commentButtonOutlet.frame.origin.y = 270
+            
+            
+        }
+        
+        
+    }
+    @IBAction func didTappedComment(_ sender: UIButton) {
+        didTapComment?()
+    }
 }

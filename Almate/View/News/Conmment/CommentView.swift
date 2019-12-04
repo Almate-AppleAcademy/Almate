@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CommentView: UIView {
 
@@ -15,6 +16,10 @@ class CommentView: UIView {
     @IBOutlet weak var commentPhoto: UIImageView!
     @IBOutlet weak var commentSenderView: UIView!
     @IBOutlet weak var postButton: UIButton!
+    
+    var dataComments: [Comments] = []
+    var dataPeople: [User] = []
+    var documents: [QueryDocumentSnapshot] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,12 +71,16 @@ class CommentView: UIView {
 
 extension CommentView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataComments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! CommentCell
-        
+        let data = dataComments[indexPath.row]
+        let dataUser = dataPeople[indexPath.row]
+        cell.commentOutlet.text = data.commentText
+        cell.nameOutlet.text = "\(dataUser.firstName) \(dataUser.lastName)"
+        cell.profilleImageOutlet.sd_setImage(with: URL(string: dataUser.userImage))
         return cell
     }
     
@@ -87,6 +96,22 @@ extension CommentView: UITextFieldDelegate {
         // also return real flow value, not strict, like: true / false
         return textField.endEditing(false)
     }
+}
+
+extension CommentView: CommentViewInput {
+    func displayComments(_ data: [Comments]?, _ dataPeople: [User]?) {
+        if let data = data, let dataPeople = dataPeople {
+            self.dataComments = data
+            self.dataPeople = dataPeople
+            self.commentTable.reloadData()
+        } else {return}
+    }
+    
+    
+}
+
+protocol CommentViewInput{
+    func displayComments(_ data: [Comments]?,_ dataPeople: [User]?)
 }
 
 //extension UITextField {
