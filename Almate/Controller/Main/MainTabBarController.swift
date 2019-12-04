@@ -19,24 +19,6 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-<<<<<<< HEAD:Almate/View/Jobs/Main/MainTabBarController.swift
-        var tabList: [UIViewController]?
-        if checkUserType() == UserType.Alumni {
-            tabList = [
-                self.createController(title: "News", imageName: "Feeds replica", vc: newsVC),
-                self.createController(title: "Jobs", imageName: "briefcase", vc: jobVC),
-                self.createController(title: "People", imageName: "people", vc: peopleVC),
-                self.createController(title: "Notification", imageName: "Icon notification-1", vc: notifVC)
-            ]
-        } else {
-            tabList = [
-                self.createController(title: "Jobs", imageName: "news", vc: jobVC),
-                self.createController(title: "People", imageName: "news", vc: peopleVC),
-                self.createController(title: "Notification", imageName: "news", vc: notifVC)
-            ]
-        }
-        tabBar.tintColor = UIColor(red:0.31, green:0.80, blue:0.77, alpha:1.0)
-=======
         
         let tabList = [
             createController(title: "Jobs", imageName: "news", vc: jobVC),
@@ -45,7 +27,6 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             createController(title: "Notification", imageName: "news", vc: notifVC)
         ]
         
->>>>>>> slametv2:Almate/Controller/Main/MainTabBarController.swift
         viewControllers = tabList
     }
     
