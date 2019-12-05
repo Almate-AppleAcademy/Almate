@@ -133,7 +133,6 @@ class RemotePeople: RemotePeopleInput {
     }
     
     func loadPeopleReferencing(models: [Reference], completion: @escaping(User?) -> Void) {
-        
         for model in models {
             let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/")
                 .document("\(model.referenceUser.documentID)")

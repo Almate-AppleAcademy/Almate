@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet var profileSuperview: ProfileView!
-    var remoteProfile: RemoteProfile?
+    var remoteProfile = RemoteProfile()
     
     override func viewDidLoad() {
         
@@ -24,7 +24,24 @@ class ProfileViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         // TODO: This DocumentID actually from local user defaults that value saved after user login, Dummy
-        remoteProfile?.loadUser(documentID: "LRWDmCoOc71P7MtaLBoa", completion: { (data) in
+        remoteProfile.loadUser(documentID: "LRWDmCoOc71P7MtaLBoa", completion: { (data) in
+            self.profileSuperview.dataUser = data
+            
+            self.remoteProfile.loadPeopleDetail(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataContact) in
+                self.profileSuperview.dataPeopleContact = dataContact
+                
+                self.remoteProfile.loadPeopleEducation(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataEducation) in
+                    self.profileSuperview.dataPeopleEducation = dataEducation
+                    
+                    self.remoteProfile.loadPeopleExperience(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataExperience) in
+                        self.profileSuperview.dataPeopleExperience = dataExperience
+                        
+                        self.remoteProfile.loadPeopleReference(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataReference, dataPeople) in
+                            self.profileSuperview.displayReference(dataReference, dataPeople)
+                        }
+                    }
+                }
+            }
             
         })
         

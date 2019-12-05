@@ -16,9 +16,6 @@ class NewsViewController: UIViewController {
     var shoulResize: Bool?
     var SearchView = UIImageView(image: UIImage(named: "white-1"))
     var imageView = UIImageView(image: UIImage(named: "Oval"))
-    @IBOutlet weak var newsView: NewsView!
-    
-   
     
     @IBOutlet var newsView: NewsView!
     var remoteNews = RemoteNews()
@@ -321,11 +318,11 @@ class NewsViewController: UIViewController {
         
     }
     
-    @IBAction func commentTapped(_ sender: UIButton) {
-        print("COMMENTS TAPPED")
-        
-        self.navigationController?.pushViewController(CommentViewController(), animated: true)
-    }
+//    @IBAction func commentTapped(_ sender: UIButton) {
+//        print("COMMENTS TAPPED")
+//        
+//        self.navigationController?.pushViewController(CommentViewController(), animated: true)
+//    }
     /*
     // MARK: - Navigation
 

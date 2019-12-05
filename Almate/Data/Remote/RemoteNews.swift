@@ -64,10 +64,9 @@ class RemoteNews: RemoteNewsInput {
                 }
             }
             self.loadPeopleComments(models: models) { (dataUser) in
-                if let dataUser = dataUser {
-                    usersData.append(dataUser)
-                    completionBlock(models, usersData ?? [User]())
-                }
+                usersData.append(dataUser!)
+                print(usersData.count)
+                completionBlock(models, usersData)
             }
         }
     }

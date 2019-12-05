@@ -77,6 +77,7 @@ extension CommentView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! CommentCell
         let data = dataComments[indexPath.row]
+//        print("HILIH : \(dataPeople)")
         let dataUser = dataPeople[indexPath.row]
         cell.commentOutlet.text = data.commentText
         cell.nameOutlet.text = "\(dataUser.firstName) \(dataUser.lastName)"

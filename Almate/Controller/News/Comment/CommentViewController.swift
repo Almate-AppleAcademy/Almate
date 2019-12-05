@@ -26,7 +26,8 @@ class CommentViewController: UIViewController {
        if let commentDocument = commentDocument {
         remoteNews.loadPostComments(documents: commentDocument) { (dataComment, dataPeople) in
                 // Kirim datacomment ke View
-                self.dataComments = dataComment
+            print("HILIH : \(dataPeople)")
+            self.dataComments = dataComment
             self.commentView.displayComments(dataComment, dataPeople)
             }
        }

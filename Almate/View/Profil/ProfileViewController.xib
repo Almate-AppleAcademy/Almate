@@ -38,18 +38,23 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkS-Wa-qlg">
                                     <rect key="frame" x="0.0" y="-72" width="414" height="540"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile pic" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-d7-WuW">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-d7-WuW">
                                             <rect key="frame" x="157" y="136" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daniella Priska Fachreza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deK-ET-GPf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deK-ET-GPf">
                                             <rect key="frame" x="88" y="249" width="238" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PT. Kompetitif Nusa Jaya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dti-78-yk8">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dti-78-yk8">
                                             <rect key="frame" x="88" y="277" width="238" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
@@ -104,8 +109,8 @@
                                                 <action selector="profilePressed:" destination="-1" eventType="touchUpInside" id="FiT-xq-lsi"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Unknown, CA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-WF-wJu">
-                                            <rect key="frame" x="138.5" y="304" width="144.5" height="16.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-WF-wJu">
+                                            <rect key="frame" x="211.5" y="304" width="0.0" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -468,9 +473,10 @@
             <viewLayoutGuide key="safeArea" id="sq6-ss-p09"/>
             <connections>
                 <outlet property="aboutLbl" destination="TFe-C5-lwc" id="Vg1-0i-nvw"/>
+                <outlet property="companyLbl" destination="Dti-78-yk8" id="lXw-f3-B6U"/>
                 <outlet property="darkView" destination="qkS-Wa-qlg" id="upH-eB-u6M"/>
                 <outlet property="editBtn" destination="zOe-gR-Chz" id="ULm-c9-Cyn"/>
-                <outlet property="educationTable" destination="AN5-Hf-U6l" id="bbK-d9-DhB"/>
+                <outlet property="educationTable" destination="AN5-Hf-U6l" id="kjP-K6-zkX"/>
                 <outlet property="emailBtn" destination="w8T-GC-eXq" id="HE5-8F-age"/>
                 <outlet property="experienceTable" destination="M1A-DY-zQO" id="fgl-jg-qM0"/>
                 <outlet property="garisMenu" destination="7gO-TS-k1H" id="761-Kf-s3l"/>
@@ -478,8 +484,11 @@
                 <outlet property="jobsListCollection" destination="fGp-Ai-RSC" id="b8j-pS-EQR"/>
                 <outlet property="jobsSavedCollection" destination="02i-KH-udO" id="UXQ-rN-mB3"/>
                 <outlet property="linkedinBtn" destination="hZX-OW-pOi" id="7su-99-mHC"/>
+                <outlet property="locationLbl" destination="aJL-WF-wJu" id="ea9-vo-HbQ"/>
+                <outlet property="nameLbl" destination="deK-ET-GPf" id="x9G-t7-Inf"/>
                 <outlet property="peopleListCollection" destination="yVO-pM-cDw" id="03m-wD-Lna"/>
                 <outlet property="phoneBtn" destination="7jF-zB-PT3" id="SN9-e6-8Nx"/>
+                <outlet property="profileImage" destination="CF4-d7-WuW" id="jae-R3-4j1"/>
                 <outlet property="profileView" destination="kZV-uR-idh" id="puU-rL-v1H"/>
                 <outlet property="referenceCollection" destination="JBz-Sm-c7B" id="d9P-4U-8W4"/>
                 <outlet property="savedView" destination="Jrk-j7-GgI" id="nNA-eD-KbI"/>
@@ -492,7 +501,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Profile pic" width="100" height="100"/>
         <image name="editprofile" width="206" height="47"/>
         <image name="emailGreen" width="43" height="43"/>
         <image name="linkedinGreen" width="43" height="43"/>
