@@ -33,7 +33,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
        imageView.isUserInteractionEnabled = true
        imageView.addGestureRecognizer(tapGestureRecognizer)
-        
+        //SearchView.addGestureRecognizer(tapGestureRecognizer)
         if UIDevice.current.orientation.isPortrait {
             shoulResize = true
         } else if UIDevice.current.orientation.isLandscape {
@@ -230,7 +230,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
 extension JobsViewController: JobDelegate {
     func didTapDetailJob(dataJob: Job) {
         let vc = JobDetailViewController()
-        vc.dataJob = dataJob
+        //vc.dataJob = dataJob
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

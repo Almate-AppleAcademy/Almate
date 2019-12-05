@@ -38,14 +38,83 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView.isUserInteractionEnabled = true
              imageView.addGestureRecognizer(tapGestureRecognizer)
-              
+        //SearchView.addGestureRecognizer(tapGestureRecognizer)
               if UIDevice.current.orientation.isPortrait {
                   shoulResize = true
               } else if UIDevice.current.orientation.isLandscape {
                   shoulResize = false
         }
     }
+   
+    @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        showImage(true)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showImage(false)
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showImage(true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        ShouldResize()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    guard let shoulResize = shoulResize
+        else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
+    navigationController?.view.backgroundColor = #colorLiteral(red: 0.127440244, green: 0.1577139199, blue: 0.1955760121, alpha: 1)
+    navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1276172996, green: 0.1577090323, blue: 0.1955741942, alpha: 1)
+    navigationController?.navigationBar.isTranslucent = false
+    if shoulResize {
+        moveAndResizeImageForPortrait()
+        }
+
+    }
+         func observeAndHandleOrientationMode() {
+            NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: OperationQueue.current) { [weak self] _ in
+                
+                if UIDevice.current.orientation.isPortrait {
+                    self?.title = "Jobs"
+                    self?.moveAndResizeImageForPortrait()
+                    self?.shoulResize = true
+                } else if UIDevice.current.orientation.isLandscape {
+                    self?.title = "Jobs"
+                    self?.resizeImageForLandscape()
+                    self?.shoulResize = false
+                }
+            }
+        }
+    func ShouldResize(){
+        guard let shoulResize = shoulResize
+            else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
+        
+        if shoulResize {
+           moveAndResizeImageForPortrait()
+        }
+    }
+    func deviceOrientation(){
+        if UIDevice.current.orientation.isPortrait {
+                   shoulResize = true
+               } else if UIDevice.current.orientation.isLandscape {
+                   shoulResize = false
+               }
+    }
     // MARK: -UI SETUP
     
     func setupUI() {
@@ -90,20 +159,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         ])
     }
     
-    func observeAndHandleOrientationMode() {
-        NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: OperationQueue.current) { [weak self] _ in
-            
-            if UIDevice.current.orientation.isPortrait {
-                self?.title = "People"
-                self?.moveAndResizeImageForPortrait()
-                self?.shoulResize = true
-            } else if UIDevice.current.orientation.isLandscape {
-                self?.title = "People"
-                self?.resizeImageForLandscape()
-                self?.shoulResize = false
-            }
-        }
-    }
+    
     
     func moveAndResizeImageForPortrait() {
         guard let height = navigationController?.navigationBar.frame.height else { return }
