@@ -10,6 +10,8 @@ import UIKit
 
 class NewsOnePhotoCell: UICollectionViewCell {
 
+    var didTapComment: (() -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

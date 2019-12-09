@@ -31,7 +31,7 @@ class CommentViewController: UIViewController {
             self.commentView.displayComments(dataComment, dataPeople)
             }
        }
-//        self.navigationItem.setHidesBackButton(true, animated:false)
+       //self.navigationItem.setHidesBackButton(true, animated:false)
 
     }
     

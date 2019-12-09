@@ -36,10 +36,10 @@ struct Admin {
 // MARK: - News
 struct Post {
     let newsText: String
-    let newsLike: NSNumber
+    var newsLike: Int
     let newsDate: String
     let newsPhoto: [String]
-    let didLike = false
+    var didLike = false
 //    let comment: [NewsComment]
     
     var dictionary: [String:Any] {
@@ -50,8 +50,14 @@ struct Post {
                "newsPhoto": newsPhoto
            ]
        }
-    
-    func adjustLikes(){
+    mutating func adjustLikes(addLike: Bool){
+        if addLike{
+            newsLike += 1
+            didLike = true
+        }else{
+            guard newsLike > 0 else {return}
+            newsLike -= 1
+        }
         
     }
 }
@@ -59,7 +65,7 @@ struct Post {
 extension Post: DocumentSerializable {
     init?(dictionary: [String:Any]) {
             guard let newsText = dictionary["newsText"] as? String,
-                    let newsLike = dictionary["newsLike"] as? NSNumber,
+                    let newsLike = dictionary["newsLike"] as? Int,
                     let newsDate = dictionary["newsDate"] as? String,
                     let newsPhoto = dictionary["newsPhoto"] as? [String] else { return nil}
             

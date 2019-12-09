@@ -30,8 +30,8 @@ class NewsView: UIView {
         super.awakeFromNib()
         newsCollection.register(UINib(nibName: "NewsNoPhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsNoPhotoCell")
         newsCollection.register(UINib(nibName: "NewsOnePhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsOnePhotoCell")
-        newsCollection.register(UINib(nibName: "NewsTwoPhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsTwoPhotoCell")
-        newsCollection.register(UINib(nibName: "NewsThreePhotoCell", bundle: nil), forCellWithReuseIdentifier: "newsThreePhotoCell")
+        newsCollection.register(UINib(nibName: "NewsTwoPhotosCell", bundle: nil), forCellWithReuseIdentifier: "newsTwoPhotosCell")
+        newsCollection.register(UINib(nibName: "NewsThreePhotosCell", bundle: nil), forCellWithReuseIdentifier: "newsThreePhotosCell")
         newsCollection.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         
         newsCollection.delegate = self
@@ -50,18 +50,66 @@ extension NewsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
-        let data = dataNews[indexPath.row]
-        cell.captionOutlet.text = data.newsText
-        cell.dateOutlet.text = data.newsDate
-        cell.postImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[indexPath.row]))
-        cell.likesButtonOutlet.setTitle("\(data.newsLike.stringValue) likes", for: .normal)
         
-        cell.didTapComment = {
-            () in
-            self.delegate?.didTapComment(self.documents[indexPath.row])
+        let data = dataNews[indexPath.row]
+        if data.newsPhoto.count == 0{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsNoPhotoCell", for: indexPath) as! NewsNoPhotoCell
+            cell.captionOutlet.text = data.newsText
+            cell.dateOutlet.text = data.newsDate
+            cell.likesButtonOutlet.setTitle("\(String(data.newsLike)) likes", for: .normal)
+            return cell
+        } else if data.newsPhoto.count == 1{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath) as! NewsCell
+            cell.captionOutlet.text = data.newsText
+            cell.dateOutlet.text = data.newsDate
+            cell.postImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[0]))
+            cell.likesButtonOutlet.setTitle("\(String(data.newsLike)) likes", for: .normal)
+
+            cell.didTapComment = {
+                () in
+                self.delegate?.didTapComment(self.documents[indexPath.row])
+            }
+            return cell
+        } else if data.newsPhoto.count == 2{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsTwoPhotosCell", for: indexPath) as! NewsTwoPhotosCell
+            cell.captionOutlet.text = data.newsText
+            cell.dateOutlet.text = data.newsDate
+            cell.firstImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[0]))
+            cell.secondImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[1]))
+            cell.likesButtonOutlet.setTitle("\(String(data.newsLike)) likes", for: .normal)
+            
+            cell.didTapComment = {
+                () in
+                self.delegate?.didTapComment(self.documents[indexPath.row])
+            }
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsThreePhotosCell", for: indexPath) as! NewsThreePhotosCell
+            cell.captionOutlet.text = data.newsText
+            cell.dateOutlet.text = data.newsDate
+            cell.firstImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[0]))
+            cell.secondImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[1]))
+            cell.thirdImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[2]))
+            cell.likesButtonOutlet.setTitle("\(String(data.newsLike)) likes", for: .normal)
+            cell.didTapComment = {
+                () in
+                self.delegate?.didTapComment(self.documents[indexPath.row])
+            }
+            return cell
         }
-        return cell
+        
+//    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath as IndexPath) as! NewsCell
+//        let data = dataNews[indexPath.row]
+//        cell.captionOutlet.text = data.newsText
+//        cell.dateOutlet.text = data.newsDate
+//        cell.postImageOutlet.sd_setImage(with: URL(string: data.newsPhoto[indexPath.row]))
+//        cell.likesButtonOutlet.setTitle("\(data.newsLike.stringValue) likes", for: .normal)
+//
+//        cell.didTapComment = {
+//            () in
+//            self.delegate?.didTapComment(self.documents[indexPath.row])
+//        }
+//        return cell
     }
     
     

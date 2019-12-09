@@ -269,8 +269,8 @@ class NewsViewController: UIViewController {
          view.backgroundColor = .white
 //        navigationController?.navigationBar.prefersLargeTitles = true
 //        navigationItem.largeTitleDisplayMode = .always
-////        UINavigationBar.appearance().tintColor = .white
-//        navigationController?.navigationBar.barStyle = UIBarStyle.black
+//       UINavigationBar.appearance().tintColor = .white
+      navigationController?.navigationBar.barStyle = UIBarStyle.black
 //
 //        navigationItem.title = "News"
 ////        navigationController?.navigationBar.topItem?.title = "News"
@@ -304,10 +304,10 @@ class NewsViewController: UIViewController {
 //        searchController.searchBar.tintColor = .white
 //        searchController.searchBar.barTintColor = .white
 //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
-//
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-        self.navigationItem.setHidesBackButton(true, animated:false)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    
+       // self.navigationItem.setHidesBackButton(true, animated:false)
     }
     
 

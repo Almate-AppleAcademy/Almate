@@ -19,6 +19,8 @@ class NewsThreePhotosCell: UICollectionViewCell {
      @IBOutlet weak var thirdImageOutlet: UIImageView!
      @IBOutlet weak var likesButtonOutlet: UIButton!
      @IBOutlet weak var commentButtonOutlet: UIButton!
+    
+    var didTapComment: (() -> ())?
      
      override func awakeFromNib() {
          super.awakeFromNib()
@@ -47,4 +49,7 @@ class NewsThreePhotosCell: UICollectionViewCell {
          self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
      }
 
+    @IBAction func didTappedComment(_ sender: UIButton) {
+        didTapComment?()
+    }
 }

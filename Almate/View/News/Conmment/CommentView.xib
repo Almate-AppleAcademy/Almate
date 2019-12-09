@@ -76,6 +76,7 @@
                 <constraint firstItem="p9x-rW-rVg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="26" id="h4w-bb-TMU"/>
                 <constraint firstItem="p9x-rW-rVg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nSc-Kk-zBh"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
                 <outlet property="commentPhoto" destination="TJn-nE-KYh" id="Wf8-Eg-wju"/>
