@@ -25,7 +25,14 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
     }
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
     
     @IBAction func editPressed(_ sender: UIButton) {
         self.present(UINavigationController(rootViewController: EditProfileViewController()), animated: true, completion: nil)
@@ -83,15 +90,5 @@ class ProfileViewController: UIViewController {
         let controller = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         self.navigationController?.present(controller, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

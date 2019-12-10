@@ -102,9 +102,14 @@ class NotifTableViewController: UITableViewController{
         showImage(false)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showImage(true)
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewDidLayoutSubviews() {
