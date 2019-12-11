@@ -19,9 +19,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" id="MJE-vT-zOz">
-                    <rect key="frame" x="0.0" y="29" width="414" height="833"/>
+                    <rect key="frame" x="0.0" y="52" width="414" height="810"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wqy-bH-qaZ">
                         <size key="itemSize" width="169" height="260"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -56,21 +56,21 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-B7-edf">
-                    <rect key="frame" x="20" y="8" width="374" height="21"/>
+                    <rect key="frame" x="20" y="15" width="374" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="fSf-Gx-bPf"/>
+                        <constraint firstAttribute="height" constant="21" id="2QQ-UL-vKX"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96463197469711304" green="0.96474748849868774" blue="0.96459275484085083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="eho-B7-edf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="7zv-kh-QoF"/>
                 <constraint firstItem="J3m-bF-tiA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IRt-xq-VOJ"/>
-                <constraint firstItem="eho-B7-edf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="SXa-aU-05b"/>
-                <constraint firstAttribute="trailing" secondItem="eho-B7-edf" secondAttribute="trailing" constant="20" id="sxg-Zc-RyP"/>
+                <constraint firstAttribute="trailing" secondItem="eho-B7-edf" secondAttribute="trailing" constant="20" id="ZMW-zk-Zji"/>
+                <constraint firstItem="eho-B7-edf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="cci-uW-dpS"/>
+                <constraint firstItem="eho-B7-edf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dm4-gh-35K"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J3m-bF-tiA" secondAttribute="bottom" constant="25" id="v57-ht-pX7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
