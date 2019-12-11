@@ -15,6 +15,7 @@ class DetailPeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .white
         navigationItem.largeTitleDisplayMode = .never
 //        print(dataPeople)
         detailPeopleVoew.dataPeople = dataPeople
@@ -50,6 +51,7 @@ class DetailPeopleViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+    
     @IBAction func addReferencePressed(_ sender: UIButton) {
         let controller = AddReferenceViewController(nibName: "AddReferenceViewController", bundle: nil)
         self.navigationController?.pushViewController(controller, animated: true)
@@ -57,5 +59,13 @@ class DetailPeopleViewController: UIViewController {
         
         
         print("K")
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
 }

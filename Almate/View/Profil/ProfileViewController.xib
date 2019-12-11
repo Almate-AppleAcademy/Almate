@@ -452,7 +452,7 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="8oX-vG-VRJ"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="loZ-Pg-eCH"/>
                 </scrollView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGc-IV-kpL">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGc-IV-kpL">
                     <rect key="frame" x="0.0" y="-24" width="414" height="58"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -467,6 +467,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="sq6-ss-p09"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="PGc-IV-kpL"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="aboutLbl" destination="TFe-C5-lwc" id="Vg1-0i-nvw"/>
                 <outlet property="darkView" destination="qkS-Wa-qlg" id="upH-eB-u6M"/>

@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet var profileSuperview: ProfileView!
     
     @IBOutlet var profileImageView: UIImageView!
@@ -19,11 +19,15 @@ class ProfileViewController: UIViewController {
         
         super.viewDidLoad()
         view.insetsLayoutMarginsFromSafeArea = false
-
+        
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
+        navigationController?.view.backgroundColor = #colorLiteral(red: 0.127440244, green: 0.1577139199, blue: 0.1955760121, alpha: 1)
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1276172996, green: 0.1577090323, blue: 0.1955741942, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1276172996, green: 0.1577090323, blue: 0.1955741942, alpha: 1)
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,6 +36,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.barStyle = .black
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     @IBAction func editPressed(_ sender: UIButton) {
@@ -55,7 +62,7 @@ class ProfileViewController: UIViewController {
     }
     @IBAction func emailPressed(_ sender: UIButton) {
         if let url = URL(string: "mailto:slametngeblog@gmail.com"){
-        UIApplication.shared.open(url)
+            UIApplication.shared.open(url)
         }
     }
     
@@ -65,10 +72,8 @@ class ProfileViewController: UIViewController {
         
         profileSuperview.garisMenu.alpha = 1
         profileSuperview.garisMenuDua.alpha = 0
+        //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
         
-        
-//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
-            
     }
     
     @IBAction func doneProfilePressed(_ sender: UIButton) {
@@ -83,12 +88,12 @@ class ProfileViewController: UIViewController {
         profileSuperview.garisMenu.alpha = 0
         
         
-//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
+        //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
     }
     
     @IBAction func settingsTapped(_ sender: Any) {
         let controller = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         self.navigationController?.present(controller, animated: true)
     }
-
+    
 }

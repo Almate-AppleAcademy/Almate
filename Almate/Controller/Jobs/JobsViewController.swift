@@ -24,7 +24,6 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         observeAndHandleOrientationMode()
         
         
-        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tapGestureRecognizer)
@@ -36,6 +35,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         }
         
     }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -43,6 +43,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
     @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -50,8 +51,10 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         showImage(true)
+        setupUI()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false

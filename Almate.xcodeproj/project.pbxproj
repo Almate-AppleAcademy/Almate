@@ -486,8 +486,8 @@
 		88945829236AF40200E3D838 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				885A9A582372C239000D946E /* DetailPeopleViewController.swift */,
 				88945833236AF47900E3D838 /* PeopleViewController.swift */,
+				885A9A582372C239000D946E /* DetailPeopleViewController.swift */,
 				5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */,
 			);
 			path = People;
@@ -1149,7 +1149,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9RKKB6DTX4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Almate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1174,7 +1174,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9RKKB6DTX4;
+				DEVELOPMENT_TEAM = 9VA3VNPW9K;
 				INFOPLIST_FILE = Almate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsView: UIView {
-
+    
     @IBOutlet weak var newsCollection: UICollectionView!
     
     var dataPost: [LocalPost] = [] {
@@ -35,7 +35,7 @@ class NewsView: UIView {
             layout.estimatedItemSize = CGSize(width: newsCollection.frame.width - 50, height: 10)
         }
     }
-
+    
 }
 
 extension NewsView: UICollectionViewDataSource {

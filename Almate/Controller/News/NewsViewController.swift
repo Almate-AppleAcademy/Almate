@@ -54,8 +54,8 @@ class NewsViewController: UIViewController {
         //        definesPresentationContext = true
         
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.isTranslucent = true
         //        navigationItem.searchController = searchController
         //        navigationItem.hidesSearchBarWhenScrolling = false
         
@@ -73,7 +73,8 @@ class NewsViewController: UIViewController {
             self.newsView.dataPost = dataPost
         }
         
-        setupUI()
+        self.tabBarController?.tabBar.isHidden = false
+//        setupUI()
         observeAndHandleOrientationMode()
         
         
@@ -106,6 +107,7 @@ class NewsViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         showImage(true)
+        setupUI()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
@@ -123,6 +125,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupUI()
         showImage(true)
     }
     

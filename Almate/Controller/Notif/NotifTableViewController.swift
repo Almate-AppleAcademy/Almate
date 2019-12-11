@@ -95,6 +95,7 @@ class NotifTableViewController: UITableViewController{
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
+        setupUI()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

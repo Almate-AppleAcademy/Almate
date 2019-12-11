@@ -72,11 +72,11 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         savedView.alpha = 0
         transparentView.alpha = 0.8
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = transparentView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        transparentView.addSubview(blurEffectView)
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = transparentView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        transparentView.addSubview(blurEffectView)
         
         
         
