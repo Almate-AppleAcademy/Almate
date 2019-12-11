@@ -59,6 +59,9 @@
                         <state key="normal" title="  12 likes" image="heart-unfilled">
                             <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="didLikedComment:" destination="kPq-MI-U7G" eventType="touchUpInside" id="Maj-kP-per"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-R9-9wz" userLabel="First Photo">
                         <rect key="frame" x="15" y="268" width="165" height="189"/>

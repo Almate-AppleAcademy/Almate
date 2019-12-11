@@ -50,6 +50,8 @@
 		5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */; };
 		5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */; };
 		5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F2223868C3300D54524 /* AddReferenceView.swift */; };
+		5EFD8C9723A0E5C600B03B60 /* NewsLikeLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD8C9623A0E5C600B03B60 /* NewsLikeLocal.swift */; };
+		5EFD8C9923A0E6AB00B03B60 /* LocalNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */; };
 		5F26F62A238F78D100190580 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26F629238F78D100190580 /* RegisterView.swift */; };
 		5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF9914238F783A00A61711 /* RegisterViewController.swift */; };
 		5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDF9915238F783A00A61711 /* RegisterViewController.xib */; };
@@ -182,6 +184,8 @@
 		5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceViewController.swift; sourceTree = "<group>"; };
 		5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReferenceViewController.xib; sourceTree = "<group>"; };
 		5EEA1F2223868C3300D54524 /* AddReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceView.swift; sourceTree = "<group>"; };
+		5EFD8C9623A0E5C600B03B60 /* NewsLikeLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLikeLocal.swift; sourceTree = "<group>"; };
+		5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNews.swift; sourceTree = "<group>"; };
 		5F26F629238F78D100190580 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5FDF9914238F783A00A61711 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5FDF9915238F783A00A61711 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				885E915B23958A4B0053613B /* UserLocal.swift */,
+				5EFD8C9623A0E5C600B03B60 /* NewsLikeLocal.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -657,6 +662,7 @@
 				88E07707237B3C540026D52B /* User.xcdatamodeld */,
 				88E0772D237B5BFF0026D52B /* LocalUser.swift */,
 				888B297D237DF0FF00CA9DC0 /* LocalJob.swift */,
+				5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -993,6 +999,7 @@
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
+				5EFD8C9723A0E5C600B03B60 /* NewsLikeLocal.swift in Sources */,
 				3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */,
 				88A73A222384173D00991B69 /* RemotePeople.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
@@ -1004,6 +1011,7 @@
 				3A1B0F2B239110D20009A27E /* Extension.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
+				5EFD8C9923A0E6AB00B03B60 /* LocalNews.swift in Sources */,
 				885E915C23958A4B0053613B /* UserLocal.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88CB38E923828CD300AED999 /* DummyUsers.swift in Sources */,

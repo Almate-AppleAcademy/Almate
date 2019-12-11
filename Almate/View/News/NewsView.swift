@@ -16,6 +16,7 @@ class NewsView: UIView {
     var delegate: NewsViewDelegate?
     var dataNews:  [Post] = []
     var documents: [QueryDocumentSnapshot] = []
+    var didLike = false
     
     
     var dataPost: [Post] = [] {
@@ -51,12 +52,27 @@ extension NewsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let data = dataNews[indexPath.row]
+        var data = dataNews[indexPath.row]
         if data.newsPhoto.count == 0{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsNoPhotoCell", for: indexPath) as! NewsNoPhotoCell
             cell.captionOutlet.text = data.newsText
             cell.dateOutlet.text = data.newsDate
             cell.likesButtonOutlet.setTitle("\(String(data.newsLike)) likes", for: .normal)
+            cell.didLikeComment = {
+                () in
+                if self.didLike == false{
+                    data.newsLike += 1
+                    self.didLike = true
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-filled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                } else {
+                    data.newsLike -= 1
+                    self.didLike = false
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-unfilled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                }
+                
+            }
             return cell
         } else if data.newsPhoto.count == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath) as! NewsCell
@@ -68,6 +84,21 @@ extension NewsView: UICollectionViewDataSource {
             cell.didTapComment = {
                 () in
                 self.delegate?.didTapComment(self.documents[indexPath.row])
+            }
+            cell.didLikeComment = {
+                () in
+                if self.didLike == false{
+                    data.newsLike += 1
+                    self.didLike = true
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-filled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                } else {
+                    data.newsLike -= 1
+                    self.didLike = false
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-unfilled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                }
+                
             }
             return cell
         } else if data.newsPhoto.count == 2{
@@ -82,6 +113,21 @@ extension NewsView: UICollectionViewDataSource {
                 () in
                 self.delegate?.didTapComment(self.documents[indexPath.row])
             }
+            cell.didLikeComment = {
+                () in
+               if self.didLike == false{
+                    data.newsLike += 1
+                    self.didLike = true
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-filled"), for: .normal)
+                self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+               } else if self.didLike == true{
+                    data.newsLike -= 1
+                    self.didLike = false
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-unfilled"), for: .normal)
+                self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                }
+                
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsThreePhotosCell", for: indexPath) as! NewsThreePhotosCell
@@ -94,6 +140,21 @@ extension NewsView: UICollectionViewDataSource {
             cell.didTapComment = {
                 () in
                 self.delegate?.didTapComment(self.documents[indexPath.row])
+            }
+            cell.didLikeComment = {
+                () in
+                if self.didLike == false{
+                    data.newsLike += 1
+                    self.didLike = true
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-filled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                } else {
+                    data.newsLike -= 1
+                    self.didLike = false
+                    cell.likesButtonOutlet.setImage(UIImage(named: "heart-unfilled"), for: .normal)
+                    self.delegate?.didLikePost(DocumentID: self.documents[indexPath.row].documentID, likeNumber: data.newsLike)
+                }
+                    
             }
             return cell
         }
@@ -124,6 +185,7 @@ extension NewsView: NewsViewInput{
         if let data = data{
             self.dataNews = data
             self.newsCollection.reloadData()
+            
         } else {return}
         self.documents = documents
     }
@@ -133,6 +195,7 @@ extension NewsView: NewsViewInput{
 
 protocol NewsViewDelegate{
     func didTapComment(_ documents: QueryDocumentSnapshot?)
+    func didLikePost(DocumentID: String, likeNumber: Int)
 }
 
 protocol NewsViewInput{

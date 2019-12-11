@@ -311,12 +311,7 @@ class NewsViewController: UIViewController {
     }
     
 
-    @IBAction func likeTapped(_ sender: UIButton) {
-        print("LIKE TAPPED")
-        let controller = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
-        
-    }
+    
     
 //    @IBAction func commentTapped(_ sender: UIButton) {
 //        print("COMMENTS TAPPED")
@@ -333,6 +328,7 @@ class NewsViewController: UIViewController {
     }
     */
 
+    
 }
 
 extension NewsViewController: UISearchBarDelegate {
@@ -344,5 +340,9 @@ extension NewsViewController: NewsViewDelegate {
         let controller = CommentViewController()
         controller.commentDocument = documents
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func didLikePost(DocumentID: String, likeNumber: Int){
+        self.remoteNews.updatePostLikes(documentID: DocumentID, likeNumber: likeNumber)
     }
 }

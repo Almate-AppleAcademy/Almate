@@ -21,6 +21,7 @@ class NewsThreePhotosCell: UICollectionViewCell {
      @IBOutlet weak var commentButtonOutlet: UIButton!
     
     var didTapComment: (() -> ())?
+    var didLikeComment: (() -> ())?
      
      override func awakeFromNib() {
          super.awakeFromNib()
@@ -51,5 +52,9 @@ class NewsThreePhotosCell: UICollectionViewCell {
 
     @IBAction func didTappedComment(_ sender: UIButton) {
         didTapComment?()
+    }
+    
+    @IBAction func didLikedComment(_ sender: UIButton) {
+        didLikeComment?()
     }
 }

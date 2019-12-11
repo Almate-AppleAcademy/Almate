@@ -13,6 +13,8 @@ class RemoteNews: RemoteNewsInput {
     
     
     
+    
+    
     var newsData: [Post]?
     var commentData: [Comments]?
     var peopleComment: [User]?
@@ -81,6 +83,23 @@ class RemoteNews: RemoteNewsInput {
         }
     }
     
+    func updatePostLikes(documentID: String, likeNumber: Int) {
+        let query =
+        Firestore.firestore()
+            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post").document(documentID)
+        query.updateData([
+            "newsLike": likeNumber
+        ]) { err in
+            if let err = err{
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+    
+    
+    
     
 //     func loadPeopleReferencing(models: [Reference], completion: @escaping(User?) -> Void) {
 //
@@ -105,4 +124,5 @@ class RemoteNews: RemoteNewsInput {
 protocol RemoteNewsInput {
     func requestDataNews(completionBlock: @escaping([Post], [QueryDocumentSnapshot]) -> Void) -> Void
     func loadPostComments (documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) -> Void
+    func updatePostLikes(documentID: String, likeNumber: Int) -> Void
 }

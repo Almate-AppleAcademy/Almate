@@ -59,6 +59,9 @@
                         <state key="normal" title="  12 likes" image="heart-unfilled">
                             <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="didLikedComment:" destination="7Be-2q-sq5" eventType="touchUpInside" id="d20-6d-Cvw"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
