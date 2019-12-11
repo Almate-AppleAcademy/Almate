@@ -26,10 +26,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agU-wf-jmt">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1179"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Job Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-ga-Js6">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Job Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-ga-Js6">
                                     <rect key="frame" x="114" y="58" width="278" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="FnD-hp-WXG"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
@@ -47,10 +49,12 @@
                                         <action selector="addLogoBtn:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Fak-YZ-X3a"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2w-oc-GI8">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2w-oc-GI8">
                                     <rect key="frame" x="114" y="103" width="278" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="9LV-hH-5ro"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
@@ -60,10 +64,12 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5h-51-Vfb">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5h-51-Vfb">
                                     <rect key="frame" x="114" y="148" width="278" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="NnZ-u0-iih"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
@@ -215,30 +221,18 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Part time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-nr-rVF">
-                                    <rect key="frame" x="153" y="227" width="70" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temporary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGZ-4f-5u4">
-                                    <rect key="frame" x="276" y="227" width="83" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temporary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGZ-4f-5u4">
+                                    <rect key="frame" x="273" y="227" width="83" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="4Ec-PL-T1l"/>
+                                        <constraint firstAttribute="width" constant="83" id="AWk-qT-FFs"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q4-mK-flj" customClass="DLRadioButton">
-                                    <rect key="frame" x="92" y="220" width="30" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="no"/>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Info"/>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-iy-zSu" customClass="DLRadioButton">
-                                    <rect key="frame" x="231" y="216" width="30" height="34"/>
+                                    <rect key="frame" x="97" y="221" width="30" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="icon" value="no"/>
@@ -246,8 +240,21 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHZ-8C-wwS" customClass="DLRadioButton">
-                                    <rect key="frame" x="367" y="220" width="30" height="34"/>
+                                    <rect key="frame" x="364" y="221" width="30" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="no"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Info"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-nr-rVF">
+                                    <rect key="frame" x="137" y="227" width="70" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-iy-zSu" customClass="DLRadioButton">
+                                    <rect key="frame" x="215" y="221" width="30" height="34"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="icon" value="no"/>
                                         <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Info"/>
@@ -256,8 +263,23 @@
                             </subviews>
                             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="C5h-51-Vfb" firstAttribute="leading" secondItem="b2w-oc-GI8" secondAttribute="leading" id="0sD-mL-aOt"/>
                                 <constraint firstAttribute="width" constant="414" id="77X-Iu-fg0"/>
+                                <constraint firstAttribute="trailing" secondItem="b2w-oc-GI8" secondAttribute="trailing" constant="22" id="BOl-gM-9uI"/>
+                                <constraint firstItem="b2w-oc-GI8" firstAttribute="top" secondItem="5dC-ga-Js6" secondAttribute="bottom" constant="5" id="GcC-0W-xnC"/>
+                                <constraint firstItem="C5h-51-Vfb" firstAttribute="width" secondItem="b2w-oc-GI8" secondAttribute="width" id="Gq4-7j-kWd"/>
+                                <constraint firstAttribute="trailing" secondItem="RGZ-4f-5u4" secondAttribute="trailing" constant="58" id="HYb-3R-b4c"/>
+                                <constraint firstItem="b2w-oc-GI8" firstAttribute="leading" secondItem="Aqf-YK-TfC" secondAttribute="trailing" constant="21" id="Jcc-kY-ZHk"/>
+                                <constraint firstItem="5dC-ga-Js6" firstAttribute="top" secondItem="agU-wf-jmt" secondAttribute="top" constant="58" id="Via-oH-GUW"/>
+                                <constraint firstItem="RGZ-4f-5u4" firstAttribute="top" secondItem="C5h-51-Vfb" secondAttribute="bottom" constant="39" id="XQi-sT-0hA"/>
                                 <constraint firstAttribute="height" constant="1179" id="YEg-yu-LBl"/>
+                                <constraint firstItem="C5h-51-Vfb" firstAttribute="top" secondItem="b2w-oc-GI8" secondAttribute="bottom" constant="5" id="Zc7-mH-sxb"/>
+                                <constraint firstItem="Mhh-nr-rVF" firstAttribute="top" secondItem="C5h-51-Vfb" secondAttribute="bottom" constant="39" id="cuH-3Z-a1S"/>
+                                <constraint firstItem="cZp-iy-zSu" firstAttribute="leading" secondItem="Mhh-nr-rVF" secondAttribute="trailing" constant="8" id="dvl-pe-lH5"/>
+                                <constraint firstItem="Mhh-nr-rVF" firstAttribute="centerX" secondItem="agU-wf-jmt" secondAttribute="centerX" constant="-35" id="ktD-1x-oLe"/>
+                                <constraint firstItem="cZp-iy-zSu" firstAttribute="top" secondItem="C5h-51-Vfb" secondAttribute="bottom" constant="33" id="r0b-w4-75g"/>
+                                <constraint firstItem="5dC-ga-Js6" firstAttribute="leading" secondItem="Aqf-YK-TfC" secondAttribute="trailing" constant="21" id="rX5-km-L8f"/>
+                                <constraint firstAttribute="trailing" secondItem="5dC-ga-Js6" secondAttribute="trailing" constant="22" id="v4e-Tg-A7N"/>
                             </constraints>
                         </view>
                     </subviews>
