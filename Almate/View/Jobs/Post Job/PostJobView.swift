@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import Foundation
 
-class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextViewDelegate {
 
   
+    @IBOutlet weak var jobDescText: UITextView!
     @IBOutlet var addLogo: UIButton!
     @IBOutlet var addDetailImage: UIButton!
+    @IBOutlet weak var detailImageView: UIImageView!
     
     var postJobDelegate: PostJobDelegate?
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
          super.awakeFromNib()
         
+        jobDescText.text = "Insert Job Description here"
+        jobDescText.textColor = UIColor.darkGray
+    
     }
     
     @IBAction func addLogoBtn(_ sender: UIButton) {

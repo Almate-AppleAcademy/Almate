@@ -13,6 +13,7 @@ class PostJobViewController: UIViewController ,UIImagePickerControllerDelegate,U
     @IBOutlet var postJobView: PostJobView!
     @IBOutlet var addLogo: UIButton!
     @IBOutlet var addDetailImage: UIButton!
+    @IBOutlet weak var detailImageView: UIImageView!
     var test = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,29 +45,6 @@ class PostJobViewController: UIViewController ,UIImagePickerControllerDelegate,U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
        
-//        if test == 1{
-//            guard let logoImage  = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
-//                // configure plusPhotoBtn with selected image
-//                addLogo.layer.cornerRadius = addLogo.frame.width/2
-//                addLogo.layer.masksToBounds = true
-//                addLogo.layer.borderColor = UIColor.black.cgColor
-//                addLogo.layer.borderWidth = 2
-//                addLogo.setImage(logoImage.withRenderingMode(.alwaysOriginal), for: .normal)
-//                print("hey")
-//                self.dismiss(animated: true, completion: nil)
-//
-//        }else if test == 2{
-//             guard let detailImage  = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
-//            addDetailImage.layer.cornerRadius = 10
-//                           addDetailImage.layer.masksToBounds = true
-//                           addDetailImage.layer.borderColor = UIColor.black.cgColor
-//                           addDetailImage.layer.borderWidth = 2
-//                           addDetailImage.setImage(detailImage.withRenderingMode(.alwaysOriginal), for: .normal)
-//            print("lol")
-//            self.dismiss(animated: true, completion: nil)
-//        }else{
-//            print("error")
-//        }
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             if test == 1 {
                                 //addLogo.image = image
@@ -79,11 +57,11 @@ class PostJobViewController: UIViewController ,UIImagePickerControllerDelegate,U
 //                                self.dismiss(animated: true, completion: nil)
 
             } else {
-                                        addDetailImage.layer.cornerRadius = 10
-                                           addDetailImage.layer.masksToBounds = true
-                                           addDetailImage.layer.borderColor = UIColor.black.cgColor
-                                           addDetailImage.layer.borderWidth = 2
-                                           addDetailImage.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+                                        //addDetailImage.layer.cornerRadius = 10
+                                          // addDetailImage.layer.masksToBounds = true
+                                           //addDetailImage.layer.borderColor = UIColor.black.cgColor
+                                          // addDetailImage.layer.borderWidth = 2
+                self.detailImageView.image = image.withRenderingMode(.alwaysOriginal)
                             print("lol")
 //                            self.dismiss(animated: true, completion: nil)
             }
