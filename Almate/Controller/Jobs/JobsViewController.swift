@@ -11,6 +11,8 @@ import UIKit
 class JobsViewController: UIViewController ,UISearchControllerDelegate{
     
     @IBOutlet var jobView: JobsView!
+    @IBOutlet weak var jobsOpeningLabel: UILabel!
+    
     var requestLocalJob = LocalJob()
     var shoulResize: Bool?
     var SearchView = UIImageView(image: UIImage(named: "white-1"))
@@ -22,7 +24,6 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         self.tabBarController?.tabBar.isHidden = false
         setupUI()
         observeAndHandleOrientationMode()
-        
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView.isUserInteractionEnabled = true

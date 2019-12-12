@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JobsViewController" customModule="Almate" customModuleProvider="target">
             <connections>
                 <outlet property="jobView" destination="i5M-Pr-FkT" id="mpV-PT-aGL"/>
+                <outlet property="jobsOpeningLabel" destination="igV-QA-jnj" id="itc-OZ-dP4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
