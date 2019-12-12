@@ -13,11 +13,11 @@ class RemotePeople: RemotePeopleInput {
     
     private var listener: ListenerRegistration?
     fileprivate var query: Query? {
-      didSet {
-        if let listener = listener {
-          listener.remove()
+        didSet {
+            if let listener = listener {
+                listener.remove()
+            }
         }
-      }
     }
     
     var userContact: [UserContact]?
@@ -66,7 +66,7 @@ class RemotePeople: RemotePeopleInput {
             }
         }
     }
-
+    
     func loadPeopleEducation(documents: QueryDocumentSnapshot, completionBlock: @escaping ([Education]) -> Void) {
         query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/\(documents.documentID)/Education").limit(to: 50)
         guard let query = query else { return }
@@ -89,8 +89,7 @@ class RemotePeople: RemotePeopleInput {
     }
     
     func loadPeopleExperience(documents: QueryDocumentSnapshot, completionBlock: @escaping ([Experience]) -> Void) {
-        query = Firestore.firestore()
-            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/\(documents.documentID)/Experience").limit(to: 50)
+        query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/\(documents.documentID)/Experience").limit(to: 50)
         guard let query = query else { return }
         listener = query.addSnapshotListener{ (snapshot, error) in
             guard let snapshot = snapshot else {
@@ -136,10 +135,10 @@ class RemotePeople: RemotePeopleInput {
         for model in models {
             let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/")
                 .document("\(model.referenceUser.documentID)")
-                query.getDocument { (snapshot, error) in
-                    let model = User(dictionary: (snapshot?.data())!)
-//                    usersData.insert(mod, at: <#T##Int#>)
-                    completion(model)
+            query.getDocument { (snapshot, error) in
+                let model = User(dictionary: (snapshot?.data())!)
+                //                    usersData.insert(mod, at: <#T##Int#>)
+                completion(model)
             }
         }
     }

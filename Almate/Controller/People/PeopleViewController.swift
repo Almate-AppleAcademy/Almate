@@ -19,30 +19,49 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     private let searchController = UISearchController(searchResultsController: nil)
     var requestUserLocal = LocalUser()
     var requestPeopleRemote = RemotePeople()
+    var likeState: [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setSearchBar()
+        //        setSearchBar()
         view.backgroundColor = .white
         peopleView.delegate = self
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
-        //Request Users Institution Data
-        requestPeopleRemote.loadPeople(completionBlock: { (data, documents) in
-            print(data)
-            self.peopleView.displayPeople(data, documents)
-        })
+        requestUserLocal.readDataLocal(appDelegate) { (dataLocal) in
+            self.peopleView.getPeopleSaved(dataLocal)
+            //Request Users Institution Data
+            self.requestPeopleRemote.loadPeople(completionBlock: { (data, documents) in
+                if dataLocal.count == 0 {
+                    for _ in documents {
+                        self.likeState.append(false)
+                    }
+                    self.peopleView.displayPeople(data, documents, self.likeState)
+                } else {
+                    for dataLoc in dataLocal {
+                        for document in documents {
+                            if dataLoc.userId == document.documentID {
+                                self.likeState.append(true)
+                                print(self.likeState)
+                            } else { self.likeState.append(false) }
+                        }
+                    }
+                    self.peopleView.displayPeople(data, documents, self.likeState)
+                }
+            })
+        }
         
         setupUI()
         observeAndHandleOrientationMode()
         self.tabBarController?.tabBar.isHidden = false
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView.isUserInteractionEnabled = true
-             imageView.addGestureRecognizer(tapGestureRecognizer)
-              
-              if UIDevice.current.orientation.isPortrait {
-                  shoulResize = true
-              } else if UIDevice.current.orientation.isLandscape {
-                  shoulResize = false
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        if UIDevice.current.orientation.isPortrait {
+            shoulResize = true
+        } else if UIDevice.current.orientation.isLandscape {
+            shoulResize = false
         }
     }
     
@@ -67,7 +86,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         navigationBar.addSubview(SearchView)
-       // SearchView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
+        // SearchView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
         SearchView.clipsToBounds = true
         SearchView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -79,9 +98,9 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
             imageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor),
             SearchView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor,
-                                             constant: -Const.SearchRightMargin),
+                                              constant: -Const.SearchRightMargin),
             SearchView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor,
-                                              constant: -Const.ImageBottomMarginForLargeState),
+                                               constant: -Const.ImageBottomMarginForLargeState),
             SearchView.heightAnchor.constraint(equalToConstant: Const.SearchSizeForLargeState),
             SearchView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
             
@@ -135,28 +154,28 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
         imageView.transform = CGAffineTransform.identity
             .scaledBy(x: scale, y: scale)
             .translatedBy(x: xTranslation, y: yTranslation)
-      SearchView.transform = CGAffineTransform.identity
-      .scaledBy(x: scale, y: scale)
-      .translatedBy(x: xTranslation, y: yTranslation)
+        SearchView.transform = CGAffineTransform.identity
+            .scaledBy(x: scale, y: scale)
+            .translatedBy(x: xTranslation, y: yTranslation)
     }
     
-     func resizeImageForLandscape() {
+    func resizeImageForLandscape() {
         let yTranslation = Const.ImageSizeForLargeState * Const.ScaleForImageSizeForLandscape
         imageView.transform = CGAffineTransform.identity
             .scaledBy(x: Const.ScaleForImageSizeForLandscape, y: Const.ScaleForImageSizeForLandscape)
             .translatedBy(x: 0, y: yTranslation)
-      SearchView.transform = CGAffineTransform.identity
-      .scaledBy(x: Const.ScaleForImageSizeForLandscape, y: Const.ScaleForImageSizeForLandscape)
-      .translatedBy(x: 0, y: yTranslation)
+        SearchView.transform = CGAffineTransform.identity
+            .scaledBy(x: Const.ScaleForImageSizeForLandscape, y: Const.ScaleForImageSizeForLandscape)
+            .translatedBy(x: 0, y: yTranslation)
     }
     
     /// Show or hide the image from NavBar while going to next screen or back to initial screen
     ///
     /// - Parameter show: show or hide the image from NavBar
-     func showImage(_ show: Bool) {
+    func showImage(_ show: Bool) {
         UIView.animate(withDuration: 0.2) {
             self.imageView.alpha = show ? 1.0 : 0.0
-           self.SearchView.alpha = show ? 1.0 : 0.0
+            self.SearchView.alpha = show ? 1.0 : 0.0
         }
     }
     

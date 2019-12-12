@@ -73,8 +73,8 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-6D-U9I">
-                                    <rect key="frame" x="18" y="272" width="54" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-6D-U9I">
+                                    <rect key="frame" x="18" y="272" width="68" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <nil key="textColor"/>
@@ -283,6 +283,11 @@
             <connections>
                 <outlet property="addDetailImage" destination="Lfp-If-XdS" id="Imx-Ad-VfE"/>
                 <outlet property="addLogo" destination="Aqf-YK-TfC" id="SJu-MO-MWt"/>
+                <outlet property="tfCompanyName" destination="b2w-oc-GI8" id="8XS-vC-4At"/>
+                <outlet property="tfJobDetails" destination="cTC-8M-f99" id="xfq-XJ-vzl"/>
+                <outlet property="tfJobTitle" destination="5dC-ga-Js6" id="Ig9-gV-mcd"/>
+                <outlet property="tfLocation" destination="C5h-51-Vfb" id="Acg-dP-Vqd"/>
+                <outlet property="tvContact" destination="i6n-9n-z9b" id="84z-Ih-462"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="120.87053571428571"/>
         </view>

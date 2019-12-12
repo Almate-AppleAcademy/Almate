@@ -19,7 +19,7 @@
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb2-Hd-wqL">
                         <rect key="frame" x="317" y="15" width="24" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" image="Icon Notification"/>
+                        <state key="normal" image="save-unfilled"/>
                         <connections>
                             <action selector="didTappedSaveContact:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qUF-qb-SPG"/>
                         </connections>
@@ -78,8 +78,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Icon Notification" width="21" height="26"/>
         <image name="Job pic" width="65" height="65"/>
-        <image name="location" width="15" height="22"/>
+        <image name="location" width="24" height="24"/>
+        <image name="save-unfilled" width="24" height="24"/>
     </resources>
 </document>

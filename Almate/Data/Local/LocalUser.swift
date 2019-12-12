@@ -11,11 +11,29 @@ import CoreData
 import UIKit
 
 class LocalUser: LocalUserDataDelegate {
+    func readDataLocal(_ appDelegate: AppDelegate, completionBlock: @escaping ([UserLocal]) -> Void) {
+        // Create context from container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        // Prepare Request of type NSFetchRequest
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
+        var dataPeople: [UserLocal] = []
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                dataPeople.append(
+                    UserLocal(fullname: data.value(forKey: "fullname") as! String, userGraduation: data.value(forKey: "userGraduation") as! String, userOccupation: data.value(forKey: "userOccupation") as! String, userSkills: data.value(forKey: "userSkills") as! [NSString], userImage: data.value(forKey: "userImage") as! Data, userId: data.value(forKey: "userId") as! String)
+                )
+            }
+            completionBlock(dataPeople)
+        } catch {
+            print("failed")
+        }
+    }
     
     func deleteData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersLocal")
-        fetchRequest.predicate = NSPredicate(format: "firstName =  %@", "\(data.fullname)")
+        fetchRequest.predicate = NSPredicate(format: "fullname =  %@", "\(data.fullname)")
         do {
             let test = try managedContext.fetch(fetchRequest)
             let objectToDelete = test[0] as! NSManagedObject
@@ -33,7 +51,7 @@ class LocalUser: LocalUserDataDelegate {
     func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) {
         // Create context from container
         let managedContext = appDelegate.persistentContainer.viewContext
-               
+        
         // Declare an entity and create new record
         let userEntity = NSEntityDescription.entity(forEntityName: "UsersLocal", in: managedContext)!
         let job = NSManagedObject(entity: userEntity, insertInto: managedContext)
@@ -41,7 +59,7 @@ class LocalUser: LocalUserDataDelegate {
         job.setValue(data.userGraduation, forKey: "userGraduation")
         job.setValue(data.userOccupation, forKey: "userOccupation")
         job.setValue(data.userSkills, forKey: "userSkills")
-        print(data.userImage)
+        job.setValue(data.userId, forKey: "userId")
         job.setValue(data.userImage, forKey: "userImage")
         
         do {
@@ -50,24 +68,11 @@ class LocalUser: LocalUserDataDelegate {
         } catch let error as NSError {
             completionBlock("\(error)")
         }
-        
-        // Prepare Request of type NSFetchRequest
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "JobsLocal")
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "fullname") as! String)
-                print(data.value(forKey: "userGraduation") as! String)
-                print(data.value(forKey: "userOccupation") as! String)
-                print(data.value(forKey: "userSkills") as! [String])
-            }
-        } catch {
-            print("failed")
-        }
     }
 }
 
 protocol LocalUserDataDelegate {
     func createData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping (String) -> Void) -> Void
     func deleteData(data: UserLocal, _ appDelegate: AppDelegate, completionBlock: @escaping(String) -> Void) -> Void
+    func readDataLocal(_ appDelegate: AppDelegate, completionBlock: @escaping([UserLocal]) -> Void) -> Void
 }

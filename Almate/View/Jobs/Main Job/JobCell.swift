@@ -15,7 +15,20 @@ class JobCell: UICollectionViewCell {
     @IBOutlet var companyName: UILabel!
     @IBOutlet var jobLocation: UILabel!
     @IBOutlet var bookmarkBtn: UIButton!
-    var didTapSaveContact : (()->())?
+    
+    var isSaved: Bool? {
+        didSet {
+            // set color according to state
+            if isSaved! {
+                self.bookmarkBtn.setBackgroundImage(UIImage(named: "save-filled"), for: .highlighted)
+            } else {
+                self.bookmarkBtn.setBackgroundImage(UIImage(named: "save-unfilled"), for: .highlighted)
+            }
+//            self.bookmarkBtn.imageView?.image = self.isSelected ? UIImage(named: "save-filled") : UIImage(named: "save-unfilled")
+        }
+    }
+    
+    var didTapSaveContact : ((_ sender: UIButton)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +54,6 @@ class JobCell: UICollectionViewCell {
     
     @IBAction func didTappedSaveContact(_ sender: UIButton) {
         // MARK: STEP 3 - Call the variable inside function action
-        didTapSaveContact?()
+        didTapSaveContact?(sender)
     }
 }
