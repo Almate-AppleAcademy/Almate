@@ -50,6 +50,9 @@
 		5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */; };
 		5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */; };
 		5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F2223868C3300D54524 /* AddReferenceView.swift */; };
+		5F01A3C2239F905800887A7E /* ForgotpassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3C0239F905800887A7E /* ForgotpassViewController.swift */; };
+		5F01A3C3239F905800887A7E /* ForgotpassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */; };
+		5F01A3C6239F909800887A7E /* ForgotpassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3C5239F909800887A7E /* ForgotpassView.swift */; };
 		5F26F62A238F78D100190580 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26F629238F78D100190580 /* RegisterView.swift */; };
 		5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF9914238F783A00A61711 /* RegisterViewController.swift */; };
 		5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDF9915238F783A00A61711 /* RegisterViewController.xib */; };
@@ -182,6 +185,9 @@
 		5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceViewController.swift; sourceTree = "<group>"; };
 		5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReferenceViewController.xib; sourceTree = "<group>"; };
 		5EEA1F2223868C3300D54524 /* AddReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceView.swift; sourceTree = "<group>"; };
+		5F01A3C0239F905800887A7E /* ForgotpassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotpassViewController.swift; sourceTree = "<group>"; };
+		5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotpassViewController.xib; sourceTree = "<group>"; };
+		5F01A3C5239F909800887A7E /* ForgotpassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotpassView.swift; sourceTree = "<group>"; };
 		5F26F629238F78D100190580 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5FDF9914238F783A00A61711 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5FDF9915238F783A00A61711 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -378,6 +384,23 @@
 				8B01FC25238D454600AD012F /* SettingsViewController.xib */,
 			);
 			path = Profil;
+			sourceTree = "<group>";
+		};
+		5F01A3BF239F902E00887A7E /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				5F01A3C0239F905800887A7E /* ForgotpassViewController.swift */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		5F01A3C4239F907A00887A7E /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				5F01A3C5239F909800887A7E /* ForgotpassView.swift */,
+				5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */,
+			);
+			path = "Forgot Password";
 			sourceTree = "<group>";
 		};
 		5F26F628238F78BA00190580 /* Register */ = {
@@ -704,6 +727,7 @@
 		88F6821A236984D3006249AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5F01A3C4239F907A00887A7E /* Forgot Password */,
 				5F26F628238F78BA00190580 /* Register */,
 				88F6821B236984D8006249AA /* Login */,
 				5E0DB359237957B10079A595 /* Profil */,
@@ -735,6 +759,7 @@
 				88945827236AF3F000E3D838 /* News */,
 				88F68225236985C4006249AA /* Login */,
 				5FDF9913238F781C00A61711 /* Register */,
+				5F01A3BF239F902E00887A7E /* Forgot Password */,
 				3A1B0F29239110B60009A27E /* Helper */,
 				88945826236AF0B200E3D838 /* Main */,
 			);
@@ -883,6 +908,7 @@
 				5E0DB360237957B10079A595 /* ProfileCell.xib in Resources */,
 				5E0DB37B237BE6420079A595 /* ReferenceProfileCell.xib in Resources */,
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
+				5F01A3C3239F905800887A7E /* ForgotpassViewController.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
 				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
@@ -984,6 +1010,7 @@
 				3A8333A223823120007C17C4 /* PostJobView.swift in Sources */,
 				888B297B237D6AD000CA9DC0 /* FilterValueCell.swift in Sources */,
 				88B9CB222379D1D500634110 /* EducationCell.swift in Sources */,
+				5F01A3C2239F905800887A7E /* ForgotpassViewController.swift in Sources */,
 				888B2977237D525500CA9DC0 /* SortCell.swift in Sources */,
 				5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */,
 				8B01FC30238E7DFD00AD012F /* NewsTwoPhotosCell.swift in Sources */,
@@ -1020,6 +1047,7 @@
 				88696A6F2387BD3000673DE2 /* RemoteNews.swift in Sources */,
 				888B2970237D4D9E00CA9DC0 /* FilterView.swift in Sources */,
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
+				5F01A3C6239F909800887A7E /* ForgotpassView.swift in Sources */,
 				3AC7266623910659008F08F2 /* Constant.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
 				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,

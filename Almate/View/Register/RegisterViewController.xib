@@ -21,6 +21,20 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0W-1e-Vtn">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmf-ZG-RVY">
+                            <rect key="frame" x="0.0" y="42" width="81" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButton:" destination="yZJ-3r-OfR" eventType="touchUpInside" id="NEc-OA-rs6"/>
+                                <action selector="cancelPressed:" destination="-1" eventType="touchUpInside" id="EZx-H5-tDB"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" red="0.13375958800000001" green="0.15626403689999999" blue="0.19216156009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apel" translatesAutoresizingMaskIntoConstraints="NO" id="Foa-ap-TmB">

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleSignIn
+import Firebase
 
 class LoginView: UIView {
     
@@ -35,16 +35,15 @@ class LoginView: UIView {
     }
     
     @IBAction func signInButton(_ sender: Any) {
-        if emailTextField.text!.isEmpty {
-            print("email tidak boleh kosong!")
-        }else if passTextField.text!.isEmpty {
+        if emailTextField.text!.isValidEmail() == false {
+            print("email tidak valid!")
+        } else if passTextField.text!.isEmpty {
             print("password tidak boleh kosong")
         } else if passTextField.text!.count < 8 {
             print("password tidak boleh kurang dari  8")
         } else {
-        loginViewDelegate?.didTappedSignIn(emailTextField.text!, userPassword: passTextField.text!)
-
-            print("sukses")
+            loginViewDelegate?.didTappedSignIn(emailTextField.text!, userPassword: passTextField.text!)
+            
         }
     }
     

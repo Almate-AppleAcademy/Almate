@@ -111,13 +111,13 @@ extension AppDelegate: AppDelegateFunc {
     func setController() {
         //MARK: CHECK LOGIN IF TRUE TO MAIN PAGE IF FALSE TO LOGIN PAGE
         window = UIWindow(frame: UIScreen.main.bounds)
-        if Auth.auth().currentUser == nil {
+        if Auth.auth().currentUser != nil {
             // TODO: Dummy Save that actually do inside LoginController later
             UserDefaults.standard.set(0, forKey: "userType")
             window?.rootViewController = MainTabBarController()
             window?.makeKeyAndVisible()
         } else {
-            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            let loginController = UINavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)) 
             window?.rootViewController = loginController
             window?.makeKeyAndVisible()
         }

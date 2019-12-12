@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterView: UIView {
 
@@ -42,8 +43,20 @@ class RegisterView: UIView {
             registerViewDelegate?.didTappedRegister()
             print("Success")
         }
+        
+        Auth.auth().createUser(withEmail: emailTF.text!, password: confirmPassTF.text!) { (user, error) in
+            if let error = error
+            {
+                print("Failed to create user", error.localizedDescription)
+                return
+            }
+            print("Successfully created user with firebase")
+        }
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        registerViewDelegate?.didTappedCancel()
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -56,4 +69,5 @@ class RegisterView: UIView {
 
 protocol RegisterViewDelegate {
     func didTappedRegister()
+    func didTappedCancel()
 }

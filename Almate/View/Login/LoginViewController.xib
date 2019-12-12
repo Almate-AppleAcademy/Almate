@@ -119,6 +119,7 @@
                     </state>
                     <connections>
                         <action selector="forgotPassButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="fyl-Y6-ydf"/>
+                        <action selector="forgotPressed:" destination="-1" eventType="touchUpInside" id="8PL-MN-L8R"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-6T-duf">
