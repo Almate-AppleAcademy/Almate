@@ -13,13 +13,13 @@ import Firebase
 
 class RemoteJob: RemoteJobInput {
     
-    func uploadJob(jobData: Job, completionBlock: @escaping (String) -> Void) {
+    func uploadJob(jobData: Job, completionBlock: @escaping (String, Bool) -> Void) {
         let collection = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Jobs")
         collection.addDocument(data: jobData.dictionary) { (error) in
             if let error = error {
-                completionBlock(error.localizedDescription)
+                completionBlock(error.localizedDescription, false)
             } else {
-                completionBlock("Success Post Job")
+                completionBlock("Success Post Job", true)
             }
         }
     }
@@ -88,5 +88,5 @@ class RemoteJob: RemoteJobInput {
 protocol RemoteJobInput {
     func loadAllJob(completionBlock: @escaping([Job], [QueryDocumentSnapshot])-> Void) -> Void
     func uploadPhoto(jobData: JobPost, completionBlock: @escaping(String)-> Void) -> Void
-    func uploadJob(jobData: Job, completionBlock: @escaping(String)-> Void) -> Void
+    func uploadJob(jobData: Job, completionBlock: @escaping(String, Bool)-> Void) -> Void
 }

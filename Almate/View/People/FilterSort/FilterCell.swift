@@ -15,10 +15,11 @@ class FilterCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = UITableViewCell.SelectionStyle.none
         // Initialization code
-        collectionListValue.dataSource = self
-        collectionListValue.delegate = self
-        collectionListValue.register(UINib(nibName: "FilterValueCell", bundle: nil), forCellWithReuseIdentifier: "filterValueCell")
+//        collectionListValue.dataSource = self
+//        collectionListValue.delegate = self
+//        collectionListValue.register(UINib(nibName: "FilterValueCell", bundle: nil), forCellWithReuseIdentifier: "filterValueCell")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

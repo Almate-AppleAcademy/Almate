@@ -44,7 +44,7 @@ extension FilterView: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return fsTitle.count
     }
 }
 

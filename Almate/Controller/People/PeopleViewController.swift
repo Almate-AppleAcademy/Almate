@@ -103,9 +103,6 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
                                                constant: -Const.ImageBottomMarginForLargeState),
             SearchView.heightAnchor.constraint(equalToConstant: Const.SearchSizeForLargeState),
             SearchView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
-            
-            
-            
         ])
     }
     
@@ -182,7 +179,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     //MARK: -ACTION HANDLER
     
     @IBAction func didTapFilterButton(_ sender: Any) {
-        self.navigationController?.present(UINavigationController(rootViewController: FilterViewController()), animated: true, completion: nil)
+        self.navigationController?.present(UINavigationController(rootViewController: FilterSortViewController()), animated: true, completion: nil)
     }
     
     func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot) {

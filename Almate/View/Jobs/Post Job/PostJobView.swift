@@ -77,8 +77,7 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
         }
     }
     @objc func cancel() {
-//        navigationController?.popViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
+        self.postJobDelegate?.didTapCancel()
     }
     
 }
@@ -96,14 +95,5 @@ protocol PostJobDelegate{
     func didTapLogo()
     func didTapAddImage()
     func didTapDone(postJobData: JobPost)
+    func didTapCancel()
 }
-
-//
-//@objc func done() {
-//    navigationController?.popViewController(animated: true)
-//    dismiss(animated: true, completion: nil)
-//}
-//@objc func cancel() {
-//    navigationController?.popViewController(animated: true)
-//    dismiss(animated: true, completion: nil)
-//}

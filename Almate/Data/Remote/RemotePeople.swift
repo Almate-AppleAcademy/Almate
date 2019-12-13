@@ -23,6 +23,7 @@ class RemotePeople: RemotePeopleInput {
     var userContact: [UserContact]?
     var userEducation: [Education]?
     var userExperience: Experience?
+    var dataFilters: [String] = []
     
     func loadPeople(completionBlock: @escaping ([User], [QueryDocumentSnapshot]) -> Void) {
         query = baseQuery()
@@ -143,6 +144,26 @@ class RemotePeople: RemotePeopleInput {
         }
     }
     
+    func loadFilterItem(itemFilter: FilterItem, queryValue: String, completionBlock: @escaping ([String]) -> Void) {
+        query = Firestore.firestore()
+            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").order(by: queryValue, descending: false)
+        guard let query = query else { return }
+        query.addSnapshotListener { (snapshot, error) in
+            guard let snapshot = snapshot else {
+                print("Error fetching snapshot results: \(String(describing: error))")
+                return
+            }
+            
+            for document in snapshot.documents {
+                let dictionary: [String:Any] = document.data()
+                let texts: String? = dictionary["\(queryValue)"] as? String
+                self.dataFilters.append(texts!)
+            }
+//            if let dataFilters = self.dataFilters {
+            completionBlock(self.dataFilters)
+//            }
+        }
+    }
     
     func baseQuery() -> Query {
         let firestore: Firestore = Firestore.firestore()
@@ -156,4 +177,5 @@ protocol RemotePeopleInput {
     func loadPeopleEducation(documents: QueryDocumentSnapshot, completionBlock: @escaping([Education]) -> Void) -> Void
     func loadPeopleExperience(documents: QueryDocumentSnapshot, completionBlock: @escaping([Experience]) -> Void) -> Void
     func loadPeopleReference(documents: QueryDocumentSnapshot, completionBlock: @escaping([Reference], [User]) -> Void) -> Void
+    func loadFilterItem(itemFilter: FilterItem, queryValue: String, completionBlock: @escaping([String]) -> Void) -> Void
 }

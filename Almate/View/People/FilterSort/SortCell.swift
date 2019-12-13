@@ -15,9 +15,11 @@ class SortCell: UITableViewCell {
     @IBOutlet weak var lblSortValue: UILabel!
     @IBOutlet var selectedBtn: UIButton!
     weak var delegate: SortCellDelegate?
+    var currentIndex: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = UITableViewCell.SelectionStyle.none
         // Initialization code
 //        for radioButton in self.rbSort.otherButtons {
 //            radioButton.isSelected = true;
@@ -29,6 +31,17 @@ class SortCell: UITableViewCell {
 //
 //        // Configure the view for the selected state
 //    }
+    
+    
+    func didTapItem(_ index: Int?, _ cell: SortCell?, _ tableView: UITableView) {
+        if currentIndex == nil {
+            cell?.selectedBtn.setImage(UIImage(named: "checked"), for: .normal)
+            currentIndex = index
+        } else {
+            cell?.selectedBtn.setImage(UIImage(named: "unchecked"), for: .normal)
+        }
+    }
+    
     @IBAction func sortItemSelectetd(_ sender: UIButton) {
         print("selected bro")
     }

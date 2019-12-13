@@ -75,11 +75,11 @@ class ProfileViewController: UIViewController {
     @IBAction func phonePressed(_ sender: UIButton) {
         //        if let dataC
         //
-        //        if let userPhone = dataContactPeople?.userPhone {
-        //            if let url = URL(string: "tel://\(userPhone)"), UIApplication.shared.canOpenURL(url) {
-        //                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        //            }
-        //        } else { print("User Number Not Found")}
+                if let userPhone = dataContact?.userPhone {
+                    if let url = URL(string: "tel://\(userPhone)"), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                } else { print("User Number Not Found")}
     }
     @IBAction func emailPressed(_ sender: UIButton) {
         if let dataContact = dataContact, let url = URL(string: "mailto:\(dataContact.userEmail)") {
