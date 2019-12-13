@@ -126,6 +126,11 @@
 		8B01FC39238E880C00AD012F /* NewsOnePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC37238E880C00AD012F /* NewsOnePhotoCell.xib */; };
 		8B01FC3C238E885400AD012F /* NewsNoPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01FC3A238E885400AD012F /* NewsNoPhotoCell.swift */; };
 		8B01FC3D238E885400AD012F /* NewsNoPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B01FC3B238E885400AD012F /* NewsNoPhotoCell.xib */; };
+		8B3A6C5123A3A5D100C83092 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A6C5023A3A5D100C83092 /* Slide.xib */; };
+		8B3A6C5323A3A5DF00C83092 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A6C5223A3A5DF00C83092 /* Slide.swift */; };
+		8B591FB623A366E200FBDF7E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591FB423A366E100FBDF7E /* OnboardingViewController.swift */; };
+		8B591FB723A366E200FBDF7E /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B591FB523A366E100FBDF7E /* OnboardingViewController.xib */; };
+		8B591FBA23A3675300FBDF7E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B591FB923A3675300FBDF7E /* OnboardingView.swift */; };
 		8B86020E2372BFC30053567B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B86020C2372BFC30053567B /* NewsCell.swift */; };
 		8B86020F2372BFC30053567B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86020D2372BFC30053567B /* NewsCell.xib */; };
 		8B860213237A872B0053567B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B860211237A872B0053567B /* CommentView.swift */; };
@@ -261,6 +266,11 @@
 		8B01FC37238E880C00AD012F /* NewsOnePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsOnePhotoCell.xib; sourceTree = "<group>"; };
 		8B01FC3A238E885400AD012F /* NewsNoPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNoPhotoCell.swift; sourceTree = "<group>"; };
 		8B01FC3B238E885400AD012F /* NewsNoPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsNoPhotoCell.xib; sourceTree = "<group>"; };
+		8B3A6C5023A3A5D100C83092 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		8B3A6C5223A3A5DF00C83092 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		8B591FB423A366E100FBDF7E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8B591FB523A366E100FBDF7E /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		8B591FB923A3675300FBDF7E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8B86020C2372BFC30053567B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		8B86020D2372BFC30053567B /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8B860211237A872B0053567B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -672,6 +682,7 @@
 		88F6821A236984D3006249AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B591FB323A366B400FBDF7E /* Onboarding */,
 				5E0DB359237957B10079A595 /* Profil */,
 				88945826236AF0B200E3D838 /* Main */,
 				8894582E236AF44100E3D838 /* Jobs */,
@@ -696,6 +707,7 @@
 		88F68224236985B6006249AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8B591FB823A366EE00FBDF7E /* Onboarding */,
 				5E0DB356237957890079A595 /* Profil */,
 				8894582D236AF43C00E3D838 /* Jobs */,
 				8894582B236AF41700E3D838 /* Notif */,
@@ -722,6 +734,25 @@
 				4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B591FB323A366B400FBDF7E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8B591FB523A366E100FBDF7E /* OnboardingViewController.xib */,
+				8B591FB923A3675300FBDF7E /* OnboardingView.swift */,
+				8B591FB423A366E100FBDF7E /* OnboardingViewController.swift */,
+				8B3A6C5023A3A5D100C83092 /* Slide.xib */,
+				8B3A6C5223A3A5DF00C83092 /* Slide.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8B591FB823A366EE00FBDF7E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		8B860210237A86D10053567B /* Conmment */ = {
@@ -818,6 +849,7 @@
 				3A1B0F2F239516EA0009A27E /* GoogleService-Info.plist in Resources */,
 				8894583E236AF49600E3D838 /* JobsViewController.xib in Resources */,
 				3A9C0CFA23742A15007E3D4D /* JobCell.xib in Resources */,
+				8B591FB723A366E200FBDF7E /* OnboardingViewController.xib in Resources */,
 				5FFD68C92372C72A00CE5E7B /* Notif2TableViewCell.xib in Resources */,
 				5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */,
 				88F68213236971B7006249AA /* LaunchScreen.storyboard in Resources */,
@@ -848,6 +880,7 @@
 				887F47B2237ADCD50059433E /* ReferenceCell.xib in Resources */,
 				88945832236AF46600E3D838 /* NewsViewController.xib in Resources */,
 				5FFD68C52372C70B00CE5E7B /* Notif1TableViewCell.xib in Resources */,
+				8B3A6C5123A3A5D100C83092 /* Slide.xib in Resources */,
 				5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */,
 				5E0DB372237BCEAF0079A595 /* ExperienceCell.xib in Resources */,
 				88B9CB232379D1D500634110 /* EducationCell.xib in Resources */,
@@ -960,6 +993,7 @@
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
 				88E07702237B398D0026D52B /* LocalPost.swift in Sources */,
+				8B591FB623A366E200FBDF7E /* OnboardingViewController.swift in Sources */,
 				3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
 				5E0DB371237BCEAF0079A595 /* ExperienceCell.swift in Sources */,
@@ -984,6 +1018,7 @@
 				8894583D236AF49600E3D838 /* JobsViewController.swift in Sources */,
 				3AC7266623910659008F08F2 /* Constant.swift in Sources */,
 				88E07706237B398D0026D52B /* LocalReference.swift in Sources */,
+				8B3A6C5323A3A5DF00C83092 /* Slide.swift in Sources */,
 				5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */,
 				888B297E237DF0FF00CA9DC0 /* LocalJob.swift in Sources */,
 				3A9C0CF923742A15007E3D4D /* JobCell.swift in Sources */,
@@ -1007,6 +1042,7 @@
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
 				3A1B0F342395300D0009A27E /* CustomImageView.swift in Sources */,
 				8890B98423717E69005EE950 /* PeopleCell.swift in Sources */,
+				8B591FBA23A3675300FBDF7E /* OnboardingView.swift in Sources */,
 				8B86021A237AB5AC0053567B /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
