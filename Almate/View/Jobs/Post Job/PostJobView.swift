@@ -16,6 +16,9 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
     @IBOutlet var addLogo: UIButton!
     @IBOutlet var addDetailImage: UIButton!
     @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var detailimageView2: UIImageView!
+    @IBOutlet weak var detailImageView3: UIImageView!
+    @IBOutlet weak var detailImageView4: UIImageView!
     
     var postJobDelegate: PostJobDelegate?
     
