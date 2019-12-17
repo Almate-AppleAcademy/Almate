@@ -19,6 +19,9 @@ class NewsTwoPhotosCell: UICollectionViewCell {
     @IBOutlet weak var likesButtonOutlet: UIButton!
     @IBOutlet weak var commentButtonOutlet: UIButton!
     
+    var didTapComment: (() -> ())?
+    var didLikeComment: (() -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     
@@ -45,4 +48,12 @@ class NewsTwoPhotosCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
+    @IBAction func didTappedComment(_ sender: UIButton) {
+        didTapComment?()
+    }
+    
+    @IBAction func didLikedComment(_ sender: UIButton) {
+        didLikeComment?()
+    }
+    
 }

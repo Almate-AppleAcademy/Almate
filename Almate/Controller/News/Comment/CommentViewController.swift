@@ -15,27 +15,39 @@ class CommentViewController: UIViewController {
     @IBOutlet var commentView: CommentView!
     var commentDocument: QueryDocumentSnapshot?
     var dataComments: [Comments] = []
-    
-    @IBAction func postTapped(_ sender: UIButton) {
-        print("POST TAPPED")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       if let commentDocument = commentDocument {
-        remoteNews.loadPostComments(documents: commentDocument) { (dataComment, dataPeople) in
+        commentView.commentDelegate = self
+        
+        if let commentDocument = commentDocument {
+            remoteNews.loadPostComments(documents: commentDocument) { (dataComment, dataPeople) in
                 // Kirim datacomment ke View
-            print("HILIH : \(dataPeople)")
-            self.dataComments = dataComment
-            self.commentView.displayComments(dataComment, dataPeople)
+                print("HILIH : \(dataPeople)")
+                self.dataComments = dataComment
+                self.commentView.displayComments(dataComment, dataPeople, commentDocument)
             }
-       }
-//        self.navigationItem.setHidesBackButton(true, animated:false)
-
+        }
+        //self.navigationItem.setHidesBackButton(true, animated:false)
+        
     }
     
+    
+    
+}
 
+extension CommentViewController: CommentDelegate{
+    func didTapPost(documents: QueryDocumentSnapshot?, postCommentData: Comments) {
+        self.remoteNews.uploadPostComments(documents: documents!, newsData: postCommentData) { (msg, isSuccess) in
+            if isSuccess{
+                print("SuKSES tot")
+            } else {
+                print(msg)
+            }
+        }
+    }
+    
+    
 }
 
 

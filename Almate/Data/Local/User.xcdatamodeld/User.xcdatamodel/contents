@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="JobsLocal" representedClassName="JobsLocal" syncable="YES" codeGenerationType="class">
         <attribute name="companyImage" optional="YES" attributeType="Binary"/>
         <attribute name="companyLocation" optional="YES" attributeType="String"/>
         <attribute name="companyName" optional="YES" attributeType="String"/>
         <attribute name="documentID" optional="YES" attributeType="String"/>
         <attribute name="jobTitle" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NewsLocal" representedClassName="NewsLocal" syncable="YES" codeGenerationType="class">
+        <attribute name="postId" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UsersLocal" representedClassName="UsersLocal" syncable="YES" codeGenerationType="class">
         <attribute name="fullname" optional="YES" attributeType="String"/>
@@ -16,7 +19,8 @@
         <attribute name="userSkills" optional="YES" attributeType="Transformable" customClassName="[String]"/>
     </entity>
     <elements>
-        <element name="JobsLocal" positionX="-54" positionY="-18" width="128" height="118"/>
-        <element name="UsersLocal" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="JobsLocal" positionX="-54" positionY="-18" width="128" height="73"/>
+        <element name="NewsLocal" positionX="-54" positionY="27" width="128" height="58"/>
+        <element name="UsersLocal" positionX="-54" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

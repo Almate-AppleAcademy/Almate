@@ -19,6 +19,8 @@ class NewsViewController: UIViewController {
     
     @IBOutlet var newsView: NewsView!
     var remoteNews = RemoteNews()
+    var requestLocalNews = LocalNews()
+    var likeState: [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +69,30 @@ class NewsViewController: UIViewController {
         //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         self.navigationItem.setHidesBackButton(true, animated:false)
-        remoteNews.requestDataNews(originQuery: nil) { (data, documents) in
-            self.newsView.displayNews(data, documents)
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        requestLocalNews.readDataLocal(appDelegate) { (dataLocal) in
+            self.remoteNews.requestDataNews { (dataRemote, documents) in
+                print(dataLocal)
+                if dataLocal.count == 0 {
+                    for _ in documents {
+                        self.likeState.append(false)
+                    }
+                    //                    self.newsView.displayNews(dataRemote, documents, self.likeState)
+                } else {
+                    self.likeState.removeAll()
+                    for local in dataLocal {
+                        for document in documents {
+                            if document.documentID == local.postId {
+                                self.likeState.append(true)
+                            } else {
+                                self.likeState.append(false)
+                            }
+                        }
+                    }
+                }
+                self.newsView.displayNews(dataRemote, documents, self.likeState)
+            }
         }
         
         setupUI()
@@ -264,12 +288,14 @@ class NewsViewController: UIViewController {
         }
     }
     
+    
+    
     override func awakeFromNib() {
         view.backgroundColor = .white
         //        navigationController?.navigationBar.prefersLargeTitles = true
         //        navigationItem.largeTitleDisplayMode = .always
-        ////        UINavigationBar.appearance().tintColor = .white
-        //        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        //       UINavigationBar.appearance().tintColor = .white
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
         //
         //        navigationItem.title = "News"
         ////        navigationController?.navigationBar.topItem?.title = "News"
@@ -303,19 +329,14 @@ class NewsViewController: UIViewController {
         //        searchController.searchBar.tintColor = .white
         //        searchController.searchBar.barTintColor = .white
         //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.white
-        //
-        //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        self.navigationItem.setHidesBackButton(true, animated:false)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        // self.navigationItem.setHidesBackButton(true, animated:false)
     }
     
     
-    @IBAction func likeTapped(_ sender: UIButton) {
-        print("LIKE TAPPED")
-        let controller = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
-        
-    }
+    
     
     //    @IBAction func commentTapped(_ sender: UIButton) {
     //        print("COMMENTS TAPPED")
@@ -332,6 +353,7 @@ class NewsViewController: UIViewController {
      }
      */
     
+    
 }
 
 extension NewsViewController: UISearchBarDelegate {
@@ -339,9 +361,25 @@ extension NewsViewController: UISearchBarDelegate {
 }
 
 extension NewsViewController: NewsViewDelegate {
+    func didLikePost(_ state: NewsCoreDataState, _ data: NewsLikeLocal, _ likeCount: Int, documentID: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        if state == .delete {
+            requestLocalNews.deleteData(data: data, appDelegate) { (message) in
+                print(message)
+            }
+        } else {
+            requestLocalNews.createData(data: data, appDelegate) {
+                (message) in
+                print(message)
+            }
+        }
+        //        self.remoteNews.updatePostLikes(documentID: DocumentID, likeNumber: likeNumber)
+    }
+    
     func didTapComment(_ documents: QueryDocumentSnapshot?) {
         let controller = CommentViewController()
         controller.commentDocument = documents
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
 }

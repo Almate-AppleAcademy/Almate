@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="189" id="Qg3-Y3-fju"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-vZ-nD2">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-vZ-nD2">
                         <rect key="frame" x="215" y="476" width="100" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="ybk-xL-3TL"/>
@@ -69,7 +69,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtD-hi-QNE">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtD-hi-QNE">
                         <rect key="frame" x="53" y="475" width="79" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="6Oq-SQ-GcO"/>
@@ -80,7 +80,7 @@
                             <color key="titleColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="likeTapped:" destination="-1" eventType="touchUpInside" id="ps6-w0-8MB"/>
+                            <action selector="didLikedComment:" destination="CKf-oY-VXe" eventType="touchUpInside" id="6TK-Vd-Jeg"/>
                         </connections>
                     </button>
                 </subviews>
