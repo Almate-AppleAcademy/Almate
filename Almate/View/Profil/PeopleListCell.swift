@@ -11,12 +11,13 @@ import UIKit
 class PeopleListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoapods", "J-Pop"]
+    var arraySkills: [String] = []
     
     @IBOutlet weak var skillPeopleCollection: UICollectionView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var angkatanLbl: UILabel!
     @IBOutlet weak var jobTitleLbl: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +40,11 @@ let arraySkills = ["Swift", "Java", "Kotlin", "Asyncrhonus", "Firestore", "Cocoa
         skillPeopleCollection.dataSource = self
         skillPeopleCollection.delegate = self
         // Initialization code
+    }
+    
+    func setSkillData(skill: [String]) {
+        self.arraySkills = skill
+        self.skillPeopleCollection.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

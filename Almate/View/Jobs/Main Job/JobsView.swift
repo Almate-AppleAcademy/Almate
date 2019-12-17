@@ -7,25 +7,33 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class JobsView: UIView {
-
+    
     @IBOutlet var jobListTable: UICollectionView!
     @IBOutlet var postJobBtn: UIButton!
     var jobDelegate: JobDelegate?
+    @IBOutlet var filterButton: UIButton!
     
-    var jobsData: [Job]?  {
-        didSet {
-            self.jobListTable.reloadData()
-        }
-    }
+    var likesState: [Bool] = []
+    var documents: [QueryDocumentSnapshot]?
+    var jobsData: [Job]?
+    var didLike = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         jobListTable.register(UINib(nibName: "JobCell", bundle: nil), forCellWithReuseIdentifier: "jobCell")
+        jobListTable.allowsMultipleSelection = true
         jobListTable.dataSource = self
         jobListTable.delegate = self
+        
+        filterButton.layer.shadowColor = UIColor.black.cgColor
+        filterButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        filterButton.layer.shadowRadius = 7.0
+        filterButton.layer.shadowOpacity = 20/100
+        filterButton.layer.cornerRadius = 20
     }
     @IBAction func postJobBtn(_ sender: UIButton) {
         jobDelegate?.didTapPostJob()
@@ -39,28 +47,33 @@ extension JobsView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobCell
-
+        
         if let jobsData = jobsData {
             let data = jobsData[indexPath.row]
             cell.jobLocation.text = data.jobLocation
             cell.jobTitle.text = data.jobTitle
             cell.companyName.text = data.jobCompanyName
             cell.jobPicture.sd_setImage(with: URL(string: data.jobCompanyLogo))
+            if likesState.count == 0 {
+                cell.bookmarkBtn.setImage(UIImage(named: "save-unfilled"), for: .normal)
+            } else {
+                if likesState[indexPath.row] {
+                    cell.bookmarkBtn.setImage(UIImage(named: "save-filled"), for: .normal)
+                } else { cell.bookmarkBtn.setImage(UIImage(named: "save-unfilled"), for: .normal) }
+            }
             cell.didTapSaveContact = {
-                () in
-                print("job-2")
-                var localState = userLocalJob[indexPath.row]
-                let data = Admin(email: "jobEmail\(indexPath.row)@gg.me", password: "password-ex\(indexPath.row)")
-                if (!localState) {
-                    localState = !localState
-                    print("job-2")
-                    self.jobDelegate?.tappedSaveJob(.create, data)
-                    //TODO : Change image Save Button
-                } else {
-                    localState = !localState
+                (button) in
+                let data = JobLocal(jobTitle: data.jobTitle, companyName: data.jobCompanyName, companyLocation: data.jobLocation, companyImage: (cell.jobPicture.image?.pngData())!, documentID: self.documents![indexPath.row].documentID)
+                
+                print(self.documents![indexPath.row].documentID)
+                if self.likesState.count != 0 && self.likesState[indexPath.row] {
+                    cell.bookmarkBtn.setImage(UIImage(named: "save-unfilled"), for: .normal)
                     self.jobDelegate?.tappedSaveJob(.delete, data)
-                    //TODO : Change image Save Button
-                    print("unfilled")
+                    self.likesState[indexPath.row] = !self.likesState[indexPath.row]
+                } else {
+                    cell.bookmarkBtn.setImage(UIImage(named: "save-filled"), for: .normal)
+                    self.jobDelegate?.tappedSaveJob(.create, data)
+                    self.likesState[indexPath.row] = !self.likesState[indexPath.row]
                 }
             }
         } else {
@@ -76,13 +89,32 @@ extension JobsView: UICollectionViewDelegate {
             jobDelegate?.didTapDetailJob(dataJob: jobsData[indexPath.row])
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return (collectionView.indexPathsForSelectedItems?.count ?? 0) < 2
+    }
+}
+
+extension JobsView: JobViewInput {
+    func displayJobs(_ data: [Job]?, documents: [QueryDocumentSnapshot], _ likeState: [Bool]) {
+        if let data = data {
+            self.jobsData = data
+            self.likesState = likeState
+            self.jobListTable.reloadData()
+        } else { return }
+        self.documents = documents
+    }
 }
 
 protocol JobDelegate {
-    func tappedSaveJob(_ state: UserCoreDataState,_ data: Admin)
+    func tappedSaveJob(_ state: UserCoreDataState,_ data: JobLocal)
     func didSelectItemAt()
     func didTapPostJob()
     func didTapDetailJob(dataJob: Job)
+}
+
+protocol JobViewInput {
+    func displayJobs(_ data: [Job]?, documents: [QueryDocumentSnapshot],_ likeState: [Bool])
 }
 
 let userLocalJob = [false, false, false, false, false, false, false, false, false, false]

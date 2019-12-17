@@ -14,7 +14,9 @@ class FilterView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        sortFilterTable.allowsSelection = true
         sortFilterTable.dataSource = self
+        sortFilterTable.delegate = self
         sortFilterTable.register(UINib(nibName: "SortCell", bundle: nil), forCellReuseIdentifier: "sortCell")
         sortFilterTable.register(UINib(nibName: "FilterCell", bundle: nil), forCellReuseIdentifier: "filterCell")
     }
@@ -42,7 +44,7 @@ extension FilterView: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return fsTitle.count
     }
 }
 
@@ -50,7 +52,7 @@ extension FilterView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 45
+            return 65
         } else {
             return 80
         }
@@ -75,7 +77,21 @@ extension FilterView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return fsTitle[section]
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            print("This Sort Selected")
+        } else {
+            print("This Filter Selected")
+        }
+    }
 }
+
+//extension FilterView: SortCellDelegate {
+//    func didSelectedSortItem(_ cell: SortCell) {
+//        print(cell.textLabel?.text)
+//    }
+//}
 
 enum FilterHeader: String {
     case sort = "Sort"
@@ -83,5 +99,5 @@ enum FilterHeader: String {
 }
 
 let fsTitle = ["Sort", "Filter"]
-let sortValue = ["Ascending order A-Z", "Descending order Z-A", "Most relevant"]
+let sortValue = ["Newest", "Oldest", "Ascending order A-Z", "Descending order Z-A"]
 let filterTitle = ["Cohort", "Location", "Skills", "Field"]

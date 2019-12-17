@@ -10,9 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 class RemoteNews: RemoteNewsInput {
-    
-    
-    
+
     var newsData: [Post]?
     var commentData: [Comments]?
     var peopleComment: [User]?
@@ -26,8 +24,10 @@ class RemoteNews: RemoteNewsInput {
       }
     }
     
-    func requestDataNews(completionBlock: @escaping ([Post], [QueryDocumentSnapshot]) -> Void) {
-        query = baseQuery()
+    func requestDataNews(originQuery: Query?, completionBlock: @escaping ([Post], [QueryDocumentSnapshot]) -> Void) {
+        if originQuery != nil {
+            query = originQuery
+        } else { query = baseQuery() }
         guard let query = query else { return }
         listener = query.addSnapshotListener({ (snapshot, error) in
             guard let snapshot = snapshot else {
@@ -103,6 +103,6 @@ class RemoteNews: RemoteNewsInput {
 }
 
 protocol RemoteNewsInput {
-    func requestDataNews(completionBlock: @escaping([Post], [QueryDocumentSnapshot]) -> Void) -> Void
+    func requestDataNews(originQuery: Query?, completionBlock: @escaping([Post], [QueryDocumentSnapshot]) -> Void) -> Void
     func loadPostComments (documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) -> Void
 }

@@ -11,7 +11,8 @@ import Foundation
 struct UserLocal {
     let fullname: String
     let userGraduation, userOccupation: String
-    let userSkills: [String]
+    var userSkills: [NSString]
     let userImage: Data
+    let userId: String
 }
 

@@ -13,7 +13,7 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+    
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -40,26 +40,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
     // MARK: - Google Sign In Stack
-
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         guard let controller = GIDSignIn.sharedInstance().presentingViewController as? LoginViewController else { return }
         if let error = error {
             // ...
-                print("opo : \(error)")
-                    return
-                }
+            print("opo : \(error)")
+            return
+        }
         
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-                  // ...
+        // ...
         print(credential.provider)
-//        controller.successLogin(credential)
+        //        controller.successLogin(credential)
     }
     
     // MARK: - Core Data stack
@@ -69,13 +69,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = NSPersistentContainer(name: "User")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+                
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -89,9 +89,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         })
         return container
     }()
-
+    
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -113,13 +113,30 @@ extension AppDelegate: AppDelegateFunc {
         window = UIWindow(frame: UIScreen.main.bounds)
         if Auth.auth().currentUser == nil {
             // TODO: Dummy Save that actually do inside LoginController later
-            UserDefaults.standard.set(0, forKey: "userType")
-            window?.rootViewController = MainTabBarController()
-            window?.makeKeyAndVisible()
+            Auth.auth().signInAnonymously(completion: { (authResult, error) in
+                if let error = error {
+                    print(error)
+                } else {
+                    // Current User is Anonymous
+                    UserDefaults.standard.set(0, forKey: "userType")
+                    self.window?.rootViewController = MainTabBarController()
+                    self.window?.makeKeyAndVisible()
+                }
+            })
         } else {
-            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            window?.rootViewController = loginController
-            window?.makeKeyAndVisible()
+            Auth.auth().signInAnonymously(completion: { (authResult, error) in
+                if let error = error {
+                    print(error)
+                } else {
+                    // Current User is Anonymous
+                    UserDefaults.standard.set(0, forKey: "userType")
+                    self.window?.rootViewController = MainTabBarController()
+                    self.window?.makeKeyAndVisible()
+                }
+            })
+            //            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            //            window?.rootViewController = loginController
+            //            window?.makeKeyAndVisible()
         }
     }
     

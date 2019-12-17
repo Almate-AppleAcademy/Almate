@@ -13,6 +13,7 @@ class JobsListCell: UICollectionViewCell {
     @IBOutlet weak var jobTitleLbl: UILabel!
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var companyImage: UIImageView!
     
     
     override func awakeFromNib() {

@@ -476,7 +476,7 @@
                 <outlet property="companyLbl" destination="Dti-78-yk8" id="lXw-f3-B6U"/>
                 <outlet property="darkView" destination="qkS-Wa-qlg" id="upH-eB-u6M"/>
                 <outlet property="editBtn" destination="zOe-gR-Chz" id="ULm-c9-Cyn"/>
-                <outlet property="educationTable" destination="AN5-Hf-U6l" id="kjP-K6-zkX"/>
+                <outlet property="educationTableProfile" destination="AN5-Hf-U6l" id="FKA-kP-UKi"/>
                 <outlet property="emailBtn" destination="w8T-GC-eXq" id="HE5-8F-age"/>
                 <outlet property="experienceTable" destination="M1A-DY-zQO" id="fgl-jg-qM0"/>
                 <outlet property="garisMenu" destination="7gO-TS-k1H" id="761-Kf-s3l"/>

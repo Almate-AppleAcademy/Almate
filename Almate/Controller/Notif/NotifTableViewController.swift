@@ -109,7 +109,7 @@ class NotifTableViewController: UITableViewController{
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        ShouldResize()
+//        ShouldResize()
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     guard let shoulResize = shoulResize

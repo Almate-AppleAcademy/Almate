@@ -9,15 +9,17 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet var profileSuperview: ProfileView!
     var remoteProfile = RemoteProfile()
+    var localJob = LocalJob()
+    var dataContact: UserContact?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         view.insetsLayoutMarginsFromSafeArea = false
-
+        
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.isHidden = true
@@ -29,6 +31,7 @@ class ProfileViewController: UIViewController {
             
             self.remoteProfile.loadPeopleDetail(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataContact) in
                 self.profileSuperview.dataPeopleContact = dataContact
+                self.dataContact = dataContact
                 
                 self.remoteProfile.loadPeopleEducation(documentID: "LRWDmCoOc71P7MtaLBoa") { (dataEducation) in
                     self.profileSuperview.dataPeopleEducation = dataEducation
@@ -42,11 +45,17 @@ class ProfileViewController: UIViewController {
                     }
                 }
             }
-            
         })
-        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        localJob.readData(appDelegate) { (dataJob) in
+            self.profileSuperview.dataJobLocal = dataJob
+            
+            self.localJob.readDataPeople(appDelegate) { (dataPeople) in
+                self.profileSuperview.dataPeopleLocal = dataPeople
+            }
+        }
     }
-
+    
     
     @IBAction func editPressed(_ sender: UIButton) {
         self.present(UINavigationController(rootViewController: EditProfileViewController()), animated: true, completion: nil)
@@ -59,17 +68,22 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func linkedinPressed(_ sender: UIButton) {
-        if let url = URL(string: "https://www.linkedin.com/in/slamet-riyadi-06a603155/")
-        {
+        if let dataContact = dataContact, let url = URL(string: dataContact.userLinkedIn) {
             UIApplication.shared.open(url)
         }
     }
     @IBAction func phonePressed(_ sender: UIButton) {
-        
+        //        if let dataC
+        //
+                if let userPhone = dataContact?.userPhone {
+                    if let url = URL(string: "tel://\(userPhone)"), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                } else { print("User Number Not Found")}
     }
     @IBAction func emailPressed(_ sender: UIButton) {
-        if let url = URL(string: "mailto:slametngeblog@gmail.com"){
-        UIApplication.shared.open(url)
+        if let dataContact = dataContact, let url = URL(string: "mailto:\(dataContact.userEmail)") {
+            UIApplication.shared.open(url)
         }
     }
     
@@ -81,8 +95,8 @@ class ProfileViewController: UIViewController {
         profileSuperview.garisMenuDua.alpha = 0
         
         
-//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
-            
+        //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
+        
     }
     
     @IBAction func doneProfilePressed(_ sender: UIButton) {
@@ -97,7 +111,7 @@ class ProfileViewController: UIViewController {
         profileSuperview.garisMenu.alpha = 0
         
         
-//        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
+        //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 22, y: 493)
     }
     
     @IBAction func settingsTapped(_ sender: Any) {
@@ -106,13 +120,13 @@ class ProfileViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

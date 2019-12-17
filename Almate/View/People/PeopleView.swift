@@ -19,7 +19,10 @@ class PeopleView: UIView {
     
     var delegate: PeopleViewDelegate?
     var dataPeople: [User] = []
+    var dataPeopleSaved: [UserLocal] = []
+    var likeStates: [Bool] = []
     var documents: [QueryDocumentSnapshot]?
+    var didLike: Bool?
     
     override func awakeFromNib() {
         peopleCollection.register(UINib(nibName: "PeopleCell", bundle: nil), forCellWithReuseIdentifier: "peopleCell")
@@ -33,7 +36,7 @@ class PeopleView: UIView {
         filterButton.layer.shadowOpacity = 20/100
         filterButton.layer.cornerRadius = 20
         
-       // headerView.isUserInteractionEnabled = true
+        // headerView.isUserInteractionEnabled = true
     }
     
     @IBAction func tapProfile(_ sender: UIButton) {
@@ -42,7 +45,6 @@ class PeopleView: UIView {
     
     @IBAction func taapProfile(_ sender: UIButton) {
         delegate?.didTapProfileIcon()
-        print("hilih gi")
     }
     
 }
@@ -54,41 +56,42 @@ extension PeopleView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath as IndexPath) as! PeopleCell
         let data = dataPeople[indexPath.row]
-        cell.namePeopleCell.text = "\(data.firstName) \(data.lastName) "
-//        cell.imgPeopleCell.image = userImage[indexPath.row]
+        cell.namePeopleCell.text = "\(data.firstName) \(data.lastName)"
         cell.genPeopleCelll.text = data.userGeneration
         cell.occupationPeopleCelll.text = data.userOccupation
         cell.imgPeopleCell.sd_setImage(with: URL(string: data.userImage))
         cell.skillData(data.tagSkill)
-//        cell.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
-        let _: UIImage = cell.btnSaveContact.currentImage ?? UIImage(named: "save-unfilled")!
+        if likeStates.count == 0 {
+            cell.btnSaveContact.setImage(UIImage(named: "save-unfilled"), for: .normal)
+        } else {
+            if likeStates[indexPath.row] {
+                cell.btnSaveContact.setImage(UIImage(named: "save-filled"), for: .normal)
+            } else { cell.btnSaveContact.setImage(UIImage(named: "save-unfilled"), for: .normal) }
+        }
         cell.didTapSaveContact = {
             () in
-            var localState = userLocal[indexPath.row]
+            let userId = self.documents![indexPath.row]
             let data =
                 UserLocal(fullname: "\(data.firstName) \(data.lastName)", userGraduation: data.userGeneration,
-                          userOccupation: data.userOccupation, userSkills: data.tagSkill, userImage: ((cell.imgPeopleCell!.image?.pngData())!))
-//            (profileimg?.image)!.pngData()
-            if (!localState) {
-                localState = !localState
-                self.delegate?.tappedSaveContact(.create, data)
-                let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
-                cell?.btnSaveContact.imageView?.image = UIImage(named: "save-filled")
-            } else {
-                localState = !localState
-                cell.btnSaveContact.imageView?.image = UIImage(named: "save-unfilled")
+                          userOccupation: data.userOccupation, userSkills: NSArray(array: data.tagSkill) as! [NSString], userImage: ((cell.imgPeopleCell!.image?.pngData())!), userId: userId.documentID)
+            let cell = collectionView.cellForItem(at: indexPath) as? PeopleCell
+            if self.likeStates.count != 0 && self.likeStates[indexPath.row] {
+                cell?.btnSaveContact.setImage(UIImage(named: "save-unfilled"), for: .normal)
                 self.delegate?.tappedSaveContact(.delete, data)
-                print("unfilled")
+                self.likeStates[indexPath.row] = !self.likeStates[indexPath.row]
+            } else {
+                self.delegate?.tappedSaveContact(.create, data)
+                cell?.btnSaveContact.setImage(UIImage(named: "save-filled"), for: .normal)
+                self.likeStates[indexPath.row] = !self.likeStates[indexPath.row]
             }
         }
         return cell
     }
     
     @IBAction func saveTapped(_ sender: UIButton) {
-    
+        
     }
     
     
@@ -102,9 +105,17 @@ extension PeopleView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
 }
 
 extension PeopleView: PeopleViewInput {
-    func displayPeople(_ data: [User]?,_ documents: [QueryDocumentSnapshot]) {
+    func getPeopleSaved(_ data: [UserLocal]?) {
         if let data = data {
+            self.dataPeopleSaved = data
+        }
+    }
+    
+    func displayPeople(_ data: [User]?,_ documents: [QueryDocumentSnapshot], _ likeStates: [Bool]) {
+        if let data = data {
+            self.likeStates.removeAll()
             self.dataPeople = data
+            self.likeStates = likeStates
             self.peopleCollection.reloadData()
         } else { return }
         self.documents = documents
@@ -114,51 +125,15 @@ extension PeopleView: PeopleViewInput {
 protocol PeopleViewDelegate {
     func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
     func didTapProfileIcon()
+    func didTapSearchIcon()
     func tappedSaveContact(_ state: UserCoreDataState,_ data: UserLocal)
 }
 
 protocol PeopleViewInput {
-    func displayPeople(_ data: [User]?, _ documents: [QueryDocumentSnapshot])
+    func displayPeople(_ data: [User]?, _ documents: [QueryDocumentSnapshot], _ likeStates: [Bool])
+    func getPeopleSaved(_ data: [UserLocal]?)
 }
 
 enum UserCoreDataState {
     case delete, create
 }
-
-let userName = ["Thomas Raharja", "Chandrawinata", "Gilang Kesuma", "Jeje Iskandar", "Tiberias Jaya", "Kirana Ginanjar", "Thomas Raharja", "Chandrawinata", "Gilang Kesuma", "Jeje Iskandar", "Tiberias Jaya", "Kirana Ginanjar"]
-
-let userGrad = ["Cohort 1", "Cohort 2", "Cohort 1", "Cohort 2", "Cohort 1", "Cohort 2", "Cohort 1", "Cohort 2", "Cohort 1", "Cohort 2", "Cohort 1", "Cohort 2"]
-
-let userImage = [UIImage(named:"Photo 28-10-19 02.23.51"), UIImage(named:"Photo 27-10-19 23.36.41"), UIImage(named:"Photo 27-10-19 23.36.17"), UIImage(named:"profile"), UIImage(named:"tiny-profile"), UIImage(named:"Photo 28-10-19 02.23.51"), UIImage(named:"Photo 27-10-19 23.36.41"), UIImage(named:"Photo 27-10-19 23.36.17"), UIImage(named:"profile"), UIImage(named:"tiny-profile"), UIImage(named:"Photo 28-10-19 02.23.51"), UIImage(named:"Photo 27-10-19 23.36.41")]
-
-let userOccu = ["Software Engineer", "Fullstack Developer", "Project Manager", "Quality Asurance", "CTO", "UI/UX Designer", "Mobile Apps Developer", "Data Analyst", "Software Engineer", "Fullstack Developer", "Project Manager", "Quality Asurance"]
-
-let userLocal = [false, false, false, false, false, false, false, false, false, false, false, false]
-
-let userEmail = ["ThomasRaharja@gmail.com", "Chandrawinata@gmail.com", "GilangKesuma@gmail.com", "JejeIskandar@gmail.com", "TiberiasJaya@gmail.com", "KiranaGinanjar@gmail.com", "ThomasRaharja@gmail.com", "Chandrawinata@gmail.com", "GilangKesuma@gmail.com", "JejeIskandar@gmail.com", "TiberiasJaya@gmail.com", "KiranaGinanjar@gmail.com"]
-
-let about = [
-    "I’m a seasoned and award-winning agency creative — a passionate leader with a proven track record for translating complex ideas into slick, successful campaigns.",
-    "I’ve managed and motivated interdisciplinary teams, both as official in-house go-to gal and A-list agency hotshot.",
-    "I’ve built and managed brands from the ground up, worn every hat on the rack, and leapt tall buildings in a single bound",
-    "I’m a seasoned and award-winning agency creative — a passionate leader with a proven track record for translating complex ideas into slick, successful campaigns.",
-    "I’ve managed and motivated interdisciplinary teams, both as official in-house go-to gal and A-list agency hotshot.",
-    "I’ve built and managed brands from the ground up, worn every hat on the rack, and leapt tall buildings in a single bound",
-    "I’m a seasoned and award-winning agency creative — a passionate leader with a proven track record for translating complex ideas into slick, successful campaigns.",
-    "I’ve managed and motivated interdisciplinary teams, both as official in-house go-to gal and A-list agency hotshot.",
-    "I’ve built and managed brands from the ground up, worn every hat on the rack, and leapt tall buildings in a single bound",
-    "I’m a seasoned and award-winning agency creative — a passionate leader with a proven track record for translating complex ideas into slick, successful campaigns.",
-    "I’ve managed and motivated interdisciplinary teams, both as official in-house go-to gal and A-list agency hotshot.",
-    "I’ve built and managed brands from the ground up, worn every hat on the rack, and leapt tall buildings in a single bound"]
-
-let linkedInLink = [
-    "https://www.linkedin.com/in/alfian-losari-94357948/", "https://www.linkedin.com/in/mikitani/", "https://www.linkedin.com/in/williamhgates/", "https://www.linkedin.com/in/alfian-losari-94357948/", "https://www.linkedin.com/in/mikitani/", "https://www.linkedin.com/in/williamhgates/","https://www.linkedin.com/in/alfian-losari-94357948/", "https://www.linkedin.com/in/mikitani/", "https://www.linkedin.com/in/williamhgates/","https://www.linkedin.com/in/alfian-losari-94357948/", "https://www.linkedin.com/in/mikitani/", "https://www.linkedin.com/in/williamhgates/"
-]
-
-let location = [
-    "Jakarta", "Semarang", "Malang", "Sumedang", "New Jersey", "Kendal", "Manila", "Tokyo", "Brazillia", "Abu Dhabi", "Budappest", "Bali"
-]
-
-let skills = [
-    ["Java", "C++", "Ai", "Cordova"], ["Javascript", "CSS", "Python"], ["Swift", "Ruby", "Cisco", "Mikrotik"], ["Java", "C++", "Ai", "Cordova"], ["Javascript", "CSS", "Python"], ["Swift", "Ruby", "Cisco", "Mikrotik"], ["Java", "C++", "Ai", "Cordova"], ["Javascript", "CSS", "Python"], ["Swift", "Ruby", "Cisco", "Mikrotik"], ["Java", "C++", "Ai", "Cordova"], ["Javascript", "CSS", "Python"], ["Swift", "Ruby", "Cisco", "Mikrotik"]
-]

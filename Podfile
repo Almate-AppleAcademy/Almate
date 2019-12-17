@@ -14,5 +14,6 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
 pod 'SDWebImage', '~> 5.0'
 pod 'DLRadioButton', '~> 1.4'
+pod 'Firebase/Storage'
 
 end

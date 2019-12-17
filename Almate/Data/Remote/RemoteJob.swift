@@ -8,20 +8,59 @@
 
 import Foundation
 import FirebaseFirestore
+import Photos
+import Firebase
 
 class RemoteJob: RemoteJobInput {
     
-    private var listener: ListenerRegistration?
-    fileprivate var query: Query? {
-      didSet {
-        if let listener = listener {
-          listener.remove()
+    func uploadJob(jobData: Job, completionBlock: @escaping (String, Bool) -> Void) {
+        let collection = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Jobs")
+        collection.addDocument(data: jobData.dictionary) { (error) in
+            if let error = error {
+                completionBlock(error.localizedDescription, false)
+            } else {
+                completionBlock("Success Post Job", true)
+            }
         }
-      }
+    }
+
+    lazy var storage = Storage.storage()
+    
+    func uploadPhoto(jobData: JobPost, completionBlock: @escaping (String) -> Void) {
+        let imagePath = "almate/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        let storagefeRef = self.storage.reference(withPath: imagePath)
+        storagefeRef.putData(jobData.jobCompanyLogo, metadata: metadata) { (metadata, error) in
+            if let error = error {
+                print("Error uploading: \(error)")
+                return
+            } else {
+                storagefeRef.downloadURL { (url, error) in
+                    if let error = error {
+                        print("Error getting download URL: \(error)")
+                        return
+                    } else {
+                        completionBlock(url?.absoluteString ?? "")
+                    }
+                }
+            }
+        }
     }
     
-    func loadAllJob(completionBlock: @escaping ([Job]) -> Void) {
-        query = baseQuery()
+    private var listener: ListenerRegistration?
+    fileprivate var query: Query? {
+        didSet {
+            if let listener = listener {
+                listener.remove()
+            }
+        }
+    }
+    
+    func loadAllJob(originQuery: Query?, completionBlock: @escaping ([Job], [QueryDocumentSnapshot]) -> Void) {
+        if originQuery != nil {
+            query = originQuery
+        } else { query = baseQuery() }
         guard let query = query else { return }
         listener = query.addSnapshotListener({ (snapshot, error) in
             guard let snapshot = snapshot else {
@@ -37,7 +76,7 @@ class RemoteJob: RemoteJobInput {
                 }
             }
             
-            completionBlock(models)
+            completionBlock(models, snapshot.documents)
         })
     }
     
@@ -49,5 +88,7 @@ class RemoteJob: RemoteJobInput {
 }
 
 protocol RemoteJobInput {
-    func loadAllJob(completionBlock: @escaping([Job])-> Void) -> Void
+    func loadAllJob(originQuery: Query?, completionBlock: @escaping([Job], [QueryDocumentSnapshot])-> Void) -> Void
+    func uploadPhoto(jobData: JobPost, completionBlock: @escaping(String)-> Void) -> Void
+    func uploadJob(jobData: Job, completionBlock: @escaping(String, Bool)-> Void) -> Void
 }
