@@ -7,21 +7,28 @@
 //
 
 import UIKit
-import GoogleSignIn
+import Firebase
 
 class LoginView: UIView {
-    
-    
+   
     
     let loginVC = LoginViewController()
     
     @IBOutlet weak var coPhotoOutlet: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
+    @IBOutlet weak var emailValidationAlert: UILabel!
+    @IBOutlet weak var passValidationAlert: UILabel!
     
     var loginViewDelegate: LoginViewDelegate?
     
     
+    
+       override func awakeFromNib() {
+           super.awakeFromNib()
+           
+
+       }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -35,16 +42,29 @@ class LoginView: UIView {
     }
     
     @IBAction func signInButton(_ sender: Any) {
-        if emailTextField.text!.isEmpty {
-            print("email tidak boleh kosong!")
-        }else if passTextField.text!.isEmpty {
-            print("password tidak boleh kosong")
-        } else if passTextField.text!.count < 8 {
-            print("password tidak boleh kurang dari  8")
-        } else {
-        loginViewDelegate?.didTappedSignIn(emailTextField.text!, userPassword: passTextField.text!)
-
-            print("sukses")
+        if emailTextField.text!.isEmpty && passTextField.text!.isEmpty
+        {
+            emailValidationAlert.text = "Your email can't be empty"
+            passValidationAlert.text = "Password can't be empty"
+        }
+        else if emailTextField.text!.isValidEmail() == false
+        {
+            emailValidationAlert.text = "Your email is not valid!"
+        }
+        else if passTextField.text!.isEmpty && emailTextField.text!.isEmpty == false
+        {
+            emailValidationAlert.text = ""
+            passValidationAlert.text = "Password can't be empty"
+        }
+        else if passTextField.text!.count < 8
+        {
+            passValidationAlert.text = "Password should be more that 8 characters"
+        }
+        else
+        {
+            emailValidationAlert.text = ""
+            passValidationAlert.text = ""
+            loginViewDelegate?.didTappedSignIn(emailTextField.text!, userPassword: passTextField.text!)
         }
     }
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleSignIn
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -18,47 +18,74 @@ class LoginViewController: UIViewController {
         title = "Login Page"
         
         navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
-        
+        loginView.loginViewDelegate = self
     }
 
-//    func login(loginMethod: String) {
-//        switch loginMethod {
-//            case "google":
-//                GIDSignIn.sharedInstance()?.presentingViewController = self
-//                GIDSignIn.sharedInstance().signIn()
-//            default:
-//                return
-//        }
-//    }
-//
-//        let controller = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
-//        self.navigationController?.pushViewController(MainTabBarController(), animated: true)
-//
+/*    func login(loginMethod: String) {
+        switch loginMethod {
+            case "google":
+                GIDSignIn.sharedInstance()?.presentingViewController = self
+                GIDSignIn.sharedInstance().signIn()
+            default:
+                return
+        }
+    }
+
+        let controller = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
+        self.navigationController?.pushViewController(MainTabBarController(), animated: true)
+*/
 
     
-    @IBAction func signUpPressed(_ sender: Any) {
-        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+//    @IBAction func forgotPressed(_ sender: Any) {
+//        let controller = ForgotpassViewController(nibName: "ForgotpassViewController", bundle: nil)
+//        self.navigationController?.pushViewController(ForgotpassViewController(), animated: true)
+//
+//    }
 
-        print("dah kepencet")
-    }
+//    @IBAction func signInPressed(_ sender: Any) {
+//        let controller =  MainTabBarController(nibName: "MainTabBarController", bundle: nil)
+//        self.navigationController?.pushViewController(MainTabBarController(), animated: true)
+//    }
+    
+//    @IBAction func signUpPressed(_ sender: Any) {
+//        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+//        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+//
+//        print("dah kepencet")
+//    }
 }
 
 extension LoginViewController: LoginViewDelegate
 {
     func didTappedForgotPassword() {
-        
+//        let buttonPressed = UIButton(type: .system)
+//        buttonPressed.addTarget(self, action: #selector(forgotPressed(_:)), for: .touchUpInside)
+        let controller = ForgotpassViewController(nibName: "ForgotpassViewController", bundle: nil)
+        self.navigationController?.pushViewController(ForgotpassViewController(), animated: true)
     }
     
     func didTappedSignIn(_ userEmail: String, userPassword: String) {
+        Auth.auth().signIn(withEmail: userEmail, password: userPassword)  { (user, error)
+        in
+        if let error = error
+        {
+            print("Failed to login user", error.localizedDescription)
+            return
+        }
+            let controller =  MainTabBarController(nibName: "MainTabBarController", bundle: nil)
+            self.navigationController?.pushViewController(MainTabBarController(), animated: true)
+            print("Successfully login user with firebase")
+        }  
     }
     
     func didTappedSignUp() {
-        let buttonPressed = UIButton(type: .system)
-        buttonPressed.addTarget(self, action: #selector(signUpPressed(_:)), for: .touchUpInside)
-    
+//        let buttonPressed = UIButton(type: .system)
+//        buttonPressed.addTarget(self, action: #selector(signUpPressed(_:)), for: .touchUpInside)
+        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
     
     
 }
+
+

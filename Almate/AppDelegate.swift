@@ -111,7 +111,7 @@ extension AppDelegate: AppDelegateFunc {
     func setController() {
         //MARK: CHECK LOGIN IF TRUE TO MAIN PAGE IF FALSE TO LOGIN PAGE
         window = UIWindow(frame: UIScreen.main.bounds)
-        if Auth.auth().currentUser == nil {
+        if Auth.auth().currentUser != nil {
             // TODO: Dummy Save that actually do inside LoginController later
             Auth.auth().signInAnonymously(completion: { (authResult, error) in
                 if let error = error {
@@ -124,6 +124,9 @@ extension AppDelegate: AppDelegateFunc {
                 }
             })
         } else {
+            let loginController = UINavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)) 
+            window?.rootViewController = loginController
+            window?.makeKeyAndVisible()
             Auth.auth().signInAnonymously(completion: { (authResult, error) in
                 if let error = error {
                     print(error)
