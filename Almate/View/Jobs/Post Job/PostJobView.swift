@@ -7,25 +7,29 @@
 //
 
 import UIKit
+import Foundation
 
-class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    
-    
+class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextViewDelegate {
+
+  
+    @IBOutlet weak var jobDescText: UITextView!
     @IBOutlet var addLogo: UIButton!
     @IBOutlet var addDetailImage: UIButton!
-    @IBOutlet var tfJobTitle: UITextField!
-    @IBOutlet var tfCompanyName: UITextField!
-    @IBOutlet var tfLocation: UITextField!
-    @IBOutlet var tfJobDetails: UITextView!
-    @IBOutlet var tvContact: UITextView!
+    @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var detailimageView2: UIImageView!
+    @IBOutlet weak var detailImageView3: UIImageView!
+    @IBOutlet weak var detailImageView4: UIImageView!
     
     
     var postJobDelegate: PostJobDelegate?
     var imgDataCompany: Data?
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        self.setNavigationBar()
+         super.awakeFromNib()
+        
+        jobDescText.text = "Insert Job Description here"
+        jobDescText.textColor = UIColor.darkGray
+    
     }
     
     @IBAction func addLogoBtn(_ sender: UIButton) {
