@@ -114,7 +114,7 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        ShouldResize()
+//        ShouldResize()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -156,28 +156,6 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
                } else if UIDevice.current.orientation.isLandscape {
                    shoulResize = false
                }
-    }
-    // MARK: -UI SETUP
-    override func viewWillAppear(_ animated: Bool) {
-        showImage(true)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isHidden = false
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        showImage(false)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showImage(true)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //        ShouldResize()
     }
     
     func setupUI() {
@@ -257,21 +235,6 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     func baseQuery() -> Query {
         let firestore: Firestore = Firestore.firestore()
         return firestore.collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users").limit(to: 50)
-    }
-    
-    func observeAndHandleOrientationMode() {
-        NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: OperationQueue.current) { [weak self] _ in
-            
-            if UIDevice.current.orientation.isPortrait {
-                self?.title = "People"
-                self?.moveAndResizeImageForPortrait()
-                self?.shoulResize = true
-            } else if UIDevice.current.orientation.isLandscape {
-                self?.title = "People"
-                self?.resizeImageForLandscape()
-                self?.shoulResize = false
-            }
-        }
     }
     
     func moveAndResizeImageForPortrait() {

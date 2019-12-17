@@ -121,7 +121,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        ShouldResize()
+//        ShouldResize()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
