@@ -10,5 +10,4 @@ import Foundation
 
 struct NewsLikeLocal {
     let postId: String
-    let postLike: Bool
 }

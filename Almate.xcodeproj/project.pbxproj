@@ -45,13 +45,13 @@
 		5E0DB38B23828ADE0079A595 /* PeopleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38923828ADE0079A595 /* PeopleListCell.xib */; };
 		5E0DB38E23828AFA0079A595 /* JobsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB38C23828AFA0079A595 /* JobsListCell.swift */; };
 		5E0DB38F23828AFA0079A595 /* JobsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0DB38D23828AFA0079A595 /* JobsListCell.xib */; };
+		5E8770ED23A3AC660021126A /* LocalNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8770EC23A3AC660021126A /* LocalNews.swift */; };
 		5EEA1F162385167D00D54524 /* SkillProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F142385167D00D54524 /* SkillProfileCell.swift */; };
 		5EEA1F172385167D00D54524 /* SkillProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F152385167D00D54524 /* SkillProfileCell.xib */; };
 		5EEA1F2023868BFB00D54524 /* AddReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */; };
 		5EEA1F2123868BFB00D54524 /* AddReferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */; };
 		5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA1F2223868C3300D54524 /* AddReferenceView.swift */; };
 		5EFD8C9723A0E5C600B03B60 /* NewsLikeLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD8C9623A0E5C600B03B60 /* NewsLikeLocal.swift */; };
-		5EFD8C9923A0E6AB00B03B60 /* LocalNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */; };
 		5F26F62A238F78D100190580 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26F629238F78D100190580 /* RegisterView.swift */; };
 		5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF9914238F783A00A61711 /* RegisterViewController.swift */; };
 		5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDF9915238F783A00A61711 /* RegisterViewController.xib */; };
@@ -179,13 +179,13 @@
 		5E0DB38923828ADE0079A595 /* PeopleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleListCell.xib; sourceTree = "<group>"; };
 		5E0DB38C23828AFA0079A595 /* JobsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListCell.swift; sourceTree = "<group>"; };
 		5E0DB38D23828AFA0079A595 /* JobsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsListCell.xib; sourceTree = "<group>"; };
+		5E8770EC23A3AC660021126A /* LocalNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNews.swift; sourceTree = "<group>"; };
 		5EEA1F142385167D00D54524 /* SkillProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillProfileCell.swift; sourceTree = "<group>"; };
 		5EEA1F152385167D00D54524 /* SkillProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillProfileCell.xib; sourceTree = "<group>"; };
 		5EEA1F1E23868BFB00D54524 /* AddReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceViewController.swift; sourceTree = "<group>"; };
 		5EEA1F1F23868BFB00D54524 /* AddReferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReferenceViewController.xib; sourceTree = "<group>"; };
 		5EEA1F2223868C3300D54524 /* AddReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReferenceView.swift; sourceTree = "<group>"; };
 		5EFD8C9623A0E5C600B03B60 /* NewsLikeLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLikeLocal.swift; sourceTree = "<group>"; };
-		5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNews.swift; sourceTree = "<group>"; };
 		5F26F629238F78D100190580 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5FDF9914238F783A00A61711 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5FDF9915238F783A00A61711 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -662,7 +662,7 @@
 				88E07707237B3C540026D52B /* User.xcdatamodeld */,
 				88E0772D237B5BFF0026D52B /* LocalUser.swift */,
 				888B297D237DF0FF00CA9DC0 /* LocalJob.swift */,
-				5EFD8C9823A0E6AB00B03B60 /* LocalNews.swift */,
+				5E8770EC23A3AC660021126A /* LocalNews.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -1011,7 +1011,7 @@
 				3A1B0F2B239110D20009A27E /* Extension.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
-				5EFD8C9923A0E6AB00B03B60 /* LocalNews.swift in Sources */,
+				5E8770ED23A3AC660021126A /* LocalNews.swift in Sources */,
 				885E915C23958A4B0053613B /* UserLocal.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88CB38E923828CD300AED999 /* DummyUsers.swift in Sources */,

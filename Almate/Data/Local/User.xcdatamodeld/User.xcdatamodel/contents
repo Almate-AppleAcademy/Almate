@@ -6,7 +6,6 @@
     </entity>
     <entity name="NewsLocal" representedClassName="NewsLocal" syncable="YES" codeGenerationType="class">
         <attribute name="postId" optional="YES" attributeType="String"/>
-        <attribute name="postLike" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <entity name="UsersLocal" representedClassName="UsersLocal" syncable="YES" codeGenerationType="class">
         <attribute name="fullname" optional="YES" attributeType="String"/>
@@ -17,7 +16,7 @@
     </entity>
     <elements>
         <element name="JobsLocal" positionX="-54" positionY="-18" width="128" height="73"/>
+        <element name="NewsLocal" positionX="-54" positionY="27" width="128" height="58"/>
         <element name="UsersLocal" positionX="-54" positionY="-9" width="128" height="118"/>
-        <element name="NewsLocal" positionX="-54" positionY="27" width="128" height="73"/>
     </elements>
 </model>

@@ -9,8 +9,10 @@
 import UIKit
 import FirebaseFirestore
 
-class CommentView: UIView {
 
+class CommentView: UIView {
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var commentTable: UITableView!
     @IBOutlet weak var commentTextfield: UITextField!
     @IBOutlet weak var commentPhoto: UIImageView!
@@ -19,7 +21,8 @@ class CommentView: UIView {
     
     var dataComments: [Comments] = []
     var dataPeople: [User] = []
-    var documents: [QueryDocumentSnapshot] = []
+    var newsDocumentID: QueryDocumentSnapshot?
+    var commentDelegate: CommentDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +36,14 @@ class CommentView: UIView {
         commentTable.dataSource = self
         commentTable.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+        if commentTextfield.text!.isEmpty{
+            postButton.setTitleColor(.darkGray, for: .normal)
+            postButton.isUserInteractionEnabled = false
+        }
+        
+        
+        
+        
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing(_:)))
 //        tap.cancelsTouchesInView = false
 //        view.addGestureRecognizer(tap)
@@ -42,8 +53,13 @@ class CommentView: UIView {
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         
-        postButton.isHidden = true
+//        postButton.isHidden = true
     }
+    
+    @IBAction func qwntlButton(_ sender: Any) {
+        post()
+    }
+    
 
     @objc func keyboardWillShow(sender: NSNotification) {
         commentTextfield.frame.origin.y = 500
@@ -67,6 +83,26 @@ class CommentView: UIView {
         postButton.isHidden = true
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let text = (textField.text as! NSString).replacingCharacters(in: range, with: string)
+
+        if !text.isEmpty{
+            postButton.setTitleColor(.systemBlue, for: .normal)
+            postButton.isUserInteractionEnabled = true
+        } else {
+            postButton.setTitleColor(.darkGray, for: .normal)
+            postButton.isUserInteractionEnabled = false
+        }
+        return true
+    }
+    
+    func post(){
+        let userReference: DocumentReference = db.collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").document("jcbXnSufKt0bllBAJlf1")
+        let time = Timestamp(date: Date())
+        let data = Comments(commentText: commentTextfield.text!, commentBy: userReference, commentDate: time)
+        self.commentDelegate?.didTapPost(documents: newsDocumentID, postCommentData: data)
+        
+    }
 }
 
 extension CommentView: UITableViewDataSource {
@@ -100,11 +136,12 @@ extension CommentView: UITextFieldDelegate {
 }
 
 extension CommentView: CommentViewInput {
-    func displayComments(_ data: [Comments]?, _ dataPeople: [User]?) {
+    func displayComments(_ data: [Comments]?, _ dataPeople: [User]?, _ newsDocumentID: QueryDocumentSnapshot?) {
         if let data = data, let dataPeople = dataPeople {
             self.dataComments = data
             self.dataPeople = dataPeople
             self.commentTable.reloadData()
+            self.newsDocumentID = newsDocumentID
         } else {return}
     }
     
@@ -112,7 +149,11 @@ extension CommentView: CommentViewInput {
 }
 
 protocol CommentViewInput{
-    func displayComments(_ data: [Comments]?,_ dataPeople: [User]?)
+    func displayComments(_ data: [Comments]?,_ dataPeople: [User]?, _ newsDocumentID: QueryDocumentSnapshot?)
+}
+
+protocol CommentDelegate{
+    func didTapPost(documents: QueryDocumentSnapshot?, postCommentData: Comments)
 }
 
 //extension UITextField {

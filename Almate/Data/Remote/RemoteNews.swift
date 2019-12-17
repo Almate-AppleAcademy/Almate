@@ -10,22 +10,17 @@ import Foundation
 import FirebaseFirestore
 
 class RemoteNews: RemoteNewsInput {
-    
-    
-    
-    
-    
     var newsData: [Post]?
     var commentData: [Comments]?
     var peopleComment: [User]?
     
     private var listener: ListenerRegistration?
     fileprivate var query: Query? {
-      didSet {
-        if let listener = listener {
-          listener.remove()
+        didSet {
+            if let listener = listener {
+                listener.remove()
+            }
         }
-      }
     }
     
     func requestDataNews(completionBlock: @escaping ([Post], [QueryDocumentSnapshot]) -> Void) {
@@ -49,8 +44,8 @@ class RemoteNews: RemoteNewsInput {
     
     func loadPostComments(documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) {
         query = Firestore.firestore()
-        
-                .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post/\(documents.documentID)/Comments")
+            
+            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post/\(documents.documentID)/Comments")
         guard let query = query else { return }
         var usersData: [User] = []
         listener = query.addSnapshotListener{ (snapshot, error) in
@@ -65,28 +60,27 @@ class RemoteNews: RemoteNewsInput {
                     fatalError("Unable to initialize type \(Comments.self) with dictionary \(document.data())")
                 }
             }
-            self.loadPeopleComments(models: models) { (dataUser) in
-                usersData.append(dataUser!)
-                print(usersData.count)
+            for model in models {
+                self.loadPeopleComments(model: model) { (dataUser) in
+                    usersData.append(dataUser!)
+                }
                 completionBlock(models, usersData)
             }
         }
     }
     
-    func loadPeopleComments(models: [Comments], completion: @escaping(User?) -> Void) {
-        for model in models {
-            let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").document("\(model.commentBy.documentID)")
-            query.getDocument { (snapshot, error) in
-                let model = User(dictionary: (snapshot?.data())!)
-                completion(model)
-            }
+    func loadPeopleComments(model: Comments, completion: @escaping(User?) -> Void) {
+        let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").document("\(model.commentBy.documentID)")
+        query.getDocument { (snapshot, error) in
+            let model = User(dictionary: (snapshot?.data())!)
+            completion(model)
         }
     }
     
     func updatePostLikes(documentID: String, likeNumber: Int) {
         let query =
-        Firestore.firestore()
-            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post").document(documentID)
+            Firestore.firestore()
+                .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post").document(documentID)
         query.updateData([
             "newsLike": likeNumber
         ]) { err in
@@ -98,21 +92,36 @@ class RemoteNews: RemoteNewsInput {
         }
     }
     
+    func uploadPostComments(documents: QueryDocumentSnapshot?, newsData: Comments, completionBlock: @escaping (String, Bool) -> Void) {
+        let query = Firestore.firestore()
+            .collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Post/\(documents!.documentID)/Comments")
+        query.addDocument(data: newsData.dictionary) { (error) in
+            if let error = error {
+                completionBlock(error.localizedDescription, false)
+            } else {
+                completionBlock("Successfully Post Comment", true)
+            }
+            
+        }
+        
+    }
     
     
     
-//     func loadPeopleReferencing(models: [Reference], completion: @escaping(User?) -> Void) {
-//
-//            for model in models {
-//                let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/")
-//                    .document("\(model.referenceUser.documentID)")
-//                    query.getDocument { (snapshot, error) in
-//                        let model = User(dictionary: (snapshot?.data())!)
-//    //                    usersData.insert(mod, at: <#T##Int#>)
-//                        completion(model)
-//                }
-//            }
-//        }
+    
+    
+    //     func loadPeopleReferencing(models: [Reference], completion: @escaping(User?) -> Void) {
+    //
+    //            for model in models {
+    //                let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/")
+    //                    .document("\(model.referenceUser.documentID)")
+    //                    query.getDocument { (snapshot, error) in
+    //                        let model = User(dictionary: (snapshot?.data())!)
+    //    //                    usersData.insert(mod, at: <#T##Int#>)
+    //                        completion(model)
+    //                }
+    //            }
+    //        }
     
     
     func baseQuery() -> Query {
@@ -125,4 +134,5 @@ protocol RemoteNewsInput {
     func requestDataNews(completionBlock: @escaping([Post], [QueryDocumentSnapshot]) -> Void) -> Void
     func loadPostComments (documents: QueryDocumentSnapshot, completionBlock: @escaping ([Comments], [User]) -> Void) -> Void
     func updatePostLikes(documentID: String, likeNumber: Int) -> Void
+    func uploadPostComments (documents: QueryDocumentSnapshot?, newsData: Comments, completionBlock: @escaping(String, Bool) -> Void) -> Void
 }

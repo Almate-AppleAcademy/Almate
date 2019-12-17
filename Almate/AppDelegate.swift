@@ -118,7 +118,7 @@ extension AppDelegate: AppDelegateFunc {
             window?.makeKeyAndVisible()
         } else {
             let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            window?.rootViewController = loginController
+            window?.rootViewController = MainTabBarController()
             window?.makeKeyAndVisible()
         }
     }
