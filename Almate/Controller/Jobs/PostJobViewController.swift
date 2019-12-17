@@ -83,6 +83,39 @@ class PostJobViewController: UIViewController, UIImagePickerControllerDelegate, 
 }
 
 extension PostJobViewController: PostJobDelegate {
+    func didTapLogo() {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true)
+        
+        
+        test = 1
+    }
+    
+    func didTapAddImage() {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true)
+        //        //configure image picker
+        //        let imagePicker = UIImagePickerController()
+        //        imagePicker.delegate = self
+        //        imagePicker.allowsEditing = true
+        //        //present image picker
+        //        self.present(imagePicker, animated: true, completion: nil)
+        
+//                let image = UIImagePickerController()
+//                image.delegate = self
+//                image.sourceType = UIImagePickerController.SourceType.photoLibrary
+//                image.allowsEditing = false
+//
+//              self.present(image, animated: true)
+        test = 2
+    }
+    
     
     func didTapCancel() {
         self.navigationController?.popViewController(animated: true)
@@ -102,43 +135,6 @@ extension PostJobViewController: PostJobDelegate {
             }
         }
     }
-    
-    
-
-extension PostJobViewController: PostJobDelegate{
-    func didTapAddImage() {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerController.SourceType.photoLibrary
-        image.allowsEditing = false
-        self.present(image, animated: true)
-        //        //configure image picker
-        //        let imagePicker = UIImagePickerController()
-        //        imagePicker.delegate = self
-        //        imagePicker.allowsEditing = true
-        //        //present image picker
-        //        self.present(imagePicker, animated: true, completion: nil)
-        
-                let image = UIImagePickerController()
-                image.delegate = self
-                image.sourceType = UIImagePickerController.SourceType.photoLibrary
-                image.allowsEditing = false
-        
-              self.present(image, animated: true)
-        test = 2
-    }
-    
-    func didTapLogo() {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerController.SourceType.photoLibrary
-        image.allowsEditing = false
-        self.present(image, animated: true)
-        
-        
-        test = 1
-    }
-}
 
 
 //
@@ -241,3 +237,4 @@ extension PostJobViewController: PostJobDelegate{
 //    }
 //
 //}
+}

@@ -10,8 +10,7 @@ import UIKit
 import Foundation
 
 class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextViewDelegate {
-
-  
+    
     @IBOutlet weak var jobDescText: UITextView!
     @IBOutlet var addLogo: UIButton!
     @IBOutlet var addDetailImage: UIButton!
@@ -19,6 +18,10 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
     @IBOutlet weak var detailimageView2: UIImageView!
     @IBOutlet weak var detailImageView3: UIImageView!
     @IBOutlet weak var detailImageView4: UIImageView!
+    @IBOutlet var tfTitle: UITextField!
+    @IBOutlet var tfCompanyName: UITextField!
+    @IBOutlet var tfLocation: UITextField!
+    @IBOutlet var tfEmail: UITextField!
     
     
     var postJobDelegate: PostJobDelegate?
@@ -29,6 +32,7 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
         
         jobDescText.text = "Insert Job Description here"
         jobDescText.textColor = UIColor.darkGray
+        setNavigationBar()
     
     }
     
@@ -62,20 +66,20 @@ class PostJobView: UIView,UIImagePickerControllerDelegate,UINavigationController
     
     @objc func done() {
         
-        if tvContact.text == nil {
+        if tfEmail.text == nil {
             
         } else if tfCompanyName.text == nil {
             
         } else if tfLocation.text == nil {
             
-        } else if tfJobDetails.text == nil {
+        } else if jobDescText.text == nil {
             
-        } else if tfJobTitle.text == nil {
+        } else if tfTitle.text == nil {
             
         } else if imgDataCompany == nil {
             
         } else {
-            let data = JobPost(jobCompanyEmail: tvContact.text! ,jobCompanyName: tfCompanyName.text!, jobLocation: tfLocation.text!, jobText: tfJobDetails.text!, jobTitle: tfJobTitle.text!, jobPhotos: [self.imgDataCompany!], jobCompanyLogo: self.imgDataCompany!)
+            let data = JobPost(jobCompanyEmail: tfEmail.text! ,jobCompanyName: tfCompanyName.text!, jobLocation: tfLocation.text!, jobText: jobDescText.text!, jobTitle: tfTitle.text!, jobPhotos: [self.imgDataCompany!], jobCompanyLogo: self.imgDataCompany!)
             self.postJobDelegate?.didTapDone(postJobData: data)
             
         }

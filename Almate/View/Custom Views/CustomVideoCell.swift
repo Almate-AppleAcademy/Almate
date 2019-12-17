@@ -6,19 +6,18 @@
 //  Copyright © 2017 Inloop. All rights reserved.
 //
 
-import UIKit
-import ImagePicker
-
-class CustomVideoCell: UICollectionViewCell, ImagePickerAssetCell {
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
-    var representedAssetIdentifier: String?
-    
-    @IBOutlet weak var label: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-}
+//import UIKit
+//
+//class CustomVideoCell: UICollectionViewCell, ImagePickerAssetCell {
+//    
+//    @IBOutlet weak var imageView: UIImageView!
+//    
+//    var representedAssetIdentifier: String?
+//    
+//    @IBOutlet weak var label: UILabel!
+//    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//}

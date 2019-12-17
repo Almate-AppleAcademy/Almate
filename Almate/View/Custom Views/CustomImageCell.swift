@@ -8,9 +8,8 @@
 
 import Foundation
 import UIKit
-import ImagePicker
 
-class CustomImageCell : UICollectionViewCell, ImagePickerAssetCell {
+class CustomImageCell : UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     

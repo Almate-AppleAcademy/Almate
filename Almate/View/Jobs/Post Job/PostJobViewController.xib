@@ -100,7 +100,7 @@
                                         <action selector="addDetailImageBtn:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="HPb-kO-Dyh"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkB-MA-5jz">
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkB-MA-5jz">
                                     <rect key="frame" x="114" y="191" width="278" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +148,10 @@
                 <outlet property="detailImageView4" destination="jhq-pO-F0e" id="FId-83-0LF"/>
                 <outlet property="detailimageView2" destination="iaI-bN-OH8" id="hwv-fa-xtx"/>
                 <outlet property="jobDescText" destination="i6n-9n-z9b" id="gUG-vj-WY6"/>
+                <outlet property="tfCompanyName" destination="b2w-oc-GI8" id="HmB-So-5hh"/>
+                <outlet property="tfEmail" destination="xkB-MA-5jz" id="hKn-Ub-1uW"/>
+                <outlet property="tfLocation" destination="C5h-51-Vfb" id="vkY-67-NaS"/>
+                <outlet property="tfTitle" destination="5dC-ga-Js6" id="rsr-0z-wlT"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </view>
