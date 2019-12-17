@@ -72,7 +72,7 @@ class NewsViewController: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         requestLocalNews.readDataLocal(appDelegate) { (dataLocal) in
-            self.remoteNews.requestDataNews { (dataRemote, documents) in
+            self.remoteNews.requestDataNews(originQuery: nil) { (dataRemote, documents) in
                 print(dataLocal)
                 if dataLocal.count == 0 {
                     for _ in documents {
