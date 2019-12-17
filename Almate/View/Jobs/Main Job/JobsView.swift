@@ -29,11 +29,11 @@ class JobsView: UIView {
         jobListTable.dataSource = self
         jobListTable.delegate = self
         
-        filterButton.layer.shadowColor = UIColor.black.cgColor
-        filterButton.layer.shadowOffset = CGSize(width: 0, height: 3)
-        filterButton.layer.shadowRadius = 7.0
-        filterButton.layer.shadowOpacity = 20/100
-        filterButton.layer.cornerRadius = 20
+//        filterButton.layer.shadowColor = UIColor.black.cgColor
+//        filterButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        filterButton.layer.shadowRadius = 7.0
+//        filterButton.layer.shadowOpacity = 20/100
+//        filterButton.layer.cornerRadius = 20
     }
     @IBAction func postJobBtn(_ sender: UIButton) {
         jobDelegate?.didTapPostJob()

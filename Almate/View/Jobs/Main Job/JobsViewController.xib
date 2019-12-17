@@ -78,7 +78,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="filterButton" destination="OnK-PG-gJO" id="S34-h7-a30"/>
                 <outlet property="jobListTable" destination="jqa-Az-E6h" id="Axp-sj-C4o"/>
                 <outlet property="postJobBtn" destination="WMs-Kk-WGh" id="4ek-2t-Xxy"/>
             </connections>
@@ -86,7 +85,6 @@
         </view>
     </objects>
     <resources>
-        <image name="filter" width="24" height="24"/>
         <image name="secondary" width="226" height="47"/>
     </resources>
 </document>

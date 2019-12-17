@@ -50,7 +50,7 @@
                             <constraint firstAttribute="width" constant="24" id="VHQ-Kv-ELF"/>
                             <constraint firstAttribute="height" constant="24" id="tld-aO-1sz"/>
                         </constraints>
-                        <state key="normal" image="filled"/>
+                        <state key="normal" image="save-filled"/>
                     </button>
                 </subviews>
             </view>
@@ -83,7 +83,7 @@
     </objects>
     <resources>
         <image name="Company pic" width="77" height="77"/>
-        <image name="filled" width="24" height="24"/>
         <image name="location" width="24" height="24"/>
+        <image name="save-filled" width="24" height="24"/>
     </resources>
 </document>

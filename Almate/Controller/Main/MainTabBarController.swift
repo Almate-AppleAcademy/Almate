@@ -20,11 +20,13 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.tabBar.tintColor = UIColor(red:0.13, green:0.16, blue:0.19, alpha:1.0)
+        
         let tabList = [
-            createController(title: "Jobs", imageName: "news", vc: jobVC),
-            createController(title: "News", imageName: "news", vc: newsVC),
-            createController(title: "People", imageName: "news", vc: peopleVC),
-            createController(title: "Notification", imageName: "news", vc: notifVC)
+            createController(title: "Jobs", imageName: "briefcase", vc: jobVC),
+            createController(title: "News", imageName: "Feeds replica", vc: newsVC),
+            createController(title: "People", imageName: "people", vc: peopleVC),
+            createController(title: "Notification", imageName: "Icon notification-1", vc: notifVC)
         ]
         
         viewControllers = tabList

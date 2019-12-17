@@ -118,15 +118,14 @@ class NotifTableViewController: UITableViewController{
 //        ShouldResize()
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    guard let shoulResize = shoulResize
-        else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
+//    guard let shoulResize = shoulResize
+//        else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
     navigationController?.view.backgroundColor = #colorLiteral(red: 0.127440244, green: 0.1577139199, blue: 0.1955760121, alpha: 1)
     navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1276172996, green: 0.1577090323, blue: 0.1955741942, alpha: 1)
     navigationController?.navigationBar.isTranslucent = false
-    if shoulResize {
-        moveAndResizeImageForPortrait()
-        }
-
+//    if shoulResize {
+//        moveAndResizeImageForPortrait()
+//        }
     }
          func observeAndHandleOrientationMode() {
             NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: OperationQueue.current) { [weak self] _ in
@@ -142,14 +141,14 @@ class NotifTableViewController: UITableViewController{
                 }
             }
         }
-    func ShouldResize(){
-        guard let shoulResize = shoulResize
-            else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
-        
-        if shoulResize {
-           moveAndResizeImageForPortrait()
-        }
-    }
+//    func ShouldResize(){
+//        guard let shoulResize = shoulResize
+//            else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
+//
+//        if shoulResize {
+//           moveAndResizeImageForPortrait()
+//        }
+//    }
     func deviceOrientation(){
         if UIDevice.current.orientation.isPortrait {
                    shoulResize = true
