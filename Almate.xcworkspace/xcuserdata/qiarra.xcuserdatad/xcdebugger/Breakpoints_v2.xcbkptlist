@@ -143,7 +143,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "270"
                   endingLineNumber = "270"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -208,7 +208,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "298">
+                  offsetFromSymbolStart = "228">
                </Location>
                <Location
                   uuid = "B4DBA4A7-D7F8-4BF3-9A1A-27B6E77FCC7C - a9bf3eee5302af74"
@@ -223,7 +223,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "718">
+                  offsetFromSymbolStart = "608">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -352,7 +352,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "289"
                   endingLineNumber = "289"
-                  offsetFromSymbolStart = "34">
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   uuid = "65FD63DF-7FDB-4548-8978-2A86894C79F4 - c56735783dbdb4b2"
@@ -367,7 +367,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "290"
                   endingLineNumber = "290"
-                  offsetFromSymbolStart = "89">
+                  offsetFromSymbolStart = "112">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -481,6 +481,70 @@
             startingLineNumber = "70"
             endingLineNumber = "70"
             landmarkName = "done()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F829733-5601-4AF3-8BF2-EA60BB8D7642"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Almate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "setController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F829733-5601-4AF3-8BF2-EA60BB8D7642 - bd7cd2bef28833c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Almate.AppDelegate.setController() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "3F829733-5601-4AF3-8BF2-EA60BB8D7642 - 2740f4dc2ad7343a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Almate.AppDelegate.setController() -&gt; ()"
+                  moduleName = "Almate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiarra/Library/Autosave%20Information/Almate/Almate/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2798553A-E85C-459B-AC68-B0976BE29B67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Almate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "setController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

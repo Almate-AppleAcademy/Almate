@@ -127,19 +127,19 @@ extension AppDelegate: AppDelegateFunc {
             let loginController = UINavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)) 
             window?.rootViewController = loginController
             window?.makeKeyAndVisible()
-            Auth.auth().signInAnonymously(completion: { (authResult, error) in
-                if let error = error {
-                    print(error)
-                } else {
-                    // Current User is Anonymous
-                    UserDefaults.standard.set(0, forKey: "userType")
-                    self.window?.rootViewController = MainTabBarController()
-                    self.window?.makeKeyAndVisible()
-                }
-            })
-            //            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            //            window?.rootViewController = loginController
-            //            window?.makeKeyAndVisible()
+//            Auth.auth().signInAnonymously(completion: { (authResult, error) in
+//                if let error = error {
+//                    print(error)
+//                } else {
+//                    // Current User is Anonymous
+//                    UserDefaults.standard.set(0, forKey: "userType")
+//                    self.window?.rootViewController = MainTabBarController()
+//                    self.window?.makeKeyAndVisible()
+//                }
+//            })
+//            //            let loginController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+//            //            window?.rootViewController = loginController
+//            //            window?.makeKeyAndVisible()
         }
     }
     
