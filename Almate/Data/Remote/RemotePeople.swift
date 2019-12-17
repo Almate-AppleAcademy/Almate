@@ -25,8 +25,11 @@ class RemotePeople: RemotePeopleInput {
     var userExperience: Experience?
     var dataFilters: [String] = []
     
-    func loadPeople(completionBlock: @escaping ([User], [QueryDocumentSnapshot]) -> Void) {
-        query = baseQuery()
+    func loadPeople(originQuery: Query?, completionBlock: @escaping ([User], [QueryDocumentSnapshot]) -> Void) {
+        if originQuery != nil {
+            query = originQuery
+        } else { query = baseQuery() }
+        
         guard let query = query else { return }
         listener = query.addSnapshotListener{ (snapshot, error) in
             guard let snapshot = snapshot else {
@@ -159,9 +162,9 @@ class RemotePeople: RemotePeopleInput {
                 let texts: String? = dictionary["\(queryValue)"] as? String
                 self.dataFilters.append(texts!)
             }
-//            if let dataFilters = self.dataFilters {
+            //            if let dataFilters = self.dataFilters {
             completionBlock(self.dataFilters)
-//            }
+            //            }
         }
     }
     
@@ -172,7 +175,7 @@ class RemotePeople: RemotePeopleInput {
 }
 
 protocol RemotePeopleInput {
-    func loadPeople(completionBlock: @escaping([User], [QueryDocumentSnapshot]) -> Void) -> Void
+    func loadPeople(originQuery: Query? ,completionBlock: @escaping([User], [QueryDocumentSnapshot]) -> Void) -> Void
     func loadPeopleDetail(documents: QueryDocumentSnapshot, completionBlock: @escaping(UserContact) -> Void) -> Void
     func loadPeopleEducation(documents: QueryDocumentSnapshot, completionBlock: @escaping([Education]) -> Void) -> Void
     func loadPeopleExperience(documents: QueryDocumentSnapshot, completionBlock: @escaping([Experience]) -> Void) -> Void

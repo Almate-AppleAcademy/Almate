@@ -11,7 +11,7 @@ import UIKit
 class FilterCell: UITableViewCell {
 
     @IBOutlet weak var lblTitleFilter: UILabel!
-    @IBOutlet weak var collectionListValue: UICollectionView!
+    @IBOutlet var lblItemFilter: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -57,8 +57,10 @@ class RemoteJob: RemoteJobInput {
         }
     }
     
-    func loadAllJob(completionBlock: @escaping ([Job], [QueryDocumentSnapshot]) -> Void) {
-        query = baseQuery()
+    func loadAllJob(originQuery: Query?, completionBlock: @escaping ([Job], [QueryDocumentSnapshot]) -> Void) {
+        if originQuery != nil {
+            query = originQuery
+        } else { query = baseQuery() }
         guard let query = query else { return }
         listener = query.addSnapshotListener({ (snapshot, error) in
             guard let snapshot = snapshot else {
@@ -86,7 +88,7 @@ class RemoteJob: RemoteJobInput {
 }
 
 protocol RemoteJobInput {
-    func loadAllJob(completionBlock: @escaping([Job], [QueryDocumentSnapshot])-> Void) -> Void
+    func loadAllJob(originQuery: Query?, completionBlock: @escaping([Job], [QueryDocumentSnapshot])-> Void) -> Void
     func uploadPhoto(jobData: JobPost, completionBlock: @escaping(String)-> Void) -> Void
     func uploadJob(jobData: Job, completionBlock: @escaping(String, Bool)-> Void) -> Void
 }

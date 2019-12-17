@@ -23,7 +23,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         super.viewDidLoad()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         jobView.jobDelegate = self
-        requestRemoteJob.loadAllJob { (dataJob, documents) in
+        requestRemoteJob.loadAllJob(originQuery: nil) { (dataJob, documents) in
             
             self.requestLocalJob.readData(appDelegate) { (data) in
                 if data.count == 0 {

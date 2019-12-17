@@ -24,7 +24,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H10-P7-ALg">
-                    <rect key="frame" x="110" y="822" width="195" height="40"/>
+                    <rect key="frame" x="110" y="711" width="195" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.44796061520000002" green="0.79205274579999996" blue="0.76470345260000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Apply Filter">
@@ -38,6 +38,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
+                <outlet property="btnApply" destination="H10-P7-ALg" id="3dj-Iv-SPl"/>
                 <outlet property="filterSortTable" destination="wzL-g7-ebS" id="lNF-zS-IF3"/>
             </connections>
             <point key="canvasLocation" x="139" y="110"/>

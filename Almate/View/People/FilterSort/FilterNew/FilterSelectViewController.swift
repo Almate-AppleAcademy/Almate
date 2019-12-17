@@ -14,8 +14,9 @@ class FilterSelectViewController: UIViewController {
     var remotePeople = RemotePeople() // this object is only used for cohort and jobfield
     var queryValue: String?
     @IBOutlet var filterSelectView: FilterSelectView!
-    var filterSortInput: FilterSortViewControllerInput?
+    var filterSortInput: (([String]) -> Void)?
     var items: [String]?
+    var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,6 @@ class FilterSelectViewController: UIViewController {
     }
     
     func navigationSetup() {
-        self.navigationItem.title = "Filter"
         let rightButtonItem = UIBarButtonItem.init(
             title: "Done",
             style: .done,
@@ -90,11 +90,17 @@ class FilterSelectViewController: UIViewController {
         return result
     }
     
+    func didFinishSelected(handler: @escaping ([String]) -> Void) {
+        filterSortInput = handler
+    }
+    
+    
     @objc func doneButtonAction(sender: UIBarButtonItem) {
         if let items = items {
-            self.filterSortInput?.didFinishSelectedItem(items)
-            self.navigationController?.popViewController(animated: true)
+            let itemDict = ["index": index ?? 0, "items": items] as [String : Any]
+            NotificationCenter.default.post(name: .didSelectedFilterItems, object: itemDict, userInfo: nil)
         }
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func leftButtonAction(sender: UIBarButtonItem) {

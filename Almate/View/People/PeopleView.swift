@@ -45,7 +45,6 @@ class PeopleView: UIView {
     
     @IBAction func taapProfile(_ sender: UIButton) {
         delegate?.didTapProfileIcon()
-        print("hilih gi")
     }
     
 }
@@ -114,6 +113,7 @@ extension PeopleView: PeopleViewInput {
     
     func displayPeople(_ data: [User]?,_ documents: [QueryDocumentSnapshot], _ likeStates: [Bool]) {
         if let data = data {
+            self.likeStates.removeAll()
             self.dataPeople = data
             self.likeStates = likeStates
             self.peopleCollection.reloadData()
@@ -125,6 +125,7 @@ extension PeopleView: PeopleViewInput {
 protocol PeopleViewDelegate {
     func didSelectItemAt(_ dataPeople: User, _ documents: QueryDocumentSnapshot)
     func didTapProfileIcon()
+    func didTapSearchIcon()
     func tappedSaveContact(_ state: UserCoreDataState,_ data: UserLocal)
 }
 
