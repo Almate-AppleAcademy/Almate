@@ -45,10 +45,10 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 jobs opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igV-QA-jnj">
-                            <rect key="frame" x="15" y="15" width="208" height="24"/>
+                            <rect key="frame" x="20" y="15" width="208" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="208" id="38m-Nq-wh5"/>
-                                <constraint firstAttribute="height" constant="24" id="O1m-Nb-JEl"/>
+                                <constraint firstAttribute="height" constant="24" id="4Xi-cr-NSj"/>
+                                <constraint firstAttribute="width" constant="208" id="lYz-t5-4Sc"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <nil key="textColor"/>
@@ -58,13 +58,13 @@
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="jqa-Az-E6h" secondAttribute="trailing" id="BsQ-0B-SmM"/>
+                        <constraint firstItem="igV-QA-jnj" firstAttribute="top" secondItem="IDT-Wj-4xS" secondAttribute="top" constant="15" id="D0O-mg-yaT"/>
                         <constraint firstAttribute="bottom" secondItem="jqa-Az-E6h" secondAttribute="bottom" id="HUb-Rm-rwK"/>
                         <constraint firstItem="jqa-Az-E6h" firstAttribute="top" secondItem="WMs-Kk-WGh" secondAttribute="bottom" constant="8" id="Kdg-Nd-GwG"/>
-                        <constraint firstItem="igV-QA-jnj" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" constant="15" id="Y5w-ot-RVW"/>
+                        <constraint firstItem="igV-QA-jnj" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" constant="20" id="PqB-h4-dPS"/>
                         <constraint firstItem="jqa-Az-E6h" firstAttribute="leading" secondItem="IDT-Wj-4xS" secondAttribute="leading" id="dP5-zl-27D"/>
                         <constraint firstItem="WMs-Kk-WGh" firstAttribute="top" secondItem="IDT-Wj-4xS" secondAttribute="top" constant="10" id="eJr-BW-EyA"/>
                         <constraint firstAttribute="trailing" secondItem="WMs-Kk-WGh" secondAttribute="trailing" constant="15" id="jBg-MH-br5"/>
-                        <constraint firstItem="igV-QA-jnj" firstAttribute="top" secondItem="IDT-Wj-4xS" secondAttribute="top" constant="15" id="keQ-hd-gVd"/>
                     </constraints>
                 </view>
             </subviews>
