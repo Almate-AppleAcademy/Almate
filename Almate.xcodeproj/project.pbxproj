@@ -53,6 +53,9 @@
 		5F01A3C2239F905800887A7E /* ForgotpassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3C0239F905800887A7E /* ForgotpassViewController.swift */; };
 		5F01A3C3239F905800887A7E /* ForgotpassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */; };
 		5F01A3C6239F909800887A7E /* ForgotpassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3C5239F909800887A7E /* ForgotpassView.swift */; };
+		5F01A3CA23A76DA300887A7E /* UpdatepassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3C823A76DA300887A7E /* UpdatepassViewController.swift */; };
+		5F01A3CB23A76DA300887A7E /* UpdatepassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F01A3C923A76DA300887A7E /* UpdatepassViewController.xib */; };
+		5F01A3CE23A76DED00887A7E /* UpdatepassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A3CD23A76DED00887A7E /* UpdatepassView.swift */; };
 		5F26F62A238F78D100190580 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26F629238F78D100190580 /* RegisterView.swift */; };
 		5FDF9916238F783A00A61711 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF9914238F783A00A61711 /* RegisterViewController.swift */; };
 		5FDF9917238F783A00A61711 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDF9915238F783A00A61711 /* RegisterViewController.xib */; };
@@ -188,6 +191,9 @@
 		5F01A3C0239F905800887A7E /* ForgotpassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotpassViewController.swift; sourceTree = "<group>"; };
 		5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotpassViewController.xib; sourceTree = "<group>"; };
 		5F01A3C5239F909800887A7E /* ForgotpassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotpassView.swift; sourceTree = "<group>"; };
+		5F01A3C823A76DA300887A7E /* UpdatepassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatepassViewController.swift; sourceTree = "<group>"; };
+		5F01A3C923A76DA300887A7E /* UpdatepassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatepassViewController.xib; sourceTree = "<group>"; };
+		5F01A3CD23A76DED00887A7E /* UpdatepassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatepassView.swift; sourceTree = "<group>"; };
 		5F26F629238F78D100190580 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5FDF9914238F783A00A61711 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5FDF9915238F783A00A61711 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -401,6 +407,23 @@
 				5F01A3C1239F905800887A7E /* ForgotpassViewController.xib */,
 			);
 			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		5F01A3C723A76D7700887A7E /* Update Password */ = {
+			isa = PBXGroup;
+			children = (
+				5F01A3C823A76DA300887A7E /* UpdatepassViewController.swift */,
+			);
+			path = "Update Password";
+			sourceTree = "<group>";
+		};
+		5F01A3CC23A76DA800887A7E /* Update Password */ = {
+			isa = PBXGroup;
+			children = (
+				5F01A3CD23A76DED00887A7E /* UpdatepassView.swift */,
+				5F01A3C923A76DA300887A7E /* UpdatepassViewController.xib */,
+			);
+			path = "Update Password";
 			sourceTree = "<group>";
 		};
 		5F26F628238F78BA00190580 /* Register */ = {
@@ -727,6 +750,7 @@
 		88F6821A236984D3006249AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5F01A3CC23A76DA800887A7E /* Update Password */,
 				5F01A3C4239F907A00887A7E /* Forgot Password */,
 				5F26F628238F78BA00190580 /* Register */,
 				88F6821B236984D8006249AA /* Login */,
@@ -760,6 +784,7 @@
 				88F68225236985C4006249AA /* Login */,
 				5FDF9913238F781C00A61711 /* Register */,
 				5F01A3BF239F902E00887A7E /* Forgot Password */,
+				5F01A3C723A76D7700887A7E /* Update Password */,
 				3A1B0F29239110B60009A27E /* Helper */,
 				88945826236AF0B200E3D838 /* Main */,
 			);
@@ -887,6 +912,7 @@
 				3A8333A0238230FB007C17C4 /* PostJobViewController.xib in Resources */,
 				8B860214237A872B0053567B /* CommentView.xib in Resources */,
 				8894583A236AF48600E3D838 /* NotifViewController.xib in Resources */,
+				5F01A3CB23A76DA300887A7E /* UpdatepassViewController.xib in Resources */,
 				3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */,
 				5E0DB377237BE1970079A595 /* EducationProfileCell.xib in Resources */,
 				8894581C236AB41200E3D838 /* Default-568h@2x.png in Resources */,
@@ -1017,6 +1043,7 @@
 				885A9A5A2372C239000D946E /* DetailPeopleViewController.swift in Sources */,
 				8B01FC26238D454600AD012F /* SettingsViewController.swift in Sources */,
 				8877464223919DFF009F3655 /* RemoteJob.swift in Sources */,
+				5F01A3CE23A76DED00887A7E /* UpdatepassView.swift in Sources */,
 				88B9CB272379D60300634110 /* WorkCell.swift in Sources */,
 				3A83339F238230FB007C17C4 /* PostJobViewController.swift in Sources */,
 				88DCABA22379708C00B2FA08 /* SkillCell.swift in Sources */,
@@ -1068,6 +1095,7 @@
 				5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */,
 				882A7ED423970B15008C9CB6 /* RemoteProfile.swift in Sources */,
 				8B01FC34238E840800AD012F /* NewsThreePhotosCell.swift in Sources */,
+				5F01A3CA23A76DA300887A7E /* UpdatepassViewController.swift in Sources */,
 				8B86020E2372BFC30053567B /* NewsCell.swift in Sources */,
 				8890B98423717E69005EE950 /* PeopleCell.swift in Sources */,
 				8B86021A237AB5AC0053567B /* CommentCell.swift in Sources */,

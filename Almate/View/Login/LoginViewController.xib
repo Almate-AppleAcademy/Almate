@@ -47,7 +47,6 @@
                             </state>
                             <connections>
                                 <action selector="signUpButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="9w3-i1-LBg"/>
-                                <action selector="signUpPressed:" destination="-1" eventType="touchUpInside" id="M1V-vr-zYx"/>
                             </connections>
                         </button>
                     </subviews>
@@ -119,7 +118,6 @@
                     </state>
                     <connections>
                         <action selector="forgotPassButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="fyl-Y6-ydf"/>
-                        <action selector="forgotPressed:" destination="-1" eventType="touchUpInside" id="8PL-MN-L8R"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-6T-duf">
@@ -127,6 +125,20 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOE-Pb-hQd">
+                    <rect key="frame" x="25" y="438" width="224" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-PM-ffK">
+                    <rect key="frame" x="25" y="563" width="224" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -140,7 +152,9 @@
             <connections>
                 <outlet property="coPhotoOutlet" destination="Hw4-7F-ckE" id="au7-m4-5LS"/>
                 <outlet property="emailTextField" destination="Qxf-wU-G5a" id="a3h-t7-JhG"/>
+                <outlet property="emailValidationAlert" destination="YOE-Pb-hQd" id="MPs-XU-hiy"/>
                 <outlet property="passTextField" destination="gwa-zw-Pqk" id="KML-JA-wzL"/>
+                <outlet property="passValidationAlert" destination="ZHs-PM-ffK" id="PSt-Pt-KMY"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </view>

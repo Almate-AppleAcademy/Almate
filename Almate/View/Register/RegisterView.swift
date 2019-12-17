@@ -18,6 +18,13 @@ class RegisterView: UIView {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
     @IBOutlet weak var confirmPassTF: UITextField!
+    @IBOutlet weak var fnameAlert: UILabel!
+    @IBOutlet weak var cohortAlert: UILabel!
+    @IBOutlet weak var emailAlert: UILabel!
+    @IBOutlet weak var passAlert: UILabel!
+    @IBOutlet weak var cpassAlert: UILabel!
+    
+    
     
     var registerViewDelegate: RegisterViewDelegate?
     
@@ -26,32 +33,63 @@ class RegisterView: UIView {
     }
     
     @IBAction func registerButton(_ sender: Any) {
-        if fullNameTF.text!.isEmpty
+        if fullNameTF.text!.isEmpty && cohortTF.text!.isEmpty && emailTF.text!.isEmpty && passTF.text!.isEmpty && confirmPassTF.text!.isEmpty
         {
-            print("Email tidak boleh kosong")
-        } else if cohortTF.text!.isEmpty{
-            print("Cohort tidak boleh kosong")
-        } else if emailTF.text!.isEmpty{
-            print("Email tidak boleh kosong")
-        } else if passTF.text!.isEmpty{
-            print("Password tidak boleh kosong")
-        } else if passTF.text!.count < 8{
-        print("Password tidak boleh kurang dari 8 character")
-        } else if confirmPassTF.text != passTF.text{
-           print("Password tidak cocok")
-        } else{
-            registerViewDelegate?.didTappedRegister()
-            print("Success")
+            fnameAlert.text = "Name can't be empty"
+            cohortAlert.text = "Cohort can't be empty"
+            emailAlert.text = "Email can't be empty"
+            passAlert.text = "Password can't be empty"
+            cpassAlert.text = "Confirm password can't be empty"
+        }
+        else if fullNameTF.text!.isEmpty == false && cohortTF.text!.isEmpty && emailTF.text!.isEmpty && passTF.text!.isEmpty && confirmPassTF.text!.isEmpty
+        {
+            fnameAlert.text = ""
+            cohortAlert.text = "Cohort can't be empty"
+            emailAlert.text = "Email can't be empty"
+            passAlert.text = "Password can't be empty"
+            cpassAlert.text = "Confirm password can't be empty"
+        }
+        else if fullNameTF.text!.isEmpty == false && cohortTF.text!.isEmpty == false && emailTF.text!.isEmpty && passTF.text!.isEmpty && confirmPassTF.text!.isEmpty
+        {
+            fnameAlert.text = ""
+            cohortAlert.text = ""
+            emailAlert.text = "Email can't be empty"
+            passAlert.text = "Password can't be empty"
+            cpassAlert.text = "Confirm password can't be empty"
+        }
+        else if emailTF.text!.isValidEmail() == false
+        {
+        emailAlert.text = "Email not valid"
+        }
+        else if fullNameTF.text!.isEmpty == false && cohortTF.text!.isEmpty == false && emailTF.text!.isEmpty  == false && passTF.text!.isEmpty && confirmPassTF.text!.isEmpty
+        {
+            fnameAlert.text = ""
+            cohortAlert.text = ""
+            emailAlert.text = ""
+            passAlert.text = "Password can't be empty"
+            cpassAlert.text = "Confirm password can't be empty"
+        } else if passTF.text!.count < 8
+        {
+            passAlert.text = "Password can't be less than 8 character"
+        }
+        else if fullNameTF.text!.isEmpty == false && cohortTF.text!.isEmpty == false && emailTF.text!.isEmpty == false && passTF.text!.isEmpty == false && confirmPassTF.text!.isEmpty
+        {
+            fnameAlert.text = ""
+            cohortAlert.text = ""
+            passAlert.text = ""
+            cpassAlert.text = "Confirm password can't be empty"
+        }
+        else if confirmPassTF.text! != passTF.text!
+        {
+            cpassAlert.text = "Password didn't match"
+        }
+        else
+        {
+            passAlert.text = ""
+            cpassAlert.text = ""
+            registerViewDelegate?.didTappedRegister(fullNameTF.text!, cohortNya: cohortTF.text!, emailNya: emailTF.text!, passwordNya: passTF.text!, confirmNya: confirmPassTF.text!)
         }
         
-        Auth.auth().createUser(withEmail: emailTF.text!, password: confirmPassTF.text!) { (user, error) in
-            if let error = error
-            {
-                print("Failed to create user", error.localizedDescription)
-                return
-            }
-            print("Successfully created user with firebase")
-        }
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -68,6 +106,6 @@ class RegisterView: UIView {
 }
 
 protocol RegisterViewDelegate {
-    func didTappedRegister()
+    func didTappedRegister(_ namaNya: String, cohortNya:String, emailNya: String, passwordNya: String, confirmNya: String)
     func didTappedCancel()
 }

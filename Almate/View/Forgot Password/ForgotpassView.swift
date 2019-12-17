@@ -26,7 +26,8 @@ class ForgotpassView: UIView {
         button.isEnabled = false
         button.alpha = 0.3
         
-        if emailForgot.text!.isValidationEmail() {
+        if emailForgot.text!.isValidationEmail() == false {
+            print("email tidak valid!")
         }
         else if emailForgot.text!.isEmpty
         {
@@ -38,15 +39,12 @@ class ForgotpassView: UIView {
             button.isEnabled = true
             print("success")
         }
-        Auth.auth().sendPasswordReset(withEmail: emailForgot.text!) { (error)
-        in
-            if let error = error
-            {
-                print("user with email \(self.emailForgot.text!) are not register yet", error.localizedDescription)
-                return
-            }
-            print("Successfully login user with firebase")
-        }
+        
+    }
+    
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        forgotViewDelegate?.didTappedCancel()
     }
     /*
     // Only override draw() if you perform custom drawing.
@@ -59,6 +57,7 @@ class ForgotpassView: UIView {
 }
 protocol ForgotViewDelegate {
     func didTappedResetPassword(_ emailAcc: String)
+    func didTappedCancel()
 }
 
 extension String {

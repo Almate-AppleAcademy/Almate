@@ -36,30 +36,32 @@ class LoginViewController: UIViewController {
 */
 
     
-    @IBAction func forgotPressed(_ sender: Any) {
-        let controller = ForgotpassViewController(nibName: "ForgotpassViewController", bundle: nil)
-        self.navigationController?.pushViewController(ForgotpassViewController(), animated: true)
-
-    }
+//    @IBAction func forgotPressed(_ sender: Any) {
+//        let controller = ForgotpassViewController(nibName: "ForgotpassViewController", bundle: nil)
+//        self.navigationController?.pushViewController(ForgotpassViewController(), animated: true)
+//
+//    }
 
 //    @IBAction func signInPressed(_ sender: Any) {
 //        let controller =  MainTabBarController(nibName: "MainTabBarController", bundle: nil)
 //        self.navigationController?.pushViewController(MainTabBarController(), animated: true)
 //    }
     
-    @IBAction func signUpPressed(_ sender: Any) {
-        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
-
-        print("dah kepencet")
-    }
+//    @IBAction func signUpPressed(_ sender: Any) {
+//        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+//        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+//
+//        print("dah kepencet")
+//    }
 }
 
 extension LoginViewController: LoginViewDelegate
 {
     func didTappedForgotPassword() {
-        let buttonPressed = UIButton(type: .system)
-        buttonPressed.addTarget(self, action: #selector(forgotPressed(_:)), for: .touchUpInside)
+//        let buttonPressed = UIButton(type: .system)
+//        buttonPressed.addTarget(self, action: #selector(forgotPressed(_:)), for: .touchUpInside)
+        let controller = ForgotpassViewController(nibName: "ForgotpassViewController", bundle: nil)
+        self.navigationController?.pushViewController(ForgotpassViewController(), animated: true)
     }
     
     func didTappedSignIn(_ userEmail: String, userPassword: String) {
@@ -77,9 +79,10 @@ extension LoginViewController: LoginViewDelegate
     }
     
     func didTappedSignUp() {
-        let buttonPressed = UIButton(type: .system)
-        buttonPressed.addTarget(self, action: #selector(signUpPressed(_:)), for: .touchUpInside)
-    
+//        let buttonPressed = UIButton(type: .system)
+//        buttonPressed.addTarget(self, action: #selector(signUpPressed(_:)), for: .touchUpInside)
+        let controller = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
     
     
