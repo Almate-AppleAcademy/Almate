@@ -20,6 +20,7 @@ class DetailPeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .white
         navigationItem.largeTitleDisplayMode = .never
         detailPeopleView.dataPeople = dataPeople
         
@@ -74,6 +75,7 @@ class DetailPeopleViewController: UIViewController {
             }
         } else { print("User Number Not Found")}
     }
+    
     @IBAction func addReferencePressed(_ sender: UIButton) {
         let controller = AddReferenceViewController(nibName: "AddReferenceViewController", bundle: nil)
         self.navigationController?.pushViewController(controller, animated: true)
@@ -81,5 +83,13 @@ class DetailPeopleViewController: UIViewController {
         
         
         print("K")
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
 }

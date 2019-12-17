@@ -95,6 +95,7 @@ class NotifTableViewController: UITableViewController{
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
+        setupUI()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,9 +103,14 @@ class NotifTableViewController: UITableViewController{
         showImage(false)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showImage(true)
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewDidLayoutSubviews() {

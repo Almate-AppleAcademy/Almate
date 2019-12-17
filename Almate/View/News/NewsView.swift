@@ -11,7 +11,7 @@ import SDWebImage
 import FirebaseFirestore
 
 class NewsView: UIView {
-
+    
     @IBOutlet weak var newsCollection: UICollectionView!
     var delegate: NewsViewDelegate?
     var dataNews:  [Post] = []
@@ -19,7 +19,7 @@ class NewsView: UIView {
     var didLike: Bool?
     var likeStates: [Bool] = []
     
-    var dataPost: [Post] = [] {
+    var dataPost: [LocalPost] = [] {
         didSet {
             self.newsCollection.reloadData()
         }
@@ -42,7 +42,7 @@ class NewsView: UIView {
             layout.estimatedItemSize = CGSize(width: newsCollection.frame.width - 50, height: 10)
         }
     }
-
+    
 }
 
 extension NewsView: UICollectionViewDataSource {

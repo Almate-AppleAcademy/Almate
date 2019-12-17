@@ -115,17 +115,18 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     @IBOutlet weak var garisMenuDua: UIImageView!
     @IBOutlet weak var editBtn: UIButton!
     
+    @IBOutlet var userFullName: UILabel!
     override func awakeFromNib() {
         
         garisMenuDua.alpha = 0
         savedView.alpha = 0
         transparentView.alpha = 0.8
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = transparentView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        transparentView.addSubview(blurEffectView)
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = transparentView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        transparentView.addSubview(blurEffectView)
         
         skillCollection.register(UINib(nibName: "SkillProfileCell", bundle: nil), forCellWithReuseIdentifier: "skillProfileCell")
         workCollection.register(UINib(nibName: "ProfileCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
@@ -155,6 +156,8 @@ class ProfileView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         //        referenceCollection.dataSource = self
         aboutLbl.sizeToFit()
         
+        
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

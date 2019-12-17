@@ -1,5 +1,5 @@
 import Foundation
-struct Reference : Codable {
+struct LocalReference : Codable {
 	let idUser : String?
 	let textReference : String?
 

@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController {
     var localJob = LocalJob()
     var dataContact: UserContact?
     
+    @IBOutlet var profileImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -93,6 +96,7 @@ class ProfileViewController: UIViewController {
         
         profileSuperview.garisMenu.alpha = 1
         profileSuperview.garisMenuDua.alpha = 0
+        //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)
         
         
         //        profileSuperview.garisMenu.frame.origin = CGPoint(x: 217, y: 493)

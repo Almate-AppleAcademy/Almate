@@ -1,6 +1,6 @@
 import Foundation
-struct Alumni {
-	let institution : [Institution]?
+struct LocalAlumni {
+	let institution : [LocalInstitution]?
 
 	enum CodingKeys: String, CodingKey {
         case institution = "institution"

@@ -11,6 +11,8 @@ import UIKit
 class JobsViewController: UIViewController ,UISearchControllerDelegate{
     
     @IBOutlet var jobView: JobsView!
+    @IBOutlet weak var jobsOpeningLabel: UILabel!
+    
     var requestLocalJob = LocalJob()
     var requestRemoteJob = RemoteJob()
     var likesState: [Bool] = []
@@ -58,6 +60,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         }
         
     }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -65,6 +68,7 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
     @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -72,8 +76,10 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         showImage(true)
+        setupUI()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
@@ -84,8 +90,13 @@ class JobsViewController: UIViewController ,UISearchControllerDelegate{
         showImage(false)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
         showImage(true)
     }
     

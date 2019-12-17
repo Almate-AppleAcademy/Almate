@@ -22,6 +22,7 @@ class NewsViewController: UIViewController {
     var requestLocalNews = LocalNews()
     var likeState: [Bool] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         newsView.delegate = self
@@ -95,7 +96,8 @@ class NewsViewController: UIViewController {
             }
         }
         
-        setupUI()
+        self.tabBarController?.tabBar.isHidden = false
+//        setupUI()
         observeAndHandleOrientationMode()
         
         
@@ -140,6 +142,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupUI()
         showImage(true)
     }
     

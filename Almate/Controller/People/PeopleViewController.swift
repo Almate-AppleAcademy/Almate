@@ -196,6 +196,35 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
             searchPicture.widthAnchor.constraint(equalTo: profilePicture.heightAnchor)
         ])
     }
+    func observeAndHandleOrientationMode() {
+        NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: OperationQueue.current) { [weak self] _ in
+            
+            if UIDevice.current.orientation.isPortrait {
+                self?.title = "People"
+                self?.moveAndResizeImageForPortrait()
+                self?.shoulResize = true
+            } else if UIDevice.current.orientation.isLandscape {
+                self?.title = "People"
+                self?.resizeImageForLandscape()
+                self?.shoulResize = false
+            }
+        }
+    }
+    func ShouldResize(){
+        guard let shoulResize = shoulResize
+            else { assertionFailure("shoulResize wasn't set. reason could be non-handled device orientation state"); return }
+        
+        if shoulResize {
+            moveAndResizeImageForPortrait()
+        }
+    }
+    func deviceOrientation(){
+        if UIDevice.current.orientation.isPortrait {
+            shoulResize = true
+        } else if UIDevice.current.orientation.isLandscape {
+            shoulResize = false
+        }
+    }
     
     @objc func appliedSortFilter(notification: Notification) {
         let dict = notification.object as? NSDictionary

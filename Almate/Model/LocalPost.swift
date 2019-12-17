@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct Post {
+struct LocalPost {
     let postImageProfile: UIImage?
     let postNameProfile: String?
 	let postText : String?
