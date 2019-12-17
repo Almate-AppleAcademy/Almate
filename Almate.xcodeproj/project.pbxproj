@@ -29,7 +29,6 @@
 		3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */; };
 		3A9C0D0023753DD9007E3D4D /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */; };
 		3AC7266623910659008F08F2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC7266523910659008F08F2 /* Constant.swift */; };
-		3AEBC45D2396497B0059B302 /* RemoteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBC45C2396497B0059B302 /* RemoteProfile.swift */; };
 		5E0DB3582379578A0079A595 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB357237957890079A595 /* ProfileViewController.swift */; };
 		5E0DB35E237957B10079A595 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB35A237957B10079A595 /* ProfileCell.swift */; };
 		5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DB35B237957B10079A595 /* ProfileView.swift */; };
@@ -109,6 +108,10 @@
 		88E07706237B398D0026D52B /* LocalReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E076FE237B398D0026D52B /* LocalReference.swift */; };
 		88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88E07707237B3C540026D52B /* User.xcdatamodeld */; };
 		88E0772E237B5BFF0026D52B /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0772D237B5BFF0026D52B /* LocalUser.swift */; };
+		88E7A43F23A98CE700178C4E /* RemoteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7A43B23A98CE700178C4E /* RemoteProfile.swift */; };
+		88E7A44023A98CE700178C4E /* RemotePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7A43C23A98CE700178C4E /* RemotePeople.swift */; };
+		88E7A44123A98CE700178C4E /* RemoteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7A43D23A98CE700178C4E /* RemoteNews.swift */; };
+		88E7A44223A98CE700178C4E /* RemoteJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7A43E23A98CE700178C4E /* RemoteJob.swift */; };
 		88F68207236971B5006249AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F68206236971B5006249AA /* AppDelegate.swift */; };
 		88F6820B236971B5006249AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6820A236971B5006249AA /* ViewController.swift */; };
 		88F68210236971B7006249AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F6820F236971B7006249AA /* Assets.xcassets */; };
@@ -164,7 +167,6 @@
 		3A9C0CFD23753DD9007E3D4D /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		3A9C0CFE23753DD9007E3D4D /* JobDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
 		3AC7266523910659008F08F2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		3AEBC45C2396497B0059B302 /* RemoteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProfile.swift; sourceTree = "<group>"; };
 		4AC7F0D31CED4B0064E35B6B /* Pods-Almate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Almate.release.xcconfig"; path = "Target Support Files/Pods-Almate/Pods-Almate.release.xcconfig"; sourceTree = "<group>"; };
 		5E0DB357237957890079A595 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5E0DB35A237957B10079A595 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -247,6 +249,10 @@
 		88E076FE237B398D0026D52B /* LocalReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalReference.swift; sourceTree = "<group>"; };
 		88E07708237B3C540026D52B /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		88E0772D237B5BFF0026D52B /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
+		88E7A43B23A98CE700178C4E /* RemoteProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfile.swift; sourceTree = "<group>"; };
+		88E7A43C23A98CE700178C4E /* RemotePeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePeople.swift; sourceTree = "<group>"; };
+		88E7A43D23A98CE700178C4E /* RemoteNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNews.swift; sourceTree = "<group>"; };
+		88E7A43E23A98CE700178C4E /* RemoteJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteJob.swift; sourceTree = "<group>"; };
 		88F68203236971B5006249AA /* Almate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F68206236971B5006249AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F6820A236971B5006249AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -362,7 +368,10 @@
 		3AEBC45B2396495A0059B302 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				3AEBC45C2396497B0059B302 /* RemoteProfile.swift */,
+				88E7A43E23A98CE700178C4E /* RemoteJob.swift */,
+				88E7A43D23A98CE700178C4E /* RemoteNews.swift */,
+				88E7A43C23A98CE700178C4E /* RemotePeople.swift */,
+				88E7A43B23A98CE700178C4E /* RemoteProfile.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -971,7 +980,6 @@
 				3A1B0F36239534250009A27E /* Alumni.swift in Sources */,
 				88E07703237B398D0026D52B /* LocalAlumni.swift in Sources */,
 				88945835236AF47900E3D838 /* PeopleViewController.swift in Sources */,
-				3AEBC45D2396497B0059B302 /* RemoteProfile.swift in Sources */,
 				5EEA1F2323868C3300D54524 /* AddReferenceView.swift in Sources */,
 				3A9C0CFC237430A8007E3D4D /* JobsView.swift in Sources */,
 				3A353CE723850DE100BE4A19 /* JobEmployerCell.swift in Sources */,
@@ -996,6 +1004,7 @@
 				8B591FB623A366E200FBDF7E /* OnboardingViewController.swift in Sources */,
 				3A67CB5C2383F3E300DC1114 /* EmployerJobView.swift in Sources */,
 				5E0DB35F237957B10079A595 /* ProfileView.swift in Sources */,
+				88E7A43F23A98CE700178C4E /* RemoteProfile.swift in Sources */,
 				5E0DB371237BCEAF0079A595 /* ExperienceCell.swift in Sources */,
 				5E0DB36723796A1C0079A595 /* EditProfileView.swift in Sources */,
 				88E07709237B3C540026D52B /* User.xcdatamodeld in Sources */,
@@ -1003,6 +1012,7 @@
 				3A1B0F2B239110D20009A27E /* Extension.swift in Sources */,
 				88945839236AF48600E3D838 /* NotifTableViewController.swift in Sources */,
 				3A9C0CFF23753DD9007E3D4D /* JobDetailViewController.swift in Sources */,
+				88E7A44023A98CE700178C4E /* RemotePeople.swift in Sources */,
 				3A1B0F3A239534A80009A27E /* ExtensionModelFirestore.swift in Sources */,
 				5FFD68C42372C70B00CE5E7B /* Notif1TableViewCell.swift in Sources */,
 				88CB38E923828CD300AED999 /* DummyUsers.swift in Sources */,
@@ -1011,6 +1021,7 @@
 				5E0DB37A237BE6420079A595 /* ReferenceProfileCell.swift in Sources */,
 				88945823236AF09B00E3D838 /* MainTabBarController.swift in Sources */,
 				5FFD68CB23741C6F00CE5E7B /* NotifView.swift in Sources */,
+				88E7A44123A98CE700178C4E /* RemoteNews.swift in Sources */,
 				5E0DB376237BE1970079A595 /* EducationProfileCell.swift in Sources */,
 				8B860213237A872B0053567B /* CommentView.swift in Sources */,
 				88C7AA3223754FE90016467A /* DetailPeopleView.swift in Sources */,
@@ -1029,6 +1040,7 @@
 				88945831236AF46600E3D838 /* NewsViewController.swift in Sources */,
 				5E0DB38E23828AFA0079A595 /* JobsListCell.swift in Sources */,
 				3A67CB582383F38800DC1114 /* EmployerJobViewController.swift in Sources */,
+				88E7A44223A98CE700178C4E /* RemoteJob.swift in Sources */,
 				88E07701237B398D0026D52B /* LocalUsers.swift in Sources */,
 				88945820236AE51500E3D838 /* LoginView.swift in Sources */,
 				88F68207236971B5006249AA /* AppDelegate.swift in Sources */,
