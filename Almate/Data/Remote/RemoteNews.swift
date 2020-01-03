@@ -73,7 +73,7 @@ class RemoteNews: RemoteNewsInput {
     
     func loadPeopleComments(model: Comments, completion: @escaping(User?) -> Void) {
         let query = Firestore.firestore().collection("/Alumni/Eb7ac4r1tAVwzsCoChc5/Institusi/9xq2RpLB9RtsSjyhczzG/Users/").document("\(model.commentBy.documentID)")
-        query.getDocument { (snapshot, error) in
+        query.getDocument { ( snapshot, error) in
             let model = User(dictionary: (snapshot?.data())!)
             completion(model)
         }

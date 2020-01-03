@@ -92,7 +92,7 @@ class NewsViewController: UIViewController {
                         }
                     }
                 }
-                self.newsView.displayNews(dataRemote, documents, self.likeState)
+                self.newsView.displayNews(dataRemote, documents)
             }
         }
         
@@ -364,19 +364,9 @@ extension NewsViewController: UISearchBarDelegate {
 }
 
 extension NewsViewController: NewsViewDelegate {
-    func didLikePost(_ state: NewsCoreDataState, _ data: NewsLikeLocal, _ likeCount: Int, documentID: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        if state == .delete {
-            requestLocalNews.deleteData(data: data, appDelegate) { (message) in
-                print(message)
-            }
-        } else {
-            requestLocalNews.createData(data: data, appDelegate) {
-                (message) in
-                print(message)
-            }
-        }
-        //        self.remoteNews.updatePostLikes(documentID: DocumentID, likeNumber: likeNumber)
+    
+    func didLikePost(DocumentID: String, likeNumber: Int){
+        self.remoteNews.updatePostLikes(documentID: DocumentID, likeNumber: likeNumber)
     }
     
     func didTapComment(_ documents: QueryDocumentSnapshot?) {
